@@ -1,12 +1,9 @@
 import Navbar from "@/components/layout/Navbar/Navbar";
 import InsideStudioSection from "@/components/sections/InsideStudioSection";
-
-
+import ServicesSection from "@/components/sections/ServicesSection";
+import TrustedClientsSection from "@/components/sections/TrustedClientsSection";
 
 export default function Home() {
-
-
-
   return (
     <>
       <section>
@@ -15,6 +12,8 @@ export default function Home() {
         </div>
       </section>
       <InsideStudioSection />
+      <ServicesSection />
+      <TrustedClientsSection />
     </>
   );
 }
