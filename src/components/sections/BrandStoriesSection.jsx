@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import Badge from "@/components/ui/Badge";
 import BrandStoriesCard from "@/components/cards/BrandStoriesCard";
@@ -9,6 +9,27 @@ import { brandStoriesData } from "@/data/brandStoriesData";
 export default function BrandStoriesSection() {
   const { badge, steps } = brandStoriesData;
   const sectionRef = useRef(null);
+  const leftColRef = useRef(null);
+  const rightColRef = useRef(null);
+
+  // Auto-calculated distance so titles always meet with exact word spacing without clashing
+  const [splitDistance, setSplitDistance] = useState(223);
+
+  useEffect(() => {
+    const updateDistance = () => {
+      if (leftColRef.current && rightColRef.current) {
+        const leftRightEdge = leftColRef.current.offsetLeft + leftColRef.current.offsetWidth;
+        const rightLeftEdge = rightColRef.current.offsetLeft;
+        const rawDistance = rightLeftEdge - leftRightEdge;
+        const targetX = Math.round((rawDistance - 14) / 2);
+        if (targetX > 0) setSplitDistance(targetX);
+      }
+    };
+
+    updateDistance();
+    window.addEventListener("resize", updateDistance);
+    return () => window.removeEventListener("resize", updateDistance);
+  }, []);
 
   // Track scroll progress through the section
   const { scrollYProgress } = useScroll({
@@ -16,10 +37,9 @@ export default function BrandStoriesSection() {
     offset: ["start start", "end end"],
   });
 
-  // Desktop horizontal split:
-  // Starts centered (translated inward by ~246px) and glides outward to the sides as user scrolls
-  const leftX = useTransform(scrollYProgress, [0, 0.10, 0.25], [246, 246, 0]);
-  const rightX = useTransform(scrollYProgress, [0, 0.10, 0.25], [-246, -246, 0]);
+  // Desktop split title horizontal translations
+  const leftX = useTransform(scrollYProgress, [0, 0.10, 0.25], [splitDistance, splitDistance, 0]);
+  const rightX = useTransform(scrollYProgress, [0, 0.10, 0.25], [-splitDistance, -splitDistance, 0]);
 
   return (
     <section
@@ -37,9 +57,7 @@ export default function BrandStoriesSection() {
         />
       </div>
 
-      {/* ============================================================== */}
-      {/* MOBILE / TABLET LAYOUT (< lg): Unified title + vertical stack  */}
-      {/* ============================================================== */}
+      {/* Mobile/Tablet view */}
       <div className="lg:hidden px-5 sm:px-8 max-w-[540px] mx-auto">
         <h2 className="text-center text-[clamp(2.25rem,6.5vw,3.5rem)] font-medium leading-[1.12] tracking-[-0.04em] text-[#05080c] mb-12 sm:mb-16">
           Your ideas transform <br />
@@ -57,13 +75,12 @@ export default function BrandStoriesSection() {
         </div>
       </div>
 
-      {/* ============================================================== */}
-      {/* DESKTOP LAYOUT (>= lg): 3-column split sticky scroll           */}
-      {/* ============================================================== */}
+      {/* Desktop split sticky view */}
       <div className="hidden lg:block max-w-[1400px] mx-auto px-8 xl:px-12">
-        <div className="relative flex justify-center items-start gap-10 xl:gap-14 min-h-[2400px]">
+        <div className="relative flex justify-center items-start gap-10 min-h-[2400px]">
           {/* Left Sticky Column: "Your ideas into Brand" */}
           <motion.div
+            ref={leftColRef}
             style={{ x: leftX }}
             className="sticky top-[30vh] w-[340px] xl:w-[380px] shrink-0 flex flex-col items-end text-right select-none pointer-events-none z-10"
           >
@@ -83,7 +100,7 @@ export default function BrandStoriesSection() {
           </motion.div>
 
           {/* Center Column: Spacer + 3 Scrolling Cards */}
-          <div className="w-[420px] xl:w-[440px] shrink-0 flex flex-col items-center z-20">
+          <div className="w-[380px] shrink-0 flex flex-col items-center z-20">
             {/* Top spacer so the centered titles have clear space before cards scroll up */}
             <div className="h-[520px] xl:h-[580px] w-full" aria-hidden="true" />
 
@@ -104,6 +121,7 @@ export default function BrandStoriesSection() {
 
           {/* Right Sticky Column: "transform stories" */}
           <motion.div
+            ref={rightColRef}
             style={{ x: rightX }}
             className="sticky top-[30vh] w-[340px] xl:w-[380px] shrink-0 flex flex-col items-start text-left select-none pointer-events-none z-10"
           >

@@ -5,7 +5,7 @@ import Image from "next/image";
 export function StepStars({ step = 1, className = "" }) {
   return (
     <div
-      className={`inline-flex items-center gap-1.5 ${className}`}
+      className={`inline-flex items-center gap-2 ${className}`}
       aria-label={`Step ${step} of 3`}
     >
       {[1, 2, 3].map((starIdx) => (
@@ -17,7 +17,7 @@ export function StepStars({ step = 1, className = "" }) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className={`transition-opacity duration-300 ${
-            starIdx <= step ? "opacity-100" : "opacity-25"
+            starIdx <= step ? "opacity-100" : "opacity-20"
           }`}
         >
           <path
@@ -43,36 +43,39 @@ export default function BrandStoriesCard({
 }) {
   return (
     <article
-      className={`rounded-[24px] sm:rounded-[32px] border border-black/5 bg-white p-6 sm:p-8 md:p-9 shadow-[0_4px_24px_rgba(0,0,0,0.03)] flex flex-col justify-between h-[440px] sm:h-[480px] w-full max-w-[430px] transition-shadow duration-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] ${className}`}
+      className={`w-full max-w-[430px] rounded-[16px] sm:rounded-[18px] bg-white p-[8px] sm:p-[10px] shadow-[0_2px_16px_rgba(0,0,0,0.03)] transition-shadow duration-300 hover:shadow-[0_6px_24px_rgba(0,0,0,0.06)] ${className}`}
     >
-      {/* Header: Title on Left, 3-star step indicator on Right */}
-      <div className="flex items-center justify-between gap-4 w-full">
-        <h3 className="text-2xl sm:text-[28px] font-medium tracking-tight text-[#05080c] leading-tight">
-          {title}
-        </h3>
-        <div className="shrink-0">
-          {badge !== undefined ? badge : <StepStars step={stepNumber} />}
+      {/* Inner bordered container matching exact Framer card frame */}
+      <div className="flex h-full min-h-[410px] sm:min-h-[440px] flex-col justify-between rounded-[10px] sm:rounded-[12px] border border-[#05080c]/10 p-5 sm:p-6">
+        {/* Header: Title on Left, 3-star step indicator on Right */}
+        <div className="flex items-center justify-between gap-4 w-full">
+          <h3 className="text-xl sm:text-[22px] font-medium tracking-tight text-[#05080c] leading-tight">
+            {title}
+          </h3>
+          <div className="shrink-0">
+            {badge !== undefined ? badge : <StepStars step={stepNumber} />}
+          </div>
         </div>
-      </div>
 
-      {/* Middle: Illustration Graphic */}
-      <div className="my-auto py-6 sm:py-8 flex items-center justify-center min-h-[170px] sm:min-h-[200px]">
-        {image && (
-          <Image
-            src={image}
-            alt={imageAlt || title || "Step illustration"}
-            width={imageWidth}
-            height={imageHeight}
-            className="object-contain max-h-[160px] sm:max-h-[185px] w-auto drop-shadow-sm"
-            style={{ width: "auto", height: "auto" }}
-          />
-        )}
-      </div>
+        {/* Middle: Illustration Graphic */}
+        <div className="my-auto py-5 sm:py-7 flex items-center justify-center min-h-[180px] sm:min-h-[210px]">
+          {image && (
+            <Image
+              src={image}
+              alt={imageAlt || title || "Step illustration"}
+              width={imageWidth}
+              height={imageHeight}
+              className="object-contain max-h-[175px] sm:max-h-[200px] w-auto"
+              style={{ width: "auto", height: "auto" }}
+            />
+          )}
+        </div>
 
-      {/* Footer: Description */}
-      <p className="text-sm sm:text-base text-[#5b5b5b] leading-relaxed">
-        {description}
-      </p>
+        {/* Footer: Description */}
+        <p className="text-sm sm:text-[15px] font-normal text-[#5b5b5b] leading-relaxed">
+          {description}
+        </p>
+      </div>
     </article>
   );
 }
