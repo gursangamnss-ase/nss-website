@@ -129,3 +129,8 @@ ol {
 ::-webkit-scrollbar-thumb:hover {
     background: #8f8f8f;
 }
+
+
+@utility text-indent-custom {
+    text-indent: 11rem;
+}

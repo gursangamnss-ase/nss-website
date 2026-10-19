@@ -17,17 +17,12 @@ export default function ServicesSection() {
     <Section
       id="services"
       spacing="none"
-      background="dark"
-      className="bg-[#05080c] py-20 sm:py-28 lg:py-36"
+      background="transparent"
+      className="py-20 sm:py-28 lg:py-36"
     >
-      <Container size="full" className="max-w-[1440px] px-5 sm:px-8 lg:px-12">
-        {/*
-          2x2 CSS Grid Layout:
-          Row 1: [What we craft] (col-span-5)  &  [Solutions that Drive results] (col-span-7)
-          Row 2: [Accordion Tabs] (col-span-5)  &  [Active Service Card] (col-span-7)
-        */}
+      <Container size="2xl" className="px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 gap-x-10 gap-y-8 lg:grid-cols-12 lg:gap-x-12 lg:gap-y-12 xl:gap-x-16">
-          {/* Row 1 Left: Pre-title Badge aligned with top of heading */}
+          {/* Badge */}
           <div className="flex items-start pt-2 lg:col-span-4">
             <Badge
               text="What we craft"
@@ -37,7 +32,7 @@ export default function ServicesSection() {
             />
           </div>
 
-          {/* Row 1 Right: Big Heading directly above the Card */}
+          {/* Heading */}
           <div className="lg:col-span-8">
             <h2 className="text-[clamp(2.5rem,5.5vw,5.25rem)] font-medium leading-[1.06] tracking-[-0.04em] text-white">
               Solutions that{" "}
@@ -48,7 +43,7 @@ export default function ServicesSection() {
             </h2>
           </div>
 
-          {/* Row 2 Left: Left Accordion Section (Spans exact height of the card so top and bottom align) */}
+          {/* Accordion tabs */}
           <div className="flex h-full flex-col justify-between lg:col-span-4">
             {servicesData.map((service, index) => (
               <ServiceTabItem
@@ -62,12 +57,12 @@ export default function ServicesSection() {
             ))}
           </div>
 
-          {/* Row 2 Right: Lower Card Section */}
+          {/* Service card */}
           <div className="lg:col-span-8">
             <ServiceDetailCard service={servicesData[activeTabIndex]} />
           </div>
 
-          {/* Row 3 Left: Pricing Button placed below the accordion bottom line */}
+          {/* Pricing CTA */}
           <div className="lg:col-span-4 mt-2 sm:mt-4">
             <Button variant="light" className="w-auto px-6 py-1">
               See pricing

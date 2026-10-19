@@ -1,17 +1,17 @@
-"use client"
-import { useState, useCallback, useEffect, useRef } from 'react';
-import { motion, useMotionValue, useAnimationFrame, useTransform } from 'motion/react';
-import { Sparkles } from 'lucide-react';
+"use client";
+import { useState, useCallback, useEffect, useRef } from "react";
+import Image from "next/image";
+import { motion, useMotionValue, useAnimationFrame, useTransform } from "motion/react";
 
 const variants = {
-  primary: { color: 'var(--color-primary)', shineColor: '#ffffff' },
-  secondary: { color: '#b5b5b5', shineColor: '#ffffff' },
+  primary: { color: "var(--color-primary)", shineColor: "#ffffff" },
+  secondary: { color: "#b5b5b5", shineColor: "#ffffff" },
 };
 
 const ShinyText = ({
   text,
-  variant = 'primary',
-  icon = <Sparkles size={16} fill="currentColor" strokeWidth={1} />,
+  variant = "primary",
+  icon,
   disabled = false,
   speed = 2,
   className = '',
@@ -107,11 +107,35 @@ const ShinyText = ({
     WebkitTextFillColor: 'transparent'
   };
 
+  const isLightText =
+    resolvedColor === "#aaa9ad" ||
+    resolvedColor === "#AAA9AD" ||
+    resolvedColor === "#ffffff" ||
+    resolvedColor === "#b5b5b5" ||
+    variant === "secondary";
+
+  const defaultIconSrc = isLightText
+    ? "/icon/white-star.svg"
+    : "/icon/black-star.svg";
+
+  const renderedIcon =
+    icon !== undefined ? (
+      icon
+    ) : (
+      <Image
+        src={defaultIconSrc}
+        alt="Badge star"
+        width={16}
+        height={16}
+        className="h-4 w-4 shrink-0 object-contain"
+      />
+    );
+
   return (
     <span className="inline-flex items-center gap-2">
-      {icon && (
-        <span className="flex items-center justify-center" style={{ color: resolvedColor }}>
-          {icon}
+      {renderedIcon && (
+        <span className="flex items-center justify-center">
+          {renderedIcon}
         </span>
       )}
 
