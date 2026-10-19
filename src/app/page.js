@@ -4,6 +4,8 @@ import InsideStudioSection from "@/components/sections/InsideStudioSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TrustedClientsSection from "@/components/sections/TrustedClientsSection";
 import CreativeCollabsSection from "@/components/sections/CreativeCollabsSection";
+import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
+import BrandStoriesSection from "@/components/sections/BrandStoriesSection";
 
 export default function Home() {
   return (
@@ -38,6 +40,12 @@ export default function Home() {
 
       {/* Ideas & Execution (Creative Collabs) */}
       <CreativeCollabsSection />
+
+      {/* Featured Projects Slider */}
+      <FeaturedProjectsSection />
+
+      {/* Brand Stories (From concept to launch) */}
+      <BrandStoriesSection />
     </>
   );
 }

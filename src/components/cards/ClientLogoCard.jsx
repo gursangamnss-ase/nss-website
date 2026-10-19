@@ -20,7 +20,7 @@ export default function ClientLogoCard({
           alt={name}
           width={width}
           height={height}
-          style={{ width: "auto" }}
+          style={{ width: "auto", height: "auto" }}
           className="max-h-7 w-auto object-contain opacity-75 transition-all duration-300 group-hover:opacity-100 group-hover:brightness-125 sm:max-h-8"
         />
       </div>
