@@ -32,9 +32,9 @@ export default function ServiceDetailCard({ service, className = "" }) {
           transition={{ duration: 0.35, ease: "easeOut" }}
           className="flex flex-col items-stretch gap-6 md:flex-row lg:gap-8"
         >
-          {/* Left info column: Icon, Description, Tags, Duration */}
+          {/* Info */}
           <div className="flex flex-1 flex-col justify-between">
-            {/* Service Icon */}
+            {/* Icon */}
             <div>
               {IconComponent ? (
                 <div className="text-white">
@@ -48,14 +48,14 @@ export default function ServiceDetailCard({ service, className = "" }) {
               {description}
             </p>
 
-            {/* Deliverables / Feature Tags */}
+            {/* Features */}
             <div className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6">
               {features.map((feature) => (
                 <ServiceFeatureTag key={feature} label={feature} />
               ))}
             </div>
 
-            {/* Timeline / Duration */}
+            {/* Duration */}
             {duration ? (
               <div className="flex items-center gap-2 pt-2 text-[14px] font-medium text-[var(--color-text-muted)] sm:text-[16px]">
                 <Clock className="size-4 shrink-0 text-white/70" />
@@ -64,7 +64,7 @@ export default function ServiceDetailCard({ service, className = "" }) {
             ) : null}
           </div>
 
-          {/* Right Image column: Large, rounded mockup image */}
+          {/* Image */}
           <div className="relative h-[340px] w-full shrink-0 overflow-hidden rounded-xl border border-white/10 sm:h-[390px] md:w-[320px] lg:h-[430px] lg:w-[360px] lg:rounded-2xl">
             <Image
               src={image}

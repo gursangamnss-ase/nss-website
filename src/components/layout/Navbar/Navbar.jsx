@@ -38,8 +38,8 @@ export default function Navbar() {
           alt="Ignitex"
           width={120}
           height={50}
+          style={{ width: "auto", height: "auto" }}
           priority
-          // className="h-10 w-auto brightness-0 invert sm:h-12"
         />
 
         <p className="absolute left-1/2 hidden -translate-x-1/2 text-sm font-medium text-white/70 min-[1200px]:block">

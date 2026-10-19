@@ -1,7 +1,12 @@
+import Image from "next/image";
 import Navbar from "@/components/layout/Navbar/Navbar";
 import InsideStudioSection from "@/components/sections/InsideStudioSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TrustedClientsSection from "@/components/sections/TrustedClientsSection";
+import CreativeCollabsSection from "@/components/sections/CreativeCollabsSection";
+import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
+import BrandStoriesSection from "@/components/sections/BrandStoriesSection";
+import WhyChooseSection from "@/components/sections/WhyChooseSection";
 
 export default function Home() {
   return (
@@ -12,8 +17,39 @@ export default function Home() {
         </div>
       </section>
       <InsideStudioSection />
-      <ServicesSection />
-      <TrustedClientsSection />
+
+      {/* Services & Clients */}
+      <section className="relative overflow-hidden bg-[#05080c] text-white">
+        {/* Background */}
+        <div className="pointer-events-none absolute inset-0 z-0">
+          <Image
+            src="/images/services/services-bg.jpg"
+            alt="Services and Clients background"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
+        </div>
+
+        <div className="relative z-10">
+          <ServicesSection />
+          <TrustedClientsSection />
+        </div>
+      </section>
+
+      {/* Ideas & Execution (Creative Collabs) */}
+      <CreativeCollabsSection />
+
+      {/* Featured Projects Slider */}
+      <FeaturedProjectsSection />
+
+      {/* Brand Stories (From concept to launch) */}
+      <BrandStoriesSection />
+
+      {/* Why Brands Trust Us (Bento Grid) */}
+      <WhyChooseSection />
     </>
   );
 }

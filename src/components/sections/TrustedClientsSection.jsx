@@ -14,13 +14,14 @@ export default function TrustedClientsSection() {
   return (
     <Section
       id="clients"
-      background="dark"
-      className="bg-[#05080c] pb-20 sm:pb-28 lg:pb-36 overflow-hidden pt-0!"
+      spacing="none"
+      background="transparent"
+      className="pb-20 sm:pb-28 lg:pb-36 pt-0"
     >
-      <Container size="full" className="max-w-[1440px] px-5 sm:px-8 lg:px-12">
-        {/* Top Header: Badge + Statement Heading aligned with 6-column grid */}
+      <Container size="2xl" className="px-5 sm:px-8 lg:px-12">
+        {/* Header */}
         <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 md:gap-3 lg:grid-cols-6 items-start">
-          {/* Left: Pre-title Badge spanning columns 1-2 */}
+          {/* Badge */}
           <div className="flex items-start pt-2 lg:col-span-2">
             <Badge
               text={header.badge}
@@ -30,25 +31,20 @@ export default function TrustedClientsSection() {
             />
           </div>
 
-          {/* Right: Statement Heading starting at column 3 and spanning columns 3-6 */}
+          {/* Heading */}
           <div className="lg:col-span-4">
-            <h3 className="text-[24px] sm:text-[30px] lg:text-[38px] font-medium leading-[1.12] tracking-[-0.04em] text-[var(--color-text-muted)]">
+            <p className="text-indent-custom text-[24px] sm:text-[30px] lg:text-[38px] font-medium leading-[1.12] tracking-[-0.04em] text-[var(--color-text-muted)]">
               <span className="text-white">
                 Together, we build impactful experiences,
               </span>
-              <br className="hidden lg:block" />{" "}
-              <span>
-                lasting relationships, and digital solutions that move
-              </span>
-              <br className="hidden lg:block" />{" "}
-              <span>
-                businesses forward.
-              </span>
-            </h3>
+              <br />
+              lasting relationships, and digital solutions that move businesses
+              forward.
+            </p>
           </div>
         </div>
 
-        {/* 12-Card Grid: 2 rows of 6 cards on desktop */}
+        {/* Clients grid */}
         <div className="mt-16 sm:mt-24 lg:mt-28 grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:gap-3 lg:grid-cols-6">
           {cards.map((card) => {
             if (card.type === "logo") {
