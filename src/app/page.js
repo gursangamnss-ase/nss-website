@@ -7,6 +7,8 @@ import CreativeCollabsSection from "@/components/sections/CreativeCollabsSection
 import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
 import BrandStoriesSection from "@/components/sections/BrandStoriesSection";
 import WhyChooseSection from "@/components/sections/WhyChooseSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import TeamSection from "@/components/sections/TeamSection";
 import EnquirySection from "@/components/sections/EnquirySection";
 import Footer from "@/components/layout/Footer/Footer";
 
@@ -52,6 +54,12 @@ export default function Home() {
 
       {/* Why Brands Trust Us (Bento Grid) */}
       <WhyChooseSection />
+
+      {/* The proof is in their words (Testimonials) */}
+      <TestimonialsSection />
+
+      {/* Talent with purpose (Team Section) */}
+      <TeamSection />
 
       {/* Enquiry / Contact CTA Section */}
       <EnquirySection />
