@@ -30,7 +30,7 @@ export default function CreativeCollabsSection() {
       id="creative-collabs"
       spacing="none"
       background="white"
-      className="bg-white text-[#05080c] py-20 sm:py-28 lg:pt-36 lg:pb-24 overflow-hidden"
+      className="bg-white text-[var(--color-primary)] py-20 sm:py-28 lg:pt-36 lg:pb-24 overflow-hidden"
     >
       <Container size="2xl" className="px-5 sm:px-8 lg:px-12">
         {/* Pre-title Badge: Left on mobile/tablet (<lg), Right on laptop/desktop (>=lg) */}
@@ -38,8 +38,8 @@ export default function CreativeCollabsSection() {
           <Badge
             text={header.badge}
             disabled
-            color="#05080c"
-            className="text-xs font-medium tracking-wide sm:text-sm text-[#05080c]"
+            color="var(--color-primary)"
+            className="text-xs font-medium tracking-wide sm:text-sm text-[var(--color-primary)]"
           />
         </div>
 
@@ -47,16 +47,16 @@ export default function CreativeCollabsSection() {
         <div className="flex lg:hidden flex-col items-start gap-1 sm:gap-2">
           {/* Line 1: Ideas & */}
           <div className="inline-flex items-center gap-2 sm:gap-3">
-            <h2 className="text-[46px] sm:text-[60px] md:text-[68px] font-semibold leading-[0.85] tracking-[-0.04em] text-[#05080c] select-none">
+            <h2 className="text-[46px] sm:text-[60px] md:text-[68px] font-semibold leading-[0.85] tracking-[-0.04em] text-[var(--color-primary)] select-none">
               {header.titleLine1}
             </h2>
             <div className="w-[42px] sm:w-[56px] md:w-[64px] aspect-[1.1] select-none shrink-0">
               <Image
                 src={header.ampersand}
-                alt="&"
+                alt=""
+                aria-hidden="true"
                 width={64}
                 height={70}
-                priority
                 className="w-full h-full object-contain"
               />
             </div>
@@ -64,7 +64,7 @@ export default function CreativeCollabsSection() {
 
           {/* Line 2: Execution */}
           <div>
-            <h2 className="text-[46px] sm:text-[60px] md:text-[68px] font-semibold leading-[0.85] tracking-[-0.04em] text-[#05080c] select-none">
+            <h2 className="text-[46px] sm:text-[60px] md:text-[68px] font-semibold leading-[0.85] tracking-[-0.04em] text-[var(--color-primary)] select-none">
               {header.titleLine2}
             </h2>
           </div>
@@ -74,7 +74,7 @@ export default function CreativeCollabsSection() {
         <div className="hidden lg:flex flex-row items-start lg:gap-28 xl:gap-47 2xl:gap-50 relative">
           {/* Left: Ideas + Script Ampersand overlapping */}
           <div className="relative inline-flex items-center shrink-0">
-            <h2 className="text-[clamp(5.2rem,8.5vw,9.5rem)] font-semibold leading-[0.8] tracking-[-0.04em] text-[#05080c] select-none">
+            <h2 className="text-[clamp(5.2rem,8.5vw,9.5rem)] font-semibold leading-[0.8] tracking-[-0.04em] text-[var(--color-primary)] select-none">
               {header.titleLine1}
             </h2>
 
@@ -82,10 +82,10 @@ export default function CreativeCollabsSection() {
             <div className="absolute left-[88%] -top-2 lg:-top-4 w-[150px] lg:w-[190px] xl:w-[260px] 2xl:w-[310px] aspect-[1.1] pointer-events-none select-none z-10">
               <Image
                 src={header.ampersand}
-                alt="&"
+                alt=""
+                aria-hidden="true"
                 width={342}
                 height={348}
-                priority
                 className="w-full h-full object-contain"
               />
             </div>
@@ -93,7 +93,7 @@ export default function CreativeCollabsSection() {
 
           {/* Right: Execution pushed down to align on line 2 */}
           <div className="pt-20 lg:pt-28 xl:pt-36 2xl:pt-44 w-full">
-            <h2 className="text-[clamp(5.5rem,12vw,14rem)] font-semibold leading-[0.8] tracking-[-0.04em] text-[#05080c] select-none">
+            <h2 className="text-[clamp(5.5rem,12vw,14rem)] font-semibold leading-[0.8] tracking-[-0.04em] text-[var(--color-primary)] select-none">
               {header.titleLine2}
             </h2>
           </div>
@@ -103,7 +103,7 @@ export default function CreativeCollabsSection() {
         <div className="mt-10 sm:mt-14 lg:mt-20 flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-12 xl:gap-40">
           {/* Left: Year tag */}
           <div className="shrink-0 lg:w-[20%] xl:w-[22%]">
-            <h3 className="text-xl sm:text-2xl lg:text-[28px] font-medium tracking-[-0.03em] text-[#05080c] whitespace-nowrap">
+            <h3 className="text-xl sm:text-2xl lg:text-[28px] font-medium tracking-[-0.03em] text-[var(--color-primary)] whitespace-nowrap">
               {header.yearTag}
             </h3>
           </div>
@@ -111,13 +111,13 @@ export default function CreativeCollabsSection() {
           {/* Right: Narrative Description and Catalog Gallery */}
           <div className="flex-1 flex flex-col items-start w-full">
             {/* Paragraph with bold accents */}
-            <p className="text-base sm:text-lg lg:text-xl font-normal leading-[1.38] tracking-[-0.015em] text-[#5b5b5b]">
+            <p className="text-base sm:text-lg lg:text-xl font-normal leading-[1.38] tracking-[-0.015em] text-[var(--color-text-secondary)]">
               {header.description.lead}
-              <span className="font-medium text-[#05080c]">
+              <span className="font-medium text-[var(--color-primary)]">
                 {header.description.highlight1}
               </span>
               {header.description.middle}
-              <span className="font-medium text-[#05080c]">
+              <span className="font-medium text-[var(--color-primary)]">
                 {header.description.highlight2}
               </span>
               {header.description.end}
@@ -128,8 +128,8 @@ export default function CreativeCollabsSection() {
               <Badge
                 text={header.catalogBadge}
                 disabled
-                color="#05080c"
-                className="text-xs font-medium tracking-wide sm:text-sm text-[#05080c]"
+                color="var(--color-primary)"
+                className="text-xs font-medium tracking-wide sm:text-sm text-[var(--color-primary)]"
               />
             </div>
 
@@ -141,7 +141,8 @@ export default function CreativeCollabsSection() {
                   type="button"
                   onClick={() => setSelectedImage(item)}
                   title={`View ${item.title}`}
-                  className="group relative aspect-square w-full overflow-hidden rounded-[12px] sm:rounded-[14px] md:rounded-[16px] bg-[#dadadb] focus:outline-none focus:ring-2 focus:ring-[#05080c]/20 cursor-zoom-in"
+                  aria-label={`View image: ${item.title}`}
+                  className="group relative aspect-square w-full overflow-hidden rounded-[12px] sm:rounded-[14px] md:rounded-[16px] bg-[var(--color-border)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 cursor-zoom-in"
                 >
                   <Image
                     src={item.image}
@@ -158,26 +159,34 @@ export default function CreativeCollabsSection() {
         </div>
       </Container>
 
-      {/* Lightbox Modal matching Image 2 */}
+      {/* Lightbox Modal */}
       {selectedImage && (
         <div
           role="dialog"
           aria-modal="true"
+          aria-label="Image preview lightbox"
           onClick={() => setSelectedImage(null)}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-[2px] transition-opacity duration-300 cursor-pointer"
         >
           <div
-            onClick={() => setSelectedImage(null)}
+            onClick={(e) => e.stopPropagation()}
             className="relative aspect-square w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] overflow-hidden rounded-[20px] sm:rounded-[24px] shadow-2xl transition-transform duration-300 ease-out hover:scale-[1.01]"
           >
             <Image
               src={selectedImage.image}
               alt={selectedImage.alt}
               fill
-              priority
               className="object-cover select-none"
               sizes="(max-width: 640px) 340px, (max-width: 768px) 420px, 460px"
             />
+            <button
+              type="button"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Close image preview"
+              className="absolute top-3 right-3 z-10 flex size-8 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80 transition-colors"
+            >
+              ✕
+            </button>
           </div>
         </div>
       )}

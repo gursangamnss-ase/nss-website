@@ -21,9 +21,13 @@ export default function FeaturedProjectsSection() {
     );
   };
 
-  // Keyboard navigation
+  // Keyboard navigation (ignored when focus is inside interactive inputs)
   useEffect(() => {
     const handleKeyDown = (e) => {
+      const activeTag = document.activeElement?.tagName;
+      if (activeTag === "INPUT" || activeTag === "TEXTAREA" || document.activeElement?.isContentEditable) {
+        return;
+      }
       if (e.key === "ArrowLeft") prevSlide();
       if (e.key === "ArrowRight") nextSlide();
     };
@@ -46,13 +50,14 @@ export default function FeaturedProjectsSection() {
   };
 
   const currentProject = featuredProjectsData[currentIndex];
+  const totalCountFormatted = String(featuredProjectsData.length).padStart(2, "0");
 
   return (
     <section
       id="featured-projects"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      className="relative w-full h-[100vh] sm:h-[100vh] lg:h-[100vh] overflow-hidden bg-[#05080c] select-none"
+      className="relative w-full h-[100vh] sm:h-[100vh] lg:h-[100vh] overflow-hidden bg-[var(--color-primary)] select-none"
     >
       {/* Background Images with cross-fade */}
       {featuredProjectsData.map((project, idx) => {
@@ -71,7 +76,6 @@ export default function FeaturedProjectsSection() {
               src={project.image}
               alt={project.alt}
               fill
-              priority={idx === 1 || idx === 0}
               sizes="100vw"
               className="object-cover object-center"
             />
@@ -82,7 +86,7 @@ export default function FeaturedProjectsSection() {
         );
       })}
 
-      {/* Progressive Bottom Blur Effect (Frosted glass gradient matching Framer) */}
+      {/* Progressive Bottom Blur Effect */}
       <div className="absolute inset-x-0 bottom-0 h-48 sm:h-64 lg:h-80 pointer-events-none z-15 overflow-hidden">
         <div className="absolute inset-0 backdrop-blur-[1px] [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_20%)]" />
         <div className="absolute inset-0 backdrop-blur-[2px] [mask-image:linear-gradient(to_bottom,transparent_20%,black_45%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_20%,black_45%)]" />
@@ -140,7 +144,7 @@ export default function FeaturedProjectsSection() {
                 {currentProject.number}
               </span>
               <span className="text-white/40 mx-1.5">/</span>
-              <span className="text-white/60">04</span>
+              <span className="text-white/60">{totalCountFormatted}</span>
             </div>
 
             <button
@@ -157,16 +161,17 @@ export default function FeaturedProjectsSection() {
           <div className="flex sm:justify-end">
             <Link
               href={currentProject.href}
-              className="group inline-flex items-center gap-2.5 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[#05080c] transition-all duration-300 hover:bg-white/95 hover:shadow-lg hover:gap-3.5"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[var(--color-primary)] transition-all duration-300 hover:bg-white/95 hover:shadow-lg hover:gap-3.5"
             >
               <span>View project</span>
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#05080c] text-white transition-transform duration-300 group-hover:translate-x-0.5">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-primary)] text-white transition-transform duration-300 group-hover:translate-x-0.5">
                 <svg
                   className="h-2.5 w-2.5"
                   fill="none"
                   viewBox="0 0 10 10"
                   stroke="currentColor"
                   strokeWidth="1.8"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"

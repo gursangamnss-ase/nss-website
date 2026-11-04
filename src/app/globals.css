@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ==========================================
-   Root Variables
+   Root Design Tokens & CSS Variables
 ========================================== */
 
 :root {
@@ -14,15 +14,34 @@
     --color-text-secondary: #5b5b5b;
     --color-text-muted: #aaa9ad;
     --color-text-light: #bababa;
+    --color-text-white: #ffffff;
 
-    /* Background */
+    /* Backgrounds */
     --color-background: #ffffff;
     --color-background-secondary: #f5f5f5;
+    --color-background-alt: #f7f7f6;
+    --color-background-soft: #f5f5f4;
+
+    /* Surfaces */
+    --color-surface: #f5f5f5;
+    --color-surface-hover: #ededed;
+    --color-surface-muted: #e5e5e5;
+    --color-surface-card: #0c1017;
+    --color-surface-dark: #121417;
+    --color-surface-darker: #080b11;
+    --color-surface-nav: #222426;
 
     /* Borders */
     --color-border: #dadadb;
+    --color-border-light: #e8e8e8;
+    --color-border-subtle: #ededed;
     --color-border-dark: #484848;
     --color-border-glass: rgba(255, 255, 255, 0.1);
+
+    /* Accents */
+    --color-accent-orange: #ef6f38;
+    --color-accent-purple: #5227ff;
+    --color-accent-lavender: #b497cf;
 
     /* Radius */
     --radius-sm: 8px;
@@ -30,6 +49,36 @@
     --radius-lg: 24px;
     --radius-xl: 32px;
     --radius-full: 999px;
+}
+
+@theme {
+    --color-primary: var(--color-primary);
+    --color-secondary: var(--color-secondary);
+    --color-text-primary: var(--color-text);
+    --color-text-secondary: var(--color-text-secondary);
+    --color-text-muted: var(--color-text-muted);
+    --color-text-light: var(--color-text-light);
+    --color-text-white: var(--color-text-white);
+    --color-background: var(--color-background);
+    --color-background-secondary: var(--color-background-secondary);
+    --color-background-alt: var(--color-background-alt);
+    --color-background-soft: var(--color-background-soft);
+    --color-surface: var(--color-surface);
+    --color-surface-hover: var(--color-surface-hover);
+    --color-surface-muted: var(--color-surface-muted);
+    --color-surface-card: var(--color-surface-card);
+    --color-surface-dark: var(--color-surface-dark);
+    --color-surface-darker: var(--color-surface-darker);
+    --color-surface-nav: var(--color-surface-nav);
+    --color-border: var(--color-border);
+    --color-border-light: var(--color-border-light);
+    --color-border-subtle: var(--color-border-subtle);
+    --color-border-dark: var(--color-border-dark);
+    --color-accent-orange: var(--color-accent-orange);
+    --color-accent-purple: var(--color-accent-purple);
+    --color-accent-lavender: var(--color-accent-lavender);
+    --font-geist: var(--font-geist);
+    --font-script: var(--font-script);
 }
 
 /* ==========================================
@@ -71,21 +120,19 @@ svg {
 }
 
 /* ==========================================
-   Links
+   Links & Lists
 ========================================== */
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+@layer base {
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-/* ==========================================
-   Lists
-========================================== */
-
-ul,
-ol {
-    list-style: none;
+    ul,
+    ol {
+        list-style: none;
+    }
 }
 
 /* ==========================================
@@ -106,7 +153,7 @@ ol {
 
 ::selection {
     background: var(--color-primary);
-    color: white;
+    color: #ffffff;
 }
 
 /* ==========================================
@@ -118,18 +165,17 @@ ol {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f5f5f5;
+    background: var(--color-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
     background: #bcbcbc;
-    border-radius: 999px;
+    border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #8f8f8f;
 }
-
 
 @utility text-indent-custom {
     text-indent: 11rem;
@@ -156,4 +202,19 @@ ol {
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+/* ==========================================
+   Accessibility & Reduced Motion
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

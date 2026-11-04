@@ -16,7 +16,6 @@ export default function ImageCard({
   imageClassName = "",
   sizes = "(max-width: 640px) 180px, (max-width: 1024px) 250px, 300px",
   priority = false,
-  onClick,
   children,
 }) {
   const displayTitle = name || title;
@@ -24,8 +23,7 @@ export default function ImageCard({
 
   return (
     <article
-      onClick={onClick}
-      className={`group relative overflow-hidden rounded-[16px] border border-white/10 bg-[#0c1017] shadow-xl select-none ${aspectRatio} ${className}`}
+      className={`group relative overflow-hidden rounded-[16px] border border-white/10 bg-[var(--color-surface-card)] shadow-xl select-none ${aspectRatio} ${className}`}
     >
       {/* Background Image */}
       {image && (
@@ -56,7 +54,7 @@ export default function ImageCard({
         )}
 
         {displaySubtitle && (
-          <p className="mt-0.5 text-xs sm:text-[13px] font-normal text-[#aaa9ad] tracking-normal">
+          <p className="mt-0.5 text-xs sm:text-[13px] font-normal text-[var(--color-text-muted)] tracking-normal">
             {displaySubtitle}
           </p>
         )}

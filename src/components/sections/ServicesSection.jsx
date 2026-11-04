@@ -9,7 +9,6 @@ import ServiceTabItem from "@/components/ui/ServiceTabItem";
 import ServiceDetailCard from "@/components/cards/ServiceDetailCard";
 import { servicesData } from "@/data/servicesData";
 
-
 export default function ServicesSection() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
@@ -27,7 +26,7 @@ export default function ServicesSection() {
             <Badge
               text="What we craft"
               disabled
-              color="#aaa9ad"
+              color="var(--color-text-muted)"
               className="text-xs font-medium tracking-wide sm:text-sm"
             />
           </div>
@@ -64,7 +63,11 @@ export default function ServicesSection() {
 
           {/* Pricing CTA */}
           <div className="lg:col-span-4 mt-2 sm:mt-4">
-            <Button variant="light" className="w-auto px-6 py-1">
+            <Button
+              href="#contact"
+              variant="light"
+              className="w-auto px-6 py-1"
+            >
               See pricing
             </Button>
           </div>

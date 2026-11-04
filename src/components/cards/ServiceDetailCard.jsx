@@ -70,7 +70,6 @@ export default function ServiceDetailCard({ service, className = "" }) {
               src={image}
               alt={imageAlt || title}
               fill
-              priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 360px, 400px"
               className="object-cover transition-transform duration-700 ease-out hover:scale-105"
             />

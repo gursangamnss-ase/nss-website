@@ -6,9 +6,9 @@ import NavbarClient from "./NavbarClient";
 
 const menuItems = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
-  { label: "About", ariaLabel: "Learn about us", link: "/about" },
-  { label: "Services", ariaLabel: "View our services", link: "/services" },
-  { label: "Contact", ariaLabel: "Get in touch", link: "/contact" },
+  { label: "About", ariaLabel: "Learn about us", link: "#about-us" },
+  { label: "Services", ariaLabel: "View our services", link: "#services" },
+  { label: "Contact", ariaLabel: "Get in touch", link: "#contact" },
 ];
 
 const socialItems = [
@@ -19,28 +19,31 @@ const socialItems = [
 
 export default function Navbar() {
   return (
-    <div className="relative min-h-svh overflow-hidden bg-[#15171a]">
+    <div className="relative min-h-[100svh] overflow-hidden bg-[#15171a]">
       <video
         autoPlay
         loop
         muted
         playsInline
+        aria-hidden="true"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       >
         <source src="/videos/herovideo2.webm" type="video/webm" />
       </video>
 
-      <div className="absolute inset-0 z-10 bg-black/45" />
+      <div className="absolute inset-0 z-10 bg-black/45" aria-hidden="true" />
 
-      <header className="absolute left-0 top-0 z-30 flex h-16 w-full items-center bg-[#222426]/95 px-5 text-white sm:px-8">
-        <Image
-          src="/images/logo.png"
-          alt="Ignitex"
-          width={120}
-          height={50}
-          style={{ width: "auto", height: "auto" }}
-          priority
-        />
+      <header className="absolute left-0 top-0 z-30 flex h-16 w-full items-center bg-[var(--color-surface-nav)]/95 px-5 text-white sm:px-8">
+        <Link href="/" aria-label="Ignitex home">
+          <Image
+            src="/images/logo.png"
+            alt="Ignitex"
+            width={120}
+            height={50}
+            style={{ width: "auto", height: "auto" }}
+            priority
+          />
+        </Link>
 
         <p className="absolute left-1/2 hidden -translate-x-1/2 text-sm font-medium text-white/70 min-[1200px]:block">
           Based in: <span className="text-white">Mohali, India</span>
@@ -48,14 +51,15 @@ export default function Navbar() {
 
         <div className="ml-auto flex items-center gap-8">
           <nav
+            aria-label="Main navigation"
             className={`hidden min-[1200px]:flex items-center gap-9 text-sm text-white ${typography.fontFamily.primary} ${typography.fontWeight.medium}`}
           >
-            <Link href="/">• Home</Link>
-            <Link href="/about">About us</Link>
-            <Link href="/services">
+            <Link href="/" className="hover:text-white/80 transition-colors">• Home</Link>
+            <Link href="#about-us" className="hover:text-white/80 transition-colors">About us</Link>
+            <Link href="#services" className="hover:text-white/80 transition-colors">
               Projects <sup className="text-[9px]">(07)</sup>
             </Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="#contact" className="hover:text-white/80 transition-colors">Contact</Link>
           </nav>
 
           <NavbarClient
