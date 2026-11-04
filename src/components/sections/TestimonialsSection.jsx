@@ -52,7 +52,7 @@ export default function TestimonialsSection() {
         <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
       </div>
 
-      <Container className="relative z-10 max-w-[1140px] px-5 sm:px-8">
+      <Container size="2xl">
         <div
           className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 sm:gap-10 lg:gap-16 xl:gap-[100px]"
           onMouseEnter={() => setIsPaused(true)}

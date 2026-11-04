@@ -17,7 +17,7 @@ export default function ProofSection() {
       background="light"
       className="bg-[#f5f5f5] py-20 sm:py-28 lg:py-32 text-[#05080c] select-none"
     >
-      <Container className="max-w-[1340px] px-4 sm:px-6 lg:px-8">
+      <Container size="2xl">
         {/* Header Area */}
         <div className="relative mb-12 sm:mb-14 lg:mb-16">
           {/* Badge: Top-Left */}

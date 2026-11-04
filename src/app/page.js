@@ -10,6 +10,7 @@ import WhyChooseSection from "@/components/sections/WhyChooseSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import TeamSection from "@/components/sections/TeamSection";
 import ProofSection from "@/components/sections/ProofSection";
+import BlogSection from "@/components/sections/BlogSection";
 import EnquirySection from "@/components/sections/EnquirySection";
 import Footer from "@/components/layout/Footer/Footer";
 
@@ -64,6 +65,9 @@ export default function Home() {
 
       {/* Proof that Speaks volumes (Case Studies) */}
       <ProofSection />
+
+      {/* Insights & Inspiration (Explore our Latest journal) */}
+      <BlogSection />
 
       {/* Enquiry / Contact CTA Section */}
       <EnquirySection />
