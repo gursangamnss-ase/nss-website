@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 
@@ -20,7 +18,8 @@ export default function ClientCtaCard({
       <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white transition-transform duration-300 group-hover:scale-105">
         <Image
           src={icon}
-          alt="Arrow"
+          alt=""
+          aria-hidden="true"
           width={15}
           height={12}
           className="transition-transform duration-300 group-hover:translate-x-0.5"

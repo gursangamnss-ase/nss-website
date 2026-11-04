@@ -8,11 +8,11 @@ export const footerData = {
   },
   mainLinks: [
     { label: "Home", href: "/" },
-    { label: "About us", href: "/about" },
-    { label: "Projects", href: "/services" },
-    { label: "Blog", href: "#blog" },
+    { label: "About us", href: "/#about-us" },
+    { label: "Projects", href: "/project" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact us", href: "/contact" },
-    { label: "Services", href: "/services" },
+    { label: "Services", href: "/#services" },
   ],
   contact: {
     phoneLabel: "082830 30094",

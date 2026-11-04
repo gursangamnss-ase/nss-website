@@ -45,21 +45,21 @@ export default function BrandStoriesSection() {
     <section
       ref={sectionRef}
       id="brand-stories"
-      className="relative bg-[#f5f5f5] text-[#05080c] pt-20 sm:pt-28 lg:pt-32 pb-24 sm:pb-36 lg:pb-44"
+      className="relative bg-[var(--color-surface)] text-[var(--color-primary)] pt-20 sm:pt-28 lg:pt-32 pb-24 sm:pb-36 lg:pb-44"
     >
       {/* Pre-title Badge - Centered */}
       <div className="flex justify-center mb-10 sm:mb-14 px-4">
         <Badge
           text={badge}
           disabled
-          color="#05080c"
+          color="var(--color-primary)"
           className="font-medium text-xs sm:text-sm tracking-wide"
         />
       </div>
 
       {/* Mobile/Tablet view */}
       <div className="lg:hidden px-5 sm:px-8 max-w-[540px] mx-auto">
-        <h2 className="text-center text-[clamp(2.25rem,6.5vw,3.5rem)] font-medium leading-[1.12] tracking-[-0.04em] text-[#05080c] mb-12 sm:mb-16">
+        <h2 className="text-center text-[clamp(2.25rem,6.5vw,3.5rem)] font-medium leading-[1.12] tracking-[-0.04em] text-[var(--color-primary)] mb-12 sm:mb-16">
           Your ideas transform <br />
           into{" "}
           <span className="font-script text-[1.25em] font-normal leading-none inline-block align-baseline">
@@ -85,14 +85,14 @@ export default function BrandStoriesSection() {
             className="sticky top-[30vh] w-[340px] xl:w-[380px] shrink-0 flex flex-col items-end text-right select-none pointer-events-none z-10"
           >
             <div className="flex flex-col items-end">
-              <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[#05080c] leading-[1.12]">
+              <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[var(--color-primary)] leading-[1.12]">
                 Your ideas
               </span>
               <div className="flex items-baseline justify-end gap-2.5 mt-1.5">
-                <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[#05080c] leading-[1.12]">
+                <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[var(--color-primary)] leading-[1.12]">
                   into
                 </span>
-                <span className="font-script text-[clamp(3.5rem,4.8vw,5.25rem)] font-normal text-[#05080c] leading-none">
+                <span className="font-script text-[clamp(3.5rem,4.8vw,5.25rem)] font-normal text-[var(--color-primary)] leading-none">
                   Brand
                 </span>
               </div>
@@ -126,11 +126,11 @@ export default function BrandStoriesSection() {
             className="sticky top-[30vh] w-[340px] xl:w-[380px] shrink-0 flex flex-col items-start text-left select-none pointer-events-none z-10"
           >
             <div className="flex flex-col items-start">
-              <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[#05080c] leading-[1.12]">
+              <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[var(--color-primary)] leading-[1.12]">
                 transform
               </span>
               <div className="flex items-baseline justify-start mt-1.5">
-                <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[#05080c] leading-[1.12]">
+                <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[var(--color-primary)] leading-[1.12]">
                   stories
                 </span>
               </div>

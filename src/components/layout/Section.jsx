@@ -10,16 +10,10 @@ const spacingClasses = {
 
 const backgroundClasses = {
   transparent: "bg-transparent",
-
-  // Light Sections
-  white: "bg-white text-primary",
-  light: "bg-secondary text-primary",
-
-  // Dark Sections
-  dark: "bg-primary text-white",
-
-  // Optional variations
-  darkSoft: "bg-[#101317] text-white",
+  white: "bg-white text-[var(--color-primary)]",
+  light: "bg-[var(--color-secondary)] text-[var(--color-primary)]",
+  dark: "bg-[var(--color-primary)] text-white",
+  darkSoft: "bg-[var(--color-surface-dark)] text-white",
   glass: "bg-white/5 backdrop-blur-xl text-white",
 };
 
@@ -29,15 +23,13 @@ export default function Section({
   spacing = "lg",
   background = "transparent",
   className = "",
+  ...props
 }) {
   return (
     <section
       id={id}
-      className={`
-        ${spacingClasses[spacing]}
-        ${backgroundClasses[background]}
-        ${className}
-      `}
+      className={`${spacingClasses[spacing] || ""} ${backgroundClasses[background] || ""} ${className}`}
+      {...props}
     >
       {children}
     </section>

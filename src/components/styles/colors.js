@@ -7,7 +7,19 @@ export const colors = {
     background: {
         primary: "#FFFFFF",
         secondary: "#F5F5F5",
+        alt: "#F7F7F6",
+        soft: "#F5F5F4",
         dark: "#05080C",
+    },
+
+    surface: {
+        default: "#F5F5F5",
+        hover: "#EDEDED",
+        muted: "#E5E5E5",
+        card: "#0C1017",
+        dark: "#121417",
+        darker: "#080B11",
+        nav: "#222426",
     },
 
     text: {
@@ -20,8 +32,15 @@ export const colors = {
 
     border: {
         light: "#DADADB",
+        subtle: "#E8E8E8",
         dark: "#484848",
         glass: "rgba(255,255,255,0.10)",
+    },
+
+    accent: {
+        orange: "#EF6F38",
+        purple: "#5227FF",
+        lavender: "#B497CF",
     },
 
     common: {
@@ -29,17 +48,3 @@ export const colors = {
         black: "#05080C",
     },
 };
-
-// | Color               | Hex                      | Purpose                               |
-// | ------------------- | ------------------------ | ------------------------------------- |
-// | `primary`           | `#05080C`                | Main headings, buttons, dark sections |
-// | `secondary`         | `#F5F5F5`                | Light backgrounds                     |
-// | `background`        | `#FFFFFF`                | Primary page background               |
-// | `backgroundAlt`     | `#F5F5F5`                | Alternate section backgrounds         |
-// | `text`              | `#05080C`                | Main text                             |
-// | `textSecondary`     | `#5B5B5B`                | Paragraphs                            |
-// | `textMuted`         | `#AAA9AD`                | Metadata, labels                      |
-// | `textLight`         | `#BABABA`                | Disabled or subtle text               |
-// | `border`            | `#DADADB`                | Card/input borders                    |
-// | `borderDark`        | `#484848`                | Borders on dark backgrounds           |
-// | `borderTransparent` | `rgba(255,255,255,0.10)` | Glassmorphism, overlays               |

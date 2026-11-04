@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
@@ -26,19 +24,18 @@ export default function TeamSection() {
       id="talent"
       spacing="none"
       background="dark"
-      className="relative overflow-hidden bg-[#05080c] pt-16 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 lg:pb-28 text-white select-none"
+      className="relative overflow-hidden bg-[var(--color-primary)] pt-16 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 lg:pb-28 text-white select-none"
     >
       {/* Background Image with Natural Office Contrast Overlay */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <Image
           src="/images/team/team-section-bg.jpg"
-          alt="Team section background"
+          alt=""
+          aria-hidden="true"
           fill
           sizes="100vw"
           className="object-cover object-center"
-          priority
         />
-        {/* Subtle gradient overlay to match Framer's natural office view */}
         <div
           className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/85"
           aria-hidden="true"
@@ -66,7 +63,7 @@ export default function TeamSection() {
             <Badge
               text={badge}
               disabled
-              color="#ffffff"
+              color="var(--color-text-white)"
               className="text-xs sm:text-sm font-medium tracking-wide text-white"
             />
           </div>
@@ -83,13 +80,16 @@ export default function TeamSection() {
 
             {/* Bottom Actions Row */}
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-1">
-              <a href={ctaLink} className="inline-block">
-                <Button variant="light" showArrow={true} className="w-auto">
-                  {ctaText}
-                </Button>
-              </a>
+              <Button
+                href={ctaLink}
+                variant="light"
+                showArrow={true}
+                className="w-auto"
+              >
+                {ctaText}
+              </Button>
 
-              <span className="text-xs sm:text-sm text-[#bababa] tracking-tight">
+              <span className="text-xs sm:text-sm text-[var(--color-text-light)] tracking-tight">
                 {copyright}
               </span>
             </div>

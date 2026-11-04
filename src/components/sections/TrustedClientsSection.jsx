@@ -1,5 +1,3 @@
-"use client";
-
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
@@ -19,6 +17,8 @@ export default function TrustedClientsSection() {
       className="pb-20 sm:pb-28 lg:pb-36 pt-0"
     >
       <Container size="2xl" className="px-5 sm:px-8 lg:px-12">
+        <h2 className="sr-only">Trusted by Visionary Clients</h2>
+
         {/* Header */}
         <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 md:gap-3 lg:grid-cols-6 items-start">
           {/* Badge */}
@@ -26,7 +26,7 @@ export default function TrustedClientsSection() {
             <Badge
               text={header.badge}
               disabled
-              color="#aaa9ad"
+              color="var(--color-text-muted)"
               className="text-xs font-medium tracking-wide sm:text-sm"
             />
           </div>

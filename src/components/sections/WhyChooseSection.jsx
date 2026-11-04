@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import Badge from "@/components/ui/Badge";
@@ -18,18 +16,18 @@ export default function WhyChooseSection() {
   } = whyChooseData;
 
   return (
-    <section id="why-choose" className="relative bg-white py-20 sm:py-28 lg:py-36 text-[#05080c] overflow-hidden">
+    <section id="why-choose" className="relative bg-white py-20 sm:py-28 lg:py-36 text-[var(--color-primary)] overflow-hidden">
       <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-14 sm:mb-20">
           <Badge
             text={badge}
             disabled
-            color="#05080c"
+            color="var(--color-primary)"
             className="font-medium text-xs sm:text-sm tracking-wide mb-4"
           />
 
-          <h2 className="text-[clamp(2.5rem,6.5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.04em] text-[#05080c]">
+          <h2 className="text-[clamp(2.5rem,6.5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.04em] text-[var(--color-primary)]">
             {heading.line1Prefix}
             <span className="font-script text-[1.25em] font-normal leading-none inline-block align-baseline -rotate-2">
               {heading.line1Highlight}
@@ -46,13 +44,13 @@ export default function WhyChooseSection() {
             {/* Top Row: Card 1 (Cost-Effective) & Card 2 (Happy Clients) */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
               {/* Card 1: Cost-Effective plans */}
-              <div className="rounded-[22px] sm:rounded-[26px] bg-[#f5f5f5] p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between h-[360px] sm:h-[390px]">
+              <div className="rounded-[22px] sm:rounded-[26px] bg-[var(--color-surface)] p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between h-[360px] sm:h-[390px]">
                 {/* Top content */}
                 <div className="relative z-10">
-                  <h3 className="text-xl sm:text-[22px] font-medium tracking-tight text-[#05080c]">
+                  <h3 className="text-xl sm:text-[22px] font-medium tracking-tight text-[var(--color-primary)]">
                     {costEffective.title}
                   </h3>
-                  <p className="text-sm text-[#5b5b5b] mt-1.5 leading-relaxed">
+                  <p className="text-sm text-[var(--color-text-secondary)] mt-1.5 leading-relaxed">
                     {costEffective.description}
                   </p>
                 </div>
@@ -63,20 +61,22 @@ export default function WhyChooseSection() {
                   <div className="absolute inset-x-0 bottom-0 h-[190px] pointer-events-none z-0">
                     <Image
                       src={costEffective.waveBg}
-                      alt="Wave background"
+                      alt=""
+                      aria-hidden="true"
                       fill
                       className="object-cover object-bottom grayscale contrast-125 opacity-90"
                     />
                   </div>
 
                   {/* 3D Floating Credit Card */}
-                  <div className="relative z-10 w-[285px] sm:w-[305px] h-[180px] rounded-[14px] bg-[#121417] border border-white/[0.08] shadow-[0_16px_36px_rgba(0,0,0,0.45),inset_0_1px_1px_rgba(255,255,255,0.15)] p-4 flex flex-col justify-between overflow-hidden mb-2">
+                  <div className="relative z-10 w-[285px] sm:w-[305px] h-[180px] rounded-[14px] bg-[var(--color-surface-dark)] border border-white/[0.08] shadow-[0_16px_36px_rgba(0,0,0,0.45),inset_0_1px_1px_rgba(255,255,255,0.15)] p-4 flex flex-col justify-between overflow-hidden mb-2">
                     {/* Top Row: Chip */}
                     <div className="flex items-center justify-between">
                       <div className="w-[44px] h-[31px] rounded-[5px] relative overflow-hidden">
                         <Image
                           src={costEffective.chipImage}
-                          alt="EMV Chip"
+                          alt=""
+                          aria-hidden="true"
                           fill
                           className="object-contain"
                         />
@@ -88,16 +88,17 @@ export default function WhyChooseSection() {
                       <div className="relative w-14 h-20 drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)]">
                         <Image
                           src={costEffective.dollarImage}
-                          alt="Dollar Icon"
+                          alt=""
+                          aria-hidden="true"
                           fill
                           className="object-contain"
                         />
                       </div>
                     </div>
 
-                    {/* Bottom: Pause & cancel anytime (direct on card face, no pill) */}
-                    <div className="flex items-center justify-center gap-2 text-[#aaa9ad] text-[13px] sm:text-[14px] font-normal tracking-tight pb-0.5">
-                      <svg viewBox="0 0 64 64" className="w-3.5 h-3.5 shrink-0 fill-[#aaa9ad]" xmlns="http://www.w3.org/2000/svg">
+                    {/* Bottom: Pause & cancel anytime */}
+                    <div className="flex items-center justify-center gap-2 text-[var(--color-text-muted)] text-[13px] sm:text-[14px] font-normal tracking-tight pb-0.5">
+                      <svg viewBox="0 0 64 64" className="w-3.5 h-3.5 shrink-0 fill-[var(--color-text-muted)]" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path strokeLinejoin="round" d="m1 32 25 6 6 25 6-25 25-6-25-6-6-25-6 25z" />
                       </svg>
                       <span>{costEffective.badge}</span>
@@ -107,27 +108,27 @@ export default function WhyChooseSection() {
               </div>
 
               {/* Card 2: 150+ Happy clients worldwide */}
-              <div className="rounded-[22px] sm:rounded-[26px] bg-[#f5f5f5] p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between h-[360px] sm:h-[390px]">
+              <div className="rounded-[22px] sm:rounded-[26px] bg-[var(--color-surface)] p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between h-[360px] sm:h-[390px]">
                 {/* Top content: Ratings & Count */}
                 <div className="flex items-start justify-between gap-2 relative z-10">
                   <div>
                     {/* 5 Stars */}
-                    <div className="flex items-center gap-1 text-[#05080c]">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className="text-sm">★</span>
+                    <div className="flex items-center gap-1 text-[var(--color-primary)]" aria-label="5 stars rating">
+                      {[1, 2, 3, 4, 5].map((i) => (
+                        <span key={i} className="text-sm" aria-hidden="true">★</span>
                       ))}
                     </div>
-                    <p className="text-xs sm:text-sm font-medium text-[#05080c] mt-1">
+                    <p className="text-xs sm:text-sm font-medium text-[var(--color-primary)] mt-1">
                       <span className="font-semibold">{happyClients.clientCount}</span>{" "}
                       {happyClients.clientLabel}
                     </p>
                   </div>
 
                   <div className="text-right">
-                    <span className="text-xl sm:text-2xl font-semibold tracking-tight text-[#05080c]">
+                    <span className="text-xl sm:text-2xl font-semibold tracking-tight text-[var(--color-primary)]">
                       {happyClients.rating}
                     </span>
-                    <span className="text-xs text-[#5b5b5b] font-normal">
+                    <span className="text-xs text-[var(--color-text-secondary)] font-normal">
                       {happyClients.maxRating}
                     </span>
                   </div>
@@ -136,9 +137,9 @@ export default function WhyChooseSection() {
                 {/* Concentric Radar Orbits & Avatars */}
                 <div className="relative w-full h-[240px] flex items-center justify-center mt-auto">
                   {/* Concentric Rings */}
-                  <div className="absolute w-[290px] h-[290px] rounded-full border border-black/[0.06]" />
-                  <div className="absolute w-[210px] h-[210px] rounded-full border border-black/[0.08]" />
-                  <div className="absolute w-[130px] h-[130px] rounded-full border border-black/[0.1]" />
+                  <div className="absolute w-[290px] h-[290px] rounded-full border border-black/[0.06]" aria-hidden="true" />
+                  <div className="absolute w-[210px] h-[210px] rounded-full border border-black/[0.08]" aria-hidden="true" />
+                  <div className="absolute w-[130px] h-[130px] rounded-full border border-black/[0.1]" aria-hidden="true" />
 
                   {/* Central Ignitex Logo */}
                   <div className="relative z-10 flex flex-col items-center">
@@ -153,9 +154,9 @@ export default function WhyChooseSection() {
                   </div>
 
                   {/* Orbiting Avatars */}
-                  {happyClients.avatars.map((av, idx) => (
+                  {happyClients.avatars.map((av) => (
                     <div
-                      key={idx}
+                      key={av.alt || av.src}
                       className={`absolute ${av.position} z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white shadow-md overflow-hidden transition-transform duration-300 hover:scale-115`}
                     >
                       <Image
@@ -173,12 +174,12 @@ export default function WhyChooseSection() {
             {/* Bottom Row: Card 4 (Tools), Card 5 (Future-Ready), Card 6 (Support) */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
               {/* Card 4: Built with the best */}
-              <div className="rounded-[22px] sm:rounded-[26px] bg-[#f5f5f5] p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between h-[270px] sm:h-[290px]">
+              <div className="rounded-[22px] sm:rounded-[26px] bg-[var(--color-surface)] p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between h-[270px] sm:h-[290px]">
                 <div>
-                  <h3 className="text-lg sm:text-xl font-medium tracking-tight text-[#05080c]">
+                  <h3 className="text-lg sm:text-xl font-medium tracking-tight text-[var(--color-primary)]">
                     {builtWithBest.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#5b5b5b] mt-1.5 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] mt-1.5 leading-relaxed">
                     {builtWithBest.description}
                   </p>
                 </div>
@@ -189,7 +190,7 @@ export default function WhyChooseSection() {
                     <div
                       key={tool.name}
                       title={tool.name}
-                      className="w-10 h-10 rounded-full bg-[#05080c] flex items-center justify-center p-2.5 shadow-sm transition-transform duration-300 hover:scale-115"
+                      className="w-10 h-10 rounded-full bg-[var(--color-primary)] flex items-center justify-center p-2.5 shadow-sm transition-transform duration-300 hover:scale-115"
                     >
                       <Image
                         src={tool.icon}
@@ -208,7 +209,7 @@ export default function WhyChooseSection() {
               <div className="rounded-[22px] sm:rounded-[26px] relative overflow-hidden h-[270px] sm:h-[290px] flex items-center justify-center text-center p-6">
                 <Image
                   src={futureReady.image}
-                  alt="Athlete running"
+                  alt="Reliable and future-ready"
                   fill
                   className="object-cover"
                 />
@@ -226,12 +227,12 @@ export default function WhyChooseSection() {
               </div>
 
               {/* Card 6: 24/7 Always-On support */}
-              <div className="rounded-[22px] sm:rounded-[26px] bg-[#f5f5f5] p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between h-[270px] sm:h-[290px]">
+              <div className="rounded-[22px] sm:rounded-[26px] bg-[var(--color-surface)] p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between h-[270px] sm:h-[290px]">
                 <div className="relative z-10">
-                  <span className="text-2xl sm:text-[28px] font-medium tracking-tight text-[#05080c]">
+                  <span className="text-2xl sm:text-[28px] font-medium tracking-tight text-[var(--color-primary)]">
                     {alwaysOnSupport.tag}
                   </span>
-                  <p className="text-xs sm:text-sm text-[#5b5b5b] mt-0.5 font-normal">
+                  <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] mt-0.5 font-normal">
                     {alwaysOnSupport.title}
                   </p>
                 </div>
@@ -240,7 +241,8 @@ export default function WhyChooseSection() {
                 <div className="absolute right-0 bottom-0 w-[150px] sm:w-[170px] h-[190px] pointer-events-none z-0">
                   <Image
                     src={alwaysOnSupport.handsImage}
-                    alt="Team collaboration"
+                    alt=""
+                    aria-hidden="true"
                     fill
                     className="object-contain object-bottom-right"
                   />
@@ -258,15 +260,15 @@ export default function WhyChooseSection() {
                         className="object-cover"
                       />
                     </div>
-                    <span className="bg-[#05080c] text-white text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
+                    <span className="bg-[var(--color-primary)] text-white text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
                       {alwaysOnSupport.messages[0].text}
                     </span>
                   </div>
 
                   {/* Bubble 2: Input Style */}
-                  <div className="flex items-center justify-between bg-[#05080c] text-white text-xs px-3.5 py-2 rounded-full font-medium shadow-sm w-full">
+                  <div className="flex items-center justify-between bg-[var(--color-primary)] text-white text-xs px-3.5 py-2 rounded-full font-medium shadow-sm w-full">
                     <span>{alwaysOnSupport.messages[1].text}</span>
-                    <span className="w-4 h-4 rounded-full border border-white/40 flex items-center justify-center text-[10px] leading-none text-white/80">
+                    <span className="w-4 h-4 rounded-full border border-white/40 flex items-center justify-center text-[10px] leading-none text-white/80" aria-hidden="true">
                       +
                     </span>
                   </div>
@@ -277,7 +279,7 @@ export default function WhyChooseSection() {
 
           {/* Right Column: Strategic Solutions Dark Card */}
           <div className="lg:col-span-4">
-            <div className="rounded-[22px] sm:rounded-[26px] bg-[#05080c] text-white p-7 sm:p-9 flex flex-col justify-between h-full min-h-[580px] lg:min-h-[700px] relative overflow-hidden">
+            <div className="rounded-[22px] sm:rounded-[26px] bg-[var(--color-primary)] text-white p-7 sm:p-9 flex flex-col justify-between h-full min-h-[580px] lg:min-h-[700px] relative overflow-hidden">
               {/* Top Section */}
               <div className="relative z-10">
                 <h3 className="text-2xl sm:text-[28px] font-medium tracking-tight leading-tight text-white mb-8">
@@ -288,7 +290,7 @@ export default function WhyChooseSection() {
                 <ul className="flex flex-col gap-4 text-sm sm:text-[15px] text-white/80">
                   {strategicSolutions.features.map((feat) => (
                     <li key={feat} className="flex items-center gap-3">
-                      <span className="text-xs text-white/90">✦</span>
+                      <span className="text-xs text-white/90" aria-hidden="true">✦</span>
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -300,8 +302,8 @@ export default function WhyChooseSection() {
                     href={strategicSolutions.ctaLink}
                     className="group inline-flex items-center justify-between gap-4 bg-white font-medium text-sm pl-5 pr-2 py-2 rounded-full transition-transform duration-300 hover:scale-105 active:scale-95 shadow-md"
                   >
-                    <span className="text-[#05080c] font-medium">{strategicSolutions.ctaText}</span>
-                    <span className="w-8 h-8 rounded-full bg-[#05080c] text-white flex items-center justify-center text-sm transition-transform duration-300 group-hover:translate-x-0.5">
+                    <span className="text-[var(--color-primary)] font-medium">{strategicSolutions.ctaText}</span>
+                    <span className="w-8 h-8 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center text-sm transition-transform duration-300 group-hover:translate-x-0.5">
                       →
                     </span>
                   </Link>
@@ -312,7 +314,8 @@ export default function WhyChooseSection() {
               <div className="absolute right-[-40px] bottom-[-20px] sm:bottom-0 w-[240px] sm:w-[300px] h-[280px] sm:h-[360px] pointer-events-none opacity-90 z-0">
                 <Image
                   src={strategicSolutions.chainImage}
-                  alt="Strategic Chain link"
+                  alt=""
+                  aria-hidden="true"
                   fill
                   className="object-contain object-bottom-right"
                 />

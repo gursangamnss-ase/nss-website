@@ -1,0 +1,78 @@
+export const projectData = {
+  metadata: {
+    title: "Projects | NetSquare Softwares - Portfolio Showcase",
+    description:
+      "Explore our curated digital projects, UI/UX designs, SaaS platforms, and brand identities crafted by NetSquare Softwares.",
+  },
+  hero: {
+    headlineStart: "Explore",
+    headlineScript: "Our",
+    headlineEnd: "projects",
+  },
+  projects: [
+    {
+      id: "nova-wallet",
+      title: "Nova",
+      scriptTitle: "Wallet",
+      tags: ["UI/UX Design", "Web App"],
+      image: "/projects/project2.jpg",
+      href: "/project/nova",
+      alt: "Nova Wallet digital design showcase",
+    },
+    {
+      id: "echo-studio",
+      title: "Echo",
+      scriptTitle: "Studio",
+      tags: ["Product Design", "Audio Tech"],
+      image: "/projects/project3.jpg",
+      href: "/project/echo",
+      alt: "Echo Studio interior design and acoustic setup",
+    },
+    {
+      id: "pulse-ui",
+      title: "Pulse UI",
+      scriptTitle: "Overhaul",
+      tags: ["Web development", "SEO"],
+      image: "/projects/project4.jpg",
+      href: "/project/pulse-ui",
+      alt: "Pulse UI Overhaul tech showcase",
+    },
+    {
+      id: "glowcap",
+      title: "Glowcap",
+      scriptTitle: "Visual Identity",
+      tags: ["Branding", "Packaging Design"],
+      image: "/projects/project5.jpg",
+      href: "/project/glowcap",
+      alt: "Glowcap Visual Identity and packaging design",
+    },
+    {
+      id: "frameflow",
+      title: "FrameFlow",
+      scriptTitle: "Overhaul",
+      tags: ["SaaS", "Web App"],
+      image: "/projects/project1.jpg",
+      href: "/project/frameflow",
+      alt: "FrameFlow workflow and SaaS platform design",
+    },
+    {
+      id: "orbit-ai",
+      title: "Orbit AI",
+      scriptTitle: "SaaS Platform",
+      tags: ["AI Tool", "UI/UX Design"],
+      image: "/images/case-studies/client-1.jpg",
+      href: "/project/orbit-ai",
+      alt: "Orbit AI SaaS interface and brand identity",
+    },
+    {
+      id: "luma",
+      title: "Luma",
+      scriptTitle: "Homes",
+      tags: ["Real Estate", "Branding"],
+      image: "/images/case-studies/client-2.jpg",
+      href: "/project/luma",
+      alt: "Luma architectural design and visual identity",
+    },
+  ],
+};
+

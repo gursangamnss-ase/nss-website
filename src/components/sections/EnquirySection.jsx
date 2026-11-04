@@ -7,7 +7,7 @@ export default function EnquirySection() {
   const { videoSrc, badge, heading, form, info } = enquiryData;
 
   return (
-    <section className="relative overflow-hidden bg-[#05080c] text-white py-24 sm:py-32 lg:py-36">
+    <section className="relative overflow-hidden bg-[var(--color-primary)] text-white py-24 sm:py-32 lg:py-36">
       {/* Background Video & Dark Overlay */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <video
@@ -15,22 +15,24 @@ export default function EnquirySection() {
           loop
           muted
           playsInline
+          aria-hidden="true"
           className="h-full w-full object-cover"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
       </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 sm:px-10">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-14 sm:mb-20">
           {/* Pre-title Badge */}
-          <div className="inline-flex items-center gap-2 text-sm sm:text-base text-white font-semibold tracking-wide mb-4">
+          <div className="inline-flex items-center gap-2 text-sm sm:text-base text-white font-medium tracking-wide mb-4">
             <svg
               viewBox="0 0 64 64"
               className="w-4 h-4 fill-white shrink-0"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 strokeLinejoin="round"
@@ -41,7 +43,7 @@ export default function EnquirySection() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-5xl sm:text-7xl lg:text-[86px] font-bold leading-[1.08] tracking-tight text-white">
+          <h2 className="text-5xl sm:text-7xl lg:text-[86px] font-medium leading-[1.08] tracking-tight text-white">
             {heading.line1} <br className="hidden sm:inline" />
             <span className="font-script text-[1.25em] font-normal leading-none inline-block align-baseline -rotate-2 mx-1.5">
               {heading.scriptWord}
@@ -55,20 +57,20 @@ export default function EnquirySection() {
           {/* Left Column: Form Card Component */}
           <EnquiryForm form={form} />
 
-          {/* Right Column: Info & Discovery CTA (Bold & Increased Font) */}
+          {/* Right Column: Info & Discovery CTA */}
           <div className="w-full lg:w-[420px] flex flex-col justify-between py-2 sm:py-3 gap-10">
             {/* Top: How do we connect */}
             <div className="space-y-5">
-              <p className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+              <p className="text-2xl sm:text-3xl font-medium text-white tracking-tight">
                 {info.title}
               </p>
               <ul className="space-y-4">
-                {info.bullets.map((bullet, idx) => (
+                {info.bullets.map((bullet) => (
                   <li
-                    key={idx}
-                    className="flex items-start gap-3 text-base sm:text-lg font-semibold text-white/95 leading-relaxed"
+                    key={bullet}
+                    className="flex items-start gap-3 text-base sm:text-lg font-medium text-white/95 leading-relaxed"
                   >
-                    <span className="w-2 h-2 rounded-full bg-white shrink-0 mt-2.5" />
+                    <span className="w-2 h-2 rounded-full bg-white shrink-0 mt-2.5" aria-hidden="true" />
                     <span>{bullet}</span>
                   </li>
                 ))}
@@ -91,7 +93,7 @@ export default function EnquirySection() {
                   <p className="text-lg sm:text-xl font-semibold text-white tracking-tight">
                     {info.teamLeader.name}
                   </p>
-                  <p className="text-sm sm:text-[15px] font-medium text-[#dadadb]">
+                  <p className="text-sm sm:text-[15px] font-medium text-[var(--color-border)]">
                     {info.teamLeader.role}
                   </p>
                 </div>
@@ -100,12 +102,12 @@ export default function EnquirySection() {
               {/* Book a Discovery Call Button */}
               <Link
                 href={info.cta.link}
-                className="group inline-flex items-center justify-between gap-4 bg-white hover:bg-neutral-100 !text-[#05080c] pl-6 pr-1 py-1 rounded-full font-medium text-[15px] transition-all shadow-md w-fit active:scale-95 h-[44px]"
+                className="group inline-flex items-center justify-between gap-4 bg-white hover:bg-neutral-100 !text-[var(--color-primary)] pl-6 pr-1 py-1 rounded-full font-medium text-[15px] transition-all shadow-md w-fit active:scale-95 h-[44px]"
               >
-                <span className="!text-[#05080c] font-medium whitespace-nowrap">
+                <span className="!text-[var(--color-primary)] font-medium whitespace-nowrap">
                   {info.cta.text}
                 </span>
-                <span className="w-9 h-9 rounded-full bg-[#05080c] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <span className="w-9 h-9 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" aria-hidden="true">
                   <svg
                     viewBox="0 0 15 12"
                     className="w-3.5 h-3 fill-none stroke-current"

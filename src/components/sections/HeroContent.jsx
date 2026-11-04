@@ -66,6 +66,7 @@ export default function HeroContent() {
         </ul>
 
         <Button
+          href="#contact"
           variant="light"
           className="mt-5 w-full max-w-70 text-sm sm:text-base"
         >
