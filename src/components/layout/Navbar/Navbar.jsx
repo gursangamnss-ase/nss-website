@@ -8,6 +8,7 @@ const menuItems = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
   { label: "About", ariaLabel: "Learn about us", link: "/#about-us" },
   { label: "Projects", ariaLabel: "View our projects", link: "/project" },
+  { label: "Blog", ariaLabel: "View our blog", link: "/blog" },
   { label: "Services", ariaLabel: "View our services", link: "/#services" },
   { label: "Contact", ariaLabel: "Get in touch", link: "/contact" },
 ];
@@ -89,7 +90,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
           <Link
             href="/project"
             className={`transition-colors ${
-              activePath === "/project"
+              activePath === "/project" || activePath.startsWith("/project/")
                 ? isHome
                   ? "font-semibold text-white"
                   : "font-semibold text-black"
@@ -98,8 +99,22 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
                 : "text-neutral-600 hover:text-black"
             }`}
           >
-            {activePath === "/project" ? "• Projects " : "Projects "}
+            {activePath === "/project" || activePath.startsWith("/project/") ? "• Projects " : "Projects "}
             <sup className="text-[9px]">(07)</sup>
+          </Link>
+          <Link
+            href="/blog"
+            className={`transition-colors ${
+              activePath === "/blog" || activePath.startsWith("/blog/")
+                ? isHome
+                  ? "font-semibold text-white"
+                  : "font-semibold text-black"
+                : isHome
+                ? "hover:text-white/80"
+                : "text-neutral-600 hover:text-black"
+            }`}
+          >
+            {activePath === "/blog" || activePath.startsWith("/blog/") ? "• Blog" : "Blog"}
           </Link>
           <Link
             href="/contact"
