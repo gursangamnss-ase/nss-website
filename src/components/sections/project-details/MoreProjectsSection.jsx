@@ -1,0 +1,35 @@
+import Container from "@/components/layout/Container";
+import ProjectCard from "@/components/cards/ProjectCard";
+import { projectData } from "@/data/projectData";
+
+export default function MoreProjectsSection({ relatedProjectIds = [] }) {
+  // Find related projects by ID, fallback to other projects in list
+  const relatedProjects = projectData.projects
+    .filter((p) => relatedProjectIds.includes(p.id))
+    .slice(0, 2);
+
+  const fallbackProjects = projectData.projects.slice(0, 2);
+  const projectsToDisplay =
+    relatedProjects.length > 0 ? relatedProjects : fallbackProjects;
+
+  return (
+    <section className="bg-white py-16 sm:py-24">
+      <Container size="2xl">
+        <h2 className="text-4xl sm:text-[86px] font-medium tracking-tight text-[#05080c] leading-tight text-center mb-12 sm:mb-16">
+          More{" "}
+          <span className="font-script font-normal italic tracking-normal">
+            Projects
+          </span>
+        </h2>
+
+        {/* 2-Column Responsive Grid Reusing ProjectCard */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          {projectsToDisplay.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+

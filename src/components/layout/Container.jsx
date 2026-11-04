@@ -12,9 +12,10 @@ export default function Container({
   size = "2xl",
   className = "",
 }) {
+  const isFull = size === "full";
   return (
     <div
-      className={`mx-auto w-full px-4 sm:px-6 lg:px-8 ${sizes[size] || sizes["2xl"]} ${className}`}
+      className={`mx-auto w-full ${isFull ? "px-0" : "px-4 sm:px-6 lg:px-8"} ${sizes[size] || sizes["2xl"]} ${className}`}
     >
       {children}
     </div>
