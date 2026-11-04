@@ -30,6 +30,7 @@
     --color-surface-dark: #121417;
     --color-surface-darker: #080b11;
     --color-surface-nav: #222426;
+    --color-pill-bg: rgba(0, 0, 0, 0.1);
 
     /* Borders */
     --color-border: #dadadb;
@@ -70,6 +71,7 @@
     --color-surface-dark: var(--color-surface-dark);
     --color-surface-darker: var(--color-surface-darker);
     --color-surface-nav: var(--color-surface-nav);
+    --color-pill-bg: var(--color-pill-bg);
     --color-border: var(--color-border);
     --color-border-light: var(--color-border-light);
     --color-border-subtle: var(--color-border-subtle);

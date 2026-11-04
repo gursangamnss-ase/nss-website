@@ -7,6 +7,7 @@ import NavbarClient from "./NavbarClient";
 const menuItems = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
   { label: "About", ariaLabel: "Learn about us", link: "/#about-us" },
+  { label: "Projects", ariaLabel: "View our projects", link: "/project" },
   { label: "Services", ariaLabel: "View our services", link: "/#services" },
   { label: "Contact", ariaLabel: "Get in touch", link: "/contact" },
 ];
@@ -86,12 +87,19 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
             About us
           </Link>
           <Link
-            href="/#services"
+            href="/project"
             className={`transition-colors ${
-              isHome ? "hover:text-white/80" : "text-neutral-600 hover:text-black"
+              activePath === "/project"
+                ? isHome
+                  ? "font-semibold text-white"
+                  : "font-semibold text-black"
+                : isHome
+                ? "hover:text-white/80"
+                : "text-neutral-600 hover:text-black"
             }`}
           >
-            Projects <sup className="text-[9px]">(07)</sup>
+            {activePath === "/project" ? "• Projects " : "Projects "}
+            <sup className="text-[9px]">(07)</sup>
           </Link>
           <Link
             href="/contact"

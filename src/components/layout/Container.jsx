@@ -9,12 +9,12 @@ const sizes = {
 
 export default function Container({
   children,
-  size = "xl",
+  size = "2xl",
   className = "",
 }) {
   return (
     <div
-      className={`mx-auto w-full px-4 sm:px-6 lg:px-8 ${sizes[size] || sizes.xl} ${className}`}
+      className={`mx-auto w-full px-4 sm:px-6 lg:px-8 ${sizes[size] || sizes["2xl"]} ${className}`}
     >
       {children}
     </div>

@@ -8,7 +8,7 @@ export default function FaqSection() {
 
   return (
     <section className="bg-white py-20 sm:py-28">
-      <Container className="relative z-10">
+      <Container size="2xl" className="relative z-10">
         {/* Centered Heading Block */}
         <div className="text-center mb-14 sm:mb-18 space-y-4">
           <Badge

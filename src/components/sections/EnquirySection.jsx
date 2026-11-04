@@ -27,7 +27,7 @@ export default function EnquirySection() {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-14 sm:mb-20">
           {/* Pre-title Badge */}
-          <div className="inline-flex items-center gap-2 text-sm sm:text-base text-white font-semibold tracking-wide mb-4">
+          <div className="inline-flex items-center gap-2 text-sm sm:text-base text-white font-medium tracking-wide mb-4">
             <svg
               viewBox="0 0 64 64"
               className="w-4 h-4 fill-white shrink-0"
@@ -43,7 +43,7 @@ export default function EnquirySection() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-5xl sm:text-7xl lg:text-[86px] font-bold leading-[1.08] tracking-tight text-white">
+          <h2 className="text-5xl sm:text-7xl lg:text-[86px] font-medium leading-[1.08] tracking-tight text-white">
             {heading.line1} <br className="hidden sm:inline" />
             <span className="font-script text-[1.25em] font-normal leading-none inline-block align-baseline -rotate-2 mx-1.5">
               {heading.scriptWord}
@@ -61,14 +61,14 @@ export default function EnquirySection() {
           <div className="w-full lg:w-[420px] flex flex-col justify-between py-2 sm:py-3 gap-10">
             {/* Top: How do we connect */}
             <div className="space-y-5">
-              <p className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+              <p className="text-2xl sm:text-3xl font-medium text-white tracking-tight">
                 {info.title}
               </p>
               <ul className="space-y-4">
                 {info.bullets.map((bullet) => (
                   <li
                     key={bullet}
-                    className="flex items-start gap-3 text-base sm:text-lg font-semibold text-white/95 leading-relaxed"
+                    className="flex items-start gap-3 text-base sm:text-lg font-medium text-white/95 leading-relaxed"
                   >
                     <span className="w-2 h-2 rounded-full bg-white shrink-0 mt-2.5" aria-hidden="true" />
                     <span>{bullet}</span>

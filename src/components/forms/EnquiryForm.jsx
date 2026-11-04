@@ -108,11 +108,10 @@ export default function EnquiryForm({ form = enquiryData.form }) {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 pt-3 mt-1">
           <button
             type="submit"
-            className="bg-[var(--color-primary)] hover:bg-neutral-800 text-white font-bold text-base px-10 py-3.5 rounded-full transition-all cursor-pointer shadow-md hover:shadow-lg active:scale-95"
+            className="bg-[var(--color-primary)] hover:bg-neutral-800 text-white font-medium text-base px-10 py-3.5 rounded-full transition-all cursor-pointer shadow-md hover:shadow-lg active:scale-95"
           >
             {form.submitText}
           </button>
-
           {/* Email Copy Box */}
           <div className="flex flex-col items-start sm:items-end gap-1.5">
             <span className="text-xs sm:text-[13px] font-semibold text-[var(--color-text-secondary)]">
