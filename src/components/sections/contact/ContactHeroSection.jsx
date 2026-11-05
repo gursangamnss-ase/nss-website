@@ -26,7 +26,7 @@ export default function ContactHeroSection() {
 
       <Container size="2xl" className="relative z-10">
         {/* Main Display Headline */}
-        <h1 className="text-center text-[clamp(2.75rem,7vw,6.5rem)] font-medium tracking-tight text-[#05080c] leading-[1.08] mb-14 sm:mb-20">
+        <h1 className="text-center text-[clamp(2.75rem,7vw,6.5rem)] font-medium tracking-tight text-[var(--color-primary)] leading-[1.08] mb-14 sm:mb-20">
           Start{" "}
           <span className="font-script font-normal italic tracking-normal">
             Something
@@ -47,13 +47,13 @@ export default function ContactHeroSection() {
               <div className="pt-1">
                 <a
                   href={`tel:${hero.phone.replace(/[^0-9+]/g, "")}`}
-                  className="block text-2xl sm:text-3xl font-medium text-[#05080c] hover:opacity-75 transition-opacity"
+                  className="block text-2xl sm:text-3xl font-medium text-[var(--color-primary)] hover:opacity-75 transition-opacity"
                 >
                   {hero.phone}
                 </a>
                 <a
                   href={`mailto:${hero.email}`}
-                  className="block text-2xl sm:text-3xl font-medium text-[#05080c] hover:opacity-75 transition-opacity pt-1"
+                  className="block text-2xl sm:text-3xl font-medium text-[var(--color-primary)] hover:opacity-75 transition-opacity pt-1"
                 >
                   {hero.email}
                 </a>
@@ -67,7 +67,7 @@ export default function ContactHeroSection() {
                 className="text-sm font-medium text-neutral-800"
               />
               <div className="pt-1">
-                <p className="text-base sm:text-lg font-semibold text-[#05080c]">
+                <p className="text-base sm:text-lg font-semibold text-[var(--color-primary)]">
                   {hero.agency}
                 </p>
                 <p className="text-sm sm:text-base text-neutral-600 max-w-xs mt-1 leading-relaxed">
@@ -78,7 +78,7 @@ export default function ContactHeroSection() {
 
             {/* Founder Note & Avatar */}
             <div className="space-y-5 pt-4">
-              <p className="text-lg sm:text-xl font-medium text-[#05080c] leading-snug max-w-md">
+              <p className="text-lg sm:text-xl font-medium text-[var(--color-primary)] leading-snug max-w-md">
                 {hero.founderQuote}
               </p>
               <div className="flex items-center gap-3">
@@ -92,7 +92,7 @@ export default function ContactHeroSection() {
                   />
                 </div>
                 <p className="text-sm text-neutral-600">
-                  <strong className="text-[#05080c] font-semibold">
+                  <strong className="text-[var(--color-primary)] font-semibold">
                     {hero.founder.name}
                   </strong>
                   , {hero.founder.role}

@@ -1,13 +1,13 @@
 export const proofData = {
   badge: "Proof in every project",
-  titlePrefix: "Proof that",
-  titleScript: "Speaks",
-  titleSuffix: "volumes",
+  titlePrefix: "The Impact",
+  titleScript: "behind",
+  titleSuffix: "our work",
   cards: {
     card1: {
-      title: "Revamping Brand & Web presence for Studio Mellow",
+      title: "Digital Solutions Build Around Your Vision",
       description:
-        "They brought clarity, style, and structure to our brand. The team felt like an extension of ours.",
+        "we transfer business ideas into functional, engaging and responsive digital platforms. Every project reflects our commitment to quality, thoughtful design and reliable delevlopment",
       stats: [
         { value: "60%", label: "Increase in user engagement" },
         { value: "45%", label: "Online sales growth" },
@@ -27,21 +27,21 @@ export const proofData = {
         "/images/case-studies/client-3.jpg",
         "/images/case-studies/client-4.jpg",
       ],
-      comingSoonTag: "Coming Soon:",
-      headline: "A Brand Transformation for Webestica.",
+      comingSoonTag: "Our Expertise, your Advantage",
+      headline: "Bringing together creativity, technology and strategic thinking to deliver digital experiences that make a difference",
       showreelImage: "/images/case-studies/webestica-showreel.jpg",
       showreelButtonText: "Showreel",
     },
     card3: {
       image: "/images/case-studies/desert-campaign.jpg",
-      title: "Digital campaign that converts",
+      title: "where creativity meets technology",
       description:
-        "Their work didn't just look good — it drove real, measurable growth. We're thrilled.",
+        "From intutive user interfaces to powerful web applications, we combine creative thinking and technical expertise to build meaningful digital experiences",
     },
     card4: {
-      title: "UX/UI that helped secure funding",
+      title: "Solutions that moves your Business Forward",
       description:
-        "Our investors were blown away by the product look and flow. Truly game-changing. We designed an intuitive app experience.",
+        "We deliver that every sucessful project begins with deep understanding. Our collaborative approach ensures that every solution is aligned with your business goals and evolving needs",
       stat: {
         value: "10K+",
         label: "Rraised in seed funding",

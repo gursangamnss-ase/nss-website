@@ -7,7 +7,7 @@ export const whyChooseData = {
   },
   costEffective: {
     title: "Cost-Effective plans",
-    description: "Get premium services without premium pricing.",
+    description: "High-Quality Solutions That Drive Meaningful Results.",
     badge: "Pause & cancel anytime",
     chipImage: "/brand/qXEl4NSEn756sdcc0gooyl3VDjU.avif",
     dollarImage: "/brand/A4PgRvR3au33LFbvVbLIjdFxYjw.avif",
@@ -28,13 +28,13 @@ export const whyChooseData = {
     ],
   },
   strategicSolutions: {
-    title: "Strategic solutions for lasting impact",
+    title: "Driven By Excellence, Designed for Impact",
     features: [
-      "Tailored strategy",
-      "High-Quality output",
-      "Timely delivery",
-      "Transparent process",
-      "Post-Launch support",
+      "Strategic Planning",
+      "Creative Excellence",
+      "Reliable Development",
+      "Client - First Approach",
+      "Continuous Innovation",
     ],
     ctaText: "Get started",
     ctaLink: "#contact",

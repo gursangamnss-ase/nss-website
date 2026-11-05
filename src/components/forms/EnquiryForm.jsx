@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import FormField from "@/components/forms/FormField";
 import { enquiryData } from "@/data/enquiryData";
 
 export default function EnquiryForm({ form = enquiryData.form }) {
@@ -43,66 +44,45 @@ export default function EnquiryForm({ form = enquiryData.form }) {
         </h3>
 
         {/* Full Name */}
-        <div className="flex flex-col gap-2">
-          <label
-            htmlFor="fullName"
-            className="text-sm sm:text-[15px] font-semibold text-[var(--color-primary)]"
-          >
-            Full name*
-          </label>
-          <input
-            id="fullName"
-            type="text"
-            required
-            placeholder="Riley Brooks"
-            value={formData.fullName}
-            onChange={(e) =>
-              setFormData({ ...formData, fullName: e.target.value })
-            }
-            className="bg-white border border-[var(--color-border)] focus:border-black focus:ring-1 focus:ring-black rounded-[12px] px-4 py-3 sm:py-3.5 text-base font-medium text-[var(--color-primary)] placeholder:text-[var(--color-text-secondary)]/75 outline-none transition-all"
-          />
-        </div>
+        <FormField
+          id="fullName"
+          name="fullName"
+          label="Full name"
+          required
+          placeholder="Riley Brooks"
+          value={formData.fullName}
+          onChange={(e) =>
+            setFormData({ ...formData, fullName: e.target.value })
+          }
+        />
 
         {/* Email Address */}
-        <div className="flex flex-col gap-2">
-          <label
-            htmlFor="email"
-            className="text-sm sm:text-[15px] font-semibold text-[var(--color-primary)]"
-          >
-            Email address*
-          </label>
-          <input
-            id="email"
-            type="email"
-            required
-            placeholder="example@gmail.com"
-            value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-            className="bg-white border border-[var(--color-border)] focus:border-black focus:ring-1 focus:ring-black rounded-[12px] px-4 py-3 sm:py-3.5 text-base font-medium text-[var(--color-primary)] placeholder:text-[var(--color-text-secondary)]/75 outline-none transition-all"
-          />
-        </div>
+        <FormField
+          id="email"
+          name="email"
+          type="email"
+          label="Email address"
+          required
+          placeholder="example@gmail.com"
+          value={formData.email}
+          onChange={(e) =>
+            setFormData({ ...formData, email: e.target.value })
+          }
+        />
 
         {/* Message */}
-        <div className="flex flex-col gap-2">
-          <label
-            htmlFor="message"
-            className="text-sm sm:text-[15px] font-semibold text-[var(--color-primary)]"
-          >
-            Message
-          </label>
-          <textarea
-            id="message"
-            rows={4}
-            placeholder="Tell us the purpose"
-            value={formData.message}
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
-            className="bg-white border border-[var(--color-border)] focus:border-black focus:ring-1 focus:ring-black rounded-[12px] p-4 text-base font-medium text-[var(--color-primary)] placeholder:text-[var(--color-text-secondary)]/75 outline-none resize-none h-32 sm:h-36 transition-all"
-          />
-        </div>
+        <FormField
+          id="message"
+          name="message"
+          as="textarea"
+          rows={4}
+          label="Message"
+          placeholder="Tell us the purpose"
+          value={formData.message}
+          onChange={(e) =>
+            setFormData({ ...formData, message: e.target.value })
+          }
+        />
 
         {/* Form Actions: Submit & Email Copy */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 pt-3 mt-1">

@@ -44,7 +44,7 @@ export default function ProjectCard({ project }) {
           {tags.map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center rounded-full bg-[var(--color-pill-bg)] px-3.5 py-1.5 text-sm md:text-base font-medium text-[#05080c]"
+              className="inline-flex items-center rounded-full bg-[var(--color-pill-bg)] px-3.5 py-1.5 text-sm md:text-base font-medium text-[var(--color-primary)]"
             >
               {tag}
             </span>
@@ -54,7 +54,7 @@ export default function ProjectCard({ project }) {
         {/* View Details Link */}
         <Link
           href={href}
-          className="inline-flex items-center gap-1.5 text-sm md:text-base font-medium text-[#05080c] hover:opacity-75 transition-opacity shrink-0 group-hover:underline"
+          className="inline-flex items-center gap-1.5 text-sm md:text-base font-medium text-[var(--color-primary)] hover:opacity-75 transition-opacity shrink-0 group-hover:underline"
         >
           <span>View details</span>
           <svg

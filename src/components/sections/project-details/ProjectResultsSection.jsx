@@ -36,7 +36,7 @@ export default function ProjectResultsSection({ results }) {
                       key={stat.label}
                       className="rounded-[20px] bg-[var(--color-surface)] p-6 sm:p-8 border border-neutral-100/60 flex flex-col justify-between shadow-sm"
                     >
-                      <div className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#05080c] tracking-tight mb-3 flex items-baseline">
+                      <div className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[var(--color-primary)] tracking-tight mb-3 flex items-baseline">
                         <span>
                           <CountUp
                             to={targetNumber}

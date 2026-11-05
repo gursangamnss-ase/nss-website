@@ -1,4 +1,3 @@
-import { typography } from "@/components/styles";
 import HeroContent from "@/components/sections/HeroContent";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +5,7 @@ import NavbarClient from "./NavbarClient";
 
 const menuItems = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
-  { label: "About", ariaLabel: "Learn about us", link: "/#about-us" },
+  { label: "About", ariaLabel: "Learn about us", link: "/about-us" },
   { label: "Projects", ariaLabel: "View our projects", link: "/project" },
   { label: "Blog", ariaLabel: "View our blog", link: "/blog" },
   { label: "Services", ariaLabel: "View our services", link: "/#services" },
@@ -25,7 +24,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
       className={`relative left-0 top-0 z-30 flex w-full items-center px-5 sm:px-8 ${
         isHome
           ? "absolute h-16 bg-[var(--color-surface-nav)]/95 text-white"
-          : "h-20 bg-transparent text-[#05080c]"
+          : "h-20 bg-transparent text-[var(--color-primary)]"
       }`}
     >
       <Link
@@ -51,7 +50,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         Based in:{" "}
         <span
           className={
-            isHome ? "text-white" : "font-medium text-[#05080c]"
+            isHome ? "text-white" : "font-medium text-[var(--color-primary)]"
           }
         >
           Mohali, India
@@ -61,9 +60,9 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
       <div className="ml-auto flex items-center gap-8">
         <nav
           aria-label="Main navigation"
-          className={`hidden min-[1200px]:flex items-center gap-9 text-sm ${
-            isHome ? "text-white" : "text-[#05080c]"
-          } ${typography.fontFamily.primary} ${typography.fontWeight.medium}`}
+          className={`hidden min-[1200px]:flex items-center gap-9 text-sm font-geist font-medium ${
+            isHome ? "text-white" : "text-[var(--color-primary)]"
+          }`}
         >
           <Link
             href="/"
@@ -80,12 +79,18 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
             {activePath === "/" ? "• Home" : "Home"}
           </Link>
           <Link
-            href="/#about-us"
+            href="/about-us"
             className={`transition-colors ${
-              isHome ? "hover:text-white/80" : "text-neutral-600 hover:text-black"
+              activePath === "/about-us"
+                ? isHome
+                  ? "font-semibold text-white"
+                  : "font-semibold text-black"
+                : isHome
+                ? "text-white/80 hover:text-white"
+                : "text-neutral-600 hover:text-black"
             }`}
           >
-            About us
+            {activePath === "/about-us" ? "• About us" : "About us"}
           </Link>
           <Link
             href="/project"

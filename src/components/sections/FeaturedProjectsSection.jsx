@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Container from "@/components/layout/Container";
 import { featuredProjectsData } from "@/data/featuredProjectsData";
 
 export default function FeaturedProjectsSection() {
@@ -97,7 +98,7 @@ export default function FeaturedProjectsSection() {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-20 flex h-full flex-col justify-between p-6 sm:p-10 lg:p-16">
+      <Container size="2xl" className="relative z-20 flex h-full flex-col justify-between py-6 sm:py-10 lg:py-16">
         {/* Top-Left Project Heading */}
         <div className="flex flex-col items-start pt-2 sm:pt-4">
           <h2
@@ -183,7 +184,7 @@ export default function FeaturedProjectsSection() {
             </Link>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

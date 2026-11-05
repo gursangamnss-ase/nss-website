@@ -1,4 +1,3 @@
-import { typography } from "@/components/styles";
 import Button from "@/components/ui/Button";
 import { Sparkles } from "lucide-react";
 import Image from "next/image";
@@ -14,7 +13,7 @@ export default function HeroContent() {
   return (
     <div className="relative z-20 min-h-[100svh] overflow-hidden px-5 pb-6 pt-16 text-white sm:px-8 sm:pb-8">
       <h1
-        className={`absolute left-[6%] top-[24%] grid w-[88%] grid-cols-[auto_1fr] items-center text-[17vw] leading-[0.84] font-semibold tracking-[-0.065em] sm:left-[3%] sm:top-[28%] sm:flex sm:w-auto sm:gap-[0.04em] sm:whitespace-nowrap sm:text-[8.4vw] min-[900px]:top-[24%] min-[900px]:grid min-[900px]:w-[76%] min-[900px]:grid-cols-[auto_1fr] min-[900px]:text-[13vw] min-[1200px]:left-[1.5%] min-[1200px]:top-[25%] min-[1200px]:w-[72%] min-[1200px]:text-[10.6vw] ${typography.fontFamily.primary}`}
+        className="absolute left-[6%] top-[24%] grid w-[88%] grid-cols-[auto_1fr] items-center text-[17vw] leading-[0.84] font-semibold tracking-[-0.065em] font-geist sm:left-[3%] sm:top-[28%] sm:flex sm:w-auto sm:gap-[0.04em] sm:whitespace-nowrap sm:text-[8.4vw] min-[900px]:top-[24%] min-[900px]:grid min-[900px]:w-[76%] min-[900px]:grid-cols-[auto_1fr] min-[900px]:text-[13vw] min-[1200px]:left-[1.5%] min-[1200px]:top-[25%] min-[1200px]:w-[72%] min-[1200px]:text-[10.6vw]"
       >
         <span className="min-[900px]:col-span-2">Design</span>
         <Image
@@ -51,12 +50,12 @@ export default function HeroContent() {
 
       <div className="absolute right-[6%] bottom-[3.5%] flex w-[88%] flex-col items-end sm:right-[3%] sm:bottom-[6%] sm:w-[54%] min-[900px]:bottom-[8%] min-[900px]:w-[48%] min-[1200px]:right-[1.5%] min-[1200px]:bottom-[9%] min-[1200px]:w-[38%]">
         <ul
-          className={`w-full space-y-1 text-right text-[clamp(1rem,4.5vw,1.25rem)] leading-[1.35] font-medium tracking-[-0.035em] sm:text-[clamp(1.15rem,2.7vw,1.5rem)] min-[1200px]:text-[clamp(1.35rem,1.65vw,2rem)] ${typography.fontFamily.primary}`}
+          className="w-full space-y-1 text-right text-[clamp(1rem,4.5vw,1.25rem)] leading-[1.35] font-medium tracking-[-0.035em] sm:text-[clamp(1.15rem,2.7vw,1.5rem)] min-[1200px]:text-[clamp(1.35rem,1.65vw,2rem)] font-sans"
         >
           {services.map((service, index) => (
             <li key={service}>
               <span
-                className={`mr-2 inline-block font-normal tracking-normal text-white/90 ${typography.fontFamily.script}`}
+                className="mr-2 inline-block font-normal tracking-normal text-white/90 font-script"
               >
                 ({String(index + 1).padStart(2, "0")})
               </span>

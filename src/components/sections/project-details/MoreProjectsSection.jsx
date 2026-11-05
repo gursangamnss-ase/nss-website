@@ -15,7 +15,7 @@ export default function MoreProjectsSection({ relatedProjectIds = [] }) {
   return (
     <section className="bg-white py-16 sm:py-24">
       <Container size="2xl">
-        <h2 className="text-4xl sm:text-[86px] font-medium tracking-tight text-[#05080c] leading-tight text-center mb-12 sm:mb-16">
+        <h2 className="text-4xl sm:text-[86px] font-medium tracking-tight text-[var(--color-primary)] leading-tight text-center mb-12 sm:mb-16">
           More{" "}
           <span className="font-script font-normal italic tracking-normal">
             Projects

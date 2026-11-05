@@ -8,7 +8,7 @@ export const footerData = {
   },
   mainLinks: [
     { label: "Home", href: "/" },
-    { label: "About us", href: "/#about-us" },
+    { label: "About us", href: "/about-us" },
     { label: "Projects", href: "/project" },
     { label: "Blog", href: "/blog" },
     { label: "Contact us", href: "/contact" },

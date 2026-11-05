@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function FaqAccordion({ items }) {
+export default function FaqAccordion({ items, className = "" }) {
   // Store ID of open item (or null if all closed)
   const [openId, setOpenId] = useState(null);
 
@@ -11,7 +11,7 @@ export default function FaqAccordion({ items }) {
   };
 
   return (
-    <div className="mx-auto max-w-4xl space-y-3.5 sm:space-y-4">
+    <div className={`space-y-3.5 sm:space-y-4 ${className || "mx-auto max-w-4xl"}`}>
       {items.map((item) => {
         const isOpen = openId === item.id;
         const triggerId = `faq-trigger-${item.id}`;
@@ -28,14 +28,14 @@ export default function FaqAccordion({ items }) {
               onClick={() => toggleItem(item.id)}
               aria-expanded={isOpen}
               aria-controls={panelId}
-              className="flex w-full items-center justify-between px-6 py-5 sm:px-8 sm:py-6 text-left cursor-pointer group"
+              className="flex w-full items-center justify-between px-6 py-5 sm:px-8 sm:py-6 text-left cursor-pointer group focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:outline-none rounded-2xl"
             >
-              <span className="text-base sm:text-lg font-medium text-[#05080c] group-hover:text-black transition-colors pr-4">
+              <span className="text-base sm:text-lg font-medium text-[var(--color-primary)] group-hover:opacity-80 transition-opacity pr-4">
                 {item.question}
               </span>
               <span
                 aria-hidden="true"
-                className={`flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 ${
+                className={`flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)] text-white transition-transform duration-300 ${
                   isOpen ? "rotate-45" : "rotate-0"
                 }`}
               >

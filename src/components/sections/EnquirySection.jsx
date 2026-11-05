@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { enquiryData } from "@/data/enquiryData";
 import EnquiryForm from "@/components/forms/EnquiryForm";
+import Container from "@/components/layout/Container";
 
 export default function EnquirySection() {
   const { videoSrc, badge, heading, form, info } = enquiryData;
@@ -23,7 +24,7 @@ export default function EnquirySection() {
         <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 sm:px-10">
+      <Container size="2xl" className="relative z-10 max-w-[1200px]">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-14 sm:mb-20">
           {/* Pre-title Badge */}
@@ -86,6 +87,7 @@ export default function EnquirySection() {
                     src={info.teamLeader.avatar}
                     alt={info.teamLeader.name}
                     fill
+                    sizes="56px"
                     className="object-cover"
                   />
                 </div>
@@ -122,7 +124,7 @@ export default function EnquirySection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

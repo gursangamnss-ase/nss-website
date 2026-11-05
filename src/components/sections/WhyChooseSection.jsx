@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Badge from "@/components/ui/Badge";
+import Container from "@/components/layout/Container";
 import { whyChooseData } from "@/data/whyChooseData";
 
 export default function WhyChooseSection() {
@@ -17,7 +18,7 @@ export default function WhyChooseSection() {
 
   return (
     <section id="why-choose" className="relative bg-white py-20 sm:py-28 lg:py-36 text-[var(--color-primary)] overflow-hidden">
-      <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <Container size="2xl">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-14 sm:mb-20">
           <Badge
@@ -64,6 +65,7 @@ export default function WhyChooseSection() {
                       alt=""
                       aria-hidden="true"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                       className="object-cover object-bottom grayscale contrast-125 opacity-90"
                     />
                   </div>
@@ -78,6 +80,7 @@ export default function WhyChooseSection() {
                           alt=""
                           aria-hidden="true"
                           fill
+                          sizes="44px"
                           className="object-contain"
                         />
                       </div>
@@ -91,6 +94,7 @@ export default function WhyChooseSection() {
                           alt=""
                           aria-hidden="true"
                           fill
+                          sizes="56px"
                           className="object-contain"
                         />
                       </div>
@@ -163,6 +167,7 @@ export default function WhyChooseSection() {
                         src={av.src}
                         alt={av.alt}
                         fill
+                        sizes="40px"
                         className="object-cover"
                       />
                     </div>
@@ -211,6 +216,7 @@ export default function WhyChooseSection() {
                   src={futureReady.image}
                   alt="Reliable and future-ready"
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 280px"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40" />
@@ -244,6 +250,7 @@ export default function WhyChooseSection() {
                     alt=""
                     aria-hidden="true"
                     fill
+                    sizes="(max-width: 640px) 150px, 170px"
                     className="object-contain object-bottom-right"
                   />
                 </div>
@@ -257,6 +264,7 @@ export default function WhyChooseSection() {
                         src={alwaysOnSupport.avatar}
                         alt="Support Agent"
                         fill
+                        sizes="24px"
                         className="object-cover"
                       />
                     </div>
@@ -317,6 +325,7 @@ export default function WhyChooseSection() {
                   alt=""
                   aria-hidden="true"
                   fill
+                  sizes="(max-width: 640px) 240px, 300px"
                   className="object-contain object-bottom-right"
                 />
               </div>
@@ -330,7 +339,7 @@ export default function WhyChooseSection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

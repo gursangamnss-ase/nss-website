@@ -17,12 +17,12 @@ export default function BlogDetailContent({ post }) {
           {(introHeading || introText) && (
             <div className="space-y-4">
               {introHeading && (
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-[#05080c]">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-[var(--color-primary)]">
                   {introHeading}
                 </h2>
               )}
               {introText && (
-                <p className="text-base sm:text-lg font-normal sm:font-medium text-neutral-700 leading-relaxed">
+                <p className="text-base sm:text-lg font-normal sm:font-medium text-[var(--color-text-secondary)] leading-relaxed">
                   {introText}
                 </p>
               )}
@@ -33,14 +33,14 @@ export default function BlogDetailContent({ post }) {
           {sections.map((section, idx) => (
             <div key={section.heading || idx} className="space-y-4 pt-2">
               {section.heading && (
-                <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-[#05080c]">
+                <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-[var(--color-primary)]">
                   {section.heading}
                 </h2>
               )}
               {section.paragraphs?.map((p, pIdx) => (
                 <p
                   key={pIdx}
-                  className="text-base sm:text-lg font-normal sm:font-medium text-neutral-700 leading-relaxed"
+                  className="text-base sm:text-lg font-normal sm:font-medium text-[var(--color-text-secondary)] leading-relaxed"
                 >
                   {p}
                 </p>
@@ -52,12 +52,12 @@ export default function BlogDetailContent({ post }) {
           {(takeawayHeading || takeawayText) && (
             <div className="space-y-4 pt-6">
               {takeawayHeading && (
-                <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-[#05080c]">
+                <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-[var(--color-primary)]">
                   {takeawayHeading}
                 </h2>
               )}
               {takeawayText && (
-                <p className="text-base sm:text-lg font-normal sm:font-medium text-neutral-700 leading-relaxed">
+                <p className="text-base sm:text-lg font-normal sm:font-medium text-[var(--color-text-secondary)] leading-relaxed">
                   {takeawayText}
                 </p>
               )}
