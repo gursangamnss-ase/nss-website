@@ -42,7 +42,7 @@ export default function ContactForm() {
 
   return (
     <div className="rounded-[26px] bg-[var(--color-surface)] p-7 sm:p-10 shadow-sm border border-neutral-100/60">
-      <h2 className="text-2xl sm:text-3xl font-semibold text-[#05080c] tracking-tight mb-8">
+      <h2 className="text-2xl sm:text-3xl font-semibold text-[var(--color-primary)] tracking-tight mb-8">
         {form.heading}
       </h2>
 
@@ -73,7 +73,7 @@ export default function ContactForm() {
           <button
             type="button"
             onClick={() => setStatus("idle")}
-            className="text-xs text-neutral-500 hover:text-black underline cursor-pointer pt-2"
+            className="text-xs text-neutral-500 hover:text-[var(--color-primary)] underline cursor-pointer pt-2"
           >
             Send another message
           </button>
@@ -93,7 +93,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="contact-name"
-              className="block text-sm font-medium text-[#05080c] mb-2"
+              className="block text-sm font-medium text-[var(--color-primary)] mb-2"
             >
               {form.fields.name.label}
             </label>
@@ -107,7 +107,7 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               placeholder={form.fields.name.placeholder}
-              className="w-full rounded-xl bg-white border border-[#e5e5e5] px-4 py-3 text-sm text-[#05080c] placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors"
+              className="w-full rounded-xl bg-white border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-primary)] placeholder:text-neutral-400 focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] transition-colors"
             />
           </div>
 
@@ -115,7 +115,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="contact-email"
-              className="block text-sm font-medium text-[#05080c] mb-2"
+              className="block text-sm font-medium text-[var(--color-primary)] mb-2"
             >
               {form.fields.email.label}
             </label>
@@ -129,7 +129,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               placeholder={form.fields.email.placeholder}
-              className="w-full rounded-xl bg-white border border-[#e5e5e5] px-4 py-3 text-sm text-[#05080c] placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors"
+              className="w-full rounded-xl bg-white border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-primary)] placeholder:text-neutral-400 focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] transition-colors"
             />
           </div>
 
@@ -137,7 +137,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="contact-message"
-              className="block text-sm font-medium text-[#05080c] mb-2"
+              className="block text-sm font-medium text-[var(--color-primary)] mb-2"
             >
               {form.fields.message.label}
             </label>
@@ -148,7 +148,7 @@ export default function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               placeholder={form.fields.message.placeholder}
-              className="w-full rounded-xl bg-white border border-[#e5e5e5] px-4 py-3 text-sm text-[#05080c] placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors resize-y min-h-[110px]"
+              className="w-full rounded-xl bg-white border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-primary)] placeholder:text-neutral-400 focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] transition-colors resize-y min-h-[110px]"
             />
           </div>
 
@@ -157,7 +157,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3 text-sm font-medium text-white hover:bg-neutral-800 disabled:opacity-60 transition-colors cursor-pointer"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-8 py-3 text-sm font-medium text-white hover:opacity-90 disabled:opacity-60 transition-opacity cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
             >
               {status === "submitting" ? "Sending..." : form.submitButton}
             </button>
@@ -167,4 +167,5 @@ export default function ContactForm() {
     </div>
   );
 }
+
 

@@ -32,7 +32,7 @@ export default function BentoBlogCard({ article }) {
             <span className="rounded-full bg-black px-3 py-1 text-xs font-medium text-white">
               {badge || "Featured post"}
             </span>
-            <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-neutral-500">
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-[var(--color-text-secondary)]">
               <span>{date}</span>
               <span
                 className="size-1 rounded-full bg-neutral-400 inline-block shrink-0"
@@ -42,7 +42,7 @@ export default function BentoBlogCard({ article }) {
             </div>
           </div>
 
-          <h2 className="mt-3 text-xl sm:text-2xl font-medium tracking-tight text-[#05080c] leading-snug group-hover:text-neutral-600 transition-colors">
+          <h2 className="mt-3 text-xl sm:text-2xl font-medium tracking-tight text-[var(--color-primary)] leading-snug group-hover:text-neutral-600 transition-colors">
             {title}
           </h2>
         </div>
@@ -68,7 +68,7 @@ export default function BentoBlogCard({ article }) {
 
       {/* Bottom Content Area */}
       <div className="flex flex-col flex-1 justify-between p-3 sm:p-4">
-        <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-neutral-500 mb-2">
+        <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-[var(--color-text-secondary)] mb-2">
           <span>{date}</span>
           <span
             className="size-1 rounded-full bg-neutral-400 inline-block shrink-0"
@@ -77,7 +77,7 @@ export default function BentoBlogCard({ article }) {
           <span>{readTime}</span>
         </div>
 
-        <h3 className="text-lg sm:text-xl font-medium tracking-tight text-[#05080c] leading-snug group-hover:text-neutral-600 transition-colors">
+        <h3 className="text-lg sm:text-xl font-medium tracking-tight text-[var(--color-primary)] leading-snug group-hover:text-neutral-600 transition-colors">
           {title}
         </h3>
       </div>

@@ -1,18 +1,17 @@
 import { Star } from "lucide-react";
-import { colors } from "@/components/styles";
 
 const variants = {
   dark: {
-    active: colors.text.primary,
-    inactive: colors.border.light,
+    active: "var(--color-primary)",
+    inactive: "var(--color-border-light)",
   },
   light: {
-    active: colors.common.white,
+    active: "#ffffff",
     inactive: "rgba(255, 255, 255, 0.25)",
   },
   muted: {
-    active: colors.text.secondary,
-    inactive: colors.border.light,
+    active: "var(--color-text-secondary)",
+    inactive: "var(--color-border-light)",
   },
 };
 

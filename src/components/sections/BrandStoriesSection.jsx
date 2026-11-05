@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import Badge from "@/components/ui/Badge";
 import BrandStoriesCard from "@/components/cards/BrandStoriesCard";
+import Container from "@/components/layout/Container";
 import { brandStoriesData } from "@/data/brandStoriesData";
 
 export default function BrandStoriesSection() {
@@ -76,7 +77,7 @@ export default function BrandStoriesSection() {
       </div>
 
       {/* Desktop split sticky view */}
-      <div className="hidden lg:block max-w-[1400px] mx-auto px-8 xl:px-12">
+      <Container size="2xl" className="hidden lg:block">
         <div className="relative flex justify-center items-start gap-10 min-h-[2400px]">
           {/* Left Sticky Column: "Your ideas into Brand" */}
           <motion.div
@@ -137,7 +138,7 @@ export default function BrandStoriesSection() {
             </div>
           </motion.div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

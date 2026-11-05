@@ -20,7 +20,7 @@ export default function ProjectFeedbackSection({ feedback }) {
 
           {/* Right Column: Quote & Author Card */}
           <div className="w-full lg:w-[62%] xl:w-[65%] space-y-8">
-            <blockquote className="text-lg lg:text-xl font-medium text-[#05080c] leading-snug tracking-tight">
+            <blockquote className="text-lg lg:text-xl font-medium text-[var(--color-primary)] leading-snug tracking-tight">
               &ldquo;{quote}&rdquo;
             </blockquote>
 
@@ -37,9 +37,9 @@ export default function ProjectFeedbackSection({ feedback }) {
                 </div>
               )}
               <div className="text-base font-medium">
-                <span className="font-semibold text-[#05080c]">{author}</span>
+                <span className="font-semibold text-[var(--color-primary)]">{author}</span>
                 {role && (
-                  <span className="text-neutral-500 ml-1.5 font-medium">
+                  <span className="text-[var(--color-text-secondary)] ml-1.5 font-medium">
                     , {role}
                   </span>
                 )}

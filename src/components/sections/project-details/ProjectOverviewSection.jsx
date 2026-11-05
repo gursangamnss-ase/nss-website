@@ -27,10 +27,10 @@ export default function ProjectOverviewSection({ overview }) {
                   key={item.label}
                   className="flex items-center justify-between py-4 text-sm sm:text-base font-medium"
                 >
-                  <span className="text-neutral-500 font-medium">
+                  <span className="text-[var(--color-text-secondary)] font-medium">
                     {item.label}
                   </span>
-                  <span className="text-[#05080c] font-medium text-right">
+                  <span className="text-[var(--color-primary)] font-medium text-right">
                     {item.value}
                   </span>
                 </div>
@@ -44,10 +44,10 @@ export default function ProjectOverviewSection({ overview }) {
                   href={liveSiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 rounded-full bg-black pl-6 pr-2 py-2 text-sm font-medium text-white hover:bg-neutral-800 transition-colors shadow-sm group"
+                  className="inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] pl-6 pr-2 py-2 text-sm font-medium text-white hover:bg-neutral-800 transition-colors shadow-sm group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
                 >
                   <span>{liveSiteLabel || "View live site"}</span>
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black transition-transform group-hover:translate-x-0.5">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[var(--color-primary)] transition-transform group-hover:translate-x-0.5">
                     <svg
                       className="h-4 w-4"
                       fill="none"

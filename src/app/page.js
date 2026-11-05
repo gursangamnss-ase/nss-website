@@ -15,6 +15,12 @@ import BlogSection from "@/components/sections/BlogSection";
 import EnquirySection from "@/components/sections/EnquirySection";
 import Footer from "@/components/layout/Footer/Footer";
 
+export const metadata = {
+  title: "NetSquare Softwares | Digital Product & Creative Agency",
+  description:
+    "Crafting impactful brands, digital products, and high-performance websites with precision strategy and modern design.",
+};
+
 export default function Home() {
   return (
     <>

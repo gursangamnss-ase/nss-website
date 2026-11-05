@@ -23,7 +23,7 @@ export default function BlogHeroSection() {
       </div>
 
       <Container size="2xl" className="relative z-10">
-        <h1 className="text-center text-[clamp(2.75rem,7vw,6.5rem)] font-medium tracking-tight text-[#05080c] leading-[1.08]">
+        <h1 className="text-center text-[clamp(2.75rem,7vw,6.5rem)] font-medium tracking-tight text-[var(--color-primary)] leading-[1.08]">
           {hero.headlineStart}{" "}
           <span className="font-script font-normal italic tracking-normal">
             {hero.headlineScript}

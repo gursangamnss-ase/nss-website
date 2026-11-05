@@ -1,4 +1,3 @@
-import { typography } from "@/components/styles";
 import HeroContent from "@/components/sections/HeroContent";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +24,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
       className={`relative left-0 top-0 z-30 flex w-full items-center px-5 sm:px-8 ${
         isHome
           ? "absolute h-16 bg-[var(--color-surface-nav)]/95 text-white"
-          : "h-20 bg-transparent text-[#05080c]"
+          : "h-20 bg-transparent text-[var(--color-primary)]"
       }`}
     >
       <Link
@@ -51,7 +50,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         Based in:{" "}
         <span
           className={
-            isHome ? "text-white" : "font-medium text-[#05080c]"
+            isHome ? "text-white" : "font-medium text-[var(--color-primary)]"
           }
         >
           Mohali, India
@@ -61,9 +60,9 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
       <div className="ml-auto flex items-center gap-8">
         <nav
           aria-label="Main navigation"
-          className={`hidden min-[1200px]:flex items-center gap-9 text-sm ${
-            isHome ? "text-white" : "text-[#05080c]"
-          } ${typography.fontFamily.primary} ${typography.fontWeight.medium}`}
+          className={`hidden min-[1200px]:flex items-center gap-9 text-sm font-geist font-medium ${
+            isHome ? "text-white" : "text-[var(--color-primary)]"
+          }`}
         >
           <Link
             href="/"

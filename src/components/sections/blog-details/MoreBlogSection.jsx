@@ -14,7 +14,7 @@ export default function MoreBlogSection({ currentSlug }) {
     <section className="bg-white py-16 sm:py-24">
       <Container size="2xl">
         {/* Centered Display Heading */}
-        <h2 className="text-center text-4xl sm:text-[84px] font-medium tracking-tight text-[#05080c] leading-none mb-12 sm:mb-16">
+        <h2 className="text-center text-4xl sm:text-[84px] font-medium tracking-tight text-[var(--color-primary)] leading-none mb-12 sm:mb-16">
           More{" "}
           <span className="font-script font-normal italic tracking-normal">
             Blog

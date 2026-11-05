@@ -15,7 +15,7 @@ export default function FaqSection() {
             text={faq.badge}
             className="text-sm font-medium text-neutral-800"
           />
-          <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-bold tracking-tight text-[#05080c] leading-[1.08]">
+          <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-bold tracking-tight text-[var(--color-primary)] leading-[1.08]">
             {faq.headingLight}{" "}
             <br className="hidden sm:inline" />
             <span className="font-script font-normal italic tracking-normal">
