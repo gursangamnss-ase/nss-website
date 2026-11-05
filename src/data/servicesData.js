@@ -1,76 +1,88 @@
-import { PenTool, Code2, LayoutGrid, Megaphone } from "lucide-react";
+import {
+  Globe2,
+  Smartphone,
+  Megaphone,
+  Lightbulb,
+} from "lucide-react";
 
 export const servicesData = [
   {
-    id: "brand-identity",
+    id: "web-development",
     number: "(01)",
-    title: "Brand identity design",
+    title: "Web Development",
     description:
-      "We craft distinctive brand identities that speak louder than words. We design bold brand identities that capture your mission and connect across every touchpoint.",
+      "We create modern, responsive and high-performing websites that strengthen your online presence, deliver seamless user experiences and help your business grow.",
     features: [
-      "Logo design",
-      "Typography",
-      "Color palette",
-      "Brand guidelines",
-      "Visual language",
-    ],
-    duration: "2 - 4 weeks",
-    image: "/images/services/brand-identity.jpg",
-    imageAlt: "Cosmetics brand identity bottle packaging mockup",
-    icon: PenTool,
-  },
-  {
-    id: "framer-development",
-    number: "(02)",
-    title: "Framer development",
-    description:
-      "We build clean, fast, and responsive Framer websites — designed to look great and perform flawlessly from launch.",
-    features: [
-      "Custom web design",
+      "Custom website development",
+      "Responsive web design",
       "CMS integration",
-      "Animations & Interactions",
-      "Responsive Layouts",
-      "SEO setup",
+      "Performance optimization",
+      "SEO-friendly development",
     ],
     duration: "3 - 5 weeks",
-    image: "/images/services/framer-development.jpg",
-    imageAlt: "Framer development design canvas and responsive layout preview",
-    icon: Code2,
+    image: "/images/services/web-development.png",
+    imageAlt:
+      "Modern high-performance website design and web development showcase",
+    icon: Globe2,
   },
+
   {
-    id: "ui-ux-strategy",
+    id: "mobile-development",
+    number: "(02)",
+    title: "Mobile Development",
+    description:
+      "We develop innovative and user-friendly mobile applications for Android and iOS, designed to keep your business connected with customers anytime, anywhere.",
+    features: [
+      "Android & iOS development",
+      "Custom mobile app design",
+      "API integration",
+      "Push notifications",
+      "App performance optimization",
+    ],
+    duration: "4 - 8 weeks",
+    image: "/images/services/mobile-development.png",
+    imageAlt:
+      "Modern mobile application development for Android and iOS platforms",
+    icon: Smartphone,
+  },
+
+  {
+    id: "digital-marketing",
     number: "(03)",
-    title: "UI/UX strategy",
+    title: "Digital Marketing",
     description:
-      "We design intuitive, functional interfaces that deliver seamless and engaging user experiences.",
+      "We help businesses build a strong digital presence through strategic marketing, SEO and engaging campaigns that increase visibility, attract audiences and drive meaningful growth.",
     features: [
-      "Wireframes",
-      "User journey mapping",
-      "Mobile optimization",
-      "Interactive prototypes",
-      "Usability testing",
+      "SEO & content strategy",
+      "Social media marketing",
+      "Paid advertising",
+      "Campaign management",
+      "Performance analytics",
     ],
-    duration: "2.5 - 3 weeks",
-    image: "/images/services/ui-ux-strategy.jpg",
-    imageAlt: "Modern digital interface product mockup",
-    icon: LayoutGrid,
-  },
-  {
-    id: "creative-campaigns",
-    number: "(04)",
-    title: "Creative campaigns",
-    description:
-      "We bring bold ideas to life with creative campaigns that capture attention, drive engagement, and deliver results.",
-    features: [
-      "Campaign strategy",
-      "Copy & Visuals",
-      "Ad creatives",
-      "Social media assets",
-      "Performance optimization",
-    ],
-    duration: "1 - 2 weeks",
-    image: "/images/services/creative-campaigns.jpg",
-    imageAlt: "Creative campaigns marketing and brand showcase",
+    duration: "4 - 12 weeks",
+    image: "/images/services/digital-marketing.png",
+    imageAlt:
+      "Digital marketing strategy and growth campaign visual",
     icon: Megaphone,
+  },
+
+  {
+    id: "ui-ux-development",
+    number: "(04)",
+    title: "UI/UX Development",
+    description:
+      "We create intuitive interfaces and engaging user experiences that combine visual appeal, functionality and simplicity to make every digital interaction meaningful.",
+    features: [
+      "UI/UX design",
+      "Wireframes & user flows",
+      "Interactive prototypes",
+      "Design systems",
+      "Usability optimization",
+    ],
+    duration: "2 - 4 weeks",
+    image: "/images/services/ui-ux-development.png",
+    imageAlt:
+      "Modern UI/UX interface design and user experience showcase",
+    icon: Lightbulb,
   },
 ];

@@ -111,17 +111,23 @@ export default function CreativeCollabsSection() {
           {/* Right: Narrative Description and Catalog Gallery */}
           <div className="flex-1 flex flex-col items-start w-full">
             {/* Paragraph with bold accents */}
-            <p className="text-base sm:text-lg lg:text-xl font-normal leading-[1.38] tracking-[-0.015em] text-[var(--color-text-secondary)]">
-              {header.description.lead}
-              <span className="font-medium text-[var(--color-primary)]">
-                {header.description.highlight1}
-              </span>
-              {header.description.middle}
-              <span className="font-medium text-[var(--color-primary)]">
-                {header.description.highlight2}
-              </span>
-              {header.description.end}
-            </p>
+            {typeof header.description === "string" ? (
+              <p className="text-base sm:text-lg lg:text-xl font-normal leading-[1.38] tracking-[-0.015em] text-[var(--color-text-secondary)]">
+                {header.description}
+              </p>
+            ) : (
+              <p className="text-base sm:text-lg lg:text-xl font-normal leading-[1.38] tracking-[-0.015em] text-[var(--color-text-secondary)]">
+                {header.description?.lead}
+                <span className="font-medium text-[var(--color-primary)]">
+                  {header.description?.highlight1}
+                </span>
+                {header.description?.middle}
+                <span className="font-medium text-[var(--color-primary)]">
+                  {header.description?.highlight2}
+                </span>
+                {header.description?.end}
+              </p>
+            )}
 
             {/* The Back Catalog Badge */}
             <div className="mt-8 sm:mt-10 lg:mt-12 mb-3">

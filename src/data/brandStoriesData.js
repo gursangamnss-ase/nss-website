@@ -23,7 +23,7 @@ export const brandStoriesData = {
       stepNumber: 1,
       title: "Discover & Define",
       description:
-        "We dive deep into your goals, audience, and brand to uncover insights and define a clear direction.",
+        "Every Sucessful project starts with understanding. We explore your business goals, audience, challenges and vision to identify the right strategy and create a clear roadmap for your digital journey",
       image: "/images/step-1.svg",
       imageAlt: "Discover and define compass illustration",
       imageWidth: 157,
@@ -34,7 +34,7 @@ export const brandStoriesData = {
       stepNumber: 2,
       title: "Design & Build",
       description:
-        "With strategy in place, we craft stunning visuals and high-performing digital solutions tailored to your needs.",
+        "With a clear vision and strategy, we bring ideas to life through thoughtful design and innovative technology. Our team creates engaging, user-friendly and scalable digital solutions tailored to your business goals.",
       image: "/images/step-2.svg",
       imageAlt: "Design and build interface illustration",
       imageWidth: 218,
@@ -45,7 +45,7 @@ export const brandStoriesData = {
       stepNumber: 3,
       title: "Launch & Grow",
       description:
-        "We bring your vision to life, optimize for performance, and support your ongoing success post-launch.",
+        "Once everything is ready, we bring your digital solution to life through seamless delivery and deployment. We focus on performance, reliability, and continous improvement to ensure your solution keeps growing with your business.",
       image: "/images/step-3.svg",
       imageAlt: "Launch and grow rocket illustration",
       imageWidth: 171,

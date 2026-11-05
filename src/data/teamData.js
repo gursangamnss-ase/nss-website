@@ -1,13 +1,13 @@
 export const teamData = {
   badge: "Talent with purpose",
-  titlePrefix: "We’re your",
-  titleScript: "Creative",
-  titleSuffix: "partners",
+  titlePrefix: "We're your",
+  titleScript: "develop",
+  titleSuffix: "innovation partners",
   statement:
-    "We’re a creative team that values purposeful design, open collaboration, and work that truly makes an impact.",
+    "We're a passionate team of creative thinkers, designers and technology professionals who believe in turning ideas into meaningful digital experiences. Through collaboration, innovation and techinal expertise, we build solutions that help businesses grow and make a lasting impact.",
   ctaText: "Know more about us",
   ctaLink: "#contact",
-  copyright: "© 2026 Ignitex - Team up with us",
+  copyright: "© Netsquare Softwares Pvt Itd",
   members: [
     {
       id: "taylor-grant",

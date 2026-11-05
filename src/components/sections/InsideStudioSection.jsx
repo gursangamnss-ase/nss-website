@@ -41,17 +41,28 @@ export default function InsideStudioSection() {
           <p className="text-right text-[var(--color-primary)]">(21.0278° N, 105.8342° E)</p>
         </div>
 
-        <div className="mx-auto max-w-[1380px] md:mt-24 lg:mt-28">
+        <div className="mx-auto max-w-[1100px] md:mt-24 lg:mt-28">
           <h2 className="text-center text-[clamp(2rem,5vw,4rem)] font-medium leading-[1.16] tracking-[-0.04em] text-[var(--color-primary)]">
-            Driven by{" "}
+            Driven by
+            <br className="hidden md:inline" />{" "}
             <span className="font-script inline-block text-[1.16em] font-normal leading-[0.8] tracking-[-0.02em]">
-              Strategy,
+              Innovation,
             </span>{" "}
-            fueled by imagination. We craft design–First solutions that help{" "}
+            powered by creativity. We
+            <br className="hidden md:inline" />{" "}
+            combine strategy, design and
+            <br className="hidden md:inline" />{" "}
+            technology to build
+            <br className="hidden md:inline" />{" "}
+            impactful{" "}
             <span className="font-script inline-block text-[1.16em] font-normal leading-[0.8] tracking-[-0.02em]">
-              Brands
+              Digital
             </span>{" "}
-            stand out and thrive in the digital age
+            experience that
+            <br className="hidden md:inline" />{" "}
+            help businesses grow, connect and
+            <br className="hidden md:inline" />{" "}
+            thrive
           </h2>
         </div>
 
@@ -86,16 +97,12 @@ export default function InsideStudioSection() {
 
         <div className="mx-auto mt-14 flex max-w-3xl flex-col items-center text-center sm:mt-20">
           <p className="text-sm leading-[1.35] text-[var(--color-text-secondary)] sm:text-base">
-            We’re not just designers or developers — we’re{" "}
+            We’re more than a technology company — we’re{" "}
             <strong className="font-semibold text-[var(--color-primary)]">
-              storytellers
+              innovators
             </strong>
-            , problem-solvers, and{" "}
-            <strong className="font-semibold text-[var(--color-primary)]">
-              brand builders
-            </strong>
-            . Blending bold creativity with strategy, we craft experiences that
-            connect, convert, and stand out in a{" "}
+            , creators, problem-solvers. Blending bold creativity with strategy and technical
+            experiences that stand out in a{" "}
             <strong className="font-semibold text-[var(--color-primary)]">
               crowded digital
             </strong>{" "}
