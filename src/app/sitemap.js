@@ -14,6 +14,12 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/about-us`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/project`,
       lastModified: currentDate,
       changeFrequency: "weekly",

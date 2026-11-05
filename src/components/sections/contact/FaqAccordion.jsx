@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function FaqAccordion({ items }) {
+export default function FaqAccordion({ items, className = "" }) {
   // Store ID of open item (or null if all closed)
   const [openId, setOpenId] = useState(null);
 
@@ -11,7 +11,7 @@ export default function FaqAccordion({ items }) {
   };
 
   return (
-    <div className="mx-auto max-w-4xl space-y-3.5 sm:space-y-4">
+    <div className={`space-y-3.5 sm:space-y-4 ${className || "mx-auto max-w-4xl"}`}>
       {items.map((item) => {
         const isOpen = openId === item.id;
         const triggerId = `faq-trigger-${item.id}`;
