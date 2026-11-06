@@ -6,8 +6,9 @@ import Link from "next/link";
 import Container from "@/components/layout/Container";
 import { featuredProjectsData } from "@/data/featuredProjectsData";
 
-export default function FeaturedProjectsSection() {
+export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
   const [currentIndex, setCurrentIndex] = useState(1); // Default to Echo Studio (02 / 04)
+  const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef(null);
 
   const prevSlide = () => {
@@ -21,6 +22,19 @@ export default function FeaturedProjectsSection() {
       prev === featuredProjectsData.length - 1 ? 0 : prev + 1
     );
   };
+
+  // Autoplay: automatically advances slides, pauses on hover, and resets timer on manual interaction
+  useEffect(() => {
+    if (isPaused || featuredProjectsData.length <= 1) return;
+
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === featuredProjectsData.length - 1 ? 0 : prev + 1
+      );
+    }, autoPlayInterval);
+
+    return () => clearInterval(timer);
+  }, [currentIndex, isPaused, autoPlayInterval]);
 
   // Keyboard navigation (ignored when focus is inside interactive inputs)
   useEffect(() => {
@@ -58,6 +72,8 @@ export default function FeaturedProjectsSection() {
       id="featured-projects"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
       className="relative w-full h-[100vh] sm:h-[100vh] lg:h-[100vh] overflow-hidden bg-[var(--color-primary)] select-none"
     >
       {/* Background Images with cross-fade */}

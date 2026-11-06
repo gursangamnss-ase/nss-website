@@ -21,10 +21,10 @@ const socialItems = [
 export default function Navbar({ isHome = true, activePath = "/" }) {
   const headerContent = (
     <header
-      className={`relative left-0 top-0 z-30 flex w-full items-center px-5 sm:px-8 ${
+      className={`left-0 top-0 z-30 flex w-full items-center px-5 sm:px-8 ${
         isHome
           ? "absolute h-16 bg-[var(--color-surface-nav)]/95 text-white"
-          : "h-20 bg-transparent text-[var(--color-primary)]"
+          : "relative h-20 bg-transparent text-[var(--color-primary)]"
       }`}
     >
       <Link

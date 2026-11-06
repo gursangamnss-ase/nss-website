@@ -1,76 +1,97 @@
-import Button from "@/components/ui/Button";
-import { Sparkles } from "lucide-react";
-import Image from "next/image";
-
-const services = [
-  "Brand identity design",
-  "Framer development",
-  "UI/UX strategy",
-  "Creative campaigns",
-];
+import Link from "next/link";
+import { servicesData } from "@/data/servicesData";
 
 export default function HeroContent() {
   return (
-    <div className="relative z-20 min-h-[100svh] overflow-hidden px-5 pb-6 pt-16 text-white sm:px-8 sm:pb-8">
-      <h1
-        className="absolute left-[6%] top-[24%] grid w-[88%] grid-cols-[auto_1fr] items-center text-[17vw] leading-[0.84] font-semibold tracking-[-0.065em] font-geist sm:left-[3%] sm:top-[28%] sm:flex sm:w-auto sm:gap-[0.04em] sm:whitespace-nowrap sm:text-[8.4vw] min-[900px]:top-[24%] min-[900px]:grid min-[900px]:w-[76%] min-[900px]:grid-cols-[auto_1fr] min-[900px]:text-[13vw] min-[1200px]:left-[1.5%] min-[1200px]:top-[25%] min-[1200px]:w-[72%] min-[1200px]:text-[10.6vw]"
-      >
-        <span className="min-[900px]:col-span-2">Design</span>
-        <Image
-          aria-hidden="true"
-          src="/images/letterImage.svg"
-          alt=""
-          width={342}
-          height={348}
-          priority
-          className="ml-[0.06em] h-[0.88em] w-auto max-w-none self-center min-[900px]:ml-[0.15em] min-[900px]:mr-[0.02em]"
-        />
-        <span className="col-span-2 sm:col-auto min-[900px]:col-span-1">
-          Strategy
-        </span>
-      </h1>
+    <div className="relative z-20 flex min-h-[100svh] flex-col justify-between px-4 sm:px-8 lg:px-12 pt-20 sm:pt-28 lg:pt-36 pb-4 sm:pb-8 lg:pb-12 text-white">
+      {/* Top Headline: "Design &" on row 1 (mobile), "& Strategy" on row 2 (desktop) */}
+      <div className="w-full select-none pt-2 sm:pt-4 lg:pt-6 mt-auto">
+        <h1 className="flex flex-col tracking-[-0.045em] leading-[0.9] font-semibold text-[clamp(2.75rem,11.5vw,4.25rem)] sm:text-[clamp(4.5rem,10vw,8rem)] lg:text-[clamp(7.5rem,11.5vw,11.5rem)] text-white">
+          {/* Row 1 */}
+          <span className="flex items-baseline">
+            <span>Design</span>
+            <span
+              className="sm:hidden font-script font-normal text-[1.2em] text-[#aaa9ad] -rotate-3 ml-2 select-none inline-block leading-none"
+              aria-hidden="true"
+            >
+              &amp;
+            </span>
+          </span>
 
-      <div className="absolute left-[6%] top-[55%] w-[88%] sm:left-[3%] sm:top-[54%] sm:w-[56%] min-[900px]:top-auto min-[900px]:bottom-[8%] min-[900px]:w-[38%] min-[1200px]:left-[1.5%] min-[1200px]:bottom-[9%] min-[1200px]:w-[27%]">
-        <div className="flex items-start gap-4">
-          <Sparkles
-            aria-hidden="true"
-            className="mt-0.5 h-5 w-5 shrink-0 fill-white text-white sm:h-6 sm:w-6"
-            strokeWidth={1.4}
-          />
-          <p className="text-base leading-[1.16] font-semibold tracking-[-0.025em] sm:text-lg min-[1200px]:text-xl">
-            We turn bold ideas into standout brands and sleek websites. Let&apos;s
-            bring your vision to life.
+          {/* Row 2 */}
+          <span className="flex items-baseline -mt-[0.04em] -ml-[0.02em]">
+            <span
+              className="hidden sm:inline-block font-script font-normal text-[1.32em] text-[#aaa9ad] -rotate-3 mr-1.5 sm:mr-3 select-none leading-none"
+              aria-hidden="true"
+            >
+              &amp;
+            </span>
+            <span>Strategy</span>
+          </span>
+        </h1>
+      </div>
+
+      {/* Bottom Grid: Left = Sparkle + Bold ideas + Copyright, Right = Services + CTA Button */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 lg:gap-12 items-end pt-3 sm:pt-6 lg:pt-16 mt-auto">
+        {/* Left Column (Statement & Copyright) */}
+        <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-end">
+          <div className="flex items-start gap-2.5 sm:gap-4 max-w-[360px] sm:max-w-[420px]">
+            <span
+              className="text-white text-sm sm:text-xl shrink-0 mt-0.5 leading-none"
+              aria-hidden="true"
+            >
+              ✦
+            </span>
+            <p className="text-base lg:text-[18px] font-medium leading-[1.3] tracking-tight text-white">
+              We turn bold ideas into standout brands and sleek websites. Let&apos;s
+              bring your vision to life.
+            </p>
+          </div>
+
+          <p className="mt-2 sm:mt-4 text-[11px] sm:text-sm font-medium text-white/70 tracking-tight pl-6 sm:pl-8">
+            © 2026 Ignitex creative agency
           </p>
         </div>
 
-        <p className="mt-4 text-sm font-semibold sm:text-base min-[1200px]:text-lg">
-          © 2026 Ignitex creative agency
-        </p>
-      </div>
-
-      <div className="absolute right-[6%] bottom-[3.5%] flex w-[88%] flex-col items-end sm:right-[3%] sm:bottom-[6%] sm:w-[54%] min-[900px]:bottom-[8%] min-[900px]:w-[48%] min-[1200px]:right-[1.5%] min-[1200px]:bottom-[9%] min-[1200px]:w-[38%]">
-        <ul
-          className="w-full space-y-1 text-right text-[clamp(1rem,4.5vw,1.25rem)] leading-[1.35] font-medium tracking-[-0.035em] sm:text-[clamp(1.15rem,2.7vw,1.5rem)] min-[1200px]:text-[clamp(1.35rem,1.65vw,2rem)] font-sans"
-        >
-          {services.map((service, index) => (
-            <li key={service}>
-              <span
-                className="mr-2 inline-block font-normal tracking-normal text-white/90 font-script"
+        {/* Right Column (Services List & Pill CTA Button) */}
+        <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-end">
+          <ul className="space-y-1 sm:space-y-1.5 text-right w-full flex flex-col items-end">
+            {servicesData.map((service, index) => (
+              <li
+                key={service.id || service.title}
+                className="text-[14px] sm:text-lg lg:text-[22px] font-medium tracking-tight text-white flex justify-end items-baseline gap-1.5 sm:gap-2"
               >
-                ({String(index + 1).padStart(2, "0")})
-              </span>
-              <span>{service}</span>
-            </li>
-          ))}
-        </ul>
+                <span className="font-script text-[15px] sm:text-xl lg:text-[24px] font-normal text-white/90">
+                  {service.number || `(${String(index + 1).padStart(2, "0")})`}
+                </span>
+                <span>{service.title}</span>
+              </li>
+            ))}
+          </ul>
 
-        <Button
-          href="#contact"
-          variant="light"
-          className="mt-5 w-full max-w-70 text-sm sm:text-base"
-        >
-          Let’s work together
-        </Button>
+          <Link
+            href="#contact"
+            className="group inline-flex items-center justify-between gap-3 sm:gap-6 rounded-full bg-white pl-4 sm:pl-6 pr-1 sm:pr-1.5 py-1 sm:py-1.5 mt-3 sm:mt-6 text-[12px] sm:text-sm font-semibold text-[var(--color-primary)] hover:bg-neutral-100 transition-all shadow-sm"
+          >
+            <span>Let&apos;s work together</span>
+            <span
+              className="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[var(--color-primary)] text-white transition-transform duration-300 group-hover:translate-x-0.5"
+              aria-hidden="true"
+            >
+              <svg
+                className="h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 fill-none stroke-current"
+                strokeWidth="2.2"
+                viewBox="0 0 15 12"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M1.5 6H14m0 0L9 1m5 5-5 5"
+                />
+              </svg>
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   );
