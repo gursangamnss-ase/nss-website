@@ -55,6 +55,7 @@ export default function TrustedClientsSection() {
                   logo={card.logo}
                   width={card.width}
                   height={card.height}
+                  imgClassName={card.imgClassName}
                 />
               );
             }

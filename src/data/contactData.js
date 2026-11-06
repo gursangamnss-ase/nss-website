@@ -9,11 +9,11 @@ export const contactData = {
   },
   hero: {
     badgeContact: "Contact us on",
-    phone: "+1 (415) 555-0167",
-    email: "example@gmail.com",
+    phone: "+ 91 82830 30094",
+    email: "info@netsquaresoftwares.com",
     badgeVisit: "Visit us",
-    agency: "Ignitex creative agency",
-    address: "2105 Creative Avenue, San Francisco, CA 94103",
+    agency: "NetSquare Software Pvt Ltd",
+    address: "D-234, Phase 8B, Industrial Area, Sector 74 (Balongi), Sahibzada Ajit Singh Nagar (Mohali), Punjab 140307",
     founderQuote:
       "Every great project begins with a simple conversation — let’s start yours.",
     founder: {
@@ -50,27 +50,27 @@ export const contactData = {
     items: [
       {
         id: "faq-services",
-        question: "What services do you offer?",
+        question: "What services does NetSquare Softwares Pvt Ltd offer?",
         answer:
-          "We specialize in branding, UI/UX design, Webflow development, and creative campaigns tailored to help brands grow and stand out.",
+          "NetSquare Softwares offers a wide range of digital solutions, including website development, mobile application development, UI/UX design, digital marketing, software development, and CMS solutions. We help businesses build, improve and grow their digital presence.",
       },
       {
         id: "faq-startups",
         question: "Do you work with startups or only big brands?",
         answer:
-          "Both! We collaborate with early-stage startups, growing businesses, and established brands. If you’re passionate, we’re in.",
+          "We work with startups, small businesses and established organizations across different industries. Whether you are launching a new idea or upgrading an existing digital platform, we provide solutions tailored to your business goals.",
       },
       {
         id: "faq-timeline",
         question: "How long does a typical project take?",
         answer:
-          "Timelines vary by scope, but most projects are completed within 2–6 weeks. We always provide a clear roadmap upfront.",
+          "Project timelines depend on the scope, complexity and specific requirements. After understanding your needs, our team defines a clear timeline and works towards delivering your project efficiently without compromising quality.",
       },
       {
         id: "faq-pricing",
-        question: "What’s your pricing structure?",
+        question: "What's your pricing structure?",
         answer:
-          "We offer flexible pricing, including monthly retainers and custom project rates. Everything is transparent and tailored to your needs.",
+          "Our pricing depends on the type of service, project requirements and level of customization. We provide solutions based on your business needs and budget. Contact us to discuss your project and receive a tailored quotation.",
       },
     ],
   },

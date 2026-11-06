@@ -145,13 +145,13 @@ export default function WhyChooseSection() {
                   <div className="absolute w-[210px] h-[210px] rounded-full border border-black/[0.08]" aria-hidden="true" />
                   <div className="absolute w-[130px] h-[130px] rounded-full border border-black/[0.1]" aria-hidden="true" />
 
-                  {/* Central Ignitex Logo */}
+                  {/* Central NetSquare Logo */}
                   <div className="relative z-10 flex flex-col items-center">
                     <Image
                       src={happyClients.centerLogo}
-                      alt="IGNITEX Logo"
-                      width={100}
-                      height={28}
+                      alt="NetSquare Softwares"
+                      width={110}
+                      height={46}
                       className="object-contain"
                       style={{ width: "auto", height: "auto" }}
                     />
@@ -189,24 +189,55 @@ export default function WhyChooseSection() {
                   </p>
                 </div>
 
-                {/* Tool Icons Cluster */}
-                <div className="flex flex-wrap items-center justify-center gap-2.5 mt-auto pt-4">
-                  {builtWithBest.tools.map((tool) => (
-                    <div
-                      key={tool.name}
-                      title={tool.name}
-                      className="w-10 h-10 rounded-full bg-[var(--color-primary)] flex items-center justify-center p-2.5 shadow-sm transition-transform duration-300 hover:scale-115"
-                    >
-                      <Image
-                        src={tool.icon}
-                        alt={tool.name}
-                        width={20}
-                        height={20}
-                        className="object-contain brightness-0 invert"
-                        style={{ width: "auto", height: "auto" }}
-                      />
-                    </div>
-                  ))}
+                {/* Tool Icons Cluster: 2-row honeycomb (3 top, 4 bottom) */}
+                <div className="flex flex-col items-center justify-center mt-auto pt-4 gap-1.5 sm:gap-2">
+                  {/* Row 1: 3 tools */}
+                  <div className="flex items-center justify-center gap-3 sm:gap-4">
+                    {builtWithBest.tools.slice(0, 3).map((tool) => (
+                      <div
+                        key={tool.name}
+                        title={tool.name}
+                        className={`w-11 h-11 rounded-full flex items-center justify-center p-2.5 shadow-sm transition-transform duration-300 hover:scale-110 ${
+                          tool.dark
+                            ? "bg-[var(--color-primary)] text-white"
+                            : "bg-[#DADADB] text-black"
+                        }`}
+                      >
+                        <Image
+                          src={tool.icon}
+                          alt={tool.name}
+                          width={tool.width || 24}
+                          height={tool.height || 24}
+                          className="max-h-5 max-w-5 w-auto h-auto object-contain"
+                          style={{ width: "auto", height: "auto" }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Row 2: 4 tools */}
+                  <div className="flex items-center justify-center gap-3 sm:gap-4">
+                    {builtWithBest.tools.slice(3, 7).map((tool) => (
+                      <div
+                        key={tool.name}
+                        title={tool.name}
+                        className={`w-11 h-11 rounded-full flex items-center justify-center p-2.5 shadow-sm transition-transform duration-300 hover:scale-110 ${
+                          tool.dark
+                            ? "bg-[var(--color-primary)] text-white"
+                            : "bg-[#DADADB] text-black"
+                        }`}
+                      >
+                        <Image
+                          src={tool.icon}
+                          alt={tool.name}
+                          width={tool.width || 24}
+                          height={tool.height || 24}
+                          className="max-h-5 max-w-5 w-auto h-auto object-contain"
+                          style={{ width: "auto", height: "auto" }}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 

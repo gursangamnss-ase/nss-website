@@ -10,11 +10,11 @@ export const aboutData = {
     },
   },
   hero: {
-    headlineStart: "We craft",
-    headlineScript: "Brands",
-    headlineEnd: "that change the game",
+    headlineStart: "We make",
+    headlineScript: "Digital",
+    headlineEnd: "Grow Your Business",
     subtitle:
-      "We’re a team of designers, developers, and strategists bringing bold ideas to life with purpose, passion, and unforgettable execution.",
+      "Combining creativity, technology and strategy, we build meaningful digital experiences that strengthen brands, simplify business processes and create opportunites for growth.",
     cta: {
       text: "Get started",
       href: "/contact",
@@ -71,11 +71,12 @@ export const aboutData = {
   vision: {
     badge: "Not just another agency",
     headingPrefix: "Turning",
-    headingScript: "Vision",
-    headingSuffix: "into reality",
+    headingScript: "Ideas",
+    headingScriptEnd: "into",
+    headingSuffix: "digital excellence",
     founderQuote: {
       quote:
-        "Every great project begins with a simple conversation — let’s start yours.",
+        "Every digital solution begins with an idea. let's turn yours into something extraordinary",
       author: "Amanda",
       role: "Founder & CEO",
       image: "/images/about/founder-quote.jpg",
@@ -83,20 +84,20 @@ export const aboutData = {
     mission: {
       title: "Our mission",
       description:
-        "To empower brands through bold design, strategic thinking, and digital experiences that inspire action and create lasting impact. To help businesses stand out through thoughtful branding and high-performance digital solutions rooted in creativity and clarity.",
+        "Our mission to empower businesses through innovative technology, creative-thinking and reliable digital solutions. We strive to transform ideas into meaningful digital experiences that simplify processes, strengthen online presence and create lasting value for our clients",
       ctaText: "Meet our team",
       ctaLink: "/contact",
     },
     goals: {
       title: "Our goal",
       items: [
-        "Clear and focused strategy",
-        "Design that drives impact",
-        "Collaboration without the chaos",
-        "Outcomes that build momentum",
-        "Smart solutions, tailored for you",
+        "Deliver Innovative and reliable digital solutions",
+        "Create intutive and engaging user experiences",
+        "Build scalable websites and applications",
+        "Foster collaboration and transparent communication",
+        "Helps business grow through technology and innovation",
       ],
-      copyright: "© 2026 Ignitex creative agency",
+      copyright: "© Netsquare Softwares Pvt Ltd",
     },
     metrics: [
       {
@@ -104,7 +105,7 @@ export const aboutData = {
         value: 8,
         suffix: "+",
         label: "Years of experience",
-        description: "Expertise that drives meaningful results.",
+        description: "Industry knowledge and techincal expertise that drive that move businesses meaningful results",
       },
       {
         id: "clients",
@@ -113,13 +114,13 @@ export const aboutData = {
         label: "Happy clients worldwide",
         description: "Clients stay for our quality and results.",
         isRating: true,
-        clientCount: "72+",
+        clientCount: "24+",
         rating: "5.0",
         avatars: [
-          "/images/about/avatar-1.jpg",
-          "/images/about/avatar-2.jpg",
-          "/images/about/avatar-3.jpg",
-          "/images/about/avatar-4.jpg",
+          "/images/testimonials/jaspreet-soni.jpg",
+          "/images/testimonials/aurevia-events.jpg",
+          "/images/testimonials/jagjot-singh.jpg",
+          "/images/testimonials/harshdeep-singh.jpg",
         ],
       },
       {
@@ -134,7 +135,7 @@ export const aboutData = {
         value: 86,
         suffix: "+",
         label: "Brands transformed",
-        description: "From strategy to standout visuals.",
+        description: "From Strategic planning to development, delivering solutions that move businesses forward",
       },
     ],
   },

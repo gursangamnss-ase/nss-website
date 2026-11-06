@@ -8,6 +8,7 @@ import AboutImpactSection from "@/components/sections/about/AboutImpactSection";
 import FaqSection from "@/components/sections/contact/FaqSection";
 import EnquirySection from "@/components/sections/EnquirySection";
 import { aboutData } from "@/data/aboutData";
+import { contactData } from "@/data/contactData";
 
 export const metadata = {
   title: aboutData.metadata.title,
@@ -41,8 +42,8 @@ export default function AboutPage() {
 
           {/* 6. Reusable FAQ Section */}
           <FaqSection
-            items={aboutData.faqs}
-            badgeText="Have questions?"
+            items={contactData.faq.items}
+            badgeText={contactData.faq.badge}
             headingLightText="Find"
             headingScriptText="The"
             headingEndText="answers"

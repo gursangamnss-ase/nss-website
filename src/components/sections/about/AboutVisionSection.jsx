@@ -32,9 +32,9 @@ export default function AboutVisionSection() {
               <span className="font-script text-[1.28em] font-normal leading-none inline-block align-baseline -rotate-2 mx-1">
                 {vision.headingScript}
               </span>{" "}
-              into
+              {vision.headingScriptEnd}
               <br />
-              reality
+              {vision.headingSuffix}
             </h2>
           </div>
         </div>
@@ -164,9 +164,9 @@ export default function AboutVisionSection() {
             return (
               <div
                 key={metric.id}
-                className={`rounded-[16px] p-7 sm:p-8 flex flex-col justify-between min-h-[300px] sm:min-h-[320px] transition-all duration-300 hover:shadow-md ${
+                className={`rounded-[24px] sm:rounded-[28px] p-7 sm:p-8 flex flex-col justify-between min-h-[310px] sm:min-h-[330px] transition-all duration-300 hover:shadow-lg ${
                   isDark
-                    ? "bg-[var(--color-primary)] text-white"
+                    ? "bg-[#09090b] text-white"
                     : "bg-white text-[var(--color-primary)] border border-neutral-100/90 shadow-sm"
                 }`}
               >
@@ -179,37 +179,44 @@ export default function AboutVisionSection() {
                         {metric.avatars.map((av, avIdx) => (
                           <div
                             key={avIdx}
-                            className="relative h-8 w-8 rounded-[10px] border-2 border-[var(--color-primary)] overflow-hidden"
+                            className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-[10px] border-2 border-[#09090b] overflow-hidden shrink-0 shadow-sm"
                           >
                             <Image
                               src={av}
                               alt=""
                               aria-hidden="true"
                               fill
-                              sizes="32px"
+                              sizes="40px"
                               className="object-cover"
                             />
                           </div>
                         ))}
                       </div>
-                      <div className="ml-1.5 px-2 py-0.5 rounded-[10px] bg-[#f5f5f5] text-[var(--color-primary)] text-xs font-semibold border-2 border-[var(--color-primary)] flex items-center justify-center">
+                      <div className="ml-2.5 px-3 py-1 rounded-full bg-white text-black text-xs sm:text-[13px] font-bold flex items-center justify-center shrink-0 shadow-sm leading-none">
                         {metric.clientCount || "72+"}
                       </div>
                     </div>
 
                     {/* 5 White Stars & Label */}
-                    <div className="mt-4">
-                      <div
-                        className="flex items-center gap-0.5 text-white text-xs tracking-widest"
-                        aria-label="5 stars rating"
-                      >
-                        <span>★</span>
-                        <span>★</span>
-                        <span>★</span>
-                        <span>★</span>
-                        <span>★</span>
+                    <div className="mt-5">
+                      <div className="flex items-center gap-2">
+                        <div
+                          className="flex items-center gap-1.5 text-white text-xs sm:text-sm tracking-wide"
+                          aria-label="5 stars rating"
+                        >
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                        </div>
+                        {metric.rating && (
+                          <span className="text-xs sm:text-sm font-semibold text-white tracking-tight">
+                            {metric.rating}
+                          </span>
+                        )}
                       </div>
-                      <p className="text-xs sm:text-sm font-medium text-[#aaa9ad] mt-2">
+                      <p className="text-xs sm:text-sm text-[#94a3b8] font-normal mt-2.5 tracking-tight">
                         {metric.label}
                       </p>
                     </div>
@@ -223,20 +230,30 @@ export default function AboutVisionSection() {
                 {/* Bottom Row: Counter Number (Left) + LG Description (Right) */}
                 <div className="flex items-end justify-between gap-3 pt-6">
                   <div className="flex items-baseline shrink-0">
-                    <span className="text-[52px] sm:text-[58px] lg:text-[60px] font-medium tracking-tight leading-none text-current">
+                    <span className="text-[56px] sm:text-[64px] lg:text-[68px] font-semibold tracking-tight leading-none text-current">
                       <CountUp to={metric.value} from={0} duration={1.8} delay={idx * 0.1} />
                     </span>
-                    <span className="font-script text-[50px] sm:text-[56px] lg:text-[62px] font-normal leading-none ml-0.5 text-current">
+                    <span className="font-script text-[54px] sm:text-[62px] lg:text-[66px] font-normal leading-none ml-1 text-current">
                       {metric.suffix}
                     </span>
                   </div>
 
                   <p
-                    className={`text-right text-base sm:text-lg font-medium leading-[1.2] max-w-[145px] ${
-                      isDark ? "text-[#aaa9ad]" : "text-[var(--color-text-secondary)]"
+                    className={`text-right text-[15px] sm:text-[17px] font-normal leading-[1.25] max-w-[155px] ${
+                      isDark ? "text-[#94a3b8]" : "text-[var(--color-text-secondary)]"
                     }`}
                   >
-                    {metric.description}
+                    {isDark ? (
+                      <>
+                        Clients stay for
+                        <br />
+                        our quality and
+                        <br />
+                        results.
+                      </>
+                    ) : (
+                      metric.description
+                    )}
                   </p>
                 </div>
               </div>
