@@ -6,6 +6,7 @@ export default function ClientLogoCard({
   width = 130,
   height = 30,
   className = "",
+  imgClassName = "",
 }) {
   return (
     <div
@@ -19,7 +20,7 @@ export default function ClientLogoCard({
           width={width}
           height={height}
           style={{ width: "auto", height: "auto" }}
-          className="max-h-7 w-auto object-contain opacity-75 transition-all duration-300 group-hover:opacity-100 group-hover:brightness-125 sm:max-h-8"
+          className={`max-h-7 sm:max-h-8 w-auto object-contain brightness-0 invert opacity-75 transition-all duration-300 group-hover:opacity-100 ${imgClassName}`}
         />
       </div>
     </div>

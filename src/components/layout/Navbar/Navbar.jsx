@@ -37,13 +37,13 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
           alt="NetSquare Softwares"
           width={130}
           height={48}
-          className="h-9 w-auto object-contain"
+          className="h-15 w-auto object-contain"
           priority
         />
       </Link>
 
       <p
-        className={`absolute left-1/2 hidden -translate-x-1/2 text-sm min-[1200px]:block ${
+        className={`absolute left-1/2 hidden -translate-x-1/2 text-base min-[1200px]:block ${
           isHome ? "font-medium text-white/70" : "font-normal text-neutral-500"
         }`}
       >

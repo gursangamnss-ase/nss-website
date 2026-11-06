@@ -34,7 +34,7 @@ export default function AboutHeroSection() {
             </span>{" "}
             that
             <br />
-            change the game
+            {hero.headlineEnd}
           </h1>
         </div>
 

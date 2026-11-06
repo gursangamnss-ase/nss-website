@@ -11,8 +11,14 @@ import { trustedClientsData } from "@/data/trustedClientsData";
 
 export default function AboutImpactSection() {
   const { impact } = aboutData;
-  const logos = trustedClientsData.cards.filter((c) => c.type === "logo");
-  const marqueeLogos = [...logos, ...logos];
+  const uniqueLogos = Array.from(
+    new Map(
+      trustedClientsData.cards
+        .filter((c) => c.type === "logo")
+        .map((c) => [c.logo, c])
+    ).values()
+  );
+  const marqueeLogos = [...uniqueLogos, ...uniqueLogos];
 
   const bannerRef = useRef(null);
   const shouldReduceMotion = useReducedMotion();
@@ -105,7 +111,7 @@ export default function AboutImpactSection() {
                     alt={client.name}
                     width={client.width}
                     height={client.height}
-                    className="max-h-7 sm:max-h-8 w-auto object-contain brightness-0 opacity-90 transition-opacity duration-300 hover:opacity-100"
+                    className={`max-h-7 sm:max-h-8 w-auto object-contain brightness-0 opacity-90 transition-opacity duration-300 hover:opacity-100 ${client.imgClassName || ""}`}
                   />
                 </div>
               ))}
@@ -126,7 +132,7 @@ export default function AboutImpactSection() {
                     alt={client.name}
                     width={client.width}
                     height={client.height}
-                    className="max-h-7 sm:max-h-8 w-auto object-contain brightness-0 opacity-90 transition-opacity duration-300 hover:opacity-100"
+                    className={`max-h-7 sm:max-h-8 w-auto object-contain brightness-0 opacity-90 transition-opacity duration-300 hover:opacity-100 ${client.imgClassName || ""}`}
                   />
                 </div>
               ))}

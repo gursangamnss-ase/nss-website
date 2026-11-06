@@ -200,9 +200,9 @@ export default function WhyChooseSection() {
                       <Image
                         src={tool.icon}
                         alt={tool.name}
-                        width={20}
-                        height={20}
-                        className="object-contain brightness-0 invert"
+                        width={tool.width || 20}
+                        height={tool.height || 20}
+                        className="max-h-5 max-w-5 w-auto h-auto object-contain brightness-0 invert"
                         style={{ width: "auto", height: "auto" }}
                       />
                     </div>

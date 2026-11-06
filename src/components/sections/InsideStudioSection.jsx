@@ -5,22 +5,13 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Rating from "@/components/ui/Rating";
 
-const studioRatings = [
-  {
-    image: "/images/clutch.svg",
-    imageAlt: "Clutch",
-    rating: 4.9,
-    stars: 5,
-    reviews: 250,
-  },
-  {
-    image: "/images/designrush.svg",
-    imageAlt: "DesignRush",
-    rating: 4,
-    stars: 4,
-    reviews: 186,
-  },
-];
+const googleRating = {
+  image: "/images/google.svg",
+  imageAlt: "Google",
+  rating: 5.0,
+  stars: 5,
+  reviews: 24,
+};
 
 export default function InsideStudioSection() {
   return (
@@ -66,24 +57,13 @@ export default function InsideStudioSection() {
           </h2>
         </div>
 
-        <div className="mx-auto mt-12 flex max-w-165 items-center justify-center gap-4 sm:mt-16 sm:gap-8">
-          {studioRatings.map((item, index) => (
-            <div
-              key={item.imageAlt}
-              className={`min-w-0 ${
-                index === 1
-                  ? "border-l border-[var(--color-border)] pl-4 sm:pl-8"
-                  : ""
-              }`}
-            >
-              <Rating
-                {...item}
-                boxSize="h-10 w-10 sm:h-15 sm:w-15"
-                sizes="60px"
-                className="gap-2 sm:gap-5 [&_p]:text-[9px] sm:[&_p]:text-sm [&_svg]:size-3 sm:[&_svg]:size-[18px]"
-              />
-            </div>
-          ))}
+        <div className="mx-auto mt-12 flex items-center justify-center sm:mt-16">
+          <Rating
+            {...googleRating}
+            boxSize="h-11 w-11 sm:h-15 sm:w-15"
+            sizes="60px"
+            className="gap-3 sm:gap-5 [&_p]:text-xs sm:[&_p]:text-sm [&_svg]:size-3.5 sm:[&_svg]:size-[18px]"
+          />
         </div>
 
         <StudioImageCard

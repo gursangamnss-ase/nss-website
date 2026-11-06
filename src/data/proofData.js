@@ -19,13 +19,13 @@ export const proofData = {
       },
     },
     card2: {
-      clientCount: "72+",
+      clientCount: "24+",
       ratingText: "Happy clients worldwide",
       avatars: [
-        "/images/case-studies/client-1.jpg",
-        "/images/case-studies/client-2.jpg",
-        "/images/case-studies/client-3.jpg",
-        "/images/case-studies/client-4.jpg",
+        "/images/testimonials/jaspreet-soni.jpg",
+        "/images/testimonials/aurevia-events.jpg",
+        "/images/testimonials/jagjot-singh.jpg",
+        "/images/testimonials/harshdeep-singh.jpg",
       ],
       comingSoonTag: "Our Expertise, your Advantage",
       headline: "Bringing together creativity, technology and strategic thinking to deliver digital experiences that make a difference",

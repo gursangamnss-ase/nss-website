@@ -65,10 +65,12 @@ export const StaggeredMenu = ({
         gsap.set(preContainer, { xPercent: 0, opacity: 1 });
       }
 
-      gsap.set(plusH, { transformOrigin: '50% 50%', rotate: 0 });
-      gsap.set(middleBar, { opacity: 1 });
-      gsap.set(plusV, { transformOrigin: '50% 50%', rotate: 0 });
-      gsap.set(icon, { rotate: 0, transformOrigin: '50% 50%' });
+      if (!openRef.current) {
+        gsap.set(plusH, { transformOrigin: '50% 50%', rotate: 0, width: '68%' });
+        gsap.set(middleBar, { opacity: 1 });
+        gsap.set(plusV, { transformOrigin: '50% 50%', rotate: 0, width: '68%' });
+        gsap.set(icon, { rotate: 0, transformOrigin: '50% 50%' });
+      }
 
       if (toggleBtnRef.current) gsap.set(toggleBtnRef.current, { color: menuButtonColor });
     });
@@ -231,15 +233,15 @@ export const StaggeredMenu = ({
       gsap.set(icon, { rotate: 0, transformOrigin: '50% 50%' });
       spinTweenRef.current = gsap
         .timeline({ defaults: { ease: 'power4.out' } })
-        .to(h, { y: 9, rotate: 45, duration: 0.5 }, 0)
+        .to(h, { y: 9, rotate: 45, width: '100%', duration: 0.5 }, 0)
         .to(middle, { opacity: 0, duration: 0.2 }, 0)
-        .to(v, { y: -9, rotate: -45, duration: 0.5 }, 0);
+        .to(v, { y: -9, rotate: -45, width: '100%', duration: 0.5 }, 0);
     } else {
       spinTweenRef.current = gsap
         .timeline({ defaults: { ease: 'power3.inOut' } })
-        .to(h, { y: 0, rotate: 0, duration: 0.35 }, 0)
+        .to(h, { y: 0, rotate: 0, width: '68%', duration: 0.35 }, 0)
         .to(middle, { opacity: 1, duration: 0.25 }, 0.1)
-        .to(v, { y: 0, rotate: 0, duration: 0.35 }, 0)
+        .to(v, { y: 0, rotate: 0, width: '68%', duration: 0.35 }, 0)
         .to(icon, { rotate: 0, duration: 0.001 }, 0);
     }
   }, []);
@@ -373,7 +375,7 @@ export const StaggeredMenu = ({
           >
             <span
               ref={plusHRef}
-              className="sm-menu-bar absolute left-0 top-[2px] h-0.5 w-full rounded-full bg-current will-change-transform"
+              className="sm-menu-bar absolute left-0 top-[2px] h-0.5 w-[68%] rounded-full bg-current will-change-transform"
             />
             <span
               ref={middleBarRef}
@@ -381,7 +383,7 @@ export const StaggeredMenu = ({
             />
             <span
               ref={plusVRef}
-              className="sm-menu-bar absolute bottom-[2px] left-0 h-0.5 w-full rounded-full bg-current will-change-transform"
+              className="sm-menu-bar absolute bottom-[2px] right-0 h-0.5 w-[68%] rounded-full bg-current will-change-transform"
             />
           </span>
         </button>
