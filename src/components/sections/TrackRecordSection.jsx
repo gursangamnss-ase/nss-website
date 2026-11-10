@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import Container from "@/components/layout/Container";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 import TrackRecordItem from "@/components/cards/TrackRecordItem";
 import { trackRecordData } from "@/data/trackRecordData";
 
@@ -28,19 +29,11 @@ export default function TrackRecordSection() {
           {/* Left Column: Pre-title Badge, Main Heading, and CTA Button */}
           <div className="flex flex-col items-start">
             {/* Sparkle Icon Pre-title */}
-            <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-[var(--color-primary)] mb-4 sm:mb-5">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="text-[var(--color-primary)] shrink-0"
-                aria-hidden="true"
-              >
-                <path d="M12 0C12 6.627 6.627 12 0 12c6.627 0 12 5.373 12 12 0-6.627 5.373-12 12-12-6.627 0-12-5.373-12-12z" />
-              </svg>
-              <span>{badge}</span>
-            </div>
+            <Badge
+              text={badge}
+              color="var(--color-primary)"
+              className="text-xs sm:text-sm font-medium mb-4 sm:mb-5"
+            />
 
             {/* Display Heading */}
             <h2 className="text-[44px] sm:text-[60px] md:text-[68px] lg:text-[84px] font-medium tracking-[-0.04em] leading-[1.08] text-[var(--color-primary)]">
@@ -53,26 +46,14 @@ export default function TrackRecordSection() {
             </h2>
 
             {/* Action CTA Button */}
-            <Link
+            <Button
               href={cta.href}
-              className="mt-7 sm:mt-9 lg:mt-11 inline-flex items-center gap-4 rounded-full bg-[var(--color-primary)] pl-6 sm:pl-7 pr-2.5 py-2.5 text-sm sm:text-base font-medium text-white transition-all hover:bg-neutral-800 hover:scale-[1.02] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)] group w-fit"
+              variant="dark"
+              size="md"
+              className="mt-7 sm:mt-9 lg:mt-11"
             >
-              <span>{cta.label}</span>
-              <span className="flex size-8 sm:size-9 items-center justify-center rounded-full bg-white text-[var(--color-primary)] transition-transform group-hover:translate-x-0.5">
-                <svg
-                  className="size-3.5 sm:size-4"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M3 8h10M9 4l4 4-4 4" />
-                </svg>
-              </span>
-            </Link>
+              {cta.label}
+            </Button>
           </div>
 
           {/* Right Column: Counter Metric List */}

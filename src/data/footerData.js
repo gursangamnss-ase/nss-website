@@ -21,6 +21,8 @@ export const footerData = {
     offlineTitle: "Offline",
     companyTitle: "NetSquare Softwares Studio",
     address: "D-234, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 140307",
+    canadaTitle: "Canada Office",
+    canadaAddress: "190 Corner Springs Landing Northeast Calgary, AB T3N 2Y1",
   },
   socials: [
     {

@@ -1,4 +1,5 @@
 import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 
 export default function ProjectOverviewSection({ overview }) {
@@ -40,30 +41,15 @@ export default function ProjectOverviewSection({ overview }) {
             {/* Live Site Pill Button */}
             {liveSiteUrl && (
               <div className="pt-2">
-                <a
+                <Button
                   href={liveSiteUrl}
+                  variant="dark"
+                  size="md"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] pl-6 pr-2 py-2 text-sm font-medium text-white hover:bg-neutral-800 transition-colors shadow-sm group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
                 >
-                  <span>{liveSiteLabel || "View live site"}</span>
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[var(--color-primary)] transition-transform group-hover:translate-x-0.5">
-                    <svg
-                      className="h-4 w-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </span>
-                </a>
+                  {liveSiteLabel || "View live site"}
+                </Button>
               </div>
             )}
           </div>

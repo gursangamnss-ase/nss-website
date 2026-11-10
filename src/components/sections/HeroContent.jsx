@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Button from "@/components/ui/Button";
 import { servicesData } from "@/data/servicesData";
 
 export default function HeroContent() {
@@ -11,7 +11,7 @@ export default function HeroContent() {
           <span className="flex items-baseline">
             <span>Design</span>
             <span
-              className="sm:hidden font-script font-normal text-[1.2em] text-[#aaa9ad] -rotate-3 ml-2 select-none inline-block leading-none"
+              className="sm:hidden font-script font-normal text-[1.2em] text-[var(--color-text-muted)] -rotate-3 ml-2 select-none inline-block leading-none"
               aria-hidden="true"
             >
               &amp;
@@ -21,7 +21,7 @@ export default function HeroContent() {
           {/* Row 2 */}
           <span className="flex items-baseline -mt-[0.04em] -ml-[0.02em]">
             <span
-              className="hidden sm:inline-block font-script font-normal text-[1.32em] text-[#aaa9ad] -rotate-3 mr-1.5 sm:mr-3 select-none leading-none"
+              className="hidden sm:inline-block font-script font-normal text-[1.32em] text-[var(--color-text-muted)] -rotate-3 mr-1.5 sm:mr-3 select-none leading-none"
               aria-hidden="true"
             >
               &amp;
@@ -69,28 +69,14 @@ export default function HeroContent() {
             ))}
           </ul>
 
-          <Link
+          <Button
             href="#contact"
-            className="group inline-flex items-center justify-between gap-3 sm:gap-6 rounded-full bg-white pl-4 sm:pl-6 pr-1 sm:pr-1.5 py-1 sm:py-1.5 mt-3 sm:mt-6 text-[12px] sm:text-sm font-semibold text-[var(--color-primary)] hover:bg-neutral-100 transition-all shadow-sm"
+            variant="light"
+            size="sm"
+            className="mt-3 sm:mt-6"
           >
-            <span>Let&apos;s work together</span>
-            <span
-              className="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[var(--color-primary)] text-white transition-transform duration-300 group-hover:translate-x-0.5"
-              aria-hidden="true"
-            >
-              <svg
-                className="h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 fill-none stroke-current"
-                strokeWidth="2.2"
-                viewBox="0 0 15 12"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M1.5 6H14m0 0L9 1m5 5-5 5"
-                />
-              </svg>
-            </span>
-          </Link>
+            Let&apos;s work together
+          </Button>
         </div>
       </div>
     </div>

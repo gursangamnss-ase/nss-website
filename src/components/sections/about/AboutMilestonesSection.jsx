@@ -18,7 +18,6 @@ export default function AboutMilestonesSection() {
           alt=""
           width={750}
           height={1064}
-          priority
           className="w-full h-auto object-contain"
         />
       </div>

@@ -1,8 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import { enquiryData } from "@/data/enquiryData";
 import EnquiryForm from "@/components/forms/EnquiryForm";
 import Container from "@/components/layout/Container";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 
 export default function EnquirySection() {
   const { videoSrc, badge, heading, form, info } = enquiryData;
@@ -28,20 +29,11 @@ export default function EnquirySection() {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-14 sm:mb-20">
           {/* Pre-title Badge */}
-          <div className="inline-flex items-center gap-2 text-sm sm:text-base text-white font-medium tracking-wide mb-4">
-            <svg
-              viewBox="0 0 64 64"
-              className="w-4 h-4 fill-white shrink-0"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinejoin="round"
-                d="m1 32 25 6 6 25 6-25 25-6-25-6-6-25-6 25z"
-              />
-            </svg>
-            <span>{badge}</span>
-          </div>
+          <Badge
+            text={badge}
+            color="var(--color-text-white)"
+            className="text-sm sm:text-base font-medium tracking-wide mb-4 text-white"
+          />
 
           {/* Heading */}
           <h2 className="text-5xl sm:text-7xl lg:text-[86px] font-medium leading-[1.08] tracking-tight text-white">
@@ -102,25 +94,13 @@ export default function EnquirySection() {
               </div>
 
               {/* Book a Discovery Call Button */}
-              <Link
+              <Button
                 href={info.cta.link}
-                className="group inline-flex items-center justify-between gap-4 bg-white hover:bg-neutral-100 !text-[var(--color-primary)] pl-6 pr-1 py-1 rounded-full font-medium text-[15px] transition-all shadow-md w-fit active:scale-95 h-[44px]"
+                variant="light"
+                size="md"
               >
-                <span className="!text-[var(--color-primary)] font-medium whitespace-nowrap">
-                  {info.cta.text}
-                </span>
-                <span className="w-9 h-9 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" aria-hidden="true">
-                  <svg
-                    viewBox="0 0 15 12"
-                    className="w-3.5 h-3 fill-none stroke-current"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M1.5 6H14m0 0L9 1m5 5-5 5" />
-                  </svg>
-                </span>
-              </Link>
+                {info.cta.text}
+              </Button>
             </div>
           </div>
         </div>

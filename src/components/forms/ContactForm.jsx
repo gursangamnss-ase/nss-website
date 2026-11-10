@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import FormField from "@/components/forms/FormField";
+import Button from "@/components/ui/Button";
 import { contactData } from "@/data/contactData";
 
 export default function ContactForm() {
@@ -90,77 +92,54 @@ export default function ContactForm() {
           )}
 
           {/* Full Name */}
-          <div>
-            <label
-              htmlFor="contact-name"
-              className="block text-sm font-medium text-[var(--color-primary)] mb-2"
-            >
-              {form.fields.name.label}
-            </label>
-            <input
-              id="contact-name"
-              name="name"
-              type="text"
-              required
-              aria-required="true"
-              autoComplete="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder={form.fields.name.placeholder}
-              className="w-full rounded-xl bg-white border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-primary)] placeholder:text-neutral-400 focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] transition-colors"
-            />
-          </div>
+          <FormField
+            id="contact-name"
+            name="name"
+            label={form.fields.name.label}
+            required
+            autoComplete="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder={form.fields.name.placeholder}
+          />
 
           {/* Email Address */}
-          <div>
-            <label
-              htmlFor="contact-email"
-              className="block text-sm font-medium text-[var(--color-primary)] mb-2"
-            >
-              {form.fields.email.label}
-            </label>
-            <input
-              id="contact-email"
-              name="email"
-              type="email"
-              required
-              aria-required="true"
-              autoComplete="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder={form.fields.email.placeholder}
-              className="w-full rounded-xl bg-white border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-primary)] placeholder:text-neutral-400 focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] transition-colors"
-            />
-          </div>
+          <FormField
+            id="contact-email"
+            name="email"
+            type="email"
+            label={form.fields.email.label}
+            required
+            autoComplete="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder={form.fields.email.placeholder}
+          />
 
           {/* Message */}
-          <div>
-            <label
-              htmlFor="contact-message"
-              className="block text-sm font-medium text-[var(--color-primary)] mb-2"
-            >
-              {form.fields.message.label}
-            </label>
-            <textarea
-              id="contact-message"
-              name="message"
-              rows={4}
-              value={formData.message}
-              onChange={handleChange}
-              placeholder={form.fields.message.placeholder}
-              className="w-full rounded-xl bg-white border border-[var(--color-border)] px-4 py-3 text-sm text-[var(--color-primary)] placeholder:text-neutral-400 focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] transition-colors resize-y min-h-[110px]"
-            />
-          </div>
+          <FormField
+            id="contact-message"
+            name="message"
+            as="textarea"
+            rows={4}
+            label={form.fields.message.label}
+            value={formData.message}
+            onChange={handleChange}
+            placeholder={form.fields.message.placeholder}
+          />
 
           {/* Submit Button */}
           <div className="pt-2">
-            <button
+            <Button
               type="submit"
+              variant="dark"
+              size="md"
+              showArrow={false}
               disabled={status === "submitting"}
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-8 py-3 text-sm font-medium text-white hover:opacity-90 disabled:opacity-60 transition-opacity cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+              className="w-auto px-9 py-3 text-base font-semibold shadow-md hover:shadow-lg disabled:opacity-60"
             >
               {status === "submitting" ? "Sending..." : form.submitButton}
-            </button>
+            </Button>
           </div>
         </form>
       )}

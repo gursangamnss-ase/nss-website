@@ -1,65 +1,725 @@
 import { projectData } from "./projectData";
 
 export const projectDetailsData = {
-  nova: {
-    slug: "nova",
-    title: "Nova",
-    scriptTitle: "Wallet",
-    heroImage: "/projects/project2.jpg",
+  shopraftaar: {
+    slug: "shopraftaar",
+    title: "Raftaar",
+    scriptTitle: "E-Commerce",
+    heroImage: "/projects/shopraftaar/hero.png",
     overview: {
       badge: "Overview",
       description:
-        "Nova Wallet, a rapidly growing crypto-finance app, reached out for a complete redesign of its platform. Their existing interface lacked clarity and failed to match the expectations of modern crypto users. We aimed to craft a sleek, intuitive, and secure experience tailored for both new and experienced traders.",
+        "Raftaar is an Australian-based Punjabi streetwear brand combining cultural heritage with modern fashion and contemporary streetwear. The brand offers premium oversized T-shirts, heavyweight hoodies, and handcrafted Punjabi-inspired carry bags. Netsquare Softwares developed a responsive e-commerce website with organized product collections, detailed product pages, and a streamlined shopping experience.",
       meta: [
-        { label: "Client:", value: "BlockNova Inc." },
-        { label: "Year:", value: "2025" },
-        { label: "Category:", value: "UI/UX Design / Web App" },
-        { label: "Location:", value: "San Francisco, CA" },
+        { label: "Client:", value: "Raftaar" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Fashion & Apparel / Punjabi Streetwear" },
+        { label: "Location:", value: "Australia" },
       ],
-      liveSiteUrl: "https://example.com",
+      liveSiteUrl: "https://shopraftaar.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/project1.jpg",
+    showcaseImage: "/projects/shopraftaar/showcase.png",
     challenge: {
       badge: "The Challenge",
       description:
-        "As user numbers grew, so did confusion. Nova Wallet’s interface was cluttered, with inconsistent icons, complex user flows, and a dated look. Security cues were poorly communicated, and users had low trust during transactions.",
+        "Raftaar needed a modern e-commerce platform that could showcase its products while effectively communicating its Punjabi heritage and brand identity. The website also needed to provide customers with a smooth and easy online shopping experience.",
       bullets: [
-        "Complex onboarding, discouraging new users",
-        "Visual design not aligned with blockchain credibility",
-        "Poor mobile responsiveness",
-        "Weak CTA placement and conversion",
+        "Showcasing Punjabi heritage fused with modern streetwear aesthetics",
+        "Clear organization of product lines across hoodies, oversized tees, and tote bags",
+        "Smooth, mobile-first product discovery and interactive lookbooks",
+        "Streamlined shopping cart and checkout flows to maximize conversion",
       ],
     },
     solution: {
       badge: "The Solution",
       description:
-        "We conducted competitor analysis and user testing, then rebuilt the UI with clarity and minimalism in mind. Security indicators were prioritized, typography was modernized, and we implemented adaptive layouts for mobile. We also introduced a consistent component library.",
+        "Netsquare Softwares developed a responsive e-commerce website with organized product collections, detailed product pages, and a streamlined shopping experience. The design combines modern aesthetics with Raftaar's cultural identity and premium streetwear positioning.",
     },
     gallery: [
-      "/images/case-studies/client-3.jpg",
-      "/images/case-studies/client-4.jpg",
-      "/images/case-studies/desert-campaign.jpg",
+      "/projects/shopraftaar/gallery-1.png",
+      "/projects/shopraftaar/gallery-2.png",
+      "/projects/shopraftaar/gallery-3.png",
     ],
     results: {
       badge: "The Result",
       description:
-        "User confidence rose dramatically, with a drop in abandonment during key transactions. Nova now stands out in a crowded space with a bold, secure, and scalable interface.",
+        "The website provides Raftaar with a professional online storefront to showcase its collections, connect with customers, and sell its Punjabi-inspired streetwear products online.",
       stats: [
-        { count: "48", symbol: "%", label: "Increase in completed sign-ups" },
-        { count: "3.2", symbol: "x", label: "Boost in daily active users" },
-        { count: "65", symbol: "%", label: "Faster mobile navigation" },
+        { count: "17", symbol: "+", label: "Products Available" },
+        { count: "3", symbol: "", label: "Main Product Collections" },
+        { count: "100", symbol: "%", label: "Responsive Streetwear Storefront" },
       ],
     },
     feedback: {
       badge: "Client feedback",
       quote:
-        "They made crypto feel approachable. The design is stunning and the UX feels effortless.",
-      author: "Jared Lin",
-      role: "Product Manager",
+        "Working with Netsquare Softwares was a great experience for Raftaar. The team understood our vision and created a modern e-commerce website that beautifully combines our Punjabi heritage with contemporary streetwear. The website gives us a professional platform to showcase our products and connect with our customers.",
+      author: "Raftaar Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["mannbros", "shahikhuraak"],
+  },
+  mannbros: {
+    slug: "mannbros",
+    title: "Mann Bros",
+    scriptTitle: "Leasing",
+    heroImage: "/projects/mannbros/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Mann Bros Leasing is an internal management platform designed to manage trailer leasing and related business operations. The system provides different access levels for Super Admin, Admin, Manager, and Staff to handle day-to-day operations efficiently. Netsquare Softwares developed a comprehensive, role-based platform that centralizes operational workflows and fleet tracking.",
+      meta: [
+        { label: "Client:", value: "Mann Bros Leasing LLC" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Trailer Leasing / Fleet & Operations Management" },
+        { label: "Location:", value: "United States" },
+      ],
+      liveSiteUrl: "https://www.mannbrosleasing.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/mannbros/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Mann Bros Leasing needed a centralized system to manage its leasing operations, trailer information, staff activities, and administrative processes. Different user roles also required controlled access to the features and information relevant to their responsibilities.",
+      bullets: [
+        "Unifying disparate spreadsheets and manual leasing records into one platform",
+        "Configuring granular role-based permissions for Super Admin, Admin, Manager, and Staff",
+        "Managing trailer lifecycle, leasing terms, security deposits, and payment tracking",
+        "Ensuring real-time visibility into revenue, overdue balances, and fleet utilization",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a role-based management platform with separate access and permissions for Super Admin, Admin, Manager, and Staff. The system centralizes operational activities and helps the team manage trailer and leasing-related processes through a single, intuitive platform.",
+    },
+    gallery: [
+      "/projects/mannbros/gallery-1.png",
+      "/projects/mannbros/gallery-2.png",
+      "/projects/mannbros/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The platform provides Mann Bros Leasing with a structured internal system for managing business operations, improving coordination between different teams, and maintaining controlled access across user roles.",
+      stats: [
+        { count: "4", symbol: "", label: "Role-Based Access Levels" },
+        { count: "100", symbol: "%", label: "Centralized Leasing & Trailer Management" },
+        { count: "24", symbol: "/7", label: "Secure Admin & Staff Operations" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood our operational requirements and developed a structured management system that helps our Super Admin, Admin, Managers, and Staff handle their responsibilities efficiently.",
+      author: "Mann Bros Leasing Team",
+      role: "Client",
       avatar: "/images/testimonials/daniel-rios.jpg",
     },
-    relatedProjectIds: ["echo-studio", "pulse-ui"],
+    relatedProjectIds: ["shopraftaar", "shahikhuraak"],
+  },
+  shahikhuraak: {
+    slug: "shahikhuraak",
+    title: "Shahi",
+    scriptTitle: "Khuraak",
+    heroImage: "/projects/shahikhuraak/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Shahi Khuraak is an online food brand offering premium Punjabi-inspired products made with traditional recipes and carefully selected ingredients. Its collection includes pickles, pinnis, combo packs, and authentic Punjabi food products. Netsquare Softwares developed a responsive e-commerce platform that highlights their rich culinary heritage and provides an effortless digital shopping experience.",
+      meta: [
+        { label: "Client:", value: "Shahi Khuraak" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Food & Beverage / Punjabi Cuisine & Traditional Food Products" },
+        { label: "Location:", value: "Auckland, New Zealand" },
+      ],
+      liveSiteUrl: "https://www.shahikhuraak.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/shahikhuraak/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Shahi Khuraak needed a professional e-commerce platform to showcase its traditional food products while communicating its focus on authenticity, quality, and Punjabi culinary heritage. The website also needed to provide customers with a simple online shopping experience.",
+      bullets: [
+        "Communicating deep Punjabi culinary heritage and authentic homemade quality",
+        "Clear organization of diverse food categories including pickles, pinnis, and combo packs",
+        "Streamlining product discovery, pricing, and ingredients transparency",
+        "Providing an intuitive, responsive cart and checkout flow for international customers",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive e-commerce website featuring organized product collections, product details, shopping cart functionality, and a clean food-focused design. The platform highlights Shahi Khuraak's traditional recipes and premium ingredients.",
+    },
+    gallery: [
+      "/projects/shahikhuraak/gallery-1.png",
+      "/projects/shahikhuraak/gallery-2.png",
+      "/projects/shahikhuraak/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The website provides Shahi Khuraak with a professional online storefront to showcase its products, strengthen its digital presence, and make authentic Punjabi food products accessible to customers online.",
+      stats: [
+        { count: "100", symbol: "%", label: "Natural Ingredients" },
+        { count: "3", symbol: "", label: "Main Product Collections" },
+        { count: "100", symbol: "%", label: "Authentic Punjabi Food Experience" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team created a professional e-commerce website that beautifully represents our Punjabi food heritage and makes our products easy for customers to explore and purchase.",
+      author: "Shahi Khuraak Team",
+      role: "Client",
+      avatar: "/images/testimonials/daniel-rios.jpg",
+    },
+    relatedProjectIds: ["shopraftaar", "mannbros"],
+  },
+  nextwave: {
+    slug: "nextwave",
+    title: "Next Wave",
+    scriptTitle: "Mechanical",
+    heroImage: "/projects/nextwave/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Next Wave Mechanical Ltd. provides residential plumbing, heating, boiler, gas, appliance installation, and renovation services across Metro Vancouver. The company focuses on reliable service, professional workmanship, and practical solutions for homeowners. Netsquare Softwares developed a responsive corporate website featuring dedicated service sections, project information, testimonials, contact details, and an intuitive service quote form.",
+      meta: [
+        { label: "Client:", value: "Next Wave Mechanical Ltd." },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Plumbing / Heating / Gas & Home Services" },
+        { label: "Location:", value: "Surrey, British Columbia, Canada" },
+      ],
+      liveSiteUrl: "https://www.nextwavemech.ca/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/nextwave/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Next Wave Mechanical needed a professional website to clearly present its wide range of home services and build trust with potential customers. The platform also needed to make service requests and emergency assistance easily accessible.",
+      bullets: [
+        "Clearly presenting multi-trade home services spanning plumbing, heating, gas, and renovation",
+        "Streamlining urgent 24/7 emergency service requests and location-based coverage",
+        "Building homeowner trust through transparent workmanship, process clarity, and customer reviews",
+        "Designing an interactive service area map and organized multi-step service inquiry workflow",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive corporate website featuring dedicated service sections, interactive service process breakdowns, project mapping, testimonials, and a streamlined quote form. The website provides visitors with a clear and simple way to understand the company's services and get in touch.",
+    },
+    gallery: [
+      "/projects/nextwave/gallery-1.png",
+      "/projects/nextwave/gallery-2.png",
+      "/projects/nextwave/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The website gives Next Wave Mechanical a professional digital presence that showcases its expertise, services, and customer-focused approach while helping homeowners easily request assistance.",
+      stats: [
+        { count: "6", symbol: "+", label: "Core Service Categories" },
+        { count: "24", symbol: "/7", label: "Emergency Service Availability" },
+        { count: "4.8", symbol: "★", label: "Google Review Rating" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood our vision and created a professional website that represents Next Wave Mechanical effectively. The website gives us a strong platform to showcase our projects and connect with potential customers.",
+      author: "Next Wave Mechanical",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["shopraftaar", "mannbros"],
+  },
+  phf: {
+    slug: "phf",
+    title: "Punjabi Heritage",
+    scriptTitle: "& Folk",
+    heroImage: "/projects/phf/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Punjabi Heritage and Folk (PHF) is a Canadian cultural organization dedicated to preserving and promoting Punjabi heritage, traditions, folk arts, and cultural practices among youth. Since 2009, PHF has been educating young people about Punjabi virsa while providing training in traditional Punjabi folk dances and musical instruments. Netsquare Softwares developed a responsive and culturally focused website with centralized registration, event showcase, and program administration.",
+      meta: [
+        { label: "Client:", value: "Punjabi Heritage and Folk (PHF)" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Cultural Organization / Punjabi Heritage & Performing Arts" },
+        { label: "Location:", value: "Edmonton, Alberta, Canada" },
+      ],
+      liveSiteUrl: "https://www.phfcanada.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/phf/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Punjabi Heritage and Folk needed a strong online presence that could effectively communicate its cultural mission and connect today's youth with Punjabi heritage. The website needed to represent the organization's long-standing work in cultural education while presenting its folk dance, musical instrument training, and other cultural activities in an engaging and accessible manner.",
+      bullets: [
+        "Presenting a rich 15+ year history of cultural education, folk dance, and music programs",
+        "Streamlining participant registration across Gidha, Bhangra, Dhol, and Summer Camps",
+        "Managing multiple branch locations, class schedules, and student inquiries",
+        "Building an administrative system for program links, payments, and instructor coordination",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive and culturally focused website that presents PHF's mission, heritage initiatives, training activities, and organizational information in a structured and engaging format. The platform provides a centralized digital presence where visitors can learn about PHF's work, submit registrations, and explore community events.",
+    },
+    gallery: [
+      "/projects/phf/gallery-1.png",
+      "/projects/phf/gallery-2.png",
+      "/projects/phf/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The website provides Punjabi Heritage and Folk with a professional digital platform that strengthens its online presence and helps communicate its mission of preserving Punjabi heritage while making its cultural initiatives more accessible to the community and younger generations.",
+      stats: [
+        { count: "15", symbol: "+", label: "Years Cultural Heritage Education" },
+        { count: "1000", symbol: "+", label: "Individuals Trained" },
+        { count: "2009", symbol: "", label: "Year Began Promoting Virsa" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a wonderful experience for Punjabi Heritage and Folk. The team understood the importance of presenting our cultural mission and created a professional website that helps us communicate our work and initiatives effectively. The website gives us a strong platform to showcase our efforts toward preserving Punjabi heritage and connecting today's youth with our traditional folk arts.",
+      author: "Punjabi Heritage and Folk Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["nextwave", "mykeys"],
+  },
+  mykeys: {
+    slug: "mykeys",
+    title: "My Keys",
+    scriptTitle: "Driving School",
+    heroImage: "/projects/mykeys/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "My Keys Driving School is a professional driver-training provider based in Edmonton, Alberta, offering structured driving lessons designed to help learners become confident, safe, and responsible drivers. The school provides a range of training programs, including Class 5 Basic and Advanced courses, winter driving, defensive driving, driving evaluation, and demerit reduction programs. The website was developed to provide students with a convenient digital platform where they can explore available courses, review program pricing, and connect for lessons and bookings.",
+      meta: [
+        { label: "Client:", value: "My Keys Driving School" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Education / Driving Training & Road Safety" },
+        { label: "Location:", value: "Edmonton, Alberta, Canada" },
+      ],
+      liveSiteUrl: "https://mykeysdrivingschool.ca/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/mykeys/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "My Keys Driving School needed a professional digital platform to clearly present its wide range of driving courses while helping students quickly understand their training options. The website also needed to communicate important services such as winter driving, Class 5 training, defensive driving, and driving evaluations in a simple and accessible way.",
+      bullets: [
+        "Presenting diverse driver training courses including Class 5 Basic, Advanced, and Demerit Reduction",
+        "Communicating specialized winter driving safety techniques and defensive driving curriculums",
+        "Streamlining lesson booking, schedule availability, and student inquiries online",
+        "Building a trustworthy, modern brand presence for Edmonton learner drivers",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive, service-focused website that organizes the school's driving programs, training information, pricing, and contact options into clear sections. The platform provides an easy-to-navigate experience that helps prospective students find suitable courses and connect with the school for further assistance.",
+    },
+    gallery: [
+      "/projects/mykeys/gallery-1.png",
+      "/projects/mykeys/gallery-2.png",
+      "/projects/mykeys/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The website gives My Keys Driving School a stronger online presence while making its driving programs and training services easier for Edmonton learners to discover, understand, and access.",
+      stats: [
+        { count: "99", symbol: "%", label: "First-Time Pass Rate" },
+        { count: "24/7", symbol: "", label: "Booking & Availability" },
+        { count: "6", symbol: "+", label: "Core Driving Training Programs" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a positive experience for our driving school. The team understood our requirements and developed a professional website that clearly presents our courses, training services, and key information. The website provides our students with a convenient way to learn about our programs and get in touch with us. We appreciated the team's professionalism, communication, and attention to detail throughout the project.",
+      author: "My Keys Driving School Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["phf", "allsydneytowtruck"],
+  },
+  allsydneytowtruck: {
+    slug: "allsydneytowtruck",
+    title: "All Sydney",
+    scriptTitle: "Tow Truck",
+    heroImage: "/projects/allsydneytowtruck/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "All Sydney Tow Truck is a professional towing and roadside assistance provider serving customers across Sydney and surrounding areas. The company provides a wide range of services, including car towing, emergency towing, vehicle recovery, long-distance towing, motorcycle towing, heavy equipment transport, and roadside assistance. The website was developed to provide customers with a convenient digital platform where they can quickly explore services, request a quote, and connect with the towing dispatch team.",
+      meta: [
+        { label: "Client:", value: "All Sydney Tow Truck" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Transportation / Towing Services" },
+        { label: "Location:", value: "Sydney, New South Wales, Australia" },
+      ],
+      liveSiteUrl: "https://allsydneytowtruck.com.au/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/allsydneytowtruck/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "All Sydney Tow Truck needed a professional digital platform to clearly present its wide range of towing and roadside assistance services while helping customers quickly find the right solution during urgent situations. The website also needed to communicate its 24/7 availability, towing capabilities, service coverage, and quick quote process in a simple and accessible way.",
+      bullets: [
+        "Organizing diverse towing capabilities across light vehicles, heavy transport, and machinery",
+        "Providing rapid contact options and emergency roadside assistance during urgent situations",
+        "Communicating broad service coverage across Sydney metropolitan and regional NSW areas",
+        "Streamlining online quote requests with vehicle details and transparent dispatch information",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive, service-focused website that organizes All Sydney Tow Truck's towing, recovery, emergency, heavy transport, and roadside assistance services into clear sections. The platform also provides an easy quote-request process and prominent contact options, helping customers quickly understand the available services and connect with the team when assistance is needed.",
+    },
+    gallery: [
+      "/projects/allsydneytowtruck/gallery-1.png",
+      "/projects/allsydneytowtruck/gallery-2.png",
+      "/projects/allsydneytowtruck/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The redesigned digital platform gives All Sydney Tow Truck a stronger online presence while making its extensive towing services, emergency support, and transportation capabilities easier for customers to discover and access.",
+      stats: [
+        { count: "24/7", symbol: "", label: "Emergency Towing Availability" },
+        { count: "40", symbol: " Tonnes", label: "Towing Capacity" },
+        { count: "15", symbol: "+ Years", label: "Industry Experience" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood our business requirements and developed a professional website that clearly presents our towing and roadside assistance services. The website has made it easier for customers to understand our services and connect with us when they need assistance. We appreciated the team's professionalism, communication, and attention to detail throughout the project.",
+      author: "All Sydney Tow Truck Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["mykeys", "lynixworld"],
+  },
+  lynixworld: {
+    slug: "lynixworld",
+    title: "Lynix",
+    scriptTitle: "World",
+    heroImage: "/projects/lynixworld/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Lynix World is a multi-brand device repair and IT service provider serving customers across Chandigarh, Mohali, Panchkula, Zirakpur, and nearby areas. The company provides repair and support services for laptops, desktops, MacBooks, iPhones, mobile phones, printers, tablets, and data recovery. The website was developed to provide customers with an easy way to explore repair services, understand available solutions, request quotes, and book doorstep or in-store services.",
+      meta: [
+        { label: "Client:", value: "Lynix World" },
+        { label: "Year:", value: "2018" },
+        { label: "Category:", value: "Technology / Device Repair & IT Services" },
+        { label: "Location:", value: "Chandigarh, India" },
+      ],
+      liveSiteUrl: "https://www.lynixworld.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/lynixworld/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Lynix World needed a professional digital platform to clearly showcase its wide range of device repair and IT services while making it easy for customers to find the right service and request assistance. The website also needed to communicate its doorstep repair model, service coverage, pricing, and reliability in a simple and accessible way.",
+      bullets: [
+        "Organizing multi-device repair offerings across laptops, MacBooks, smartphones, and printers",
+        "Communicating doorstep repair workflows, transparent pricing, and warranty commitments",
+        "Structuring regional service coverage across the Tricity (Chandigarh, Mohali, Panchkula)",
+        "Providing streamlined instant quote requests and on-demand repair booking options",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a user-friendly, responsive website that organizes Lynix World's repair services, device categories, locations, pricing, and support information into clear sections. The platform also provides convenient booking and quote-request options, helping customers quickly identify their repair needs and connect with the service team.",
+    },
+    gallery: [
+      "/projects/lynixworld/gallery-1.png",
+      "/projects/lynixworld/gallery-2.png",
+      "/projects/lynixworld/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The redesigned digital platform gives Lynix World a stronger online presence while making its repair services, doorstep support, pricing, and service coverage easier for customers to discover and access.",
+      stats: [
+        { count: "10000", symbol: "+", label: "Devices Repaired" },
+        { count: "4.4", symbol: "★", label: "Customer Rating" },
+        { count: "53", symbol: "+", label: "Service Areas Covered" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood our requirements and developed a professional, user-friendly website that clearly represents our repair services and makes it easier for customers to connect with us. Their communication, technical expertise, and attention to detail made the entire development process smooth and effective.",
+      author: "Lynix World Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["allsydneytowtruck", "aminabazaar"],
+  },
+  aminabazaar: {
+    slug: "aminabazaar",
+    title: "Amina",
+    scriptTitle: "Bazaar",
+    heroImage: "/projects/aminabazaar/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Amina Bazaar is an online marketplace specializing in VIP and fancy mobile numbers in India, offering customers a curated collection of unique numbers across different patterns, categories, and price ranges. The platform enables users to search and explore numbers based on specific digit combinations, including mirror numbers, special digits, doubling numbers, zero-pattern numbers, business numbers, and Super VIP numbers.",
+      meta: [
+        { label: "Client:", value: "Amina Bazaar" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "E-commerce / Telecommunications" },
+        { label: "Location:", value: "India" },
+      ],
+      liveSiteUrl: "https://aminabazaar.in/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/aminabazaar/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Amina Bazaar needed a user-friendly e-commerce platform capable of handling a large and diverse collection of VIP mobile numbers while making it easy for customers to search, filter, compare, and purchase numbers. The website also needed to clearly organize complex number categories, pricing, and RTP/NON-RTP information into a simple and accessible shopping experience.",
+      bullets: [
+        "Organizing complex number categories including mirror, doubling, and zero-pattern VIP sequences",
+        "Designing advanced search and filter parameters by digits, budget, network, and RTP status",
+        "Streamlining porting documentation and instant checkout for telecom customers nationwide",
+        "Ensuring rapid, secure mobile commerce interactions with 24/7 customer support access",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a structured e-commerce platform with advanced number categories, price-based filtering, product listings, and detailed number information. The platform simplifies the buying journey by allowing customers to discover suitable VIP numbers, understand their availability and porting status, and proceed with online purchases through a streamlined interface.",
+    },
+    gallery: [
+      "/projects/aminabazaar/gallery-1.png",
+      "/projects/aminabazaar/gallery-2.png",
+      "/projects/aminabazaar/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The new digital marketplace gives Amina Bazaar a structured platform for showcasing and selling VIP mobile numbers, making it easier for customers to discover unique numbers, explore different categories, and complete their purchase journey online.",
+      stats: [
+        { count: "10", symbol: "+", label: "Number Categories" },
+        { count: "24/7", symbol: "", label: "Customer Service Availability" },
+        { count: "5-9", symbol: "%", label: "Deal Discounts" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood the requirements of our marketplace and developed a professional, user-friendly platform that makes it easier for customers to explore and purchase VIP mobile numbers. Their technical expertise, responsiveness, and attention to detail helped us turn our concept into a practical online marketplace.",
+      author: "Amina Bazaar Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["shopraftaar", "ibsp"],
+  },
+  ibsp: {
+    slug: "ibsp",
+    title: "IBSP",
+    scriptTitle: "Chris21 HR",
+    heroImage: "/projects/ibsp/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Integrated Business Services Provider (IBSP) is an Australian HR, payroll, and IT consulting company specializing in Chris21 solutions, payroll services, system support, training, reporting, HR21/iChris, and customized business solutions. The company works with organizations across different industries to simplify payroll and HR processes and provide specialized Chris21 support. Netsquare Softwares developed a structured, user-friendly digital platform to present IBSP's specialized services, consulting capabilities, and enterprise support offerings.",
+      meta: [
+        { label: "Client:", value: "Integrated Business Services Provider (IBSP)" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "HR & Payroll / Business Software" },
+        { label: "Location:", value: "Australia" },
+      ],
+      liveSiteUrl: "http://ibsp.net.au/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/ibsp/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "IBSP needed a professional digital platform to clearly communicate its specialized Chris21, HR, payroll, and IT services while making complex solutions easy for businesses to understand. The website also needed to effectively present its wide range of services, expertise, support capabilities, and value proposition in one accessible platform.",
+      bullets: [
+        "Communicating complex Chris21 and HR21/iChris enterprise software consulting solutions",
+        "Structuring specialized payroll services, training modules, and customized reporting",
+        "Highlighting significant 40-60% cost-saving benefits and dedicated 24/7 support response",
+        "Providing streamlined business consultation inquiry workflows for Australian enterprises",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a structured, user-friendly website that organizes IBSP's Chris21, payroll, HR, training, reporting, and support services into clear sections. The platform provides an intuitive way for businesses to understand IBSP's expertise, explore its solutions, and connect with the team for customized support.",
+    },
+    gallery: [
+      "/projects/ibsp/gallery-1.png",
+      "/projects/ibsp/gallery-2.png",
+      "/projects/ibsp/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The redesigned digital platform gives IBSP a professional online presence that clearly communicates its specialized HR and payroll solutions while making its extensive Chris21 services easier for businesses to discover and understand.",
+      stats: [
+        { count: "40-60", symbol: "%", label: "Cost-Saving Value Highlighted" },
+        { count: "24/7", symbol: "", label: "Online Support Visibility" },
+        { count: "<4", symbol: " Hours", label: "Faster Support Response" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a smooth and professional experience. The team took the time to understand our business and transformed our requirements into a clear, user-friendly website that effectively presents our Chris21, payroll, and HR solutions. Their technical expertise, communication, and attention to detail made the entire development process efficient and straightforward.",
+      author: "IBSP Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["mannbros", "rentexcar"],
+  },
+  rentexcar: {
+    slug: "rentexcar",
+    title: "Rentex",
+    scriptTitle: "Car Rental",
+    heroImage: "/projects/rentexcar/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Rentex Car Rental is a Canadian car rental company serving customers across the Greater Toronto Area with affordable and convenient vehicle rental solutions. The company provides a diverse range of rental options for personal, business, insurance replacement, body-shop, and travel-related needs. The website was developed to provide customers with a convenient digital platform where they can explore available vehicles, understand rental services, check pickup and drop-off options, and make reservations online.",
+      meta: [
+        { label: "Client:", value: "Rentex Car Rental" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Travel & Transportation / Car Rental" },
+        { label: "Location:", value: "Mississauga, Ontario, Canada" },
+      ],
+      liveSiteUrl: "https://www.rentexcarrental.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/rentexcar/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Rentex Car Rental needed a user-friendly digital platform to showcase its diverse rental services and vehicle fleet while making the booking process simple and accessible. The website needed to clearly organize personal, business, airport, and insurance rental solutions while enabling customers to quickly select their rental details and make a reservation online.",
+      bullets: [
+        "Showcasing a diverse vehicle fleet spanning economy, sedans, SUVs, and luxury rentals",
+        "Structuring personal, corporate, airport, and insurance replacement rental categories",
+        "Designing an integrated online reservation and pickup/drop-off scheduling experience",
+        "Optimizing local fleet discovery and transparent pricing across the Greater Toronto Area",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a user-friendly, responsive website with an integrated booking experience, allowing customers to easily select rental details and explore available vehicles. The platform also organizes Rentex's key services and fleet into clear sections, creating a streamlined digital experience focused on convenience, accessibility, and easy navigation.",
+    },
+    gallery: [
+      "/projects/rentexcar/gallery-1.png",
+      "/projects/rentexcar/gallery-2.png",
+      "/projects/rentexcar/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The redesigned digital platform brings Rentex Car Rental's services, fleet, and booking journey together in a clearer and more convenient platform, helping customers find rental options and begin their booking with greater ease.",
+      stats: [
+        { count: "32", symbol: "%", label: "Improved Booking Accessibility" },
+        { count: "27", symbol: "%", label: "Better Fleet Engagement" },
+        { count: "3", symbol: "x", label: "Faster Service Discovery" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood our requirements, created a professional and user-friendly website, and made sure the final solution reflected our business and services. Their communication, technical expertise, and attention to detail made the entire development process smooth and efficient.",
+      author: "Rentex Car Rental Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["mannbros", "bottlepos"],
+  },
+  bottlepos: {
+    slug: "bottlepos",
+    title: "Bottle",
+    scriptTitle: "POS",
+    heroImage: "/projects/bottlepos/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Bottle POS is a cloud-based point-of-sale and inventory management software platform custom-built specifically for liquor, wine, and beer retailers. Developed by retail veterans, the system streamlines complex beverage-retail operations with automated invoice scanning, AI-powered sales ranking, age verification compliance, and multi-store inventory synchronization. Netsquare Softwares designed and engineered a high-converting digital platform to showcase its software capabilities, drive product demos, and convert independent store owners.",
+      meta: [
+        { label: "Client:", value: "Bottle POS" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "SaaS / Point of Sale & Retail Technology" },
+        { label: "Location:", value: "Peachtree Corners, Georgia, United States" },
+      ],
+      liveSiteUrl: "https://bottlepos.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/bottlepos/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Liquor store owners face unique hurdles that generic retail POS systems fail to address, including case-break inventory tracking, stringent alcohol compliance laws, and tedious manual invoice entries from distributors. Bottle POS required a modern, credible digital platform to communicate its industry-specific advantages, highlight real-time ROI, and facilitate instant demo bookings for retail operators nationwide.",
+      bullets: [
+        "Communicating industry-tailored liquor POS features like automated invoice scanning and case-break inventory",
+        "Highlighting proprietary AI-powered A-B-C-D stock ranking to eliminate dead inventory and shrinkage",
+        "Structuring compliance workflows, built-in age verification, and integrated liquor databases",
+        "Creating an optimized conversion funnel for software walkthroughs, pricing tiers, and hardware bundles",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares delivered a high-performance, modern web application highlighting Bottle POS's core value propositions through interactive feature walkthroughs, clear hardware bundle breakdowns, and seamless demo scheduling. The design couples crisp enterprise typography with engaging product visualizations that showcase the software in action.",
+    },
+    gallery: [
+      "/projects/bottlepos/gallery-1.png",
+      "/projects/bottlepos/gallery-2.png",
+      "/projects/bottlepos/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The digital platform elevates Bottle POS as the premier beverage-retail POS solution in North America, driving increased demo conversion rates and empowering liquor store owners to automate store operations.",
+      stats: [
+        { count: "40", symbol: "%+", label: "Faster Inventory Entry via Auto-Invoicing" },
+        { count: "24/7", symbol: "", label: "Live Expert Support & Training" },
+        { count: "1000", symbol: "+", label: "Retail Stores & Liquor Merchants Supported" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares has been exceptional. They understood the nuances of the beverage retail market and created a powerful, modern website that communicates the depth of Bottle POS with absolute clarity. Our demo bookings and merchant inquiries increased dramatically following the launch.",
+      author: "Bottle POS Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["rentexcar", "mannbros"],
   },
 };
 
@@ -109,9 +769,8 @@ export function getProjectBySlug(slug) {
         "We designed a modular design system and focused typography hierarchy to enhance clarity and user engagement.",
     },
     gallery: [
-      "/images/case-studies/client-1.jpg",
-      "/images/case-studies/client-2.jpg",
-      "/images/case-studies/client-3.jpg",
+      "/projects/shopraftaar/hero.png",
+      "/projects/mannbros/hero.png",
     ],
     results: {
       badge: "The Result",

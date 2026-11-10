@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
 import Container from "@/components/layout/Container";
+import Button from "@/components/ui/Button";
 import { aboutData } from "@/data/aboutData";
 import AboutHeroVideo from "./AboutHeroVideo";
 
@@ -69,28 +69,13 @@ export default function AboutHeroSection() {
             </div>
 
             {/* Pill CTA Button aligned directly under the left edge of the block */}
-            <Link
+            <Button
               href={hero.cta.href}
-              className="group inline-flex items-center justify-between gap-5 rounded-full bg-[var(--color-primary)] pl-6 pr-1.5 py-1.5 text-sm sm:text-base font-medium text-white hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)] shadow-sm"
+              variant="dark"
+              size="md"
             >
-              <span>{hero.cta.text}</span>
-              <span
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[var(--color-primary)] transition-transform duration-300 group-hover:translate-x-0.5"
-                aria-hidden="true"
-              >
-                <svg
-                  className="h-3.5 w-3.5 fill-none stroke-current"
-                  strokeWidth="2.2"
-                  viewBox="0 0 15 12"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M1.5 6H14m0 0L9 1m5 5-5 5"
-                  />
-                </svg>
-              </span>
-            </Link>
+              {hero.cta.text}
+            </Button>
           </div>
         </div>
 
