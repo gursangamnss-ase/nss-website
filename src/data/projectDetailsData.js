@@ -659,7 +659,67 @@ export const projectDetailsData = {
       role: "Client",
       avatar: "/images/testimonials/sarah-jenkins.jpg",
     },
-    relatedProjectIds: ["mannbros", "allsydneytowtruck"],
+    relatedProjectIds: ["mannbros", "bottlepos"],
+  },
+  bottlepos: {
+    slug: "bottlepos",
+    title: "Bottle",
+    scriptTitle: "POS",
+    heroImage: "/projects/bottlepos/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Bottle POS is a cloud-based point-of-sale and inventory management software platform custom-built specifically for liquor, wine, and beer retailers. Developed by retail veterans, the system streamlines complex beverage-retail operations with automated invoice scanning, AI-powered sales ranking, age verification compliance, and multi-store inventory synchronization. Netsquare Softwares designed and engineered a high-converting digital platform to showcase its software capabilities, drive product demos, and convert independent store owners.",
+      meta: [
+        { label: "Client:", value: "Bottle POS" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "SaaS / Point of Sale & Retail Technology" },
+        { label: "Location:", value: "Peachtree Corners, Georgia, United States" },
+      ],
+      liveSiteUrl: "https://bottlepos.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/bottlepos/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Liquor store owners face unique hurdles that generic retail POS systems fail to address, including case-break inventory tracking, stringent alcohol compliance laws, and tedious manual invoice entries from distributors. Bottle POS required a modern, credible digital platform to communicate its industry-specific advantages, highlight real-time ROI, and facilitate instant demo bookings for retail operators nationwide.",
+      bullets: [
+        "Communicating industry-tailored liquor POS features like automated invoice scanning and case-break inventory",
+        "Highlighting proprietary AI-powered A-B-C-D stock ranking to eliminate dead inventory and shrinkage",
+        "Structuring compliance workflows, built-in age verification, and integrated liquor databases",
+        "Creating an optimized conversion funnel for software walkthroughs, pricing tiers, and hardware bundles",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares delivered a high-performance, modern web application highlighting Bottle POS's core value propositions through interactive feature walkthroughs, clear hardware bundle breakdowns, and seamless demo scheduling. The design couples crisp enterprise typography with engaging product visualizations that showcase the software in action.",
+    },
+    gallery: [
+      "/projects/bottlepos/gallery-1.png",
+      "/projects/bottlepos/gallery-2.png",
+      "/projects/bottlepos/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The digital platform elevates Bottle POS as the premier beverage-retail POS solution in North America, driving increased demo conversion rates and empowering liquor store owners to automate store operations.",
+      stats: [
+        { count: "40", symbol: "%+", label: "Faster Inventory Entry via Auto-Invoicing" },
+        { count: "24/7", symbol: "", label: "Live Expert Support & Training" },
+        { count: "1000", symbol: "+", label: "Retail Stores & Liquor Merchants Supported" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares has been exceptional. They understood the nuances of the beverage retail market and created a powerful, modern website that communicates the depth of Bottle POS with absolute clarity. Our demo bookings and merchant inquiries increased dramatically following the launch.",
+      author: "Bottle POS Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["rentexcar", "mannbros"],
   },
 };
 

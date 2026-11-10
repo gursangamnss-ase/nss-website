@@ -139,16 +139,29 @@ export default function Footer() {
               </div>
 
               {/* Offline studio address */}
-              <div className="flex flex-col gap-1.5">
-                <p className="text-lg font-medium text-[var(--color-text-muted)] tracking-wide">
-                  {contact.offlineTitle}
-                </p>
-                <p className="text-base font-medium text-white">
-                  {contact.companyTitle}
-                </p>
-                <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed">
-                  {contact.address}
-                </p>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-1.5">
+                  <p className="text-lg font-medium text-[var(--color-text-muted)] tracking-wide">
+                    {contact.offlineTitle}
+                  </p>
+                  <p className="text-base font-medium text-white">
+                    {contact.companyTitle}
+                  </p>
+                  <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs">
+                    {contact.address}
+                  </p>
+                </div>
+
+                {contact.canadaAddress && (
+                  <div className="flex flex-col gap-1.5">
+                    <p className="text-base font-medium text-white">
+                      {contact.canadaTitle || "Canada Office"}
+                    </p>
+                    <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs">
+                      {contact.canadaAddress}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -14,6 +14,8 @@ export const contactData = {
     badgeVisit: "Visit us",
     agency: "NetSquare Software Pvt Ltd",
     address: "D-234, Phase 8B, Industrial Area, Sector 74 (Balongi), Sahibzada Ajit Singh Nagar (Mohali), Punjab 140307",
+    canadaAgency: "Canada Office",
+    canadaAddress: "190 Corner Springs Landing Northeast Calgary, AB T3N 2Y1",
     founderQuote:
       "Every great project begins with a simple conversation — let’s start yours.",
     founder: {
@@ -26,11 +28,11 @@ export const contactData = {
     heading: "Let’s work together",
     fields: {
       name: {
-        label: "Full name*",
+        label: "Full name",
         placeholder: "Amanda Ferguson",
       },
       email: {
-        label: "Email address*",
+        label: "Email address",
         placeholder: "example@gmail.com",
       },
       message: {

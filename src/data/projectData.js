@@ -109,5 +109,14 @@ export const projectData = {
       href: "/project/rentexcar",
       alt: "Rentex Car Rental vehicle fleet and online booking platform",
     },
+    {
+      id: "bottlepos",
+      title: "Bottle",
+      scriptTitle: "POS",
+      tags: ["Point of Sale", "SaaS & Retail"],
+      image: "/projects/bottlepos/hero.png",
+      href: "/project/bottlepos",
+      alt: "Bottle POS liquor and beverage retail point of sale platform",
+    },
   ],
 };

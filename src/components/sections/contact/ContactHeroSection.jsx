@@ -66,13 +66,26 @@ export default function ContactHeroSection() {
                 text={hero.badgeVisit}
                 className="text-sm font-medium text-neutral-800"
               />
-              <div className="pt-1">
-                <p className="text-base sm:text-lg font-semibold text-[var(--color-primary)]">
-                  {hero.agency}
-                </p>
-                <p className="text-sm sm:text-base text-neutral-600 max-w-xs mt-1 leading-relaxed">
-                  {hero.address}
-                </p>
+              <div className="space-y-4 pt-1">
+                <div>
+                  <p className="text-base sm:text-lg font-semibold text-[var(--color-primary)]">
+                    {hero.agency}
+                  </p>
+                  <p className="text-sm sm:text-base text-neutral-600 max-w-sm mt-1 leading-relaxed">
+                    {hero.address}
+                  </p>
+                </div>
+
+                {hero.canadaAddress && (
+                  <div>
+                    <p className="text-base sm:text-lg font-semibold text-[var(--color-primary)]">
+                      {hero.canadaAgency || "Canada Office"}
+                    </p>
+                    <p className="text-sm sm:text-base text-neutral-600 max-w-sm mt-1 leading-relaxed">
+                      {hero.canadaAddress}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
 

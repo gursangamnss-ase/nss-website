@@ -2,6 +2,7 @@ import HeroContent from "@/components/sections/HeroContent";
 import Image from "next/image";
 import Link from "next/link";
 import NavbarClient from "./NavbarClient";
+import { projectData } from "@/data/projectData";
 
 const menuItems = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
@@ -18,10 +19,12 @@ const socialItems = [
   { label: "LinkedIn", link: "https://linkedin.com" },
 ];
 
+const projectCountBadge = `(${String(projectData.projects.length).padStart(2, "0")})`;
+
 const desktopNavLinks = [
   { label: "Home", href: "/" },
   { label: "About us", href: "/about-us" },
-  { label: "Projects", href: "/project", badge: "(07)" },
+  { label: "Projects", href: "/project", badge: projectCountBadge },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];

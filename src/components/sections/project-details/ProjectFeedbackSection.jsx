@@ -1,10 +1,9 @@
-import Image from "next/image";
 import Badge from "@/components/ui/Badge";
 import Container from "@/components/layout/Container";
 
 export default function ProjectFeedbackSection({ feedback }) {
   if (!feedback) return null;
-  const { badge, quote, author, role, avatar } = feedback;
+  const { badge, quote, author, role } = feedback;
 
   return (
     <section className="bg-white py-12 sm:py-18">
@@ -24,18 +23,7 @@ export default function ProjectFeedbackSection({ feedback }) {
               &ldquo;{quote}&rdquo;
             </blockquote>
 
-            <div className="flex items-center gap-3.5 pt-2">
-              {avatar && (
-                <div className="relative h-12 w-12 overflow-hidden rounded-full border border-neutral-200 bg-neutral-100 shrink-0">
-                  <Image
-                    src={avatar}
-                    alt={author}
-                    fill 
-                    sizes="48px"
-                    className="object-cover"
-                  />
-                </div>
-              )}
+            <div className="pt-2">
               <div className="text-base font-medium">
                 <span className="font-semibold text-[var(--color-primary)]">{author}</span>
                 {role && (
