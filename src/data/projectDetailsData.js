@@ -299,7 +299,187 @@ export const projectDetailsData = {
       role: "Client",
       avatar: "/images/testimonials/sarah-jenkins.jpg",
     },
-    relatedProjectIds: ["shopraftaar", "nextwave"],
+    relatedProjectIds: ["nextwave", "mykeys"],
+  },
+  mykeys: {
+    slug: "mykeys",
+    title: "My Keys",
+    scriptTitle: "Driving School",
+    heroImage: "/projects/mykeys/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "My Keys Driving School is a professional driver-training provider based in Edmonton, Alberta, offering structured driving lessons designed to help learners become confident, safe, and responsible drivers. The school provides a range of training programs, including Class 5 Basic and Advanced courses, winter driving, defensive driving, driving evaluation, and demerit reduction programs. The website was developed to provide students with a convenient digital platform where they can explore available courses, review program pricing, and connect for lessons and bookings.",
+      meta: [
+        { label: "Client:", value: "My Keys Driving School" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Education / Driving Training & Road Safety" },
+        { label: "Location:", value: "Edmonton, Alberta, Canada" },
+      ],
+      liveSiteUrl: "https://mykeysdrivingschool.ca/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/mykeys/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "My Keys Driving School needed a professional digital platform to clearly present its wide range of driving courses while helping students quickly understand their training options. The website also needed to communicate important services such as winter driving, Class 5 training, defensive driving, and driving evaluations in a simple and accessible way.",
+      bullets: [
+        "Presenting diverse driver training courses including Class 5 Basic, Advanced, and Demerit Reduction",
+        "Communicating specialized winter driving safety techniques and defensive driving curriculums",
+        "Streamlining lesson booking, schedule availability, and student inquiries online",
+        "Building a trustworthy, modern brand presence for Edmonton learner drivers",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive, service-focused website that organizes the school's driving programs, training information, pricing, and contact options into clear sections. The platform provides an easy-to-navigate experience that helps prospective students find suitable courses and connect with the school for further assistance.",
+    },
+    gallery: [
+      "/projects/mykeys/gallery-1.png",
+      "/projects/mykeys/gallery-2.png",
+      "/projects/mykeys/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The website gives My Keys Driving School a stronger online presence while making its driving programs and training services easier for Edmonton learners to discover, understand, and access.",
+      stats: [
+        { count: "99", symbol: "%", label: "First-Time Pass Rate" },
+        { count: "24/7", symbol: "", label: "Booking & Availability" },
+        { count: "6", symbol: "+", label: "Core Driving Training Programs" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a positive experience for our driving school. The team understood our requirements and developed a professional website that clearly presents our courses, training services, and key information. The website provides our students with a convenient way to learn about our programs and get in touch with us. We appreciated the team's professionalism, communication, and attention to detail throughout the project.",
+      author: "My Keys Driving School Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["phf", "allsydneytowtruck"],
+  },
+  allsydneytowtruck: {
+    slug: "allsydneytowtruck",
+    title: "All Sydney",
+    scriptTitle: "Tow Truck",
+    heroImage: "/projects/allsydneytowtruck/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "All Sydney Tow Truck is a professional towing and roadside assistance provider serving customers across Sydney and surrounding areas. The company provides a wide range of services, including car towing, emergency towing, vehicle recovery, long-distance towing, motorcycle towing, heavy equipment transport, and roadside assistance. The website was developed to provide customers with a convenient digital platform where they can quickly explore services, request a quote, and connect with the towing dispatch team.",
+      meta: [
+        { label: "Client:", value: "All Sydney Tow Truck" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Transportation / Towing Services" },
+        { label: "Location:", value: "Sydney, New South Wales, Australia" },
+      ],
+      liveSiteUrl: "https://allsydneytowtruck.com.au/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/allsydneytowtruck/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "All Sydney Tow Truck needed a professional digital platform to clearly present its wide range of towing and roadside assistance services while helping customers quickly find the right solution during urgent situations. The website also needed to communicate its 24/7 availability, towing capabilities, service coverage, and quick quote process in a simple and accessible way.",
+      bullets: [
+        "Organizing diverse towing capabilities across light vehicles, heavy transport, and machinery",
+        "Providing rapid contact options and emergency roadside assistance during urgent situations",
+        "Communicating broad service coverage across Sydney metropolitan and regional NSW areas",
+        "Streamlining online quote requests with vehicle details and transparent dispatch information",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive, service-focused website that organizes All Sydney Tow Truck's towing, recovery, emergency, heavy transport, and roadside assistance services into clear sections. The platform also provides an easy quote-request process and prominent contact options, helping customers quickly understand the available services and connect with the team when assistance is needed.",
+    },
+    gallery: [
+      "/projects/allsydneytowtruck/gallery-1.png",
+      "/projects/allsydneytowtruck/gallery-2.png",
+      "/projects/allsydneytowtruck/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The redesigned digital platform gives All Sydney Tow Truck a stronger online presence while making its extensive towing services, emergency support, and transportation capabilities easier for customers to discover and access.",
+      stats: [
+        { count: "24/7", symbol: "", label: "Emergency Towing Availability" },
+        { count: "40", symbol: " Tonnes", label: "Towing Capacity" },
+        { count: "15", symbol: "+ Years", label: "Industry Experience" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood our business requirements and developed a professional website that clearly presents our towing and roadside assistance services. The website has made it easier for customers to understand our services and connect with us when they need assistance. We appreciated the team's professionalism, communication, and attention to detail throughout the project.",
+      author: "All Sydney Tow Truck Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["mykeys", "lynixworld"],
+  },
+  lynixworld: {
+    slug: "lynixworld",
+    title: "Lynix",
+    scriptTitle: "World",
+    heroImage: "/projects/lynixworld/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Lynix World is a multi-brand device repair and IT service provider serving customers across Chandigarh, Mohali, Panchkula, Zirakpur, and nearby areas. The company provides repair and support services for laptops, desktops, MacBooks, iPhones, mobile phones, printers, tablets, and data recovery. The website was developed to provide customers with an easy way to explore repair services, understand available solutions, request quotes, and book doorstep or in-store services.",
+      meta: [
+        { label: "Client:", value: "Lynix World" },
+        { label: "Year:", value: "2018" },
+        { label: "Category:", value: "Technology / Device Repair & IT Services" },
+        { label: "Location:", value: "Chandigarh, India" },
+      ],
+      liveSiteUrl: "https://www.lynixworld.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/lynixworld/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Lynix World needed a professional digital platform to clearly showcase its wide range of device repair and IT services while making it easy for customers to find the right service and request assistance. The website also needed to communicate its doorstep repair model, service coverage, pricing, and reliability in a simple and accessible way.",
+      bullets: [
+        "Organizing multi-device repair offerings across laptops, MacBooks, smartphones, and printers",
+        "Communicating doorstep repair workflows, transparent pricing, and warranty commitments",
+        "Structuring regional service coverage across the Tricity (Chandigarh, Mohali, Panchkula)",
+        "Providing streamlined instant quote requests and on-demand repair booking options",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a user-friendly, responsive website that organizes Lynix World's repair services, device categories, locations, pricing, and support information into clear sections. The platform also provides convenient booking and quote-request options, helping customers quickly identify their repair needs and connect with the service team.",
+    },
+    gallery: [
+      "/projects/lynixworld/gallery-1.png",
+      "/projects/lynixworld/gallery-2.png",
+      "/projects/lynixworld/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The redesigned digital platform gives Lynix World a stronger online presence while making its repair services, doorstep support, pricing, and service coverage easier for customers to discover and access.",
+      stats: [
+        { count: "10000", symbol: "+", label: "Devices Repaired" },
+        { count: "4.4", symbol: "★", label: "Customer Rating" },
+        { count: "53", symbol: "+", label: "Service Areas Covered" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood our requirements and developed a professional, user-friendly website that clearly represents our repair services and makes it easier for customers to connect with us. Their communication, technical expertise, and attention to detail made the entire development process smooth and effective.",
+      author: "Lynix World Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["allsydneytowtruck", "nextwave"],
   },
 };
 
