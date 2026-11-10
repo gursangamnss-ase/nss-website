@@ -479,7 +479,187 @@ export const projectDetailsData = {
       role: "Client",
       avatar: "/images/testimonials/sarah-jenkins.jpg",
     },
-    relatedProjectIds: ["allsydneytowtruck", "nextwave"],
+    relatedProjectIds: ["allsydneytowtruck", "aminabazaar"],
+  },
+  aminabazaar: {
+    slug: "aminabazaar",
+    title: "Amina",
+    scriptTitle: "Bazaar",
+    heroImage: "/projects/aminabazaar/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Amina Bazaar is an online marketplace specializing in VIP and fancy mobile numbers in India, offering customers a curated collection of unique numbers across different patterns, categories, and price ranges. The platform enables users to search and explore numbers based on specific digit combinations, including mirror numbers, special digits, doubling numbers, zero-pattern numbers, business numbers, and Super VIP numbers.",
+      meta: [
+        { label: "Client:", value: "Amina Bazaar" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "E-commerce / Telecommunications" },
+        { label: "Location:", value: "India" },
+      ],
+      liveSiteUrl: "https://aminabazaar.in/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/aminabazaar/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Amina Bazaar needed a user-friendly e-commerce platform capable of handling a large and diverse collection of VIP mobile numbers while making it easy for customers to search, filter, compare, and purchase numbers. The website also needed to clearly organize complex number categories, pricing, and RTP/NON-RTP information into a simple and accessible shopping experience.",
+      bullets: [
+        "Organizing complex number categories including mirror, doubling, and zero-pattern VIP sequences",
+        "Designing advanced search and filter parameters by digits, budget, network, and RTP status",
+        "Streamlining porting documentation and instant checkout for telecom customers nationwide",
+        "Ensuring rapid, secure mobile commerce interactions with 24/7 customer support access",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a structured e-commerce platform with advanced number categories, price-based filtering, product listings, and detailed number information. The platform simplifies the buying journey by allowing customers to discover suitable VIP numbers, understand their availability and porting status, and proceed with online purchases through a streamlined interface.",
+    },
+    gallery: [
+      "/projects/aminabazaar/gallery-1.png",
+      "/projects/aminabazaar/gallery-2.png",
+      "/projects/aminabazaar/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The new digital marketplace gives Amina Bazaar a structured platform for showcasing and selling VIP mobile numbers, making it easier for customers to discover unique numbers, explore different categories, and complete their purchase journey online.",
+      stats: [
+        { count: "10", symbol: "+", label: "Number Categories" },
+        { count: "24/7", symbol: "", label: "Customer Service Availability" },
+        { count: "5-9", symbol: "%", label: "Deal Discounts" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood the requirements of our marketplace and developed a professional, user-friendly platform that makes it easier for customers to explore and purchase VIP mobile numbers. Their technical expertise, responsiveness, and attention to detail helped us turn our concept into a practical online marketplace.",
+      author: "Amina Bazaar Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["shopraftaar", "ibsp"],
+  },
+  ibsp: {
+    slug: "ibsp",
+    title: "IBSP",
+    scriptTitle: "Chris21 HR",
+    heroImage: "/projects/ibsp/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Integrated Business Services Provider (IBSP) is an Australian HR, payroll, and IT consulting company specializing in Chris21 solutions, payroll services, system support, training, reporting, HR21/iChris, and customized business solutions. The company works with organizations across different industries to simplify payroll and HR processes and provide specialized Chris21 support. Netsquare Softwares developed a structured, user-friendly digital platform to present IBSP's specialized services, consulting capabilities, and enterprise support offerings.",
+      meta: [
+        { label: "Client:", value: "Integrated Business Services Provider (IBSP)" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "HR & Payroll / Business Software" },
+        { label: "Location:", value: "Australia" },
+      ],
+      liveSiteUrl: "http://ibsp.net.au/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/ibsp/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "IBSP needed a professional digital platform to clearly communicate its specialized Chris21, HR, payroll, and IT services while making complex solutions easy for businesses to understand. The website also needed to effectively present its wide range of services, expertise, support capabilities, and value proposition in one accessible platform.",
+      bullets: [
+        "Communicating complex Chris21 and HR21/iChris enterprise software consulting solutions",
+        "Structuring specialized payroll services, training modules, and customized reporting",
+        "Highlighting significant 40-60% cost-saving benefits and dedicated 24/7 support response",
+        "Providing streamlined business consultation inquiry workflows for Australian enterprises",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a structured, user-friendly website that organizes IBSP's Chris21, payroll, HR, training, reporting, and support services into clear sections. The platform provides an intuitive way for businesses to understand IBSP's expertise, explore its solutions, and connect with the team for customized support.",
+    },
+    gallery: [
+      "/projects/ibsp/gallery-1.png",
+      "/projects/ibsp/gallery-2.png",
+      "/projects/ibsp/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The redesigned digital platform gives IBSP a professional online presence that clearly communicates its specialized HR and payroll solutions while making its extensive Chris21 services easier for businesses to discover and understand.",
+      stats: [
+        { count: "40-60", symbol: "%", label: "Cost-Saving Value Highlighted" },
+        { count: "24/7", symbol: "", label: "Online Support Visibility" },
+        { count: "<4", symbol: " Hours", label: "Faster Support Response" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a smooth and professional experience. The team took the time to understand our business and transformed our requirements into a clear, user-friendly website that effectively presents our Chris21, payroll, and HR solutions. Their technical expertise, communication, and attention to detail made the entire development process efficient and straightforward.",
+      author: "IBSP Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["mannbros", "rentexcar"],
+  },
+  rentexcar: {
+    slug: "rentexcar",
+    title: "Rentex",
+    scriptTitle: "Car Rental",
+    heroImage: "/projects/rentexcar/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Rentex Car Rental is a Canadian car rental company serving customers across the Greater Toronto Area with affordable and convenient vehicle rental solutions. The company provides a diverse range of rental options for personal, business, insurance replacement, body-shop, and travel-related needs. The website was developed to provide customers with a convenient digital platform where they can explore available vehicles, understand rental services, check pickup and drop-off options, and make reservations online.",
+      meta: [
+        { label: "Client:", value: "Rentex Car Rental" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Travel & Transportation / Car Rental" },
+        { label: "Location:", value: "Mississauga, Ontario, Canada" },
+      ],
+      liveSiteUrl: "https://www.rentexcarrental.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/rentexcar/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Rentex Car Rental needed a user-friendly digital platform to showcase its diverse rental services and vehicle fleet while making the booking process simple and accessible. The website needed to clearly organize personal, business, airport, and insurance rental solutions while enabling customers to quickly select their rental details and make a reservation online.",
+      bullets: [
+        "Showcasing a diverse vehicle fleet spanning economy, sedans, SUVs, and luxury rentals",
+        "Structuring personal, corporate, airport, and insurance replacement rental categories",
+        "Designing an integrated online reservation and pickup/drop-off scheduling experience",
+        "Optimizing local fleet discovery and transparent pricing across the Greater Toronto Area",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a user-friendly, responsive website with an integrated booking experience, allowing customers to easily select rental details and explore available vehicles. The platform also organizes Rentex's key services and fleet into clear sections, creating a streamlined digital experience focused on convenience, accessibility, and easy navigation.",
+    },
+    gallery: [
+      "/projects/rentexcar/gallery-1.png",
+      "/projects/rentexcar/gallery-2.png",
+      "/projects/rentexcar/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The redesigned digital platform brings Rentex Car Rental's services, fleet, and booking journey together in a clearer and more convenient platform, helping customers find rental options and begin their booking with greater ease.",
+      stats: [
+        { count: "32", symbol: "%", label: "Improved Booking Accessibility" },
+        { count: "27", symbol: "%", label: "Better Fleet Engagement" },
+        { count: "3", symbol: "x", label: "Faster Service Discovery" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood our requirements, created a professional and user-friendly website, and made sure the final solution reflected our business and services. Their communication, technical expertise, and attention to detail made the entire development process smooth and efficient.",
+      author: "Rentex Car Rental Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["mannbros", "allsydneytowtruck"],
   },
 };
 
