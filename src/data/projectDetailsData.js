@@ -1,66 +1,6 @@
 import { projectData } from "./projectData";
 
 export const projectDetailsData = {
-  nova: {
-    slug: "nova",
-    title: "Nova",
-    scriptTitle: "Wallet",
-    heroImage: "/projects/project2.jpg",
-    overview: {
-      badge: "Overview",
-      description:
-        "Nova Wallet, a rapidly growing crypto-finance app, reached out for a complete redesign of its platform. Their existing interface lacked clarity and failed to match the expectations of modern crypto users. We aimed to craft a sleek, intuitive, and secure experience tailored for both new and experienced traders.",
-      meta: [
-        { label: "Client:", value: "BlockNova Inc." },
-        { label: "Year:", value: "2025" },
-        { label: "Category:", value: "UI/UX Design / Web App" },
-        { label: "Location:", value: "San Francisco, CA" },
-      ],
-      liveSiteUrl: "https://example.com",
-      liveSiteLabel: "View live site",
-    },
-    showcaseImage: "/projects/project1.jpg",
-    challenge: {
-      badge: "The Challenge",
-      description:
-        "As user numbers grew, so did confusion. Nova Wallet’s interface was cluttered, with inconsistent icons, complex user flows, and a dated look. Security cues were poorly communicated, and users had low trust during transactions.",
-      bullets: [
-        "Complex onboarding, discouraging new users",
-        "Visual design not aligned with blockchain credibility",
-        "Poor mobile responsiveness",
-        "Weak CTA placement and conversion",
-      ],
-    },
-    solution: {
-      badge: "The Solution",
-      description:
-        "We conducted competitor analysis and user testing, then rebuilt the UI with clarity and minimalism in mind. Security indicators were prioritized, typography was modernized, and we implemented adaptive layouts for mobile. We also introduced a consistent component library.",
-    },
-    gallery: [
-      "/images/case-studies/client-3.jpg",
-      "/images/case-studies/client-4.jpg",
-      "/images/case-studies/desert-campaign.jpg",
-    ],
-    results: {
-      badge: "The Result",
-      description:
-        "User confidence rose dramatically, with a drop in abandonment during key transactions. Nova now stands out in a crowded space with a bold, secure, and scalable interface.",
-      stats: [
-        { count: "48", symbol: "%", label: "Increase in completed sign-ups" },
-        { count: "3.2", symbol: "x", label: "Boost in daily active users" },
-        { count: "65", symbol: "%", label: "Faster mobile navigation" },
-      ],
-    },
-    feedback: {
-      badge: "Client feedback",
-      quote:
-        "They made crypto feel approachable. The design is stunning and the UX feels effortless.",
-      author: "Jared Lin",
-      role: "Product Manager",
-      avatar: "/images/testimonials/daniel-rios.jpg",
-    },
-    relatedProjectIds: ["echo-studio", "pulse-ui"],
-  },
   shopraftaar: {
     slug: "shopraftaar",
     title: "Raftaar",
@@ -119,7 +59,7 @@ export const projectDetailsData = {
       role: "Client",
       avatar: "/images/testimonials/sarah-jenkins.jpg",
     },
-    relatedProjectIds: ["nova-wallet", "pulse-ui"],
+    relatedProjectIds: ["mannbros", "shahikhuraak"],
   },
   mannbros: {
     slug: "mannbros",
@@ -179,7 +119,187 @@ export const projectDetailsData = {
       role: "Client",
       avatar: "/images/testimonials/daniel-rios.jpg",
     },
-    relatedProjectIds: ["shopraftaar", "nova-wallet"],
+    relatedProjectIds: ["shopraftaar", "shahikhuraak"],
+  },
+  shahikhuraak: {
+    slug: "shahikhuraak",
+    title: "Shahi",
+    scriptTitle: "Khuraak",
+    heroImage: "/projects/shahikhuraak/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Shahi Khuraak is an online food brand offering premium Punjabi-inspired products made with traditional recipes and carefully selected ingredients. Its collection includes pickles, pinnis, combo packs, and authentic Punjabi food products. Netsquare Softwares developed a responsive e-commerce platform that highlights their rich culinary heritage and provides an effortless digital shopping experience.",
+      meta: [
+        { label: "Client:", value: "Shahi Khuraak" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Food & Beverage / Punjabi Cuisine & Traditional Food Products" },
+        { label: "Location:", value: "Auckland, New Zealand" },
+      ],
+      liveSiteUrl: "https://www.shahikhuraak.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/shahikhuraak/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Shahi Khuraak needed a professional e-commerce platform to showcase its traditional food products while communicating its focus on authenticity, quality, and Punjabi culinary heritage. The website also needed to provide customers with a simple online shopping experience.",
+      bullets: [
+        "Communicating deep Punjabi culinary heritage and authentic homemade quality",
+        "Clear organization of diverse food categories including pickles, pinnis, and combo packs",
+        "Streamlining product discovery, pricing, and ingredients transparency",
+        "Providing an intuitive, responsive cart and checkout flow for international customers",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive e-commerce website featuring organized product collections, product details, shopping cart functionality, and a clean food-focused design. The platform highlights Shahi Khuraak's traditional recipes and premium ingredients.",
+    },
+    gallery: [
+      "/projects/shahikhuraak/gallery-1.png",
+      "/projects/shahikhuraak/gallery-2.png",
+      "/projects/shahikhuraak/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The website provides Shahi Khuraak with a professional online storefront to showcase its products, strengthen its digital presence, and make authentic Punjabi food products accessible to customers online.",
+      stats: [
+        { count: "100", symbol: "%", label: "Natural Ingredients" },
+        { count: "3", symbol: "", label: "Main Product Collections" },
+        { count: "100", symbol: "%", label: "Authentic Punjabi Food Experience" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team created a professional e-commerce website that beautifully represents our Punjabi food heritage and makes our products easy for customers to explore and purchase.",
+      author: "Shahi Khuraak Team",
+      role: "Client",
+      avatar: "/images/testimonials/daniel-rios.jpg",
+    },
+    relatedProjectIds: ["shopraftaar", "mannbros"],
+  },
+  nextwave: {
+    slug: "nextwave",
+    title: "Next Wave",
+    scriptTitle: "Mechanical",
+    heroImage: "/projects/nextwave/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Next Wave Mechanical Ltd. provides residential plumbing, heating, boiler, gas, appliance installation, and renovation services across Metro Vancouver. The company focuses on reliable service, professional workmanship, and practical solutions for homeowners. Netsquare Softwares developed a responsive corporate website featuring dedicated service sections, project information, testimonials, contact details, and an intuitive service quote form.",
+      meta: [
+        { label: "Client:", value: "Next Wave Mechanical Ltd." },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Plumbing / Heating / Gas & Home Services" },
+        { label: "Location:", value: "Surrey, British Columbia, Canada" },
+      ],
+      liveSiteUrl: "https://www.nextwavemech.ca/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/nextwave/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Next Wave Mechanical needed a professional website to clearly present its wide range of home services and build trust with potential customers. The platform also needed to make service requests and emergency assistance easily accessible.",
+      bullets: [
+        "Clearly presenting multi-trade home services spanning plumbing, heating, gas, and renovation",
+        "Streamlining urgent 24/7 emergency service requests and location-based coverage",
+        "Building homeowner trust through transparent workmanship, process clarity, and customer reviews",
+        "Designing an interactive service area map and organized multi-step service inquiry workflow",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive corporate website featuring dedicated service sections, interactive service process breakdowns, project mapping, testimonials, and a streamlined quote form. The website provides visitors with a clear and simple way to understand the company's services and get in touch.",
+    },
+    gallery: [
+      "/projects/nextwave/gallery-1.png",
+      "/projects/nextwave/gallery-2.png",
+      "/projects/nextwave/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The website gives Next Wave Mechanical a professional digital presence that showcases its expertise, services, and customer-focused approach while helping homeowners easily request assistance.",
+      stats: [
+        { count: "6", symbol: "+", label: "Core Service Categories" },
+        { count: "24", symbol: "/7", label: "Emergency Service Availability" },
+        { count: "4.8", symbol: "★", label: "Google Review Rating" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team understood our vision and created a professional website that represents Next Wave Mechanical effectively. The website gives us a strong platform to showcase our projects and connect with potential customers.",
+      author: "Next Wave Mechanical",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["shopraftaar", "mannbros"],
+  },
+  phf: {
+    slug: "phf",
+    title: "Punjabi Heritage",
+    scriptTitle: "& Folk",
+    heroImage: "/projects/phf/hero.png",
+    overview: {
+      badge: "Overview",
+      description:
+        "Punjabi Heritage and Folk (PHF) is a Canadian cultural organization dedicated to preserving and promoting Punjabi heritage, traditions, folk arts, and cultural practices among youth. Since 2009, PHF has been educating young people about Punjabi virsa while providing training in traditional Punjabi folk dances and musical instruments. Netsquare Softwares developed a responsive and culturally focused website with centralized registration, event showcase, and program administration.",
+      meta: [
+        { label: "Client:", value: "Punjabi Heritage and Folk (PHF)" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Cultural Organization / Punjabi Heritage & Performing Arts" },
+        { label: "Location:", value: "Edmonton, Alberta, Canada" },
+      ],
+      liveSiteUrl: "https://www.phfcanada.com/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/phf/showcase.png",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Punjabi Heritage and Folk needed a strong online presence that could effectively communicate its cultural mission and connect today's youth with Punjabi heritage. The website needed to represent the organization's long-standing work in cultural education while presenting its folk dance, musical instrument training, and other cultural activities in an engaging and accessible manner.",
+      bullets: [
+        "Presenting a rich 15+ year history of cultural education, folk dance, and music programs",
+        "Streamlining participant registration across Gidha, Bhangra, Dhol, and Summer Camps",
+        "Managing multiple branch locations, class schedules, and student inquiries",
+        "Building an administrative system for program links, payments, and instructor coordination",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive and culturally focused website that presents PHF's mission, heritage initiatives, training activities, and organizational information in a structured and engaging format. The platform provides a centralized digital presence where visitors can learn about PHF's work, submit registrations, and explore community events.",
+    },
+    gallery: [
+      "/projects/phf/gallery-1.png",
+      "/projects/phf/gallery-2.png",
+      "/projects/phf/gallery-3.png",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The website provides Punjabi Heritage and Folk with a professional digital platform that strengthens its online presence and helps communicate its mission of preserving Punjabi heritage while making its cultural initiatives more accessible to the community and younger generations.",
+      stats: [
+        { count: "15", symbol: "+", label: "Years Cultural Heritage Education" },
+        { count: "1000", symbol: "+", label: "Individuals Trained" },
+        { count: "2009", symbol: "", label: "Year Began Promoting Virsa" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a wonderful experience for Punjabi Heritage and Folk. The team understood the importance of presenting our cultural mission and created a professional website that helps us communicate our work and initiatives effectively. The website gives us a strong platform to showcase our efforts toward preserving Punjabi heritage and connecting today's youth with our traditional folk arts.",
+      author: "Punjabi Heritage and Folk Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["shopraftaar", "nextwave"],
   },
 };
 
@@ -229,9 +349,8 @@ export function getProjectBySlug(slug) {
         "We designed a modular design system and focused typography hierarchy to enhance clarity and user engagement.",
     },
     gallery: [
-      "/images/case-studies/client-1.jpg",
-      "/images/case-studies/client-2.jpg",
-      "/images/case-studies/client-3.jpg",
+      "/projects/shopraftaar/hero.png",
+      "/projects/mannbros/hero.png",
     ],
     results: {
       badge: "The Result",
