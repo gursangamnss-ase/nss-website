@@ -18,7 +18,7 @@ export default function Rating({
       >
         <Image
           src={image}
-          alt={imageAlt}
+          alt={imageAlt || "Review rating provider logo"}
           fill
           sizes={sizes}
           className="object-contain p-3"

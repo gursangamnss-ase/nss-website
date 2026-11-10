@@ -1,50 +1,51 @@
 export const colors = {
     brand: {
-        primary: "#05080C",
-        secondary: "#F5F5F5",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
     },
 
     background: {
-        primary: "#FFFFFF",
-        secondary: "#F5F5F5",
-        alt: "#F7F7F6",
-        soft: "#F5F5F4",
-        dark: "#05080C",
+        primary: "var(--color-background)",
+        secondary: "var(--color-background-secondary)",
+        alt: "var(--color-background-alt)",
+        soft: "var(--color-background-soft)",
+        dark: "var(--color-primary)",
     },
 
     surface: {
-        default: "#F5F5F5",
-        hover: "#EDEDED",
-        muted: "#E5E5E5",
-        card: "#0C1017",
-        dark: "#121417",
-        darker: "#080B11",
-        nav: "#222426",
+        default: "var(--color-surface)",
+        hover: "var(--color-surface-hover)",
+        muted: "var(--color-surface-muted)",
+        card: "var(--color-surface-card)",
+        dark: "var(--color-surface-dark)",
+        darker: "var(--color-surface-darker)",
+        nav: "var(--color-surface-nav)",
+        hero: "var(--color-surface-hero)",
     },
 
     text: {
-        primary: "#05080C",
-        secondary: "#5B5B5B",
-        muted: "#AAA9AD",
-        light: "#BABABA",
-        white: "#FFFFFF",
+        primary: "var(--color-text)",
+        secondary: "var(--color-text-secondary)",
+        muted: "var(--color-text-muted)",
+        light: "var(--color-text-light)",
+        white: "var(--color-text-white)",
     },
 
     border: {
-        light: "#DADADB",
-        subtle: "#E8E8E8",
-        dark: "#484848",
-        glass: "rgba(255,255,255,0.10)",
+        light: "var(--color-border)",
+        subtle: "var(--color-border-subtle)",
+        dark: "var(--color-border-dark)",
+        glass: "var(--color-border-glass)",
     },
 
     accent: {
-        orange: "#EF6F38",
-        purple: "#5227FF",
-        lavender: "#B497CF",
+        orange: "var(--color-accent-orange)",
+        purple: "var(--color-accent-purple)",
+        lavender: "var(--color-accent-lavender)",
     },
 
     common: {
-        white: "#FFFFFF",
-        black: "#05080C",
+        white: "var(--color-text-white)",
+        black: "var(--color-primary)",
     },
 };

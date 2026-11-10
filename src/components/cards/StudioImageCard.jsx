@@ -15,7 +15,7 @@ export default function StudioImageCard({
       <div className="relative aspect-square overflow-hidden rounded-[7px]">
         <Image
           src={image}
-          alt={imageAlt}
+          alt={imageAlt || title || "Studio photograph"}
           fill
           sizes="(max-width: 640px) calc(100vw - 40px), 640px"
           className="object-cover"

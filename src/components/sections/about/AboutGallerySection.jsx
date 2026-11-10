@@ -60,7 +60,6 @@ export default function AboutGallerySection() {
                 alt={item.alt}
                 fill
                 sizes="(min-width: 1200px) 33vw, 50vw"
-                priority
                 className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
               />
               <div

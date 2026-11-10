@@ -32,7 +32,7 @@ export default function AboutTeamSection() {
           <Badge
             text={team.badge}
             disabled
-            color="#ffffff"
+            color="var(--color-text-white)"
             className="font-medium text-xs sm:text-sm tracking-wide mb-4 !bg-white/10 !text-white border border-white/15"
           />
 

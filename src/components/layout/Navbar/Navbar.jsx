@@ -18,7 +18,20 @@ const socialItems = [
   { label: "LinkedIn", link: "https://linkedin.com" },
 ];
 
+const desktopNavLinks = [
+  { label: "Home", href: "/" },
+  { label: "About us", href: "/about-us" },
+  { label: "Projects", href: "/project", badge: "(07)" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
+];
+
 export default function Navbar({ isHome = true, activePath = "/" }) {
+  const isLinkActive = (href) => {
+    if (href === "/") return activePath === "/";
+    return activePath === href || activePath.startsWith(`${href}/`);
+  };
+
   const headerContent = (
     <header
       className={`left-0 top-0 z-30 flex w-full items-center px-5 sm:px-8 ${
@@ -64,88 +77,38 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
             isHome ? "text-white" : "text-[var(--color-primary)]"
           }`}
         >
-          <Link
-            href="/"
-            className={`transition-colors ${
-              activePath === "/"
-                ? isHome
-                  ? "font-semibold text-white"
-                  : "font-semibold text-black"
-                : isHome
-                ? "text-white/80 hover:text-white"
-                : "text-neutral-600 hover:text-black"
-            }`}
-          >
-            {activePath === "/" ? "• Home" : "Home"}
-          </Link>
-          <Link
-            href="/about-us"
-            className={`transition-colors ${
-              activePath === "/about-us"
-                ? isHome
-                  ? "font-semibold text-white"
-                  : "font-semibold text-black"
-                : isHome
-                ? "text-white/80 hover:text-white"
-                : "text-neutral-600 hover:text-black"
-            }`}
-          >
-            {activePath === "/about-us" ? "• About us" : "About us"}
-          </Link>
-          <Link
-            href="/project"
-            className={`transition-colors ${
-              activePath === "/project" || activePath.startsWith("/project/")
-                ? isHome
-                  ? "font-semibold text-white"
-                  : "font-semibold text-black"
-                : isHome
-                ? "hover:text-white/80"
-                : "text-neutral-600 hover:text-black"
-            }`}
-          >
-            {activePath === "/project" || activePath.startsWith("/project/") ? "• Projects " : "Projects "}
-            <sup className="text-[9px]">(07)</sup>
-          </Link>
-          <Link
-            href="/blog"
-            className={`transition-colors ${
-              activePath === "/blog" || activePath.startsWith("/blog/")
-                ? isHome
-                  ? "font-semibold text-white"
-                  : "font-semibold text-black"
-                : isHome
-                ? "hover:text-white/80"
-                : "text-neutral-600 hover:text-black"
-            }`}
-          >
-            {activePath === "/blog" || activePath.startsWith("/blog/") ? "• Blog" : "Blog"}
-          </Link>
-          <Link
-            href="/contact"
-            className={`transition-colors ${
-              activePath === "/contact"
-                ? isHome
-                  ? "font-semibold text-white"
-                  : "font-semibold text-black"
-                : isHome
-                ? "text-white/80 hover:text-white"
-                : "text-neutral-600 hover:text-black"
-            }`}
-          >
-            {activePath === "/contact" ? "• Contact" : "Contact"}
-          </Link>
+          {desktopNavLinks.map((item) => {
+            const active = isLinkActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`transition-colors ${
+                  active
+                    ? isHome
+                      ? "font-semibold text-white"
+                      : "font-semibold text-[var(--color-primary)]"
+                    : isHome
+                    ? "text-white/80 hover:text-white"
+                    : "text-neutral-600 hover:text-[var(--color-primary)]"
+                }`}
+              >
+                {active ? `• ${item.label}` : item.label}
+                {item.badge && <sup className="text-[9px] ml-0.5">{item.badge}</sup>}
+              </Link>
+            );
+          })}
         </nav>
 
         <NavbarClient
           items={menuItems}
           socialItems={socialItems}
           displayItemNumbering
-          menuButtonColor={isHome ? "#ffffff" : "#05080c"}
-          openMenuButtonColor="#ffffff"
+          menuButtonColor={isHome ? "var(--color-text-white)" : "var(--color-primary)"}
+          openMenuButtonColor="var(--color-text-white)"
           changeMenuColorOnOpen={false}
-          colors={["#B497CF", "#5227FF"]}
-          accentColor="#5227FF"
+          colors={["var(--color-accent-lavender)", "var(--color-accent-purple)"]}
+          accentColor="var(--color-accent-purple)"
         />
       </div>
     </header>
@@ -156,7 +119,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
   }
 
   return (
-    <div className="relative min-h-[100svh] overflow-hidden bg-[#15171a]">
+    <div className="relative min-h-[100svh] overflow-hidden bg-[var(--color-surface-hero)]">
       <video
         autoPlay
         loop

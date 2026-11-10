@@ -16,7 +16,7 @@ export default function ClientLogoCard({
       <div className="relative flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
         <Image
           src={logo}
-          alt={name}
+          alt={name ? `${name} logo` : "Client logo"}
           width={width}
           height={height}
           style={{ width: "auto", height: "auto" }}

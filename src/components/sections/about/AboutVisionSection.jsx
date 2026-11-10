@@ -166,7 +166,7 @@ export default function AboutVisionSection() {
                 key={metric.id}
                 className={`rounded-[24px] sm:rounded-[28px] p-7 sm:p-8 flex flex-col justify-between min-h-[310px] sm:min-h-[330px] transition-all duration-300 hover:shadow-lg ${
                   isDark
-                    ? "bg-[#09090b] text-white"
+                    ? "bg-[var(--color-surface-card)] text-white"
                     : "bg-white text-[var(--color-primary)] border border-neutral-100/90 shadow-sm"
                 }`}
               >
@@ -179,12 +179,11 @@ export default function AboutVisionSection() {
                         {metric.avatars.map((av, avIdx) => (
                           <div
                             key={avIdx}
-                            className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-[10px] border-2 border-[#09090b] overflow-hidden shrink-0 shadow-sm"
+                            className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-[10px] border-2 border-[var(--color-surface-card)] overflow-hidden shrink-0 shadow-sm"
                           >
                             <Image
                               src={av}
-                              alt=""
-                              aria-hidden="true"
+                              alt={`Client review avatar ${avIdx + 1}`}
                               fill
                               sizes="40px"
                               className="object-cover"
@@ -216,7 +215,7 @@ export default function AboutVisionSection() {
                           </span>
                         )}
                       </div>
-                      <p className="text-xs sm:text-sm text-[#94a3b8] font-normal mt-2.5 tracking-tight">
+                      <p className="text-xs sm:text-sm text-[var(--color-text-muted)] font-normal mt-2.5 tracking-tight">
                         {metric.label}
                       </p>
                     </div>
@@ -240,7 +239,7 @@ export default function AboutVisionSection() {
 
                   <p
                     className={`text-right text-[15px] sm:text-[17px] font-normal leading-[1.25] max-w-[155px] ${
-                      isDark ? "text-[#94a3b8]" : "text-[var(--color-text-secondary)]"
+                      isDark ? "text-[var(--color-text-muted)]" : "text-[var(--color-text-secondary)]"
                     }`}
                   >
                     {isDark ? (

@@ -6,7 +6,7 @@ const variants = {
     inactive: "var(--color-border-light)",
   },
   light: {
-    active: "#ffffff",
+    active: "var(--color-text-white)",
     inactive: "rgba(255, 255, 255, 0.25)",
   },
   muted: {

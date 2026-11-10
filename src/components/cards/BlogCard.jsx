@@ -13,7 +13,7 @@ export default function BlogCard({ article }) {
       <div className="relative w-full sm:w-[210px] md:w-[230px] aspect-[16/10] sm:aspect-[1.9/1] rounded-[10px] overflow-hidden shrink-0 bg-[var(--color-surface-muted)]">
         <Image
           src={image}
-          alt={title}
+          alt={title || "Blog article thumbnail"}
           fill
           sizes="(max-width: 640px) 100vw, 240px"
           className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"

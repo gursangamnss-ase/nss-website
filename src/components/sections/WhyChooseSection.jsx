@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 import { whyChooseData } from "@/data/whyChooseData";
 
@@ -191,53 +191,30 @@ export default function WhyChooseSection() {
 
                 {/* Tool Icons Cluster: 2-row honeycomb (3 top, 4 bottom) */}
                 <div className="flex flex-col items-center justify-center mt-auto pt-4 gap-1.5 sm:gap-2">
-                  {/* Row 1: 3 tools */}
-                  <div className="flex items-center justify-center gap-3 sm:gap-4">
-                    {builtWithBest.tools.slice(0, 3).map((tool) => (
-                      <div
-                        key={tool.name}
-                        title={tool.name}
-                        className={`w-11 h-11 rounded-full flex items-center justify-center p-2.5 shadow-sm transition-transform duration-300 hover:scale-110 ${
-                          tool.dark
-                            ? "bg-[var(--color-primary)] text-white"
-                            : "bg-[#DADADB] text-black"
-                        }`}
-                      >
-                        <Image
-                          src={tool.icon}
-                          alt={tool.name}
-                          width={tool.width || 24}
-                          height={tool.height || 24}
-                          className="max-h-5 max-w-5 w-auto h-auto object-contain"
-                          style={{ width: "auto", height: "auto" }}
-                        />
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Row 2: 4 tools */}
-                  <div className="flex items-center justify-center gap-3 sm:gap-4">
-                    {builtWithBest.tools.slice(3, 7).map((tool) => (
-                      <div
-                        key={tool.name}
-                        title={tool.name}
-                        className={`w-11 h-11 rounded-full flex items-center justify-center p-2.5 shadow-sm transition-transform duration-300 hover:scale-110 ${
-                          tool.dark
-                            ? "bg-[var(--color-primary)] text-white"
-                            : "bg-[#DADADB] text-black"
-                        }`}
-                      >
-                        <Image
-                          src={tool.icon}
-                          alt={tool.name}
-                          width={tool.width || 24}
-                          height={tool.height || 24}
-                          className="max-h-5 max-w-5 w-auto h-auto object-contain"
-                          style={{ width: "auto", height: "auto" }}
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  {[builtWithBest.tools.slice(0, 3), builtWithBest.tools.slice(3, 7)].map((row, rowIdx) => (
+                    <div key={rowIdx} className="flex items-center justify-center gap-3 sm:gap-4">
+                      {row.map((tool) => (
+                        <div
+                          key={tool.name}
+                          title={tool.name}
+                          className={`w-11 h-11 rounded-full flex items-center justify-center p-2.5 shadow-sm transition-transform duration-300 hover:scale-110 ${
+                            tool.dark
+                              ? "bg-[var(--color-primary)] text-white"
+                              : "bg-[var(--color-border)] text-black"
+                          }`}
+                        >
+                          <Image
+                            src={tool.icon}
+                            alt={tool.name}
+                            width={tool.width || 24}
+                            height={tool.height || 24}
+                            className="max-h-5 max-w-5 w-auto h-auto object-contain"
+                            style={{ width: "auto", height: "auto" }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -337,15 +314,13 @@ export default function WhyChooseSection() {
 
                 {/* CTA Button */}
                 <div className="mt-8">
-                  <Link
+                  <Button
                     href={strategicSolutions.ctaLink}
-                    className="group inline-flex items-center justify-between gap-4 bg-white font-medium text-sm pl-5 pr-2 py-2 rounded-full transition-transform duration-300 hover:scale-105 active:scale-95 shadow-md"
+                    variant="light"
+                    size="sm"
                   >
-                    <span className="text-[var(--color-primary)] font-medium">{strategicSolutions.ctaText}</span>
-                    <span className="w-8 h-8 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center text-sm transition-transform duration-300 group-hover:translate-x-0.5">
-                      →
-                    </span>
-                  </Link>
+                    {strategicSolutions.ctaText}
+                  </Button>
                 </div>
               </div>
 

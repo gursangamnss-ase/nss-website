@@ -13,7 +13,7 @@ export default function BentoBlogCard({ article }) {
         {/* Background Image with Zoom-Out Hover */}
         <Image
           src={image}
-          alt={title}
+          alt={title || "Featured blog article cover"}
           fill
           sizes="(max-width: 1024px) 100vw, 66vw"
           priority
@@ -59,7 +59,7 @@ export default function BentoBlogCard({ article }) {
       <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[14px] sm:rounded-[16px] bg-neutral-100">
         <Image
           src={image}
-          alt={title}
+          alt={title || "Blog article thumbnail"}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover object-center transition-transform duration-700 ease-out scale-105 group-hover:scale-100"
