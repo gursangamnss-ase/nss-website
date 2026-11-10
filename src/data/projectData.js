@@ -73,6 +73,24 @@ export const projectData = {
       href: "/project/luma",
       alt: "Luma architectural design and visual identity",
     },
+    {
+      id: "shopraftaar",
+      title: "Raftaar",
+      scriptTitle: "E-Commerce",
+      tags: ["Fashion & Apparel", "Punjabi Streetwear"],
+      image: "/projects/shopraftaar/hero.png",
+      href: "/project/shopraftaar",
+      alt: "Raftaar Punjabi Streetwear E-Commerce digital storefront",
+    },
+    {
+      id: "mannbros",
+      title: "Mann Bros",
+      scriptTitle: "Leasing",
+      tags: ["Fleet Management", "Admin System"],
+      image: "/projects/mannbros/hero.png",
+      href: "/project/mannbros",
+      alt: "Mann Bros Leasing trailer and fleet management platform",
+    },
   ],
 };
 
