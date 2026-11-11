@@ -13,6 +13,9 @@ export default function EnquiryForm({ form = enquiryData.form }) {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState("idle"); // "idle" | "submitting" | "success" | "error"
+  const [responseMessage, setResponseMessage] = useState("");
 
   const handleCopyEmail = async () => {
     try {
@@ -33,13 +36,66 @@ export default function EnquiryForm({ form = enquiryData.form }) {
     };
   }, []);
 
-  const handleSubmit = (e) => {
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Please enter your full name.";
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Please enter your email address.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+    return newErrors;
+  };
+
+  const handleInputChange = (field, value) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    if (errors[field]) {
+      setErrors((prev) => {
+        const updated = { ...prev };
+        delete updated[field];
+        return updated;
+      });
+    }
+    if (status === "error") {
+      setStatus("idle");
+      setResponseMessage("");
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const validationErrors = validate();
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      setStatus("error");
+      setResponseMessage("Please fill in all required fields correctly.");
+      return;
+    }
+
+    setErrors({});
+    setStatus("submitting");
+    setResponseMessage("");
+
+    // Simulate clean client-side submission with realistic response delay
+    await new Promise((resolve) => setTimeout(resolve, 800));
+
+    setStatus("success");
+    setResponseMessage(
+      "Thank you! Your query has been submitted successfully. Our team will get back to you shortly."
+    );
+    setFormData({
+      fullName: "",
+      email: "",
+      message: "",
+    });
   };
 
   return (
     <div className="w-full lg:w-[580px] rounded-[22px] sm:rounded-[26px] bg-[var(--color-surface)] p-7 sm:p-10 md:p-11 text-[var(--color-primary)] shadow-[0_24px_60px_rgba(0,0,0,0.55)] flex flex-col justify-between">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+      <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
         <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-normal text-[var(--color-primary)] tracking-tight mb-2">
           {form.title}
         </h3>
@@ -52,9 +108,8 @@ export default function EnquiryForm({ form = enquiryData.form }) {
           required
           placeholder="Riley Brooks"
           value={formData.fullName}
-          onChange={(e) =>
-            setFormData({ ...formData, fullName: e.target.value })
-          }
+          error={errors.fullName}
+          onChange={(e) => handleInputChange("fullName", e.target.value)}
         />
 
         {/* Email Address */}
@@ -66,9 +121,8 @@ export default function EnquiryForm({ form = enquiryData.form }) {
           required
           placeholder="example@gmail.com"
           value={formData.email}
-          onChange={(e) =>
-            setFormData({ ...formData, email: e.target.value })
-          }
+          error={errors.email}
+          onChange={(e) => handleInputChange("email", e.target.value)}
         />
 
         {/* Message */}
@@ -80,20 +134,73 @@ export default function EnquiryForm({ form = enquiryData.form }) {
           label="Message"
           placeholder="Tell us the purpose"
           value={formData.message}
-          onChange={(e) =>
-            setFormData({ ...formData, message: e.target.value })
-          }
+          onChange={(e) => handleInputChange("message", e.target.value)}
         />
 
+        {/* Response Notification Message above Submit Button */}
+        {status === "success" && (
+          <div
+            role="status"
+            className="flex items-start gap-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 p-3.5 sm:p-4 text-emerald-800 animate-in fade-in duration-300"
+          >
+            <svg
+              className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            <div className="space-y-0.5">
+              <p className="text-sm font-semibold text-emerald-900">
+                Message Received!
+              </p>
+              <p className="text-xs sm:text-sm text-emerald-800 leading-relaxed">
+                {responseMessage}
+              </p>
+            </div>
+          </div>
+        )}
+
+        {status === "error" && responseMessage && (
+          <div
+            role="alert"
+            className="flex items-center gap-2.5 rounded-xl bg-rose-500/10 border border-rose-500/30 p-3 sm:p-3.5 text-xs sm:text-sm font-medium text-rose-700 animate-in fade-in duration-300"
+          >
+            <svg
+              className="w-5 h-5 text-rose-600 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span>{responseMessage}</span>
+          </div>
+        )}
+
         {/* Form Actions: Submit & Email Copy */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 pt-3 mt-1">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 pt-2 mt-1">
           <Button
             type="submit"
             variant="dark"
             size="md"
+            disabled={status === "submitting"}
+            className="disabled:opacity-60"
           >
-            {form.submitText}
+            {status === "submitting" ? "Sending..." : form.submitText}
           </Button>
+
           {/* Email Copy Box */}
           <div className="flex flex-col items-start sm:items-end gap-1.5">
             <span className="text-xs sm:text-[13px] font-semibold text-[var(--color-text-secondary)]">
