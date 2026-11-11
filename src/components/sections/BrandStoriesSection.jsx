@@ -38,15 +38,15 @@ export default function BrandStoriesSection() {
     offset: ["start start", "end end"],
   });
 
-  // Desktop split title horizontal translations
-  const leftX = useTransform(scrollYProgress, [0, 0.10, 0.25], [splitDistance, splitDistance, 0]);
-  const rightX = useTransform(scrollYProgress, [0, 0.10, 0.25], [-splitDistance, -splitDistance, 0]);
+  // Desktop split title horizontal translations - complete split before first card arrives
+  const leftX = useTransform(scrollYProgress, [0, 0.06, 0.18], [splitDistance, splitDistance, 0]);
+  const rightX = useTransform(scrollYProgress, [0, 0.06, 0.18], [-splitDistance, -splitDistance, 0]);
 
   return (
     <section
       ref={sectionRef}
       id="brand-stories"
-      className="relative bg-[var(--color-surface)] text-[var(--color-primary)] pt-20 sm:pt-28 lg:pt-32 pb-24 sm:pb-36 lg:pb-44"
+      className="relative bg-[var(--color-surface)] text-[var(--color-primary)] pt-20 sm:pt-28 lg:pt-32 pb-16 sm:pb-24 lg:pb-28"
     >
       {/* Pre-title Badge - Centered */}
       <div className="flex justify-center mb-10 sm:mb-14 px-4">
@@ -58,18 +58,22 @@ export default function BrandStoriesSection() {
         />
       </div>
 
-      {/* Mobile/Tablet view */}
-      <div className="lg:hidden px-5 sm:px-8 max-w-[540px] mx-auto">
-        <h2 className="text-center text-[clamp(2.25rem,6.5vw,3.5rem)] font-medium leading-[1.12] tracking-[-0.04em] text-[var(--color-primary)] mb-12 sm:mb-16">
-          Your ideas transform <br />
-          into{" "}
-          <span className="font-script text-[1.25em] font-normal leading-none inline-block align-baseline">
-            Brand
-          </span>{" "}
-          stories
-        </h2>
+      {/* Mobile/Tablet view with sticky title and cards scrolling over it */}
+      <div className="lg:hidden relative px-4 sm:px-6 max-w-[640px] mx-auto">
+        {/* Sticky Title (behind the cards) */}
+        <div className="sticky top-[100px] sm:top-[130px] z-0 flex flex-col items-center pointer-events-none select-none">
+          <h2 className="text-center text-[clamp(2.5rem,5.5vw,3rem)] font-medium leading-[1.15] tracking-[-0.04em] text-[var(--color-primary)]">
+            Your ideas transform <br className="sm:hidden" />
+            into{" "}
+            <span className="font-script text-[1.25em] font-normal leading-none inline-block align-baseline">
+              Brand
+            </span>{" "}
+            stories
+          </h2>
+        </div>
 
-        <div className="flex flex-col items-center gap-7 sm:gap-9">
+        {/* Cards Stack scrolling OVER the sticky title */}
+        <div className="relative z-10 flex flex-col items-center gap-12 sm:gap-16 pt-[80px] sm:pt-[180px]">
           {steps.map((step) => (
             <BrandStoriesCard key={step.id} {...step} />
           ))}
@@ -78,12 +82,12 @@ export default function BrandStoriesSection() {
 
       {/* Desktop split sticky view */}
       <Container size="2xl" className="hidden lg:block">
-        <div className="relative flex justify-center items-start gap-10 min-h-[2400px]">
+        <div className="relative flex justify-center items-start gap-10">
           {/* Left Sticky Column: "Your ideas into Brand" */}
           <motion.div
             ref={leftColRef}
             style={{ x: leftX }}
-            className="sticky top-[30vh] w-[340px] xl:w-[380px] shrink-0 flex flex-col items-end text-right select-none pointer-events-none z-10"
+            className="sticky top-[calc(30vh-150px)] h-[440px] xl:h-[460px] w-[340px] xl:w-[380px] shrink-0 flex flex-col justify-center items-end text-right select-none pointer-events-none z-10"
           >
             <div className="flex flex-col items-end">
               <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[var(--color-primary)] leading-[1.12]">
@@ -103,10 +107,10 @@ export default function BrandStoriesSection() {
           {/* Center Column: Spacer + 3 Scrolling Cards */}
           <div className="w-[380px] shrink-0 flex flex-col items-center z-20">
             {/* Top spacer so the centered titles have clear space before cards scroll up */}
-            <div className="h-[520px] xl:h-[580px] w-full" aria-hidden="true" />
+            <div className="h-[460px] xl:h-[520px] w-full" aria-hidden="true" />
 
-            {/* Cards Stack */}
-            <div className="flex flex-col items-center gap-12 xl:gap-16 w-full">
+            {/* Cards Stack with generous spacing for slower, comfortable scroll progression */}
+            <div className="flex flex-col items-center gap-[300px] xl:gap-[380px] w-full">
               {steps.map((step) => (
                 <BrandStoriesCard
                   key={step.id}
@@ -115,16 +119,13 @@ export default function BrandStoriesSection() {
                 />
               ))}
             </div>
-
-            {/* Bottom spacer for comfortable scroll out */}
-            <div className="h-[260px] w-full" aria-hidden="true" />
           </div>
 
           {/* Right Sticky Column: "transform stories" */}
           <motion.div
             ref={rightColRef}
             style={{ x: rightX }}
-            className="sticky top-[30vh] w-[340px] xl:w-[380px] shrink-0 flex flex-col items-start text-left select-none pointer-events-none z-10"
+            className="sticky top-[calc(30vh-150px)] h-[440px] xl:h-[460px] w-[340px] xl:w-[380px] shrink-0 flex flex-col justify-center items-start text-left select-none pointer-events-none z-10"
           >
             <div className="flex flex-col items-start">
               <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[var(--color-primary)] leading-[1.12]">

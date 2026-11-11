@@ -13,11 +13,11 @@ export const contactData = {
     email: "info@netsquaresoftwares.com",
     badgeVisit: "Visit us",
     agency: "NetSquare Software Pvt Ltd",
-    address: "D-234, Phase 8B, Industrial Area, Sector 74 (Balongi), Sahibzada Ajit Singh Nagar (Mohali), Punjab 140307",
+    address: "D-234, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar (Mohali), Punjab 140307",
     canadaAgency: "Canada Office",
     canadaAddress: "190 Corner Springs Landing Northeast Calgary, AB T3N 2Y1",
     founderQuote:
-      "Every great project begins with a simple conversation — let’s start yours.",
+      "Every great project begins with a simple conversation let’s start yours.",
     founder: {
       name: "Amanda",
       role: "Founder & CEO",

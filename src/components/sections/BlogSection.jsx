@@ -60,9 +60,9 @@ export default function BlogSection() {
             </div>
           </div>
 
-          {/* Right Column: 3 Blog Cards */}
+          {/* Right Column: Featured Blog Cards */}
           <div className="flex-1 flex flex-col gap-4 sm:gap-5 w-full max-w-[740px]">
-            {articles.map((article) => (
+            {articles.slice(0, 4).map((article) => (
               <BlogCard key={article.id} article={article} />
             ))}
           </div>

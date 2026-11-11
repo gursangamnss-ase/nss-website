@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "motion/react";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
@@ -45,43 +48,63 @@ export default function TrustedClientsSection() {
         </div>
 
         {/* Clients grid */}
-        <div className="mt-16 sm:mt-24 lg:mt-28 grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:gap-3 lg:grid-cols-6">
-          {cards.map((card) => {
-            if (card.type === "logo") {
-              return (
-                <ClientLogoCard
-                  key={card.id}
-                  name={card.name}
-                  logo={card.logo}
-                  width={card.width}
-                  height={card.height}
-                  imgClassName={card.imgClassName}
-                />
-              );
-            }
+        <div className="mt-16 sm:mt-24 lg:mt-28 grid grid-cols-2 gap-2.5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 md:gap-3">
+          {cards.map((card, idx) => {
+            const cardContent = (() => {
+              if (card.type === "logo") {
+                return (
+                  <ClientLogoCard
+                    key={card.id}
+                    name={card.name}
+                    logo={card.logo}
+                    width={card.width}
+                    height={card.height}
+                    imgClassName={card.imgClassName}
+                    interval={card.interval}
+                    logos={card.logos}
+                  />
+                );
+              }
 
-            if (card.type === "stat") {
-              return (
-                <ClientStatCard
-                  key={card.id}
-                  count={card.count}
-                  label={card.label}
-                />
-              );
-            }
+              if (card.type === "stat") {
+                return (
+                  <ClientStatCard
+                    key={card.id}
+                    count={card.count}
+                    label={card.label}
+                  />
+                );
+              }
 
-            if (card.type === "cta") {
-              return (
-                <ClientCtaCard
-                  key={card.id}
-                  text={card.text}
-                  href={card.href}
-                  icon={card.icon}
-                />
-              );
-            }
+              if (card.type === "cta") {
+                return (
+                  <ClientCtaCard
+                    key={card.id}
+                    text={card.text}
+                    href={card.href}
+                    icon={card.icon}
+                  />
+                );
+              }
 
-            return null;
+              return null;
+            })();
+
+            return (
+              <motion.div
+                key={card.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{
+                  duration: 0.5,
+                  delay: Math.min(idx * 0.05, 0.4),
+                  ease: [0.25, 0.1, 0.25, 1],
+                }}
+              >
+                {cardContent}
+              </motion.div>
+            );
           })}
         </div>
       </Container>

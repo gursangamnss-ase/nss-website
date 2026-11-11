@@ -3,11 +3,12 @@
 import { useState } from "react";
 import Container from "@/components/layout/Container";
 import BentoBlogCard from "@/components/cards/BentoBlogCard";
+import Button from "@/components/ui/Button";
 import { blogData } from "@/data/blogData";
 
 export default function BlogBentoGrid() {
   const allArticles = blogData.articles;
-  const [visibleCount, setVisibleCount] = useState(5);
+  const [visibleCount, setVisibleCount] = useState(12);
 
   const handleLoadMore = () => {
     setVisibleCount(allArticles.length);
@@ -29,13 +30,16 @@ export default function BlogBentoGrid() {
         {/* Interactive Load More Button */}
         {hasMore && (
           <div className="mt-12 sm:mt-16 flex justify-center">
-            <button
+            <Button
               type="button"
+              variant="dark"
+              showArrow={false}
+              size="md"
               onClick={handleLoadMore}
-              className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-sm font-medium text-white shadow-sm hover:bg-neutral-800 transition-colors cursor-pointer"
+              aria-label="Load more articles"
             >
               Load More
-            </button>
+            </Button>
           </div>
         )}
       </Container>

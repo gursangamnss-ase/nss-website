@@ -22,8 +22,8 @@ export default function MoreProjectsSection({ relatedProjectIds = [] }) {
           </span>
         </h2>
 
-        {/* 2-Column Responsive Grid Reusing ProjectCard */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Responsive Grid: 1 col on mobile/tablet, 2 cols on desktop */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {projectsToDisplay.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

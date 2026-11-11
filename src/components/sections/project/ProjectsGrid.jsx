@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Container from "@/components/layout/Container";
 import ProjectCard from "@/components/cards/ProjectCard";
+import Button from "@/components/ui/Button";
 import { projectData } from "@/data/projectData";
 
 const INITIAL_COUNT = 4;
@@ -21,8 +22,8 @@ export default function ProjectsGrid() {
   return (
     <section className="bg-white pb-24 sm:pb-32">
       <Container size="2xl" className="relative z-10">
-        {/* 2-Column Responsive Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Responsive Grid: 1 col on mobile and tablet (768px), 2 cols on desktop (1024px+) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 xl:gap-12">
           {visibleProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
@@ -31,14 +32,16 @@ export default function ProjectsGrid() {
         {/* Load More Button */}
         {hasMore && (
           <div className="flex justify-center pt-12 sm:pt-16">
-            <button
+            <Button
               type="button"
+              variant="dark"
+              showArrow={false}
+              size="md"
               onClick={handleLoadMore}
-              className="inline-flex items-center justify-center rounded-full bg-black px-9 py-3.5 text-sm font-medium text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-sm"
               aria-label="Load more projects"
             >
               Load More
-            </button>
+            </Button>
           </div>
         )}
       </Container>
