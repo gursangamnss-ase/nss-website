@@ -679,6 +679,145 @@ print(f"Model and tokenizer successfully saved to: {drive_save_path}")`,
     takeawayText:
       "LoRA and PEFT demonstrate that you don't need massive supercomputing clusters to customize state-of-the-art transformer models for specialized domain tasks. By freezing base model weights and training only low-rank adapter matrices, fine-tuning becomes dramatically faster, accessible, and lightweight.",
   },
+  "multiprocessing-in-python-a-beginner-friendly-guide": {
+    slug: "multiprocessing-in-python-a-beginner-friendly-guide",
+    title: "Multiprocessing in Python: A Beginner-Friendly Guide",
+    date: "Aug 30, 2025",
+    readTime: "4 min read",
+    badge: "Python & Performance",
+    image: "/blog/python-multiprocessing.webp",
+    alt: "Multiprocessing in Python: A Beginner-Friendly Guide",
+    quote:
+      "Parallel work, faster results — that’s the magic of multiprocessing.",
+    introHeading: "Introduction",
+    introText:
+      "Most Python programs run one task at a time, even on multi-core computers. Multiprocessing lets our program run many tasks at once, making it faster and smarter. In this blog, we will cover the basic concepts of multiprocessing and show some examples.",
+    sections: [
+      {
+        heading: "What is Multiprocessing?",
+        paragraphs: [
+          "Multiprocessing is a Python module that provides a simple way to run multiple processes in parallel. It allows us to take advantage of multiple cores or processors on our system and significantly improve the performance of our code.",
+        ],
+      },
+      {
+        heading: "Importing Multiprocessing",
+        paragraphs: [
+          "We can use multiprocessing by importing the multiprocessing module.",
+          {
+            type: "code",
+            language: "Python",
+            content: "import multiprocessing",
+          },
+        ],
+      },
+      {
+        heading: "Usage",
+        paragraphs: [
+          "After importing, we need to create a process object that calls a start() method. The start() method runs the process and then to stop the execution, we use the join() method.",
+        ],
+      },
+      {
+        heading: "Example-1: Creating, Starting, and Stopping Processes",
+        paragraphs: [
+          "This example demonstrates how to create, start, and stop processes using the multiprocessing module.",
+          {
+            type: "code",
+            language: "Python",
+            content: `# An example using multiprocessing module 
+
+import multiprocessing
+
+# cube function
+def cube(num):
+    print(f"Cube of {num} is:{num*num*num}")
+    
+# square function
+def square(num):
+    print(f"Square of {num} is:{num*num}")
+   
+    
+if __name__== "__main__":
+    # creating processes
+    cube_process=multiprocessing.Process(target=cube,args=(2,))
+    square_process=multiprocessing.Process(target=square,args=(3,))
+    
+    # starting cube process
+    cube_process.start()
+    # starting square process
+    square_process.start()
+    # waiting till cube process completes
+    cube_process.join()
+    # waiting till square process completes
+    square_process.join()`,
+          },
+        ],
+      },
+      {
+        heading: "Example-2: Shared Memory Using Array and Value",
+        paragraphs: [
+          "This example demonstrates how to create and use shared memory between processes using an array and a value.",
+          {
+            type: "code",
+            language: "Python",
+            content: `import multiprocessing
+
+# square function
+def square(numbers,result_array,shared_value):
+    shared_value.value=5.67
+    for idx,n in enumerate(numbers):
+        result_array[idx]=n*n
+        
+        
+if __name__=="__main__":
+    # list
+    numbers=[1,2,3]
+    # creating a shared memory array
+    result_array=multiprocessing.Array('i',3)
+    # creating a shared memory value
+    shared_value=multiprocessing.Value('d',0.0)
+    # creating process
+    square_process=multiprocessing.Process(target=square,args=(numbers,result_array,shared_value))
+    # starting process
+    square_process.start()
+    # waiting for the process to complete
+    square_process.join()
+    # Printing the result from shared memory 
+    print("Result=",result_array[:])
+    # Printing the value from shared memory
+    print(shared_value.value)`,
+          },
+        ],
+      },
+      {
+        heading: "Example-3: Inter-Process Communication Using Queue",
+        paragraphs: [
+          "This example demonstrates how to communicate between processes using a queue.",
+          {
+            type: "code",
+            language: "Python",
+            content: `# Communication between processes using queue
+import multiprocessing
+
+
+def square(number,queue):
+    queue.put(number*number)
+    
+if __name__=="__main__":
+    queue=multiprocessing.Queue()
+    process=multiprocessing.Process(target=square,args=(2,queue))
+    
+    process.start()
+    process.join()
+    
+    print(queue.get())`,
+          },
+        ],
+      },
+    ],
+    takeawayHeading: "Conclusion",
+    takeawayText:
+      "Multiprocessing unlocks the full power of modern multi-core computers in Python, enabling CPU-heavy operations to run concurrently. Whether you need independent workers, shared state, or message passing with queues, multiprocessing provides a robust foundation for building high-throughput Python applications.",
+  },
 
 
 };

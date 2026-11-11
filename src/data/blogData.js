@@ -73,6 +73,16 @@ export const blogData = {
       link: "/blog/lora-peft-fine-tuning-transformers",
     },
     {
+      id: "multiprocessing-in-python-a-beginner-friendly-guide",
+      slug: "multiprocessing-in-python-a-beginner-friendly-guide",
+      title: "Multiprocessing in Python: A Beginner-Friendly Guide",
+      date: "Aug 30, 2025",
+      readTime: "4 min read",
+      isFeatured: false,
+      image: "/blog/python-multiprocessing.webp",
+      link: "/blog/multiprocessing-in-python-a-beginner-friendly-guide",
+    },
+    {
       id: "choosing-the-right-cms",
       slug: "choosing-the-right-cms-for-your-brand-modern-platforms-compared",
       title: "Content Management System (CMS)",
