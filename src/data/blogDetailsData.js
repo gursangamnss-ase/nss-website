@@ -521,6 +521,164 @@ export const blogDetailsData = {
     takeawayText:
       "By combining ChromaDB for persistent local vector storage, SentenceTransformers for embeddings, Ollama for local LLM inference, and FastAPI for a high-performance web service, you can build secure, private, and production-ready enterprise RAG pipelines without sending sensitive company data to third-party cloud providers.",
   },
+  "lora-peft-fine-tuning-transformers": {
+    slug: "lora-peft-fine-tuning-transformers",
+    title: "LoRA & PEFT: Fine-Tuning Transformers",
+    date: "Aug 26, 2025",
+    readTime: "4 min read",
+    badge: "AI & Machine Learning",
+    image: "/blog/lora.webp",
+    alt: "LoRA & PEFT: Fine-Tuning Transformers with Hugging Face and Colab",
+    quote:
+      "Why train everything from scratch, when a few smart adapters can do the heavy lifting?",
+    introHeading: "Introduction",
+    introText:
+      "In this blog, we will learn about PEFT, LoRA and how to implement LoRA on the DistilBERT model.",
+    sections: [
+      {
+        heading: "What is PEFT?",
+        paragraphs: [
+          "PEFT (Parameter-Efficient Fine-Tuning) is a method in which, instead of updating all the parameters, we freeze most of the pretrained model and train only a small number of additional parameters.",
+          "Advantages of using PEFT:\n• Faster Training\n• Lower GPU Memory\n• Smaller checkpoints\n• Multiple task adapters possible",
+        ],
+      },
+      {
+        heading: "What is LoRA?",
+        paragraphs: [
+          "LoRA is a popular and lightweight fine-tuning technique that significantly reduces the number of trainable parameters in a pretrained model.",
+        ],
+      },
+      {
+        heading: "How LoRA Works?",
+        paragraphs: [
+          "• LoRA inserts a small number of new trainable weights into a pretrained model.\n• Only these new weights are trained, while the rest of the model stays frozen.\n• This makes training faster, memory-efficient, and produces smaller model files (a few hundred MBs), which are easier to store and share.",
+        ],
+      },
+      {
+        heading: "Conceptual Overview of LoRA",
+        paragraphs: [
+          "Let the original weight matrix be W.\nThe weight update is approximated as:\nW + ΔW",
+          "Instead of learning ΔW directly, we decompose it into two small low-rank matrices A and B:",
+          {
+            type: "code",
+            language: "Mathematical Matrix Decomposition",
+            content: "ΔW = A × B",
+          },
+          "A and B are much smaller than W, which means fewer parameters need to be trained.",
+        ],
+      },
+      {
+        heading: "Fine-Tuning DistilBERT with LoRA: Practical Implementation",
+        paragraphs: [
+          "I implemented this on Google Colab and saved the results to my Google Drive.",
+          {
+            type: "code",
+            language: "Python (PyTorch / Hugging Face Transformers & PEFT)",
+            content: `import numpy as np
+from sklearn.metrics import accuracy_score, f1_score
+from datasets import load_dataset
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, TrainingArguments, Trainer
+import transformers
+from google.colab import drive
+drive.mount('/content/drive')
+
+# loading dataset
+dataset = load_dataset("ag_news")
+print(dataset)
+
+# tokenizer
+tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+
+# tokenize function
+def tokenize_function(example):
+    return tokenizer(
+        example["text"],
+        padding="max_length",
+        truncation=True,
+        max_length=128
+    )
+
+# applying mapping
+tokenized_dataset = dataset.map(tokenize_function, batched=True)
+
+# setting format
+tokenized_dataset.set_format("torch")
+
+from peft import LoraConfig, get_peft_model
+from transformers import AutoModelForSequenceClassification
+
+# loading model
+model = AutoModelForSequenceClassification.from_pretrained(
+    "distilbert-base-uncased",
+    num_labels=4
+)
+
+# Configure LoRA
+lora_config = LoraConfig(
+    r=8,
+    lora_alpha=16,
+    target_modules=["q_lin", "v_lin"],
+    lora_dropout=0.1,
+    bias="none",
+    task_type="SEQ_CLS"
+)
+
+# Attaching LoRA to Model
+model = get_peft_model(model, lora_config)
+model.print_trainable_parameters()
+
+# compute metrics function
+def compute_metrics(eval_pred):
+    logits, labels = eval_pred
+    predictions = np.argmax(logits, axis=-1)
+    return {
+        "accuracy": accuracy_score(labels, predictions),
+        "f1": f1_score(labels, predictions, average="weighted")
+    }
+
+# setting training parameters
+training_args = TrainingArguments(
+    output_dir="/content/results",
+    learning_rate=2e-4,
+    per_device_train_batch_size=8,
+    per_device_eval_batch_size=8,
+    num_train_epochs=1,
+    weight_decay=0.01,
+    save_strategy="no",
+    logging_strategy="steps",
+    logging_steps=100
+)
+
+# initializing trainer
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=tokenized_dataset["train"],
+    eval_dataset=tokenized_dataset["test"],
+    compute_metrics=compute_metrics,
+)
+
+# start training
+trainer.train()
+
+# evaluating
+eval_results = trainer.evaluate()
+print(eval_results)
+
+# saving to drive
+drive_save_path = "/content/drive/MyDrive/lora_model"
+trainer.model.save_pretrained(drive_save_path)
+tokenizer.save_pretrained(drive_save_path)
+
+print(f"Model and tokenizer successfully saved to: {drive_save_path}")`,
+          },
+        ],
+      },
+    ],
+    takeawayHeading: "Conclusion",
+    takeawayText:
+      "LoRA and PEFT demonstrate that you don't need massive supercomputing clusters to customize state-of-the-art transformer models for specialized domain tasks. By freezing base model weights and training only low-rank adapter matrices, fine-tuning becomes dramatically faster, accessible, and lightweight.",
+  },
 
 
 };

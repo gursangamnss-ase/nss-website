@@ -63,6 +63,16 @@ export const blogData = {
       link: "/blog/building-a-production-ready-rag-pipeline-for-company-documents-using-local-llms",
     },
     {
+      id: "lora-peft-fine-tuning-transformers",
+      slug: "lora-peft-fine-tuning-transformers",
+      title: "LoRA & PEFT: Fine-Tuning Transformers",
+      date: "Aug 26, 2025",
+      readTime: "4 min read",
+      isFeatured: false,
+      image: "/blog/lora.webp",
+      link: "/blog/lora-peft-fine-tuning-transformers",
+    },
+    {
       id: "choosing-the-right-cms",
       slug: "choosing-the-right-cms-for-your-brand-modern-platforms-compared",
       title: "Content Management System (CMS)",
