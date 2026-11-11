@@ -47,7 +47,7 @@ export default function CreativeCollabsSection() {
         <div className="flex lg:hidden flex-col items-start gap-1 sm:gap-2">
           {/* Line 1: Ideas & */}
           <div className="inline-flex items-center gap-2 sm:gap-3">
-            <h2 className="text-[46px] sm:text-[60px] md:text-[68px] font-semibold leading-[0.85] tracking-[-0.04em] text-[var(--color-primary)] select-none">
+            <h2 className="text-[60px] md:text-[68px] font-semibold leading-[0.85] tracking-[-0.04em] text-[var(--color-primary)] select-none">
               {header.titleLine1}
             </h2>
             <div className="w-[42px] sm:w-[56px] md:w-[64px] aspect-[1.1] select-none shrink-0">
@@ -64,7 +64,7 @@ export default function CreativeCollabsSection() {
 
           {/* Line 2: Execution */}
           <div>
-            <h2 className="text-[46px] sm:text-[60px] md:text-[68px] font-semibold leading-[0.85] tracking-[-0.04em] text-[var(--color-primary)] select-none">
+            <h2 className="text-[60px] md:text-[68px] font-semibold leading-[0.85] tracking-[-0.04em] text-[var(--color-primary)] select-none">
               {header.titleLine2}
             </h2>
           </div>

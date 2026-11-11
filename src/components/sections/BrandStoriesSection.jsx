@@ -58,18 +58,22 @@ export default function BrandStoriesSection() {
         />
       </div>
 
-      {/* Mobile/Tablet view */}
-      <div className="lg:hidden px-5 sm:px-8 max-w-[540px] mx-auto">
-        <h2 className="text-center text-[clamp(2.25rem,6.5vw,3.5rem)] font-medium leading-[1.12] tracking-[-0.04em] text-[var(--color-primary)] mb-12 sm:mb-16">
-          Your ideas transform <br />
-          into{" "}
-          <span className="font-script text-[1.25em] font-normal leading-none inline-block align-baseline">
-            Brand
-          </span>{" "}
-          stories
-        </h2>
+      {/* Mobile/Tablet view with sticky title and cards scrolling over it */}
+      <div className="lg:hidden relative px-4 sm:px-6 max-w-[640px] mx-auto">
+        {/* Sticky Title (behind the cards) */}
+        <div className="sticky top-[100px] sm:top-[130px] z-0 flex flex-col items-center pointer-events-none select-none">
+          <h2 className="text-center text-[clamp(2.5rem,5.5vw,3rem)] font-medium leading-[1.15] tracking-[-0.04em] text-[var(--color-primary)]">
+            Your ideas transform <br className="sm:hidden" />
+            into{" "}
+            <span className="font-script text-[1.25em] font-normal leading-none inline-block align-baseline">
+              Brand
+            </span>{" "}
+            stories
+          </h2>
+        </div>
 
-        <div className="flex flex-col items-center gap-7 sm:gap-9">
+        {/* Cards Stack scrolling OVER the sticky title */}
+        <div className="relative z-10 flex flex-col items-center gap-12 sm:gap-16 pt-[80px] sm:pt-[180px]">
           {steps.map((step) => (
             <BrandStoriesCard key={step.id} {...step} />
           ))}

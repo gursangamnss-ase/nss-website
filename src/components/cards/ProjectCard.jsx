@@ -10,14 +10,14 @@ export default function ProjectCard({ project }) {
       {/* Clickable Image Box with Hover Zoom & Centered Title */}
       <Link
         href={href}
-        className="relative aspect-[16/7.3] w-full overflow-hidden rounded-[20px] sm:rounded-[26px] bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+        className="relative aspect-[16/10.5] sm:aspect-[16/8] md:aspect-[16/6] lg:aspect-[16/10] xl:aspect-[16/11] w-full overflow-hidden rounded-[20px] sm:rounded-[24px] bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
         aria-label={`View details for ${title} ${scriptTitle}`}
       >
         <Image
           src={image}
           alt={alt || `${title} ${scriptTitle}`}
           fill
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
         />
 
@@ -29,7 +29,7 @@ export default function ProjectCard({ project }) {
 
         {/* Centered Display Title Overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 text-center text-white pointer-events-none">
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium tracking-tight text-white drop-shadow-sm leading-tight">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-medium tracking-tight text-white drop-shadow-sm leading-tight">
             {title}
             <span className="font-script font-normal italic tracking-normal block mt-1 text-[1.1em]">
               {scriptTitle}
@@ -39,25 +39,25 @@ export default function ProjectCard({ project }) {
       </Link>
 
       {/* Card Footer: Category Tags & Details Link */}
-      <div className="flex items-center justify-between gap-3 px-1 pt-1">
+      <div className="flex flex-col items-start gap-2.5 sm:gap-3 px-1 pt-1">
         {/* Category Pill Tags */}
         <div className="flex flex-wrap items-center gap-2">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center rounded-full bg-[var(--color-pill-bg)] px-3.5 py-1.5 text-sm md:text-base font-medium text-[var(--color-primary)]"
+              className="inline-flex items-center rounded-full bg-[var(--color-pill-bg)] px-3.5 py-1.5 text-xs sm:text-sm font-medium text-[var(--color-primary)]"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        {/* View Details Button (without bg) */}
+        {/* View Details Button (without bg, left-aligned below tags) */}
         <Button
           href={href}
           variant="link"
           size="sm"
-          className="shrink-0"
+          className="shrink-0 -ml-1"
         >
           View details
         </Button>

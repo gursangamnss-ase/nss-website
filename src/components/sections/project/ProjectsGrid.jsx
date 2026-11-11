@@ -22,8 +22,8 @@ export default function ProjectsGrid() {
   return (
     <section className="bg-white pb-24 sm:pb-32">
       <Container size="2xl" className="relative z-10">
-        {/* 2-Column Responsive Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Responsive Grid: 1 col on mobile and tablet (768px), 2 cols on desktop (1024px+) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 xl:gap-12">
           {visibleProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

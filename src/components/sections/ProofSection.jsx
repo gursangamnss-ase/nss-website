@@ -16,10 +16,10 @@ export default function ProofSection() {
       className="bg-[var(--color-surface)] py-20 sm:py-28 lg:py-32 text-[var(--color-primary)] select-none"
     >
       <Container size="2xl">
-        {/* Header Area */}
-        <div className="relative mb-12 sm:mb-14 lg:mb-16">
+        {/* Header Area: Left aligned layout matching Image 1 */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start mb-12 sm:mb-14 lg:mb-16">
           {/* Badge: Top-Left */}
-          <div className="flex justify-start mb-6 lg:mb-0 lg:absolute lg:top-1 lg:left-0">
+          <div className="flex justify-start pt-1 lg:col-span-4">
             <Badge
               text={badge}
               disabled
@@ -28,29 +28,27 @@ export default function ProofSection() {
             />
           </div>
 
-          {/* Main Title: Center Aligned */}
-          <div className="text-center">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-semibold leading-[1.02] tracking-[-0.035em] text-[var(--color-primary)]">
-              <span className="block">{titlePrefix}</span>
-              <span className="block">
-                <span className="font-script font-normal text-[1.16em] tracking-normal inline-block pr-1.5">
-                  {titleScript}
-                </span>
-                {titleSuffix}
+          {/* Main Title: Left Aligned */}
+          <div className="lg:col-span-8 text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[62px] xl:text-[68px] font-medium leading-[1.08] tracking-[-0.035em] text-[var(--color-primary)]">
+              <span>{titlePrefix} </span>
+              <span className="font-script font-normal text-[1.18em] tracking-normal inline-block pr-1.5 align-baseline">
+                {titleScript}
               </span>
+              <span className="block">{titleSuffix}</span>
             </h2>
           </div>
         </div>
 
         {/* 4 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-4 xl:gap-5 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-4 xl:gap-5 items-stretch">
           {/* Card 1: Studio Mellow Case Study */}
-          <div className="bg-white rounded-[16px] p-5 sm:p-5 lg:p-6 flex flex-col justify-between border border-[var(--color-border-light)] shadow-[0_2px_10px_rgba(0,0,0,0.03)] min-h-[420px] sm:min-h-[440px] lg:min-h-[455px] transition-transform duration-300 hover:-translate-y-1">
+          <div className="bg-white rounded-[20px] p-5 sm:p-6 flex flex-col justify-between border border-[var(--color-border-light)] shadow-[0_2px_10px_rgba(0,0,0,0.03)] min-h-[350px] sm:min-h-[440px] lg:min-h-[455px] transition-transform duration-300 hover:-translate-y-1">
             <div>
-              <h3 className="text-[17px] sm:text-[18px] lg:text-[19px] font-semibold text-[var(--color-primary)] leading-[1.3] tracking-[-0.02em]">
+              <h3 className="text-[18px] lg:text-2xl font-medium text-[var(--color-primary)] leading-[1.3] tracking-[-0.02em]">
                 {cards.card1.title}
               </h3>
-              <p className="mt-2 text-[12.5px] sm:text-[13px] text-[var(--color-text-secondary)] leading-[1.5]">
+              <p className="mt-2.5 text-base md:text-lg text-[var(--color-text-secondary)] leading-[1.5]">
                 {cards.card1.description}
               </p>
             </div>
@@ -60,10 +58,10 @@ export default function ProofSection() {
               <div className="flex items-start gap-7 pt-1">
                 {cards.card1.stats.map((stat) => (
                   <div key={stat.label} className="flex flex-col">
-                    <span className="text-[28px] sm:text-[32px] font-semibold tracking-[-0.03em] text-[var(--color-primary)] leading-none">
+                    <span className="text-[28px] sm:text-[32px] font-medium tracking-[-0.03em] text-[var(--color-primary)] leading-none">
                       {stat.value}
                     </span>
-                    <span className="mt-1 text-[11px] sm:text-[11.5px] text-[var(--color-text-secondary)] leading-tight max-w-[95px]">
+                    <span className="mt-1 text-sm sm:text-base text-[var(--color-text-secondary)] leading-tight">
                       {stat.label}
                     </span>
                   </div>
@@ -73,19 +71,19 @@ export default function ProofSection() {
               {/* Divider & Author */}
               <div className="border-t border-[var(--color-border-subtle)] mt-5 pt-3.5 flex items-center justify-between">
                 <div>
-                  <h4 className="text-[13.5px] sm:text-[14px] font-semibold text-[var(--color-primary)]">
+                  <h4 className="text-base sm:text-xl font-medium text-[var(--color-primary)]">
                     {cards.card1.author.name}
                   </h4>
-                  <p className="text-[11px] text-[var(--color-text-secondary)] mt-0.5">
+                  <p className="text-sm sm:text-base text-[var(--color-text-secondary)] mt-0.5">
                     {cards.card1.author.role}
                   </p>
                 </div>
-                <div className="relative size-11 rounded-[10px] overflow-hidden shrink-0 border border-black/5">
+                <div className="relative size-12 rounded-[12px] overflow-hidden shrink-0 border border-black/5">
                   <Image
                     src={cards.card1.author.avatar}
                     alt={cards.card1.author.name}
                     fill
-                    sizes="44px"
+                    sizes="48px"
                     className="object-cover"
                   />
                 </div>
@@ -94,15 +92,15 @@ export default function ProofSection() {
           </div>
 
           {/* Card 2: Client Trust & Webestica Showreel */}
-          <div className="bg-[var(--color-surface-darker)] text-white rounded-[20px] p-2 sm:p-2.5 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.18)] min-h-[420px] sm:min-h-[440px] lg:min-h-[455px] flex flex-col transition-transform duration-300 hover:-translate-y-1">
-            <div className="rounded-[12px] border border-white/10 p-4 sm:p-5 flex flex-col justify-between h-full">
-              {/* Top Rating & Avatar Group */}
-              <div>
-                <div className="flex items-center -space-x-2.5">
-                  {cards.card2.avatars.map((av) => (
+          <div className="bg-[var(--color-surface-darker)] text-white rounded-[20px] p-2 sm:p-2.5 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.18)] min-h-[350px] sm:min-h-[440px] lg:min-h-[455px] flex flex-col transition-transform duration-300 hover:-translate-y-1">
+            <div className="rounded-[14px] border border-white/10 p-4 sm:p-5 flex flex-col justify-between h-full">
+              {/* Top Rating & Avatar Group - Inline side-by-side matching Image 1 */}
+              <div className="flex items-center justify-between gap-3 flex-wrap sm:flex-nowrap">
+                <div className="flex items-center -space-x-2.5 shrink-0">
+                  {cards.card2.avatars.map((av, idx) => (
                     <div
-                      key={av}
-                      className="relative size-[38px] rounded-[10px] border-2 border-[var(--color-surface-darker)] overflow-hidden shrink-0"
+                      key={av || idx}
+                      className="relative size-[34px] sm:size-[36px] rounded-[8px] sm:rounded-[10px] border-2 border-[var(--color-surface-darker)] overflow-hidden shrink-0"
                     >
                       <Image
                         src={av}
@@ -113,26 +111,26 @@ export default function ProofSection() {
                       />
                     </div>
                   ))}
-                  <div className="relative w-[44px] h-[38px] rounded-[10px] bg-[var(--color-surface)] text-[var(--color-primary)] font-semibold text-[14px] flex items-center justify-center border-2 border-[var(--color-surface-darker)] shrink-0 tracking-tight">
+                  <div className="relative w-[38px] sm:w-[42px] h-[34px] sm:h-[36px] rounded-[8px] sm:rounded-[10px] bg-[var(--color-surface)] text-[var(--color-primary)] font-medium text-[13px] sm:text-[14px] flex items-center justify-center border-2 border-[var(--color-surface-darker)] shrink-0 tracking-tight">
                     {cards.card2.clientCount}
                   </div>
                 </div>
 
-                {/* Stars & Label */}
-                <div className="mt-4">
-                  <RatingStars rating={5} variant="light" size={14} />
-                  <p className="mt-2 text-[13px] text-[var(--color-text-light)] font-normal">
+                {/* Stars & Label next to avatars */}
+                <div className="flex flex-col items-start gap-1">
+                  <RatingStars rating={5} variant="light" size={13} />
+                  <p className="text-[11.5px] sm:text-[12px] text-[var(--color-text-light)] font-normal whitespace-nowrap">
                     {cards.card2.ratingText}
                   </p>
                 </div>
               </div>
 
               {/* Bottom Coming Soon & Showreel */}
-              <div className="mt-4">
+              <div className="mt-5">
                 <span className="text-[11px] text-[var(--color-text-muted)] font-normal">
                   {cards.card2.comingSoonTag}
                 </span>
-                <h4 className="text-[15px] sm:text-[16px] font-semibold text-white mt-1 leading-snug">
+                <h4 className="text-[15px] sm:text-[16px] font-medium text-white mt-1 leading-snug">
                   {cards.card2.headline}
                 </h4>
 
@@ -146,7 +144,7 @@ export default function ProofSection() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/20 transition-opacity group-hover:bg-black/10" />
-                  <span className="absolute inset-0 m-auto w-max h-max px-3.5 py-1 rounded-full bg-white text-black text-[11px] font-semibold shadow-md backdrop-blur-sm transition-transform duration-300 group-hover:scale-105">
+                  <span className="absolute inset-0 m-auto w-max h-max px-3.5 py-1 rounded-full bg-white text-black text-[11px] font-medium shadow-md backdrop-blur-sm transition-transform duration-300 group-hover:scale-105">
                     {cards.card2.showreelButtonText}
                   </span>
                 </div>
@@ -155,13 +153,13 @@ export default function ProofSection() {
           </div>
 
           {/* Card 3: Digital Campaign (Full Photo Card) */}
-          <div className="relative rounded-[16px] overflow-hidden flex flex-col justify-end p-5 sm:p-5 lg:p-6 border border-black/5 shadow-[0_2px_10px_rgba(0,0,0,0.06)] min-h-[420px] sm:min-h-[440px] lg:min-h-[455px] group transition-transform duration-300 hover:-translate-y-1">
+          <div className="relative rounded-[20px] overflow-hidden flex flex-col justify-end p-5 sm:p-6 border border-black/5 shadow-[0_2px_10px_rgba(0,0,0,0.06)] min-h-[350px] sm:min-h-[440px] lg:min-h-[455px] group transition-transform duration-300 hover:-translate-y-1">
             <Image
               src={cards.card3.image}
               alt={cards.card3.title}
               fill
               sizes="(max-width: 768px) 100vw, 320px"
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              className="object-cover object-top sm:object-center transition-transform duration-700 group-hover:scale-105"
             />
             {/* Gradient Overlay for text readability */}
             <div
@@ -170,7 +168,7 @@ export default function ProofSection() {
             />
 
             <div className="relative z-10">
-              <h3 className="text-[17px] sm:text-[18px] lg:text-[19px] font-semibold text-white leading-[1.3] tracking-[-0.02em]">
+              <h3 className="text-[17px] sm:text-[18px] lg:text-[19px] font-medium text-white leading-[1.3] tracking-[-0.02em]">
                 {cards.card3.title}
               </h3>
               <p className="mt-2 text-[12.5px] sm:text-[13px] text-white/80 leading-[1.45] font-normal">
@@ -180,12 +178,12 @@ export default function ProofSection() {
           </div>
 
           {/* Card 4: Funding / BoldCraft Case Study */}
-          <div className="bg-white rounded-[16px] p-5 sm:p-5 lg:p-6 flex flex-col justify-between border border-[var(--color-border-light)] shadow-[0_2px_10px_rgba(0,0,0,0.03)] min-h-[420px] sm:min-h-[440px] lg:min-h-[455px] transition-transform duration-300 hover:-translate-y-1">
+          <div className="bg-white rounded-[20px] p-5 sm:p-6 flex flex-col justify-between border border-[var(--color-border-light)] shadow-[0_2px_10px_rgba(0,0,0,0.03)] min-h-[350px] sm:min-h-[440px] lg:min-h-[455px] transition-transform duration-300 hover:-translate-y-1">
             <div>
-              <h3 className="text-[17px] sm:text-[18px] lg:text-[19px] font-semibold text-[var(--color-primary)] leading-[1.3] tracking-[-0.02em]">
+              <h3 className="text-[18px] lg:text-2xl font-medium text-[var(--color-primary)] leading-[1.3] tracking-[-0.02em]">
                 {cards.card4.title}
               </h3>
-              <p className="mt-2 text-[12.5px] sm:text-[13px] text-[var(--color-text-secondary)] leading-[1.5]">
+              <p className="mt-2 text-base md:text-lg text-[var(--color-text-secondary)] leading-[1.5]">
                 {cards.card4.description}
               </p>
             </div>
@@ -193,7 +191,7 @@ export default function ProofSection() {
             <div className="mt-5">
               {/* Stat */}
               <div className="pt-1">
-                <span className="text-[28px] sm:text-[32px] font-semibold tracking-[-0.03em] text-[var(--color-primary)] leading-none block">
+                <span className="text-[28px] sm:text-[32px] font-medium tracking-[-0.03em] text-[var(--color-primary)] leading-none block">
                   {cards.card4.stat.value}
                 </span>
                 <span className="mt-1 text-[11px] sm:text-[11.5px] text-[var(--color-text-secondary)] leading-tight block">
@@ -204,10 +202,10 @@ export default function ProofSection() {
               {/* Divider & Company */}
               <div className="border-t border-[var(--color-border-subtle)] mt-5 pt-3.5 flex items-center justify-between">
                 <div>
-                  <h4 className="text-[13.5px] sm:text-[14px] font-semibold text-[var(--color-primary)]">
+                  <h4 className="text-base sm:text-xl font-medium text-[var(--color-primary)]">
                     {cards.card4.client.name}
                   </h4>
-                  <p className="text-[11px] text-[var(--color-text-secondary)] mt-0.5">
+                  <p className="text-sm sm:text-base text-[var(--color-text-secondary)] mt-0.5">
                     {cards.card4.client.tagline}
                   </p>
                 </div>

@@ -1,13 +1,13 @@
 export const proofData = {
   badge: "Proof in every project",
-  titlePrefix: "The Impact",
-  titleScript: "behind",
-  titleSuffix: "our work",
+  titlePrefix: "Proof that",
+  titleScript: "Speaks",
+  titleSuffix: "volumes",
   cards: {
     card1: {
-      title: "Digital Solutions Build Around Your Vision",
+      title: "Revamping Brand & Web presence for Studio Mellow",
       description:
-        "we transfer business ideas into functional, engaging and responsive digital platforms. Every project reflects our commitment to quality, thoughtful design and reliable delevlopment",
+        "They brought clarity, style, and structure to our brand. The team felt like an extension of ours.",
       stats: [
         { value: "60%", label: "Increase in user engagement" },
         { value: "45%", label: "Online sales growth" },
@@ -19,32 +19,32 @@ export const proofData = {
       },
     },
     card2: {
-      clientCount: "24+",
+      clientCount: "72+",
       ratingText: "Happy clients worldwide",
       avatars: [
-        "/images/testimonials/jaspreet-soni.jpg",
-        "/images/testimonials/aurevia-events.jpg",
-        "/images/testimonials/jagjot-singh.jpg",
-        "/images/testimonials/harshdeep-singh.jpg",
+        "/images/testimonials/client-avatar-1.jpg",
+        "/images/testimonials/client-avatar-2.jpg",
+        "/images/testimonials/client-avatar-3.jpg",
+        "/images/testimonials/client-avatar-4.jpg",
       ],
-      comingSoonTag: "Our Expertise, your Advantage",
-      headline: "Bringing together creativity, technology and strategic thinking to deliver digital experiences that make a difference",
+      comingSoonTag: "Coming Soon:",
+      headline: "A Brand Transformation for Webestica.",
       showreelImage: "/images/case-studies/webestica-showreel.jpg",
       showreelButtonText: "Showreel",
     },
     card3: {
       image: "/images/case-studies/desert-campaign.jpg",
-      title: "where creativity meets technology",
+      title: "Digital campaign that converts",
       description:
-        "From intutive user interfaces to powerful web applications, we combine creative thinking and technical expertise to build meaningful digital experiences",
+        "Their work didn’t just look good — it drove real, measurable growth. We’re thrilled.",
     },
     card4: {
-      title: "Solutions that moves your Business Forward",
+      title: "UX/UI that helped secure funding",
       description:
-        "We deliver that every sucessful project begins with deep understanding. Our collaborative approach ensures that every solution is aligned with your business goals and evolving needs",
+        "Our investors were blown away by the product look and flow. Truly game-changing.",
       stat: {
         value: "10K+",
-        label: "Rraised in seed funding",
+        label: "Raised in seed funding",
       },
       client: {
         name: "BoldCraft Co.",

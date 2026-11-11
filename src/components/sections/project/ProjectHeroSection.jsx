@@ -28,6 +28,7 @@ export default function ProjectHeroSection() {
           <span className="font-script font-normal italic tracking-normal">
             {hero.headlineScript}
           </span>{" "}
+          <br className="sm:hidden" />
           {hero.headlineEnd}
         </h1>
       </Container>
