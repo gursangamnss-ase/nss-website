@@ -83,6 +83,16 @@ export const blogData = {
       link: "/blog/multiprocessing-in-python-a-beginner-friendly-guide",
     },
     {
+      id: "git-a-boon-for-developers",
+      slug: "git-a-boon-for-developers",
+      title: "Git — A Boon For Developers",
+      date: "Sep 5, 2025",
+      readTime: "5 min read",
+      isFeatured: false,
+      image: "/blog/git1.webp",
+      link: "/blog/git-a-boon-for-developers",
+    },
+    {
       id: "choosing-the-right-cms",
       slug: "choosing-the-right-cms-for-your-brand-modern-platforms-compared",
       title: "Content Management System (CMS)",
