@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer/Footer";
 import AboutHeroSection from "@/components/sections/about/AboutHeroSection";
 import AboutGallerySection from "@/components/sections/about/AboutGallerySection";
 import AboutVisionSection from "@/components/sections/about/AboutVisionSection";
-import AboutMilestonesSection from "@/components/sections/about/AboutMilestonesSection";
+import AboutTechStackSection from "@/components/sections/about/AboutTechStackSection";
 import AboutImpactSection from "@/components/sections/about/AboutImpactSection";
 import AboutTeamSection from "@/components/sections/about/AboutTeamSection";
 import FaqSection from "@/components/sections/contact/FaqSection";
@@ -35,8 +35,8 @@ export default function AboutPage() {
           {/* 3. Vision & Mission Bento Grid with Animated Metric Counters */}
           <AboutVisionSection />
 
-          {/* 4. Milestones & Industry Awards */}
-          <AboutMilestonesSection />
+          {/* 4. Technologies & Modern Tech Stack */}
+          <AboutTechStackSection />
 
           {/* 5. Visionary Impact, Client Marquee & Wide Studio Banner */}
           <AboutImpactSection />

@@ -39,7 +39,7 @@ export const enquiryData = {
     title: "How do we connect?",
     bullets: [
       "We reply within 24 hours",
-      "Direct access to our team — no bots.",
+      "Direct access to our team no bots.",
       "We ask smart questions fast.",
     ],
     teamLeader: {

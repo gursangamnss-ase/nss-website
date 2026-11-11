@@ -77,11 +77,11 @@ export default function InsideStudioSection() {
 
         <div className="mx-auto mt-14 flex max-w-3xl flex-col items-center text-center sm:mt-20">
           <p className="text-sm leading-[1.35] text-[var(--color-text-secondary)] sm:text-base">
-            We’re more than a technology company — we’re{" "}
+            We’re more than a technology company we’re{" "}
             <strong className="font-semibold text-[var(--color-primary)]">
               innovators
             </strong>
-            , creators, problem-solvers. Blending bold creativity with strategy and technical
+            , creators, problem solvers. Blending bold creativity with strategy and technical
             experiences that stand out in a{" "}
             <strong className="font-semibold text-[var(--color-primary)]">
               crowded digital

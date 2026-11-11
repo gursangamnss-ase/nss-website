@@ -11,7 +11,7 @@ export const servicesData = [
     number: "(01)",
     title: "Web Development",
     description:
-      "We create modern, responsive and high-performing websites that strengthen your online presence, deliver seamless user experiences and help your business grow.",
+      "We create modern, responsive and high performing websites that strengthen your online presence, deliver seamless user experiences and help your business grow.",
     features: [
       "Custom website development",
       "Responsive web design",

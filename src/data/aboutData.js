@@ -139,44 +139,50 @@ export const aboutData = {
       },
     ],
   },
-  milestones: {
-    badge: "Celebrating milestones",
-    headingPrefix: "Honored for",
-    headingScript: "Design",
-    headingSuffix: "brilliance",
-    copyright: "(©2019-26)",
-    awards: [
+  techStack: {
+    badge: "Tech Stack & Tools",
+    headingPrefix: "Powered by",
+    headingScript: "Modern",
+    headingSuffix: "technologies",
+    description:
+      "We engineer digital products with industry leading frameworks and scalable cloud infrastructure built for high performance, uncompromising security, and seamless user experiences.",
+    copyright: "(Technologies & Ecosystem)",
+    stacks: [
       {
-        id: "award-1",
-        logo: "/images/about/award-1.svg",
-        title: "Site of the day / No-Code honor",
-        year: "2026",
+        id: "stack-web",
+        title: "Web & Frontend",
+        category: "Frontend",
+        techs: ["Next.js", "React", "TypeScript", "Tailwind CSS", "SSR"],
       },
       {
-        id: "award-2",
-        logo: "/images/about/award-2.svg",
-        title: "Red dot design awards",
-        year: "2025",
+        id: "stack-mobile",
+        title: "Mobile Engineering",
+        category: "Mobile",
+        techs: ["React Native", "Flutter", "iOS (Swift)", "Android (Kotlin)", "Expo"],
       },
       {
-        id: "award-3",
-        logo: "/images/about/award-3.svg",
-        title: "Site of the month / Honorable mention",
-        year: "2024",
+        id: "stack-backend",
+        title: "Backend & Cloud",
+        category: "Backend",
+        techs: ["Node.js", "Python", "PostgreSQL", "REST & GraphQL", "AWS"],
       },
       {
-        id: "award-4",
-        logo: "/images/about/award-4.svg",
-        title: "Site of the year / No-Code honor",
-        year: "2022",
+        id: "stack-ecommerce",
+        title: "eCommerce & CMS",
+        category: "eCommerce",
+        techs: ["Shopify", "WordPress", "Headless CMS", "Stripe", "WooCommerce"],
       },
       {
-        id: "award-5",
-        logo: "/images/about/award-5.svg",
-        title: "Site of the month",
-        year: "2020",
+        id: "stack-design",
+        title: "UI/UX & Prototyping",
+        category: "Design",
+        techs: ["Figma", "Design Systems", "Framer", "User Flows", "Prototyping"],
       },
     ],
+  },
+  // Backward compatibility alias
+  get milestones() {
+    return this.techStack;
   },
   impact: {
     badge: "Trusted by the visionaries",

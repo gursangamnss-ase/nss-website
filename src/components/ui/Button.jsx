@@ -8,33 +8,39 @@ const variants = {
   transparent: "bg-transparent !text-[var(--color-primary)] text-[var(--color-primary)] hover:bg-black/5",
   outline: "bg-transparent border border-current text-current hover:bg-black/5",
   link: "bg-transparent !text-[var(--color-primary)] text-[var(--color-primary)] hover:bg-transparent shadow-none",
+  capsule: "bg-black/[0.04] text-[var(--color-primary)] border border-black/[0.08] shadow-none",
 };
 
 const sizes = {
+  xs: "pl-3 pr-1 py-0.5 text-xs sm:text-sm",
   sm: "pl-4 pr-1 py-1 text-xs sm:text-sm",
   md: "pl-5 sm:pl-6 pr-1 sm:pr-1.5 py-1 text-sm sm:text-base",
   lg: "pl-6 sm:pl-7 pr-1.5 sm:pr-2 py-1.5 text-base sm:text-lg",
 };
 
 const symmetricSizes = {
+  xs: "px-3 sm:px-3.5 py-1 sm:py-1.5 text-xs sm:text-sm",
   sm: "px-6 py-2.5 text-xs sm:text-sm",
   md: "px-8 sm:px-9 py-3 sm:py-3.5 text-sm sm:text-base",
   lg: "px-9 sm:px-10 py-3.5 sm:py-4 text-base sm:text-lg",
 };
 
 const linkSizes = {
+  xs: "px-0 py-0.5 text-xs sm:text-sm gap-1.5",
   sm: "px-0 py-0.5 text-xs sm:text-sm gap-2",
   md: "px-0 py-1 text-sm sm:text-base gap-2.5",
   lg: "px-0 py-1.5 text-base sm:text-lg gap-3",
 };
 
 const iconSizes = {
+  xs: "size-6 sm:size-7",
   sm: "size-7 sm:size-8",
   md: "size-8 sm:size-9",
   lg: "size-9 sm:size-10",
 };
 
 const arrowSvgSizes = {
+  xs: 12,
   sm: 14,
   md: 15,
   lg: 17,
