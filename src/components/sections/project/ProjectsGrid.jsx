@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Container from "@/components/layout/Container";
 import ProjectCard from "@/components/cards/ProjectCard";
+import Button from "@/components/ui/Button";
 import { projectData } from "@/data/projectData";
 
 const INITIAL_COUNT = 4;
@@ -31,14 +32,16 @@ export default function ProjectsGrid() {
         {/* Load More Button */}
         {hasMore && (
           <div className="flex justify-center pt-12 sm:pt-16">
-            <button
+            <Button
               type="button"
+              variant="dark"
+              showArrow={false}
+              size="md"
               onClick={handleLoadMore}
-              className="inline-flex items-center justify-center rounded-full bg-black px-9 py-3.5 text-sm font-medium text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-sm"
               aria-label="Load more projects"
             >
               Load More
-            </button>
+            </Button>
           </div>
         )}
       </Container>

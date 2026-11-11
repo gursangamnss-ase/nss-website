@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "@/components/ui/Button";
 
 export default function ProjectCard({ project }) {
   const { title, scriptTitle, tags, image, href, alt } = project;
@@ -9,7 +10,7 @@ export default function ProjectCard({ project }) {
       {/* Clickable Image Box with Hover Zoom & Centered Title */}
       <Link
         href={href}
-        className="relative aspect-[4/3] w-full overflow-hidden rounded-[26px] bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+        className="relative aspect-[16/7.3] w-full overflow-hidden rounded-[20px] sm:rounded-[26px] bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
         aria-label={`View details for ${title} ${scriptTitle}`}
       >
         <Image
@@ -17,7 +18,7 @@ export default function ProjectCard({ project }) {
           alt={alt || `${title} ${scriptTitle}`}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover scale-108 transition-transform duration-700 ease-out group-hover:scale-100"
+          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
         />
 
         {/* Gradient Overlay for Text Contrast */}
@@ -27,8 +28,8 @@ export default function ProjectCard({ project }) {
         />
 
         {/* Centered Display Title Overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-white pointer-events-none">
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-white drop-shadow-sm leading-tight">
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 text-center text-white pointer-events-none">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium tracking-tight text-white drop-shadow-sm leading-tight">
             {title}
             <span className="font-script font-normal italic tracking-normal block mt-1 text-[1.1em]">
               {scriptTitle}
@@ -51,27 +52,15 @@ export default function ProjectCard({ project }) {
           ))}
         </div>
 
-        {/* View Details Link */}
-        <Link
+        {/* View Details Button (without bg) */}
+        <Button
           href={href}
-          className="inline-flex items-center gap-1.5 text-sm md:text-base font-medium text-[var(--color-primary)] hover:opacity-75 transition-opacity shrink-0 group-hover:underline"
+          variant="link"
+          size="sm"
+          className="shrink-0"
         >
-          <span>View details</span>
-          <svg
-            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
-        </Link>
+          View details
+        </Button>
       </div>
     </article>
   );

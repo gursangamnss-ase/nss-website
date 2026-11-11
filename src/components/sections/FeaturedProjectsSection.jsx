@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/layout/Container";
+import Button from "@/components/ui/Button";
 import { featuredProjectsData } from "@/data/featuredProjectsData";
 
 export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
@@ -176,28 +177,13 @@ export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
 
           {/* Right: View project CTA */}
           <div className="flex sm:justify-end">
-            <Link
+            <Button
               href={currentProject.href}
-              className="group inline-flex items-center gap-2.5 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[var(--color-primary)] transition-all duration-300 hover:bg-white/95 hover:shadow-lg hover:gap-3.5"
+              variant="light"
+              size="sm"
             >
-              <span>View project</span>
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-primary)] text-white transition-transform duration-300 group-hover:translate-x-0.5">
-                <svg
-                  className="h-2.5 w-2.5"
-                  fill="none"
-                  viewBox="0 0 10 10"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M1 5h8m-3-3 3 3-3 3"
-                  />
-                </svg>
-              </span>
-            </Link>
+              View project
+            </Button>
           </div>
         </div>
       </Container>

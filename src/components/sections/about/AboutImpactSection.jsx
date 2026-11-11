@@ -11,12 +11,11 @@ import { trustedClientsData } from "@/data/trustedClientsData";
 
 export default function AboutImpactSection() {
   const { impact } = aboutData;
+  const allLogos = trustedClientsData.cards
+    .filter((c) => c.type === "logo")
+    .flatMap((c) => c.logos || [c]);
   const uniqueLogos = Array.from(
-    new Map(
-      trustedClientsData.cards
-        .filter((c) => c.type === "logo")
-        .map((c) => [c.logo, c])
-    ).values()
+    new Map(allLogos.map((c) => [c.logo, c])).values()
   );
   const marqueeLogos = [...uniqueLogos, ...uniqueLogos];
 

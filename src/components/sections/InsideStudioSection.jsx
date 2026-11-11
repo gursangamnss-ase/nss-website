@@ -35,24 +35,24 @@ export default function InsideStudioSection() {
         <div className="mx-auto max-w-[1100px] md:mt-24 lg:mt-28">
           <h2 className="text-center text-[clamp(2rem,5vw,4rem)] font-medium leading-[1.16] tracking-[-0.04em] text-[var(--color-primary)]">
             Driven by
-            <br className="hidden md:inline" />{" "}
+            {/* {" "} */}
             <span className="font-script inline-block text-[1.16em] font-normal leading-[0.8] tracking-[-0.02em]">
               Innovation,
             </span>{" "}
             powered by creativity. We
-            <br className="hidden md:inline" />{" "}
+            {" "}
             combine strategy, design and
-            <br className="hidden md:inline" />{" "}
+            {" "}
             technology to build
-            <br className="hidden md:inline" />{" "}
+            {" "}
             impactful{" "}
             <span className="font-script inline-block text-[1.16em] font-normal leading-[0.8] tracking-[-0.02em]">
               Digital
             </span>{" "}
             experience that
-            <br className="hidden md:inline" />{" "}
+           {" "}
             help businesses grow, connect and
-            <br className="hidden md:inline" />{" "}
+            {" "}
             thrive
           </h2>
         </div>

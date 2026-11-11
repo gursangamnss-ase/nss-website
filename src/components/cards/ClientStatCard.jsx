@@ -13,17 +13,17 @@ export default function ClientStatCard({
 
   return (
     <div
-      className={`group relative flex h-[130px] flex-col items-center justify-center rounded-2xl border border-white/[0.06] bg-white/[0.03] px-4 py-4 text-center transition-all duration-300 hover:border-white/20 hover:bg-white/[0.05] sm:h-[140px] ${className}`}
+      className={`relative flex h-[130px] sm:h-[140px] flex-col items-center justify-center bg-transparent px-4 py-4 text-center select-none ${className}`}
     >
       <div className="flex items-baseline justify-center">
-        <span className="font-script text-[54px] font-normal leading-[0.75] tracking-[-0.03em] text-white sm:text-[64px] lg:text-[72px]">
+        <span className="font-script text-[60px] sm:text-[72px] lg:text-[84px] font-normal leading-[0.7] tracking-[-0.04em] text-white">
           <CountUp to={targetNumber} from={0} duration={1.6} />
         </span>
-        <span className="font-script text-[42px] font-normal leading-[0.75] tracking-[-0.03em] text-white sm:text-[50px] lg:text-[58px]">
+        <span className="font-script text-[48px] sm:text-[58px] lg:text-[68px] font-normal leading-[0.7] tracking-[-0.04em] text-white">
           {suffix}
         </span>
       </div>
-      <p className="mt-2.5 text-xs font-normal tracking-wide text-[var(--color-text-muted)] sm:text-[13px]">
+      <p className="mt-3 text-[13px] sm:text-[14px] font-normal tracking-normal text-[#AAA9AD]">
         {label}
       </p>
     </div>

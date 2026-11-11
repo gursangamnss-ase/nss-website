@@ -1,7 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
+import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 import Badge from "@/components/ui/Badge";
+import RatingStars from "@/components/ui/RatingStars";
 import CountUp from "@/components/ui/CounterUp";
 import { aboutData } from "@/data/aboutData";
 
@@ -99,28 +100,13 @@ export default function AboutVisionSection() {
                   </p>
 
                   <div className="mt-7 sm:mt-8">
-                    <Link
+                    <Button
                       href={vision.mission.ctaLink}
-                      className="group inline-flex items-center justify-between gap-5 rounded-full bg-[var(--color-primary)] pl-6 pr-1.5 py-1.5 text-sm font-medium text-white hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)] shadow-sm"
+                      variant="dark"
+                      size="md"
                     >
-                      <span>{vision.mission.ctaText}</span>
-                      <span
-                        className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[var(--color-primary)] transition-transform duration-300 group-hover:translate-x-0.5"
-                        aria-hidden="true"
-                      >
-                        <svg
-                          className="h-3 w-3 fill-none stroke-current"
-                          strokeWidth="2.2"
-                          viewBox="0 0 15 12"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M1.5 6H14m0 0L9 1m5 5-5 5"
-                          />
-                        </svg>
-                      </span>
-                    </Link>
+                      {vision.mission.ctaText}
+                    </Button>
                   </div>
                 </div>
 
@@ -196,19 +182,14 @@ export default function AboutVisionSection() {
                       </div>
                     </div>
 
-                    {/* 5 White Stars & Label */}
+                    {/* Rating Stars & Label */}
                     <div className="mt-5">
                       <div className="flex items-center gap-2">
-                        <div
-                          className="flex items-center gap-1.5 text-white text-xs sm:text-sm tracking-wide"
-                          aria-label="5 stars rating"
-                        >
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                        </div>
+                        <RatingStars
+                          rating={Number(metric.rating) || 5}
+                          size={13}
+                          variant="light"
+                        />
                         {metric.rating && (
                           <span className="text-xs sm:text-sm font-semibold text-white tracking-tight">
                             {metric.rating}
