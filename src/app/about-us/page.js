@@ -52,7 +52,7 @@ export default function AboutPage() {
           />
 
           {/* 7. Dedicated Studio Team Section */}
-          <AboutTeamSection />
+          {/* <AboutTeamSection /> */}
 
           {/* 8. Reusable Enquiry / Contact CTA Section */}
           <EnquirySection />
