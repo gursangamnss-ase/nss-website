@@ -385,6 +385,142 @@ export const blogDetailsData = {
     takeawayText:
       "With NetSquare Softwares, you can easily optimize, add mobile-first, interactive, and engaging content — within your CMS or in the Cloud — regardless of which CMS technology you use. Contact us today to build your custom CMS solution.",
   },
+  "building-a-production-ready-rag-pipeline-for-company-documents-using-local-llms": {
+    slug: "building-a-production-ready-rag-pipeline-for-company-documents-using-local-llms",
+    title:
+      "Building a Production-Ready RAG Pipeline for Company Documents Using Local LLMs",
+    date: "Aug 20, 2025",
+    readTime: "6 min read",
+    badge: "AI & Machine Learning",
+    image: "/blog/ragpipeline.jpg",
+    alt: "Building a Production-Ready RAG Pipeline for Company Documents Using Local LLMs",
+    quote:
+      "Instead of training a model to memorize everything, RAG allows the model to retrieve the right information at the right time.",
+    introHeading: "Introduction",
+    introText:
+      "This blog demonstrates the implementation of a production-ready Retrieval Augmented Generation (RAG) pipeline that answers questions from company documents using ChromaDB, Ollama, and FastAPI. The system loads documents, splits them into chunks, converts them into embeddings, stores them in a vector database, and retrieves relevant context at query time to generate accurate answers using a local LLM.",
+    sections: [
+      {
+        heading: "Architecture Overview",
+        paragraphs: [
+          {
+            type: "image",
+            src: "/blog/ragpipeline.jpg",
+            alt: "RAG Pipeline Architecture Diagram with Local LLMs",
+            caption:
+              "End-to-end RAG architecture: Knowledge Base → Document Chunks → Embeddings → ChromaDB Vector Store → Local LLM Query & Answer Pipeline.",
+          },
+        ],
+      },
+      {
+        heading: "Project Structure",
+        paragraphs: [
+          {
+            type: "code",
+            language: "Project Directory Structure",
+            content: `RAG_PROJECT/
+│
+├── data/
+│   ├── faqs/
+│   │   └── faqs.txt                    # FAQ Q&A pairs
+│   ├── html/
+│   │   └── about.html                  # Company HTML page
+│   ├── pdfs/
+│   │   └── TechCorp_KnowledgeBase.pdf  # Company PDF document
+│   ├── vector_store/                   # ChromaDB persistent storage (auto-generated)
+│   └── training_data.json              # Fine-tuning dataset in Alpaca format
+│
+├── logs/
+│   └── app.log                         # Application logs
+│
+├── src/
+│   ├── api/
+│   │   ├── middleware/
+│   │   │   └── timing.py               # Adds X-Response-Time header to responses
+│   │   ├── routes/
+│   │   │   └── ask.py                  # POST /ask endpoint
+│   │   ├── __init__.py
+│   │   └── schemas.py                  # Pydantic request and response schemas
+│   │
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── rag_pipeline.py             # Core RAG chain — retrieves context and calls LLM
+│   │   └── retriever.py                # ChromaDB retriever with similarity threshold
+│   │
+│   ├── ingestion/
+│   │   ├── __init__.py
+│   │   ├── chunker.py                  # Splits documents into smaller chunks
+│   │   ├── data_ingestion.py           # Runs the full ingestion pipeline
+│   │   ├── embedding.py                # Generates embeddings using SentenceTransformer
+│   │   └── loaders.py                  # Loads TXT, PDF (pdfplumber), and HTML files
+│   │
+│   ├── store/
+│   │   ├── __init__.py
+│   │   └── vectorstore.py              # Stores embeddings and documents in ChromaDB
+│   │
+│   └── utils/
+│       ├── __init__.py
+│       ├── guardrails.py               # Validates LLM responses before returning
+│       └── logger.py                   # Centralized logging setup
+│
+├── .env                                # Environment variables
+├── .gitignore
+├── app.py                              # FastAPI app — startup, middleware, routes
+├── config.py                           # All configuration settings
+├── Modelfile                           # Ollama custom model definition
+└── requirements.txt                    # Python dependencies`,
+          },
+        ],
+      },
+      {
+        heading: "How the System Works",
+        paragraphs: [
+          "The system is split into two phases — Ingestion (run once) and Query (run on every user question).",
+        ],
+      },
+      {
+        heading: "Phase 1 — Ingestion (One Time Setup)",
+        paragraphs: [
+          "Before the API can answer questions, all company documents must be processed and stored in the vector database. This is done by running the ingestion pipeline once.",
+          "• Document Loading — The loaders.py module reads all files from the data/ folder. TXT files are loaded using LangChain’s TextLoader, HTML files using BSHTMLLoader, and PDF files using pdfplumber which also handles structured table extraction. Each file becomes one or more LangChain Document objects with metadata like source file and page number.",
+          "• Chunking — The chunker.py module splits each document into smaller overlapping chunks using RecursiveCharacterTextSplitter. A chunk size of 300 characters with an overlap of 100 characters is used. Smaller chunks improve retrieval precision — each chunk focuses on one specific topic rather than mixing multiple topics together.",
+          "• Embedding Generation — The embedding.py module passes each chunk through the all-MiniLM-L6-v2 SentenceTransformer model, which converts each chunk of text into a 384-dimensional numerical vector. Similar text will produce similar vectors — this is what allows semantic search to work.",
+          "• Vector Storage — The vectorstore.py module stores all chunk texts, their embeddings, and metadata into ChromaDB, a persistent local vector database. ChromaDB saves everything to disk in data/vector_store/ so it does not need to be rebuilt every time the server starts.",
+        ],
+      },
+      {
+        heading: "Phase 2 — Query (Every User Request)",
+        paragraphs: [
+          "When a user sends a question to the `/ask` endpoint, the following steps happen:",
+          "• Query Embedding — The user’s question is converted into a 384-dimensional embedding using the same all-MiniLM-L6-v2 model that was used during ingestion. This ensures the query vector is in the same space as the document vectors.",
+          "• Semantic Retrieval — The retriever.py module queries ChromaDB with the question embedding and retrieves the top 2 most similar chunks using cosine similarity. Chunks with a similarity score below 0.30 are filtered out to avoid passing irrelevant context to the LLM.",
+          "• Prompt Construction — The retrieved chunks are joined together to form a context block. This context, along with the original question and a system prompt, is formatted into a single prompt for the LLM.",
+          "• LLM Answer Generation — The prompt is sent to the techcorp-assistant model running locally via Ollama. The model is instructed to answer only using the provided context and to respond with “I don’t know” if the answer is not present in the documents.",
+          "• Guardrail Validation — The guardrails.py module checks the LLM response before it is returned to the user. This prevents hallucinated or unsafe responses from reaching the user.",
+          "• Caching — Responses are cached in Redis. If the same question is asked again, the cached answer is returned immediately without calling the LLM again, significantly reducing response time.",
+        ],
+      },
+      {
+        heading: "Fine-Tuning & Model Customization",
+        paragraphs: [
+          "A dataset of 65 Q&A pairs has been prepared in Alpaca format (data/training_data.json) based on the actual company documents. Alpaca format is a standard supervised fine-tuning format used for large language models where each entry contains three fields:",
+          "• instruction — The system role and behavioral rules for the assistant",
+          "• input — The retrieved context from documents combined with the user question",
+          "• output — The ideal expected answer",
+          "Each entry looks like this:",
+          {
+            type: "code",
+            language: "JSON (Alpaca Dataset Format)",
+            content: `{\n  "instruction": "You are a customer support assistant. Answer ONLY using the provided context. If the answer is not in the context, say: I don't know.",\n  "input": "Context: We offer a 30-day return policy.\\n\\nQuestion: What is the return policy?",\n  "output": "We offer a 30-day return policy for all products."\n}`,
+          },
+          "Since external fine-tuning tools were not used at this stage, Ollama’s Modelfile approach was used as an alternative for model customization. The Modelfile uses FROM llama3.2 to set llama3.2 as the base model and defines a SYSTEM prompt with specific behavioral rules — answer only from context, do not hallucinate, and respond with “I don’t know” for out-of-scope questions. This creates the techcorp-assistant custom model.",
+        ],
+      },
+    ],
+    takeawayHeading: "Conclusion",
+    takeawayText:
+      "By combining ChromaDB for persistent local vector storage, SentenceTransformers for embeddings, Ollama for local LLM inference, and FastAPI for a high-performance web service, you can build secure, private, and production-ready enterprise RAG pipelines without sending sensitive company data to third-party cloud providers.",
+  },
 
 
 };

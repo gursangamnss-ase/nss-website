@@ -8,7 +8,7 @@ import { blogData } from "@/data/blogData";
 
 export default function BlogBentoGrid() {
   const allArticles = blogData.articles;
-  const [visibleCount, setVisibleCount] = useState(5);
+  const [visibleCount, setVisibleCount] = useState(6);
 
   const handleLoadMore = () => {
     setVisibleCount(allArticles.length);

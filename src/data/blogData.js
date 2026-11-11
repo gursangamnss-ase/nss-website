@@ -53,6 +53,16 @@ export const blogData = {
       link: "/blog/the-complete-guide-to-ecommerce-personalization-conversion-growth",
     },
     {
+      id: "building-a-production-ready-rag-pipeline-for-company-documents-using-local-llms",
+      slug: "building-a-production-ready-rag-pipeline-for-company-documents-using-local-llms",
+      title: "Building a Production-Ready RAG Pipeline for Company Documents Using Local LLMs",
+      date: "Aug 20, 2025",
+      readTime: "6 min read",
+      isFeatured: false,
+      image: "/blog/ragpipeline.jpg",
+      link: "/blog/building-a-production-ready-rag-pipeline-for-company-documents-using-local-llms",
+    },
+    {
       id: "choosing-the-right-cms",
       slug: "choosing-the-right-cms-for-your-brand-modern-platforms-compared",
       title: "Content Management System (CMS)",
