@@ -5,7 +5,6 @@ import AboutGallerySection from "@/components/sections/about/AboutGallerySection
 import AboutVisionSection from "@/components/sections/about/AboutVisionSection";
 import AboutTechStackSection from "@/components/sections/about/AboutTechStackSection";
 import AboutImpactSection from "@/components/sections/about/AboutImpactSection";
-import AboutTeamSection from "@/components/sections/about/AboutTeamSection";
 import FaqSection from "@/components/sections/contact/FaqSection";
 import EnquirySection from "@/components/sections/EnquirySection";
 import { aboutData } from "@/data/aboutData";
@@ -51,10 +50,7 @@ export default function AboutPage() {
             layout="split"
           />
 
-          {/* 7. Dedicated Studio Team Section */}
-          {/* <AboutTeamSection /> */}
-
-          {/* 8. Reusable Enquiry / Contact CTA Section */}
+          {/* 7. Reusable Enquiry / Contact CTA Section */}
           <EnquirySection />
         </div>
       </main>

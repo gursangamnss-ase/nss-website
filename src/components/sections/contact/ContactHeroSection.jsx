@@ -93,30 +93,6 @@ export default function ContactHeroSection() {
                 )}
               </div>
             </div>
-
-            {/* Founder Note & Avatar */}
-            <div className="space-y-5 pt-4">
-              <p className="text-lg sm:text-xl font-medium text-[var(--color-primary)] leading-snug max-w-md">
-                {hero.founderQuote}
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="relative h-11 w-11 overflow-hidden rounded-full border border-neutral-200 bg-neutral-100">
-                  <Image
-                    src={hero.founder.avatar}
-                    alt={hero.founder.name}
-                    fill
-                    sizes="44px"
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-sm text-neutral-600">
-                  <strong className="text-[var(--color-primary)] font-semibold">
-                    {hero.founder.name}
-                  </strong>
-                  , {hero.founder.role}
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Contact Form */}
