@@ -67,8 +67,7 @@ export default function AboutVisionSection() {
                 </p>
                 <p className="text-xs sm:text-sm text-neutral-300 font-normal">
                   <span className="font-semibold text-white">{vision.founderQuote.author}</span>
-                  {" "}
-                  {vision.founderQuote.role}
+                  {vision.founderQuote.role && ` · ${vision.founderQuote.role}`}
                 </p>
               </div>
             </div>

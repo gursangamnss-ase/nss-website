@@ -10,9 +10,9 @@ export default function StudioImageCard({
 }) {
   return (
     <article
-      className={`relative w-full rounded-[10px] border border-white bg-[var(--color-background-alt)] p-1.5 pb-12 shadow-[0_0_0_1px_rgba(5,8,12,0.04)] sm:p-2 sm:pb-16 ${className}`}
+      className={`relative w-full rounded-[16px] sm:rounded-[24px] border border-black/[0.05] bg-white p-2 pb-10 sm:p-3 sm:pb-14 shadow-[0_4px_24px_rgba(0,0,0,0.06)] ${className}`}
     >
-      <div className="relative aspect-square overflow-hidden rounded-[7px]">
+      <div className="relative aspect-square overflow-hidden rounded-[12px] sm:rounded-[18px]">
         <Image
           src={image}
           alt={imageAlt || title || "Studio photograph"}
@@ -22,8 +22,8 @@ export default function StudioImageCard({
         />
       </div>
 
-      <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-white py-1.5 pl-1.5 pr-4 shadow-[0_2px_12px_rgba(5,8,12,0.08)] sm:bottom-3 sm:gap-3 sm:py-2 sm:pl-2 sm:pr-5">
-        <div className="relative size-8 shrink-0 overflow-hidden rounded-full border border-[var(--color-accent-orange)] sm:size-11 sm:border-2">
+      <div className="absolute bottom-2.5 sm:bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2.5 sm:gap-3 whitespace-nowrap rounded-full bg-white py-1.5 pl-1.5 pr-4 sm:py-2 sm:pl-2 sm:pr-5 shadow-[0_2px_14px_rgba(5,8,12,0.1)] border border-black/[0.04]">
+        <div className="relative size-9 sm:size-11 shrink-0 overflow-hidden rounded-full border border-[var(--color-accent-orange)]">
           <Image
             src={avatar}
             alt=""
@@ -33,11 +33,11 @@ export default function StudioImageCard({
           />
         </div>
 
-        <div className="leading-tight">
-          <p className="text-[10px] font-semibold text-[var(--color-primary)] sm:text-sm">
+        <div className="leading-tight text-left">
+          <p className="text-sm font-semibold text-[var(--color-primary)]">
             {title}
           </p>
-          <p className="mt-0.5 text-[8px] text-[var(--color-text-secondary)] sm:text-[11px]">
+          <p className="mt-0.5 text-xs text-[var(--color-text-secondary)]">
             {subtitle}
           </p>
         </div>

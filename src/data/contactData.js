@@ -12,9 +12,11 @@ export const contactData = {
     phone: "+ 91 82830 30094",
     email: "info@netsquaresoftwares.com",
     badgeVisit: "Visit us",
+    registeredOfficeTitle: "Registered Office",
     agency: "NetSquare Software Pvt Ltd",
     address: "D-234, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar (Mohali), Punjab 140307",
-    canadaAgency: "Canada Office",
+    branchOfficeTitle: "Branch Office",
+    canadaAgency: "Branch Office",
     canadaAddress: "190 Corner Springs Landing Northeast Calgary, AB T3N 2Y1",
     founderQuote:
       "Every great project begins with a simple conversation let’s start yours.",

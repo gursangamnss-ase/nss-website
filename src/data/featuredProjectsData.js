@@ -6,7 +6,7 @@ export const featuredProjectsData = [
     titleLine2: "E-Commerce",
     tags: ["Fashion & Apparel", "Punjabi Streetwear"],
     href: "/project/shopraftaar",
-    image: "/projects/shopraftaar/hero.png",
+    image: "/projects/cover-image/RAFTAAR Website Mockup with Tote Bag.webp",
     alt: "Raftaar Punjabi Streetwear E-Commerce digital storefront",
   },
   {
@@ -16,7 +16,7 @@ export const featuredProjectsData = [
     titleLine2: "Leasing",
     tags: ["Fleet Management", "Admin System"],
     href: "/project/mannbros",
-    image: "/projects/mannbros/hero.png",
+    image: "/projects/cover-image/Modern Trailer Leasing Office Dashboard.webp",
     alt: "Mann Bros Leasing trailer and fleet management platform",
   },
   {
@@ -26,7 +26,7 @@ export const featuredProjectsData = [
     titleLine2: "Khuraak",
     tags: ["E-Commerce", "Food & Beverage"],
     href: "/project/shahikhuraak",
-    image: "/projects/shahikhuraak/hero.png",
+    image: "/projects/cover-image/Shahi Khuraak Digital Feast.webp",
     alt: "Shahi Khuraak authentic Punjabi food e-commerce platform",
   },
   {
@@ -36,7 +36,7 @@ export const featuredProjectsData = [
     titleLine2: "Mechanical",
     tags: ["Plumbing & Heating", "Home Services"],
     href: "/project/nextwave",
-    image: "/projects/nextwave/hero.png",
+    image: "/projects/cover-image/Next Wave Mechanical Brand Mockup.webp",
     alt: "Next Wave Mechanical home services and renovations corporate website",
   },
 ];

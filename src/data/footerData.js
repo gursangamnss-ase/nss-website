@@ -18,10 +18,10 @@ export const footerData = {
     phoneLabel: "082830 30094",
     phoneTel: "+918283030094",
     email: "info@netsquaresoftwares.com",
-    offlineTitle: "Offline",
-    companyTitle: "NetSquare Softwares Studio",
+    offlineTitle: "Registered Office",
+    companyTitle: "NetSquare Software Pvt Ltd",
     address: "D-234, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 140307",
-    canadaTitle: "Canada Office",
+    canadaTitle: "Branch Office",
     canadaAddress: "190 Corner Springs Landing Northeast Calgary, AB T3N 2Y1",
   },
   socials: [

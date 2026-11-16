@@ -3,65 +3,97 @@ import { servicesData } from "@/data/servicesData";
 
 export default function HeroContent() {
   return (
-    <div className="relative z-20 flex min-h-[100svh] flex-col justify-between px-4 sm:px-8 lg:px-12 pt-20 sm:pt-28 lg:pt-36 pb-4 sm:pb-8 lg:pb-12 text-white">
-      {/* Top Headline: "Design &" on row 1 (mobile), "& Strategy" on row 2 (desktop) */}
-      <div className="w-full select-none pt-2 sm:pt-4 lg:pt-6 mt-auto">
-        <h1 className="flex flex-col tracking-[-0.045em] leading-[0.9] font-semibold text-[clamp(2.75rem,11.5vw,4.25rem)] sm:text-[clamp(4.5rem,10vw,8rem)] lg:text-[clamp(7.5rem,11.5vw,11.5rem)] text-white">
-          {/* Row 1 */}
+    <div className="relative z-20 flex w-full flex-col justify-between px-5 sm:px-10 lg:px-16 xl:px-20 pt-[68px] sm:pt-36 lg:pt-40 xl:pt-44 pb-5 sm:pb-16 lg:pb-24 min-h-[100svh] text-white">
+      {/* Top Headline + Mobile Statement Block */}
+      <div className="w-full select-none mt-auto">
+        <h1 className="flex flex-col tracking-[-0.04em] leading-[0.88] sm:leading-[0.92] font-semibold text-[clamp(4.15rem,13.8vw,3.95rem)] sm:text-[clamp(5.5rem,11.5vw,9rem)] lg:text-[clamp(8.5rem,13.5vw,12.5rem)]">
+          {/* Row 1: Build */}
           <span className="flex items-baseline">
-            <span>Design</span>
+            <span className="bg-[linear-gradient(280deg,#bababa_0%,#ffffff_100%)] bg-clip-text text-transparent">
+              Build
+            </span>
             <span
-              className="sm:hidden font-script font-normal text-[1.2em] text-[var(--color-text-muted)] -rotate-3 ml-2 select-none inline-block leading-none"
+              className="sm:hidden font-script font-normal text-[1.28em] text-[#aaa9ad] -rotate-3 ml-2.5 select-none inline-block leading-none"
               aria-hidden="true"
             >
               &amp;
             </span>
           </span>
 
-          {/* Row 2 */}
-          <span className="flex items-baseline -mt-[0.04em] -ml-[0.02em]">
+          {/* Row 2: & Automate */}
+          <span className="flex items-baseline -mt-1 sm:-mt-3 lg:-mt-6 xl:-mt-8 -ml-[0.02em]">
             <span
-              className="hidden sm:inline-block font-script font-normal text-[1.32em] text-[var(--color-text-muted)] -rotate-3 mr-1.5 sm:mr-3 select-none leading-none"
+              className="hidden sm:inline-block font-script font-normal text-[1.38em] text-[#aaa9ad] -rotate-3 mr-2 sm:mr-3 lg:mr-4 select-none leading-none shrink-0"
               aria-hidden="true"
             >
               &amp;
             </span>
-            <span>Strategy</span>
+            <span className="bg-[linear-gradient(280deg,#bababa_0%,#ffffff_100%)] bg-clip-text text-transparent">
+              Automate
+            </span>
           </span>
         </h1>
-      </div>
 
-      {/* Bottom Grid: Left = Sparkle + Bold ideas + Copyright, Right = Services + CTA Button */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 lg:gap-12 items-end pt-3 sm:pt-6 lg:pt-16 mt-auto">
-        {/* Left Column (Statement & Copyright) */}
-        <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-end">
-          <div className="flex items-start gap-2.5 sm:gap-4 max-w-[360px] sm:max-w-[420px]">
+        {/* Mobile-only Statement & Copyright: Sits directly under Automate matching Image 1 */}
+        <div className="sm:hidden mt-6 flex flex-col gap-2">
+          <p className="text-base font-medium leading-[1.3] tracking-[-0.015em] text-white">
             <span
-              className="text-white text-sm sm:text-xl shrink-0 mt-0.5 leading-none"
+              className="inline-flex items-center justify-center align-middle mr-2.5 select-none shrink-0 -mt-0.5"
               aria-hidden="true"
             >
-              ✦
+              <svg
+                viewBox="0 0 64 64"
+                fill="currentColor"
+                className="w-4 h-4 text-white"
+              >
+                <path d="m1 32 25 6 6 25 6-25 25-6-25-6-6-25-6 25z" />
+              </svg>
             </span>
-            <p className="text-base lg:text-[18px] font-medium leading-[1.3] tracking-tight text-white">
-              We turn bold ideas into standout brands and sleek websites. Let&apos;s
-              bring your vision to life.
-            </p>
-          </div>
+            We turn bold ideas into standout brands and sleek websites. Let&apos;s
+            bring your vision to life.
+          </p>
 
-          <p className="mt-2 sm:mt-4 text-[11px] sm:text-sm font-medium text-white/70 tracking-tight pl-6 sm:pl-8">
-            © 2026 Ignitex creative agency
+          <p className="text-xs font-normal leading-[1.2] text-white/70 tracking-[-0.015em]">
+            © Netsquare Softwares, 2026.
+          </p>
+        </div>
+      </div>
+
+      {/* Bottom Row / Services Block */}
+      <div className="w-full flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 sm:gap-10 lg:gap-8 mt-8">
+        {/* Desktop-only Left Column (Statement & Copyright) */}
+        <div className="hidden sm:flex w-full max-w-[380px] flex-col gap-6 lg:gap-7">
+          <p className="text-[18px] lg:text-[20px] font-medium leading-[1.25] tracking-[-0.02em] text-white">
+            <span
+              className="inline-flex items-center justify-center align-middle mr-4 select-none shrink-0 -mt-1"
+              aria-hidden="true"
+            >
+              <svg
+                viewBox="0 0 64 64"
+                fill="currentColor"
+                className="w-5 h-5 text-white"
+              >
+                <path d="m1 32 25 6 6 25 6-25 25-6-25-6-6-25-6 25z" />
+              </svg>
+            </span>
+            We turn bold ideas into standout brands and sleek websites. Let&apos;s
+            bring your vision to life.
+          </p>
+
+          <p className="text-[15px] lg:text-[16px] font-medium leading-[1.2] text-white/70 tracking-[-0.02em]">
+            © Netsquare Softwares, 2026.
           </p>
         </div>
 
         {/* Right Column (Services List & Pill CTA Button) */}
-        <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-end">
-          <ul className="space-y-1 sm:space-y-1.5 text-right w-full flex flex-col items-end">
+        <div className="w-full max-w-[320px] sm:max-w-[380px] ml-auto flex flex-col items-end">
+          <ul className="space-y-1.5 sm:space-y-2 lg:space-y-2.5 w-full flex flex-col items-end text-right">
             {servicesData.map((service, index) => (
               <li
                 key={service.id || service.title}
-                className="text-[14px] sm:text-lg lg:text-[22px] font-medium tracking-tight text-white flex justify-end items-baseline gap-1.5 sm:gap-2"
+                className="text-lg sm:text-xl lg:text-[24px] font-medium tracking-[-0.02em] leading-tight text-white flex items-baseline justify-end gap-2 sm:gap-2.5"
               >
-                <span className="font-script text-[15px] sm:text-xl lg:text-[24px] font-normal text-white/90">
+                <span className="font-script text-[19px] sm:text-2xl lg:text-[24px] font-normal text-white">
                   {service.number || `(${String(index + 1).padStart(2, "0")})`}
                 </span>
                 <span>{service.title}</span>
@@ -69,14 +101,25 @@ export default function HeroContent() {
             ))}
           </ul>
 
-          <Button
-            href="#contact"
-            variant="light"
-            size="sm"
-            className="mt-3 sm:mt-6"
-          >
-            Let&apos;s work together
-          </Button>
+          <div className="mt-3 sm:mt-6 lg:mt-8">
+            <Button
+              href="#contact"
+              variant="light"
+              size="sm"
+              className="!py-1.5 !pl-4 !pr-1.5 text-xs sm:hidden"
+            >
+              Let&apos;s work together
+            </Button>
+            <div className="hidden sm:block">
+              <Button
+                href="#contact"
+                variant="light"
+                size="md"
+              >
+                Let&apos;s work together
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

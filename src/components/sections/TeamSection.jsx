@@ -3,7 +3,6 @@ import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
-import ImageCard from "@/components/cards/ImageCard";
 import { teamData } from "@/data/teamData";
 
 export default function TeamSection() {
@@ -16,7 +15,6 @@ export default function TeamSection() {
     ctaText,
     ctaLink = "#contact",
     copyright,
-    members = [],
   } = teamData;
 
   return (
@@ -44,8 +42,8 @@ export default function TeamSection() {
 
       <Container size="2xl" className="relative z-10 px-5 sm:px-8 lg:px-12">
         {/* Top Header Row: Main Heading on Left, Badge on Right */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 pb-20 sm:pb-32 lg:pb-44 xl:pb-52">
-          {/* Main Title: We're your Creative (line 1), partners (line 2) */}
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 pb-14 sm:pb-20 lg:pb-28">
+          {/* Main Title */}
           <h2 className="text-[46px] sm:text-[60px] md:text-[74px] lg:text-[84px] xl:text-[92px] font-semibold leading-[0.95] tracking-[-0.04em] text-white">
             <span className="block">
               {titlePrefix}{" "}
@@ -69,44 +67,27 @@ export default function TeamSection() {
           </div>
         </div>
 
-        {/* Bottom Content Row: Left Statement + CTA, Right Team Cards */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-14">
-          {/* Left Column: Statement, Button, Copyright */}
-          <div className="flex flex-col gap-6 sm:gap-7 max-w-md lg:max-w-[440px] pb-1 sm:pb-2">
-            {/* Statement */}
-            <p className="text-lg sm:text-xl lg:text-[22px] font-normal leading-[1.4] text-white/95">
-              {statement}
-            </p>
+        {/* Bottom Content Row: Left Statement + CTA */}
+        <div className="flex flex-col gap-6 sm:gap-7 max-w-xl lg:max-w-2xl pb-1 sm:pb-2">
+          {/* Statement */}
+          <p className="text-lg sm:text-xl lg:text-[22px] font-normal leading-[1.4] text-white/95">
+            {statement}
+          </p>
 
-            {/* Bottom Actions Row */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-1">
-              <Button
-                href={ctaLink}
-                variant="light"
-                showArrow={true}
-                className="w-auto"
-              >
-                {ctaText}
-              </Button>
+          {/* Bottom Actions Row */}
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-1">
+            <Button
+              href={ctaLink}
+              variant="light"
+              showArrow={true}
+              className="w-auto"
+            >
+              {ctaText}
+            </Button>
 
-              <span className="text-xs sm:text-sm text-[var(--color-text-light)] tracking-tight">
-                {copyright}
-              </span>
-            </div>
-          </div>
-
-          {/* Right Column: Compact Team Member Cards */}
-          <div className="flex items-center gap-4 sm:gap-5 shrink-0 self-start lg:self-auto">
-            {members.map((member) => (
-              <ImageCard
-                key={member.id}
-                image={member.image}
-                alt={member.name}
-                name={member.name}
-                role={member.role}
-                className="w-[170px] sm:w-[220px] md:w-[250px] lg:w-[270px] h-[250px] sm:h-[320px] md:h-[360px] lg:h-[390px] rounded-[16px]"
-              />
-            ))}
+            <span className="text-xs sm:text-sm text-[var(--color-text-light)] tracking-tight">
+              {copyright}
+            </span>
           </div>
         </div>
       </Container>

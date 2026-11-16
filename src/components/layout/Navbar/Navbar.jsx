@@ -39,7 +39,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
     <header
       className={`left-0 top-0 z-30 flex w-full items-center px-5 sm:px-8 ${
         isHome
-          ? "absolute h-16 bg-[var(--color-surface-nav)]/95 text-white"
+          ? "absolute h-16 sm:h-20 bg-transparent text-white"
           : "relative h-20 bg-transparent text-[var(--color-primary)]"
       }`}
     >
@@ -49,11 +49,15 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         className="flex items-center"
       >
         <Image
-          src="/images/logo.png"
+          src={
+            isHome
+              ? "/Netsquare Softwares Circuit Logo.png"
+              : "/Netsquare Softwares Logo.png"
+          }
           alt="NetSquare Softwares"
-          width={130}
-          height={48}
-          className="h-15 w-auto object-contain"
+          width={160}
+          height={55}
+          className="h-10 sm:h-11 w-auto object-contain"
           priority
         />
       </Link>
@@ -131,7 +135,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         aria-hidden="true"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       >
-        <source src="/videos/herovideo2.webm" type="video/webm" />
+        <source src="/videos/herovideo.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 z-10 bg-black/45" aria-hidden="true" />

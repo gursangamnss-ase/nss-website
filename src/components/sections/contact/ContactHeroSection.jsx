@@ -69,8 +69,13 @@ export default function ContactHeroSection() {
               <div className="space-y-4 pt-1">
                 <div>
                   <p className="text-base sm:text-lg font-semibold text-[var(--color-primary)]">
-                    {hero.agency}
+                    {hero.registeredOfficeTitle || "Registered Office"}
                   </p>
+                  {hero.agency && (
+                    <p className="text-sm font-medium text-neutral-700">
+                      {hero.agency}
+                    </p>
+                  )}
                   <p className="text-sm sm:text-base text-neutral-600 max-w-sm mt-1 leading-relaxed">
                     {hero.address}
                   </p>
@@ -79,37 +84,13 @@ export default function ContactHeroSection() {
                 {hero.canadaAddress && (
                   <div>
                     <p className="text-base sm:text-lg font-semibold text-[var(--color-primary)]">
-                      {hero.canadaAgency || "Canada Office"}
+                      {hero.canadaAgency || "Branch Office"}
                     </p>
                     <p className="text-sm sm:text-base text-neutral-600 max-w-sm mt-1 leading-relaxed">
                       {hero.canadaAddress}
                     </p>
                   </div>
                 )}
-              </div>
-            </div>
-
-            {/* Founder Note & Avatar */}
-            <div className="space-y-5 pt-4">
-              <p className="text-lg sm:text-xl font-medium text-[var(--color-primary)] leading-snug max-w-md">
-                {hero.founderQuote}
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="relative h-11 w-11 overflow-hidden rounded-full border border-neutral-200 bg-neutral-100">
-                  <Image
-                    src={hero.founder.avatar}
-                    alt={hero.founder.name}
-                    fill
-                    sizes="44px"
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-sm text-neutral-600">
-                  <strong className="text-[var(--color-primary)] font-semibold">
-                    {hero.founder.name}
-                  </strong>
-                  , {hero.founder.role}
-                </p>
               </div>
             </div>
           </div>

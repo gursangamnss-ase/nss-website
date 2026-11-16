@@ -83,11 +83,10 @@ export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
         return (
           <div
             key={project.id}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-              isActive
-                ? "opacity-100 z-10"
-                : "opacity-0 z-0 pointer-events-none"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${isActive
+              ? "opacity-100 z-10"
+              : "opacity-0 z-0 pointer-events-none"
+              }`}
             aria-hidden={!isActive}
           >
             <Image

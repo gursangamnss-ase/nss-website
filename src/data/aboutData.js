@@ -76,9 +76,9 @@ export const aboutData = {
     headingSuffix: "digital excellence",
     founderQuote: {
       quote:
-        "Every digital solution begins with an idea. let's turn yours into something extraordinary",
-      author: "Amanda",
-      role: "Founder & CEO",
+        "Every digital solution begins with an idea. Let's turn yours into something extraordinary.",
+      author: "Netsquare Softwares",
+      role: "Digital Studio",
       image: "/images/about/founder-quote.jpg",
     },
     mission: {

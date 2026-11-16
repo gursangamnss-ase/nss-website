@@ -70,30 +70,8 @@ export default function EnquirySection() {
               </ul>
             </div>
 
-            {/* Bottom: Team Leader Badge & Discovery Call Button */}
-            <div className="space-y-6 pt-4">
-              {/* Team Leader Inline Badge */}
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-[12px] overflow-hidden relative shrink-0 shadow-md">
-                  <Image
-                    src={info.teamLeader.avatar}
-                    alt={info.teamLeader.name}
-                    fill
-                    sizes="56px"
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="text-lg sm:text-xl font-semibold text-white tracking-tight">
-                    {info.teamLeader.name}
-                  </p>
-                  <p className="text-sm sm:text-[15px] font-medium text-[var(--color-border)]">
-                    {info.teamLeader.role}
-                  </p>
-                </div>
-              </div>
-
-              {/* Book a Discovery Call Button */}
+            {/* Bottom: Discovery Call Button */}
+            <div className="pt-2">
               <Button
                 href={info.cta.link}
                 variant="light"

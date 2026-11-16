@@ -138,11 +138,11 @@ export default function Footer() {
                 </a>
               </div>
 
-              {/* Offline studio address */}
+              {/* Registered & Branch Office studio address */}
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-1.5">
                   <p className="text-lg font-medium text-[var(--color-text-muted)] tracking-wide">
-                    {contact.offlineTitle}
+                    {contact.offlineTitle || "Registered Office"}
                   </p>
                   <p className="text-base font-medium text-white">
                     {contact.companyTitle}
@@ -155,7 +155,7 @@ export default function Footer() {
                 {contact.canadaAddress && (
                   <div className="flex flex-col gap-1.5">
                     <p className="text-base font-medium text-white">
-                      {contact.canadaTitle || "Canada Office"}
+                      {contact.canadaTitle || "Branch Office"}
                     </p>
                     <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs">
                       {contact.canadaAddress}
