@@ -23,9 +23,9 @@ export default function TrustedClientsSection() {
         <h2 className="sr-only">Trusted by Visionary Clients</h2>
 
         {/* Header */}
-        <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 md:gap-3 lg:grid-cols-6 items-start">
+        <div className="grid grid-cols-1 gap-y-4 sm:gap-y-6 sm:grid-cols-2 md:gap-3 lg:grid-cols-6 items-start">
           {/* Badge */}
-          <div className="flex items-start pt-2 lg:col-span-2">
+          <div className="flex items-start pt-1 sm:pt-2 lg:col-span-2">
             <Badge
               text={header.badge}
               disabled
@@ -36,11 +36,11 @@ export default function TrustedClientsSection() {
 
           {/* Heading */}
           <div className="lg:col-span-4">
-            <p className="text-indent-custom text-[24px] sm:text-[30px] lg:text-[38px] font-medium leading-[1.12] tracking-[-0.04em] text-[var(--color-text-muted)]">
+            <p className="indent-14 sm:indent-24 lg:text-indent-custom text-[27px] sm:text-[32px] lg:text-[38px] font-medium leading-[1.14] tracking-[-0.035em] text-[var(--color-text-muted)]">
               <span className="text-white">
                 Together, we build impactful experiences,
-              </span>
-              <br />
+              </span>{" "}
+              <br className="hidden sm:inline" />
               lasting relationships, and digital solutions that move businesses
               forward.
             </p>
@@ -48,7 +48,7 @@ export default function TrustedClientsSection() {
         </div>
 
         {/* Clients grid */}
-        <div className="mt-16 sm:mt-24 lg:mt-28 grid grid-cols-2 gap-2.5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 md:gap-3">
+        <div className="mt-8 sm:mt-16 lg:mt-24 grid grid-cols-2 gap-2.5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 md:gap-3">
           {cards.map((card, idx) => {
             const cardContent = (() => {
               if (card.type === "logo") {
