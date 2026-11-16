@@ -69,8 +69,13 @@ export default function ContactHeroSection() {
               <div className="space-y-4 pt-1">
                 <div>
                   <p className="text-base sm:text-lg font-semibold text-[var(--color-primary)]">
-                    {hero.agency}
+                    {hero.registeredOfficeTitle || "Registered Office"}
                   </p>
+                  {hero.agency && (
+                    <p className="text-sm font-medium text-neutral-700">
+                      {hero.agency}
+                    </p>
+                  )}
                   <p className="text-sm sm:text-base text-neutral-600 max-w-sm mt-1 leading-relaxed">
                     {hero.address}
                   </p>
@@ -79,7 +84,7 @@ export default function ContactHeroSection() {
                 {hero.canadaAddress && (
                   <div>
                     <p className="text-base sm:text-lg font-semibold text-[var(--color-primary)]">
-                      {hero.canadaAgency || "Canada Office"}
+                      {hero.canadaAgency || "Branch Office"}
                     </p>
                     <p className="text-sm sm:text-base text-neutral-600 max-w-sm mt-1 leading-relaxed">
                       {hero.canadaAddress}
