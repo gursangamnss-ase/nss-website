@@ -17,6 +17,7 @@ export default function EnquirySection() {
           loop
           muted
           playsInline
+          preload="none"
           aria-hidden="true"
           className="h-full w-full object-cover"
         >

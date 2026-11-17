@@ -132,7 +132,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         loop
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
         poster="/images/herovideo-poster.webp"
         aria-hidden="true"
         className="absolute inset-0 z-0 h-full w-full object-cover"
