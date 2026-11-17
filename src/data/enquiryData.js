@@ -1,4 +1,6 @@
 export const enquiryData = {
+  videoWebm: "/videos/enquirysection.webm",
+  videoMp4: "/videos/enquirysection.mp4",
   videoSrc: "/videos/enquirysection.mp4",
   badge: "Start the conversation today",
   heading: {

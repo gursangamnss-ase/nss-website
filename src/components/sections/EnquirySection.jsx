@@ -6,7 +6,7 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 
 export default function EnquirySection() {
-  const { videoSrc, badge, heading, form, info } = enquiryData;
+  const { videoWebm, videoMp4, videoSrc, badge, heading, form, info } = enquiryData;
 
   return (
     <section className="relative overflow-hidden bg-[var(--color-primary)] text-white py-24 sm:py-32 lg:py-36">
@@ -20,7 +20,8 @@ export default function EnquirySection() {
           aria-hidden="true"
           className="h-full w-full object-cover"
         >
-          <source src={videoSrc} type="video/mp4" />
+          <source src={videoWebm || "/videos/enquirysection.webm"} type="video/webm" />
+          <source src={videoMp4 || videoSrc || "/videos/enquirysection.mp4"} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
       </div>
