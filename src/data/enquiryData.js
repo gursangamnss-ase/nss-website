@@ -47,7 +47,7 @@ export const enquiryData = {
     teamLeader: {
       name: "Amanda Ferguson",
       role: "Team leader",
-      avatar: "/brand/enquiry-avatar.jpg",
+      avatar: "/brand/enquiry-avatar.webp",
     },
     cta: {
       text: "Book a discovery call",

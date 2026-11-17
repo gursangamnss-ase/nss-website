@@ -34,7 +34,7 @@ export default function Home() {
           {/* Background */}
           <div className="pointer-events-none absolute inset-0 z-0">
             <Image
-              src="/images/services/services-bg.jpg"
+              src="/images/services/services-bg.webp"
               alt=""
               aria-hidden="true"
               fill

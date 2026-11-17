@@ -74,7 +74,7 @@ export default function InsideStudioSection() {
         <StudioImageCard
           image="/images/studio-team.avif"
           imageAlt="Studio team gathered in sunlight"
-          avatar="/brand/avatar-6.jpg"
+          avatar="/brand/avatar-6.webp"
           title="Discuss your projects"
           subtitle="Speak with the team lead"
           className="mx-auto max-w-[640px] sm:mt-20"

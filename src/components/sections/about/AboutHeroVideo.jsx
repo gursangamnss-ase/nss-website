@@ -21,7 +21,7 @@ export default function AboutHeroVideo() {
     <div className="relative w-full sm:w-[360px] lg:w-[410px] aspect-[410/236] rounded-2xl overflow-hidden bg-neutral-900 shadow-md">
       <video
         ref={videoRef}
-        poster="/images/about/hero-video-poster.jpg"
+        poster="/images/about/hero-video-poster.webp"
         autoPlay
         loop
         muted

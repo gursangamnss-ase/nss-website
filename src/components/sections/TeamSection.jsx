@@ -27,7 +27,7 @@ export default function TeamSection() {
       {/* Background Image with Natural Office Contrast Overlay */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <Image
-          src="/images/team/team-section-bg.jpg"
+          src="/images/team/team-section-bg.webp"
           alt=""
           aria-hidden="true"
           fill

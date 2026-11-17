@@ -23,7 +23,7 @@ export const contactData = {
     founder: {
       name: "Amanda",
       role: "Founder & CEO",
-      avatar: "/images/team/amanda-reeds.jpg",
+      avatar: "/images/team/amanda-reeds.webp",
     },
   },
   form: {

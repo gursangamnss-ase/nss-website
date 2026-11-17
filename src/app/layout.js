@@ -74,6 +74,21 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/herovideo-poster.webp"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="video"
+          href="/videos/herovideo.webm"
+          type="video/webm"
+          fetchPriority="high"
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

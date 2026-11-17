@@ -51,8 +51,8 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         <Image
           src={
             isHome
-              ? "/Netsquare Softwares Circuit Logo.png"
-              : "/Netsquare Softwares Logo.png"
+              ? "/Netsquare Softwares Circuit Logo.webp"
+              : "/Netsquare Softwares Logo.webp"
           }
           alt="NetSquare Softwares"
           width={160}
@@ -132,6 +132,8 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         loop
         muted
         playsInline
+        preload="auto"
+        poster="/images/herovideo-poster.webp"
         aria-hidden="true"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       >

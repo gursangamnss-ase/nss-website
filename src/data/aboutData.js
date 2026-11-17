@@ -24,47 +24,47 @@ export const aboutData = {
   gallery: [
     {
       id: "gal-1",
-      src: "/images/about/gallery-1.jpg",
+      src: "/images/about/gallery-1.webp",
       alt: "Studio team collaborating on digital interfaces",
     },
     {
       id: "gal-2",
-      src: "/images/about/gallery-2.jpg",
+      src: "/images/about/gallery-2.webp",
       alt: "Designer sketching visual identity concepts",
     },
     {
       id: "gal-3",
-      src: "/images/about/gallery-3.jpg",
+      src: "/images/about/gallery-3.webp",
       alt: "Design system components review",
     },
     {
       id: "gal-4",
-      src: "/images/about/gallery-4.jpg",
+      src: "/images/about/gallery-4.webp",
       alt: "Creative workshop brainstorming session",
     },
     {
       id: "gal-5",
-      src: "/images/about/gallery-5.jpg",
+      src: "/images/about/gallery-5.webp",
       alt: "Modern agency workspace environment",
     },
     {
       id: "gal-6",
-      src: "/images/about/gallery-6.jpg",
+      src: "/images/about/gallery-6.webp",
       alt: "Digital product wireframing on display",
     },
     {
       id: "gal-7",
-      src: "/images/about/gallery-7.jpg",
+      src: "/images/about/gallery-7.webp",
       alt: "Team strategy session and architecture map",
     },
     {
       id: "gal-8",
-      src: "/images/about/gallery-8.jpg",
+      src: "/images/about/gallery-8.webp",
       alt: "Brand guidelines and typography printouts",
     },
     {
       id: "gal-9",
-      src: "/images/about/gallery-9.jpg",
+      src: "/images/about/gallery-9.webp",
       alt: "High-fidelity responsive UI prototypes",
     },
   ],
@@ -79,7 +79,7 @@ export const aboutData = {
         "Every digital solution begins with an idea. Let's turn yours into something extraordinary.",
       author: "Netsquare Softwares",
       role: "Digital Studio",
-      image: "/images/about/founder-quote.jpg",
+      image: "/images/about/founder-quote.webp",
     },
     mission: {
       title: "Our mission",
@@ -117,10 +117,10 @@ export const aboutData = {
         clientCount: "24+",
         rating: "5.0",
         avatars: [
-          "/images/testimonials/jaspreet-soni.jpg",
-          "/images/testimonials/aurevia-events.jpg",
-          "/images/testimonials/jagjot-singh.jpg",
-          "/images/testimonials/harshdeep-singh.jpg",
+          "/images/testimonials/jaspreet-soni.webp",
+          "/images/testimonials/aurevia-events.webp",
+          "/images/testimonials/jagjot-singh.webp",
+          "/images/testimonials/harshdeep-singh.webp",
         ],
       },
       {
@@ -193,7 +193,7 @@ export const aboutData = {
       href: "/contact",
     },
     studioBanner: {
-      src: "/images/about/studio-banner.jpg",
+      src: "/images/about/studio-banner.webp",
       alt: "NetSquare Softwares creative studio team and architectural workspace",
     },
   },
@@ -207,7 +207,7 @@ export const aboutData = {
         id: "amanda-reed",
         name: "Amanda Reed",
         role: "Founder & CEO",
-        image: "/images/about/team-1.jpg",
+        image: "/images/about/team-1.webp",
         socials: {
           facebook: "https://facebook.com",
           instagram: "https://instagram.com",
@@ -218,7 +218,7 @@ export const aboutData = {
         id: "taylor-grant",
         name: "Taylor Grant",
         role: "Creative Director",
-        image: "/images/about/team-2.jpg",
+        image: "/images/about/team-2.webp",
         socials: {
           facebook: "https://facebook.com",
           instagram: "https://instagram.com",
@@ -229,7 +229,7 @@ export const aboutData = {
         id: "casey-reed",
         name: "Casey Reed",
         role: "UI/UX Strategist",
-        image: "/images/about/team-3.jpg",
+        image: "/images/about/team-3.webp",
         socials: {
           facebook: "https://facebook.com",
           instagram: "https://instagram.com",
@@ -239,7 +239,7 @@ export const aboutData = {
         id: "riley-brooks",
         name: "Riley Brooks",
         role: "Senior Designer",
-        image: "/images/about/team-4.jpg",
+        image: "/images/about/team-4.webp",
         socials: {
           instagram: "https://instagram.com",
           twitter: "https://x.com",
@@ -249,7 +249,7 @@ export const aboutData = {
         id: "jordan-blake",
         name: "Jordan Blake",
         role: "Head of Development",
-        image: "/images/about/team-5.jpg",
+        image: "/images/about/team-5.webp",
         socials: {
           facebook: "https://facebook.com",
           instagram: "https://instagram.com",
@@ -260,7 +260,7 @@ export const aboutData = {
         id: "morgan-ellis",
         name: "Morgan Ellis",
         role: "Project Manager",
-        image: "/images/about/team-6.jpg",
+        image: "/images/about/team-6.webp",
         socials: {
           facebook: "https://facebook.com",
           twitter: "https://x.com",
@@ -270,7 +270,7 @@ export const aboutData = {
         id: "jamie-scott",
         name: "Jamie Scott",
         role: "Marketing Lead",
-        image: "/images/about/team-7.jpg",
+        image: "/images/about/team-7.webp",
         socials: {
           facebook: "https://facebook.com",
           instagram: "https://instagram.com",

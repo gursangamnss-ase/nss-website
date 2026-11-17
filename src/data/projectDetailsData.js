@@ -5,7 +5,7 @@ export const projectDetailsData = {
     slug: "shopraftaar",
     title: "Raftaar",
     scriptTitle: "E-Commerce",
-    heroImage: "/projects/shopraftaar/hero.png",
+    heroImage: "/projects/shopraftaar/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -19,7 +19,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://shopraftaar.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/shopraftaar/showcase.png",
+    showcaseImage: "/projects/shopraftaar/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -37,9 +37,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive e-commerce website with organized product collections, detailed product pages, and a streamlined shopping experience. The design combines modern aesthetics with Raftaar's cultural identity and premium streetwear positioning.",
     },
     gallery: [
-      "/projects/shopraftaar/gallery-1.png",
-      "/projects/shopraftaar/gallery-2.png",
-      "/projects/shopraftaar/gallery-3.png",
+      "/projects/shopraftaar/gallery-1.webp",
+      "/projects/shopraftaar/gallery-2.webp",
+      "/projects/shopraftaar/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -65,7 +65,7 @@ export const projectDetailsData = {
     slug: "mannbros",
     title: "Mann Bros",
     scriptTitle: "Leasing",
-    heroImage: "/projects/mannbros/hero.png",
+    heroImage: "/projects/mannbros/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -79,7 +79,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.mannbrosleasing.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/mannbros/showcase.png",
+    showcaseImage: "/projects/mannbros/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -97,9 +97,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a role-based management platform with separate access and permissions for Super Admin, Admin, Manager, and Staff. The system centralizes operational activities and helps the team manage trailer and leasing-related processes through a single, intuitive platform.",
     },
     gallery: [
-      "/projects/mannbros/gallery-1.png",
-      "/projects/mannbros/gallery-2.png",
-      "/projects/mannbros/gallery-3.png",
+      "/projects/mannbros/gallery-1.webp",
+      "/projects/mannbros/gallery-2.webp",
+      "/projects/mannbros/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -117,7 +117,7 @@ export const projectDetailsData = {
         "Working with Netsquare Softwares was a great experience. The team understood our operational requirements and developed a structured management system that helps our Super Admin, Admin, Managers, and Staff handle their responsibilities efficiently.",
       author: "Mann Bros Leasing Team",
       role: "Client",
-      avatar: "/images/testimonials/daniel-rios.jpg",
+      avatar: "/images/testimonials/daniel-rios.webp",
     },
     relatedProjectIds: ["shopraftaar", "shahikhuraak"],
   },
@@ -125,7 +125,7 @@ export const projectDetailsData = {
     slug: "shahikhuraak",
     title: "Shahi",
     scriptTitle: "Khuraak",
-    heroImage: "/projects/shahikhuraak/hero.png",
+    heroImage: "/projects/shahikhuraak/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -139,7 +139,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.shahikhuraak.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/shahikhuraak/showcase.png",
+    showcaseImage: "/projects/shahikhuraak/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -157,9 +157,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive e-commerce website featuring organized product collections, product details, shopping cart functionality, and a clean food-focused design. The platform highlights Shahi Khuraak's traditional recipes and premium ingredients.",
     },
     gallery: [
-      "/projects/shahikhuraak/gallery-1.png",
-      "/projects/shahikhuraak/gallery-2.png",
-      "/projects/shahikhuraak/gallery-3.png",
+      "/projects/shahikhuraak/gallery-1.webp",
+      "/projects/shahikhuraak/gallery-2.webp",
+      "/projects/shahikhuraak/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -177,7 +177,7 @@ export const projectDetailsData = {
         "Working with Netsquare Softwares was a great experience. The team created a professional e-commerce website that beautifully represents our Punjabi food heritage and makes our products easy for customers to explore and purchase.",
       author: "Shahi Khuraak Team",
       role: "Client",
-      avatar: "/images/testimonials/daniel-rios.jpg",
+      avatar: "/images/testimonials/daniel-rios.webp",
     },
     relatedProjectIds: ["shopraftaar", "mannbros"],
   },
@@ -185,7 +185,7 @@ export const projectDetailsData = {
     slug: "nextwave",
     title: "Next Wave",
     scriptTitle: "Mechanical",
-    heroImage: "/projects/nextwave/hero.png",
+    heroImage: "/projects/nextwave/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -199,7 +199,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.nextwavemech.ca/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/nextwave/showcase.png",
+    showcaseImage: "/projects/nextwave/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -217,9 +217,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive corporate website featuring dedicated service sections, interactive service process breakdowns, project mapping, testimonials, and a streamlined quote form. The website provides visitors with a clear and simple way to understand the company's services and get in touch.",
     },
     gallery: [
-      "/projects/nextwave/gallery-1.png",
-      "/projects/nextwave/gallery-2.png",
-      "/projects/nextwave/gallery-3.png",
+      "/projects/nextwave/gallery-1.webp",
+      "/projects/nextwave/gallery-2.webp",
+      "/projects/nextwave/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -245,7 +245,7 @@ export const projectDetailsData = {
     slug: "phf",
     title: "Punjabi Heritage",
     scriptTitle: "& Folk",
-    heroImage: "/projects/phf/hero.png",
+    heroImage: "/projects/phf/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -259,7 +259,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.phfcanada.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/phf/showcase.png",
+    showcaseImage: "/projects/phf/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -277,9 +277,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive and culturally focused website that presents PHF's mission, heritage initiatives, training activities, and organizational information in a structured and engaging format. The platform provides a centralized digital presence where visitors can learn about PHF's work, submit registrations, and explore community events.",
     },
     gallery: [
-      "/projects/phf/gallery-1.png",
-      "/projects/phf/gallery-2.png",
-      "/projects/phf/gallery-3.png",
+      "/projects/phf/gallery-1.webp",
+      "/projects/phf/gallery-2.webp",
+      "/projects/phf/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -305,7 +305,7 @@ export const projectDetailsData = {
     slug: "mykeys",
     title: "My Keys",
     scriptTitle: "Driving School",
-    heroImage: "/projects/mykeys/hero.png",
+    heroImage: "/projects/mykeys/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -319,7 +319,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://mykeysdrivingschool.ca/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/mykeys/showcase.png",
+    showcaseImage: "/projects/mykeys/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -337,9 +337,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive, service-focused website that organizes the school's driving programs, training information, pricing, and contact options into clear sections. The platform provides an easy-to-navigate experience that helps prospective students find suitable courses and connect with the school for further assistance.",
     },
     gallery: [
-      "/projects/mykeys/gallery-1.png",
-      "/projects/mykeys/gallery-2.png",
-      "/projects/mykeys/gallery-3.png",
+      "/projects/mykeys/gallery-1.webp",
+      "/projects/mykeys/gallery-2.webp",
+      "/projects/mykeys/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -365,7 +365,7 @@ export const projectDetailsData = {
     slug: "allsydneytowtruck",
     title: "All Sydney",
     scriptTitle: "Tow Truck",
-    heroImage: "/projects/allsydneytowtruck/hero.png",
+    heroImage: "/projects/allsydneytowtruck/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -379,7 +379,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://allsydneytowtruck.com.au/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/allsydneytowtruck/showcase.png",
+    showcaseImage: "/projects/allsydneytowtruck/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -397,9 +397,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive, service-focused website that organizes All Sydney Tow Truck's towing, recovery, emergency, heavy transport, and roadside assistance services into clear sections. The platform also provides an easy quote-request process and prominent contact options, helping customers quickly understand the available services and connect with the team when assistance is needed.",
     },
     gallery: [
-      "/projects/allsydneytowtruck/gallery-1.png",
-      "/projects/allsydneytowtruck/gallery-2.png",
-      "/projects/allsydneytowtruck/gallery-3.png",
+      "/projects/allsydneytowtruck/gallery-1.webp",
+      "/projects/allsydneytowtruck/gallery-2.webp",
+      "/projects/allsydneytowtruck/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -425,7 +425,7 @@ export const projectDetailsData = {
     slug: "lynixworld",
     title: "Lynix",
     scriptTitle: "World",
-    heroImage: "/projects/lynixworld/hero.png",
+    heroImage: "/projects/lynixworld/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -439,7 +439,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.lynixworld.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/lynixworld/showcase.png",
+    showcaseImage: "/projects/lynixworld/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -457,9 +457,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a user-friendly, responsive website that organizes Lynix World's repair services, device categories, locations, pricing, and support information into clear sections. The platform also provides convenient booking and quote-request options, helping customers quickly identify their repair needs and connect with the service team.",
     },
     gallery: [
-      "/projects/lynixworld/gallery-1.png",
-      "/projects/lynixworld/gallery-2.png",
-      "/projects/lynixworld/gallery-3.png",
+      "/projects/lynixworld/gallery-1.webp",
+      "/projects/lynixworld/gallery-2.webp",
+      "/projects/lynixworld/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -485,7 +485,7 @@ export const projectDetailsData = {
     slug: "aminabazaar",
     title: "Amina",
     scriptTitle: "Bazaar",
-    heroImage: "/projects/aminabazaar/hero.png",
+    heroImage: "/projects/aminabazaar/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -499,7 +499,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://aminabazaar.in/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/aminabazaar/showcase.png",
+    showcaseImage: "/projects/aminabazaar/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -517,9 +517,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a structured e-commerce platform with advanced number categories, price-based filtering, product listings, and detailed number information. The platform simplifies the buying journey by allowing customers to discover suitable VIP numbers, understand their availability and porting status, and proceed with online purchases through a streamlined interface.",
     },
     gallery: [
-      "/projects/aminabazaar/gallery-1.png",
-      "/projects/aminabazaar/gallery-2.png",
-      "/projects/aminabazaar/gallery-3.png",
+      "/projects/aminabazaar/gallery-1.webp",
+      "/projects/aminabazaar/gallery-2.webp",
+      "/projects/aminabazaar/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -545,7 +545,7 @@ export const projectDetailsData = {
     slug: "ibsp",
     title: "IBSP",
     scriptTitle: "Chris21 HR",
-    heroImage: "/projects/ibsp/hero.png",
+    heroImage: "/projects/ibsp/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -559,7 +559,7 @@ export const projectDetailsData = {
       liveSiteUrl: "http://ibsp.net.au/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/ibsp/showcase.png",
+    showcaseImage: "/projects/ibsp/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -577,9 +577,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a structured, user-friendly website that organizes IBSP's Chris21, payroll, HR, training, reporting, and support services into clear sections. The platform provides an intuitive way for businesses to understand IBSP's expertise, explore its solutions, and connect with the team for customized support.",
     },
     gallery: [
-      "/projects/ibsp/gallery-1.png",
-      "/projects/ibsp/gallery-2.png",
-      "/projects/ibsp/gallery-3.png",
+      "/projects/ibsp/gallery-1.webp",
+      "/projects/ibsp/gallery-2.webp",
+      "/projects/ibsp/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -605,7 +605,7 @@ export const projectDetailsData = {
     slug: "rentexcar",
     title: "Rentex",
     scriptTitle: "Car Rental",
-    heroImage: "/projects/rentexcar/hero.png",
+    heroImage: "/projects/rentexcar/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -619,7 +619,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.rentexcarrental.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/rentexcar/showcase.png",
+    showcaseImage: "/projects/rentexcar/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -637,9 +637,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a user-friendly, responsive website with an integrated booking experience, allowing customers to easily select rental details and explore available vehicles. The platform also organizes Rentex's key services and fleet into clear sections, creating a streamlined digital experience focused on convenience, accessibility, and easy navigation.",
     },
     gallery: [
-      "/projects/rentexcar/gallery-1.png",
-      "/projects/rentexcar/gallery-2.png",
-      "/projects/rentexcar/gallery-3.png",
+      "/projects/rentexcar/gallery-1.webp",
+      "/projects/rentexcar/gallery-2.webp",
+      "/projects/rentexcar/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -665,7 +665,7 @@ export const projectDetailsData = {
     slug: "bottlepos",
     title: "Bottle",
     scriptTitle: "POS",
-    heroImage: "/projects/bottlepos/hero.png",
+    heroImage: "/projects/bottlepos/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -679,7 +679,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://bottlepos.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/bottlepos/showcase.png",
+    showcaseImage: "/projects/bottlepos/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -697,9 +697,9 @@ export const projectDetailsData = {
         "Netsquare Softwares delivered a high-performance, modern web application highlighting Bottle POS's core value propositions through interactive feature walkthroughs, clear hardware bundle breakdowns, and seamless demo scheduling. The design couples crisp enterprise typography with engaging product visualizations that showcase the software in action.",
     },
     gallery: [
-      "/projects/bottlepos/gallery-1.png",
-      "/projects/bottlepos/gallery-2.png",
-      "/projects/bottlepos/gallery-3.png",
+      "/projects/bottlepos/gallery-1.webp",
+      "/projects/bottlepos/gallery-2.webp",
+      "/projects/bottlepos/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -769,8 +769,8 @@ export function getProjectBySlug(slug) {
         "We designed a modular design system and focused typography hierarchy to enhance clarity and user engagement.",
     },
     gallery: [
-      "/projects/shopraftaar/hero.png",
-      "/projects/mannbros/hero.png",
+      "/projects/shopraftaar/hero.webp",
+      "/projects/mannbros/hero.webp",
     ],
     results: {
       badge: "The Result",
@@ -788,7 +788,7 @@ export function getProjectBySlug(slug) {
         "A transformative digital experience that exceeded our expectations in aesthetic and function.",
       author: "Alex Morgan",
       role: "Design Lead",
-      avatar: "/images/testimonials/daniel-rios.jpg",
+      avatar: "/images/testimonials/daniel-rios.webp",
     },
     relatedProjectIds: ["nova-wallet", "echo-studio"].filter(
       (id) => id !== base.id,

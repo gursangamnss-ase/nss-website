@@ -19,7 +19,7 @@ export const servicesData = [
       "Performance optimization",
     ],
     duration: "3 - 5 weeks",
-    image: "/images/services/web-development.png",
+    image: "/images/services/web-development.webp",
     imageAlt:
       "Modern high-performance website design and web development showcase",
     icon: Globe2,
@@ -38,7 +38,7 @@ export const servicesData = [
       "Push notifications",
     ],
     duration: "4 - 8 weeks",
-    image: "/images/services/mobile-development.png",
+    image: "/images/services/mobile-development.webp",
     imageAlt:
       "Modern mobile application development for Android and iOS platforms",
     icon: Smartphone,
@@ -57,7 +57,7 @@ export const servicesData = [
       "Campaign management",
     ],
     duration: "4 - 12 weeks",
-    image: "/images/services/digital-marketing.png",
+    image: "/images/services/digital-marketing.webp",
     imageAlt:
       "Digital marketing strategy and growth campaign visual",
     icon: Megaphone,
@@ -77,7 +77,7 @@ export const servicesData = [
       
     ],
     duration: "2 - 4 weeks",
-    image: "/images/services/ui-ux-development.png",
+    image: "/images/services/ui-ux-development.webp",
     imageAlt:
       "Modern UI/UX interface design and user experience showcase",
     icon: Lightbulb,

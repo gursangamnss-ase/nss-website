@@ -7,7 +7,7 @@ export const blogDetailsData = {
     date: "Aug 14, 2025",
     readTime: "4 min read",
     badge: "Featured post",
-    image: "/blog/webstillmatter.jpg",
+    image: "/blog/webstillmatter.webp",
     alt: "Modern web design workspace with typography and UI layouts",
     introHeading: "Introduction",
     introText:
@@ -48,7 +48,7 @@ export const blogDetailsData = {
     date: "Aug 14, 2025",
     readTime: "4 min read",
     badge: "Featured post",
-    image: "/blog/webstillmatter.jpg",
+    image: "/blog/webstillmatter.webp",
     alt: "Modern web design workspace with typography and UI layouts",
     introHeading: "Introduction",
     introText:
@@ -89,7 +89,7 @@ export const blogDetailsData = {
     title: "Mobile App Development Process",
     date: "Aug 5, 2025",
     readTime: "5 min read",
-    image: "/blog/mobiledevelopment.jpg",
+    image: "/blog/mobiledevelopment.webp",
     alt: "Mobile app wireframes and interactive prototyping interface",
     introHeading: "Introduction",
     introText:
@@ -316,7 +316,7 @@ export const blogDetailsData = {
     title: "Content Management System (CMS)",
     date: "Jul 10, 2025",
     readTime: "4 min read",
-    image: "/blog/cms.jpg",
+    image: "/blog/cms.webp",
     alt: "Content management dashboard on laptop screen",
     introHeading: "What is a CMS?",
     introText:
@@ -353,7 +353,7 @@ export const blogDetailsData = {
     title: "Content Management System (CMS)",
     date: "Jul 10, 2025",
     readTime: "4 min read",
-    image: "/blog/cms.jpg",
+    image: "/blog/cms.webp",
     alt: "Content management dashboard on laptop screen",
     introHeading: "What is a CMS?",
     introText:
@@ -392,7 +392,7 @@ export const blogDetailsData = {
     date: "Aug 20, 2025",
     readTime: "6 min read",
     badge: "AI & Machine Learning",
-    image: "/blog/ragpipeline.jpg",
+    image: "/blog/ragpipeline.webp",
     alt: "Building a Production-Ready RAG Pipeline for Company Documents Using Local LLMs",
     quote:
       "Instead of training a model to memorize everything, RAG allows the model to retrieve the right information at the right time.",
@@ -405,7 +405,7 @@ export const blogDetailsData = {
         paragraphs: [
           {
             type: "image",
-            src: "/blog/ragpipeline.jpg",
+            src: "/blog/ragpipeline.webp",
             alt: "RAG Pipeline Architecture Diagram with Local LLMs",
             caption:
               "End-to-end RAG architecture: Knowledge Base → Document Chunks → Embeddings → ChromaDB Vector Store → Local LLM Query & Answer Pipeline.",
