@@ -63,8 +63,8 @@ export const projectDetailsData = {
   },
   dav: {
     slug: "dav",
-    title: "DAV Transport",
-    scriptTitle: "Logistics",
+    title: "DAV",
+    scriptTitle: "NZ",
     heroImage: "/projects/dav/hero.webp",
     overview: {
       badge: "Overview",
@@ -124,7 +124,7 @@ export const projectDetailsData = {
   iris: {
     slug: "iris",
     title: "IRIS",
-    scriptTitle: "AI Platform",
+    scriptTitle: "USA",
     heroImage: "/projects/iris/hero.webp",
     overview: {
       badge: "Overview",
@@ -186,7 +186,7 @@ export const projectDetailsData = {
   fingerprint: {
     slug: "fingerprint",
     title: "Fingerprint",
-    scriptTitle: "Social App",
+    scriptTitle: "USA",
     heroImage: "/projects/fingerprint/hero.webp",
     overview: {
       badge: "Overview",
@@ -246,7 +246,7 @@ export const projectDetailsData = {
   shopraftaar: {
     slug: "shopraftaar",
     title: "Raftaar",
-    scriptTitle: "E-Commerce",
+    scriptTitle: "NZ",
     heroImage: "/projects/shopraftaar/hero.webp",
     overview: {
       badge: "Overview",
@@ -306,7 +306,7 @@ export const projectDetailsData = {
   mannbros: {
     slug: "mannbros",
     title: "Mann Bros",
-    scriptTitle: "Leasing",
+    scriptTitle: "USA",
     heroImage: "/projects/mannbros/hero.webp",
     overview: {
       badge: "Overview",
@@ -905,8 +905,8 @@ export const projectDetailsData = {
   },
   bottlepos: {
     slug: "bottlepos",
-    title: "Bottle",
-    scriptTitle: "POS",
+    title: "Bottle POS",
+    scriptTitle: "USA",
     heroImage: "/projects/bottlepos/hero.webp",
     overview: {
       badge: "Overview",
