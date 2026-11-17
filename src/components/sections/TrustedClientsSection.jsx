@@ -17,7 +17,7 @@ export default function TrustedClientsSection() {
       id="clients"
       spacing="none"
       background="transparent"
-      className="pb-20 sm:pb-28 lg:pb-36 pt-0"
+      className="pb-20 sm:pb-28 lg:pb-36 pt-12 sm:pt-16 lg:pt-20"
     >
       <Container size="2xl" className="px-5 sm:px-8 lg:px-12">
         <h2 className="sr-only">Trusted by Visionary Clients</h2>

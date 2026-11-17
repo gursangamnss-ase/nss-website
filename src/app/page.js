@@ -6,7 +6,8 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import TrustedClientsSection from "@/components/sections/TrustedClientsSection";
 import Footer from "@/components/layout/Footer/Footer";
 
-// Lazy-load below-the-fold sections for optimal mobile performance and minimal Total Blocking Time (TBT)
+// Lazy-load sections for optimal mobile performance and minimal Total Blocking Time (TBT)
+const IndustriesSection = dynamic(() => import("@/components/sections/IndustriesSection"));
 const CreativeCollabsSection = dynamic(() => import("@/components/sections/CreativeCollabsSection"));
 const FeaturedProjectsSection = dynamic(() => import("@/components/sections/FeaturedProjectsSection"));
 const BrandStoriesSection = dynamic(() => import("@/components/sections/BrandStoriesSection"));
@@ -50,6 +51,7 @@ export default function Home() {
 
           <div className="relative z-10">
             <ServicesSection />
+            <IndustriesSection />
             <TrustedClientsSection />
           </div>
         </section>
