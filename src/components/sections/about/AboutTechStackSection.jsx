@@ -9,7 +9,7 @@ export default function AboutTechStackSection() {
   const stacks = data?.stacks || [];
 
   return (
-    <section className="relative bg-white py-20 sm:py-28 lg:py-36 text-[var(--color-primary)] overflow-hidden">
+    <section className="relative bg-white pt-20 sm:pt-28 lg:pt-36 pb-12 sm:pb-16 lg:pb-20 text-[var(--color-primary)] overflow-hidden">
       {/* Decorative Background Watermark Vector */}
       <div
         className="pointer-events-none absolute -top-12 sm:-top-16 lg:-top-24 -left-32 sm:-left-40 lg:-left-48 w-[580px] sm:w-[720px] lg:w-[860px] h-auto select-none opacity-90 z-0"

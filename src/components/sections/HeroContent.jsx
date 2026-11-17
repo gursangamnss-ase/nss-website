@@ -91,7 +91,9 @@ export default function HeroContent() {
             {servicesData.map((service, index) => (
               <li
                 key={service.id || service.title}
-                className="text-lg sm:text-xl lg:text-[24px] font-medium tracking-[-0.02em] leading-tight text-white flex items-baseline justify-end gap-2 sm:gap-2.5"
+                className={`text-lg sm:text-xl lg:text-[24px] font-medium tracking-[-0.02em] leading-tight text-white flex items-baseline justify-end gap-2 sm:gap-2.5 ${
+                  index >= 4 ? "hidden sm:flex" : ""
+                }`}
               >
                 <span className="font-script text-[19px] sm:text-2xl lg:text-[24px] font-normal text-white">
                   {service.number || `(${String(index + 1).padStart(2, "0")})`}

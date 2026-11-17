@@ -3,6 +3,8 @@ import {
   Smartphone,
   Megaphone,
   Lightbulb,
+  Bot,
+  LayoutGrid,
 } from "lucide-react";
 
 export const servicesData = [
@@ -28,7 +30,7 @@ export const servicesData = [
   {
     id: "mobile-development",
     number: "(02)",
-    title: "Mobile Development",
+    title: "Mobile App Development",
     description:
       "We develop innovative and user-friendly mobile applications for Android and iOS, designed to keep your business connected with customers anytime, anywhere.",
     features: [
@@ -74,12 +76,49 @@ export const servicesData = [
       "Wireframes & user flows",
       "Interactive prototypes",
       "Design systems",
-      
     ],
     duration: "2 - 4 weeks",
     image: "/images/services/ui-ux-development.webp",
     imageAlt:
       "Modern UI/UX interface design and user experience showcase",
     icon: Lightbulb,
+  },
+
+  {
+    id: "ai-development",
+    number: "(05)",
+    title: "AI Development",
+    description:
+      "We build intelligent AI solutions, LLM integrations and custom machine learning models that automate workflows, drive actionable insights and transform digital interactions.",
+    features: [
+      "Custom LLM & AI agent development",
+      "Intelligent workflow automation",
+      "Predictive analytics & ML models",
+      "Conversational AI & smart chatbots",
+    ],
+    duration: "4 - 8 weeks",
+    image: "/images/services/ai-development.webp",
+    imageAlt:
+      "Modern artificial intelligence and machine learning solution showcase",
+    icon: Bot,
+  },
+
+  {
+    id: "cms-framework",
+    number: "(06)",
+    title: "CMS Framework",
+    description:
+      "We engineer scalable headless CMS platforms and modular content architectures that empower teams to publish effortlessly, manage assets and deliver high-speed web experiences.",
+    features: [
+      "Headless CMS development",
+      "Custom CMS integrations & migrations",
+      "Structured content modeling",
+      "Multi-platform API publishing",
+    ],
+    duration: "3 - 6 weeks",
+    image: "/images/services/cms-framework.webp",
+    imageAlt:
+      "Modern headless CMS framework and content management dashboard showcase",
+    icon: LayoutGrid,
   },
 ];
