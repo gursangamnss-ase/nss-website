@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
       {/* Background Image with Dark Overlay */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <Image
-          src="/images/services/services-bg.jpg"
+          src="/images/services/services-bg.webp"
           alt=""
           aria-hidden="true"
           fill

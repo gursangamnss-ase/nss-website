@@ -18,9 +18,25 @@ export default function InsideStudioSection() {
     <Section
       id="about-us"
       spacing="none"
-      className="bg-[var(--color-background-soft)] py-14 sm:py-20 lg:py-28"
+      className="relative bg-[var(--color-background-soft)] py-14 sm:py-20 lg:py-28 overflow-hidden"
     >
-      <Container size="full" className="px-5 sm:px-8 lg:px-10">
+      {/* Background Shadow Texture (Framer exact match) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute inset-0 z-0 flex flex-col items-center justify-start overflow-hidden"
+      >
+        <div className="sticky top-0 z-[1] flex w-full items-center justify-center overflow-hidden aspect-square h-[360px] min-[810px]:h-[810px] min-[1200px]:h-[1200px]">
+          <div className="absolute z-[1] overflow-hidden select-none aspect-square w-[350px] h-[350px] -top-[60px] -right-[60px] min-[810px]:w-[810px] min-[810px]:h-[810px] min-[810px]:-top-[130px] min-[810px]:-right-[130px] min-[1200px]:w-[1200px] min-[1200px]:h-[1200px]">
+            <img
+              src="/images/inside-studio-shadows.svg"
+              alt=""
+              className="block h-full w-full object-contain pointer-events-none"
+            />
+          </div>
+        </div>
+      </div>
+
+      <Container size="full" className="relative z-10 px-5 sm:px-8 lg:px-10">
         <div className="hidden grid-cols-3 items-center text-sm font-medium md:grid lg:text-base">
           <Badge
             text="Inside the Studio"
@@ -74,7 +90,7 @@ export default function InsideStudioSection() {
         <StudioImageCard
           image="/images/studio-team.avif"
           imageAlt="Studio team gathered in sunlight"
-          avatar="/brand/avatar-6.jpg"
+          avatar="/brand/avatar-6.webp"
           title="Discuss your projects"
           subtitle="Speak with the team lead"
           className="mx-auto max-w-[640px] sm:mt-20"

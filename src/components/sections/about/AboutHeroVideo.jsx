@@ -21,8 +21,7 @@ export default function AboutHeroVideo() {
     <div className="relative w-full sm:w-[360px] lg:w-[410px] aspect-[410/236] rounded-2xl overflow-hidden bg-neutral-900 shadow-md">
       <video
         ref={videoRef}
-        src="/videos/about_video.mp4"
-        poster="/images/about/hero-video-poster.jpg"
+        poster="/images/about/hero-video-poster.webp"
         autoPlay
         loop
         muted
@@ -31,7 +30,10 @@ export default function AboutHeroVideo() {
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         className="w-full h-full object-cover"
-      />
+      >
+        <source src="/videos/about_video.webm" type="video/webm" />
+        <source src="/videos/about_video.mp4" type="video/mp4" />
+      </video>
 
       {/* Floating Play/Pause Toggle Button matching Framer reference */}
       <button

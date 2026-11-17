@@ -33,7 +33,7 @@ export const blogData = {
       readTime: "6 min read",
       isFeatured: false,
       badge: "AI & LLMs",
-      image: "/blog/ragpipeline.jpg",
+      image: "/blog/ragpipeline.webp",
       link: "/blog/building-a-production-ready-rag-pipeline-for-company-documents-using-local-llms",
     },
 
@@ -85,7 +85,7 @@ export const blogData = {
       readTime: "4 min read",
       isFeatured: false,
       badge: "Web Design",
-      image: "/blog/webstillmatter.jpg",
+      image: "/blog/webstillmatter.webp",
       link: "/blog/why-web-design-still-matters",
     },
     {
@@ -96,7 +96,7 @@ export const blogData = {
       readTime: "5 min read",
       isFeatured: false,
       badge: "Mobile Apps",
-      image: "/blog/mobiledevelopment.jpg",
+      image: "/blog/mobiledevelopment.webp",
       link: "/blog/mobile-app-development-the-complete-process-from-concept-to-launch",
     },
     {
@@ -129,7 +129,7 @@ export const blogData = {
       readTime: "4 min read",
       isFeatured: false,
       badge: "CMS",
-      image: "/blog/cms.jpg",
+      image: "/blog/cms.webp",
       link: "/blog/choosing-the-right-cms-for-your-brand-modern-platforms-compared",
     },
   ],

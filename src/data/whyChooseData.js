@@ -11,20 +11,20 @@ export const whyChooseData = {
     badge: "Pause & cancel anytime",
     chipImage: "/brand/qXEl4NSEn756sdcc0gooyl3VDjU.avif",
     dollarImage: "/brand/A4PgRvR3au33LFbvVbLIjdFxYjw.avif",
-    waveBg: "/brand/card-wave.png",
+    waveBg: "/brand/card-wave.webp",
   },
   happyClients: {
     rating: "5.0",
     maxRating: "/5.0",
     clientCount: "150+",
     clientLabel: "Happy clients worldwide",
-    centerLogo: "/images/logo.png",
+    centerLogo: "/Netsquare_Logo_White_Without_Tagline_Transparent.png",
     avatars: [
-      { src: "/brand/avatar-1.jpg", alt: "Client 1", position: "top-[14%] left-[50%] -translate-x-1/2" },
-      { src: "/brand/avatar-2.jpg", alt: "Client 2", position: "top-[40%] left-[14%]" },
-      { src: "/brand/avatar-3.jpg", alt: "Client 3", position: "top-[42%] right-[16%]" },
-      { src: "/brand/avatar-4.jpg", alt: "Client 4", position: "bottom-[10%] left-[4%]" },
-      { src: "/brand/avatar-5.jpg", alt: "Client 5", position: "bottom-[8%] right-[4%]" },
+      { src: "/brand/avatar-1.webp", alt: "Client 1", position: "top-[14%] left-[50%] -translate-x-1/2" },
+      { src: "/brand/avatar-2.webp", alt: "Client 2", position: "top-[40%] left-[14%]" },
+      { src: "/brand/avatar-3.webp", alt: "Client 3", position: "top-[42%] right-[16%]" },
+      { src: "/brand/avatar-4.webp", alt: "Client 4", position: "bottom-[10%] left-[4%]" },
+      { src: "/brand/avatar-5.webp", alt: "Client 5", position: "bottom-[8%] right-[4%]" },
     ],
   },
   strategicSolutions: {
@@ -58,12 +58,12 @@ export const whyChooseData = {
     line1: "Reliable &",
     line2Highlight: "Future-ready",
     image:
-      "/brand/ignitex-digital-agency-template-for-designers-studios.image.SkzqB7SW8lsArubE8ItR280AM.Woblo.jpg",
+      "/brand/ignitex-digital-agency-template-for-designers-studios.image.SkzqB7SW8lsArubE8ItR280AM.Woblo.webp",
   },
   alwaysOnSupport: {
     tag: "24/7",
     title: "Always-On support",
-    avatar: "/brand/avatar-1.jpg",
+    avatar: "/brand/avatar-1.webp",
     handsImage: "/brand/MUgrrLByNsvKb575zwtrYhrmFZA.avif",
     messages: [
       { text: "Hey there!", isSender: false },

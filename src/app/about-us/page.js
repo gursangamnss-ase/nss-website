@@ -4,6 +4,7 @@ import AboutHeroSection from "@/components/sections/about/AboutHeroSection";
 import AboutGallerySection from "@/components/sections/about/AboutGallerySection";
 import AboutVisionSection from "@/components/sections/about/AboutVisionSection";
 import AboutTechStackSection from "@/components/sections/about/AboutTechStackSection";
+import IndustriesSection from "@/components/sections/IndustriesSection";
 import AboutImpactSection from "@/components/sections/about/AboutImpactSection";
 import FaqSection from "@/components/sections/contact/FaqSection";
 import EnquirySection from "@/components/sections/EnquirySection";
@@ -37,7 +38,10 @@ export default function AboutPage() {
           {/* 4. Technologies & Modern Tech Stack */}
           <AboutTechStackSection />
 
-          {/* 5. Visionary Impact, Client Marquee & Wide Studio Banner */}
+          {/* 5. Built for Verticals that Move (Reusable Industries Section - Light Theme) */}
+          <IndustriesSection theme="light" id="about-industries" />
+
+          {/* 6. Visionary Impact, Client Marquee & Wide Studio Banner */}
           <AboutImpactSection />
 
           {/* 6. Reusable FAQ Section */}

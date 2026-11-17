@@ -51,31 +51,16 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         <Image
           src={
             isHome
-              ? "/Netsquare Softwares Circuit Logo.png"
-              : "/Netsquare Softwares Logo.png"
+              ? "/Netsquare_Logo_White_Without_Tagline_Transparent.png"
+              : "/Netsquare Softwares Logo.webp"
           }
           alt="NetSquare Softwares"
           width={160}
           height={55}
-          className="h-10 sm:h-11 w-auto object-contain"
+          className="h-10 sm:h-18 w-auto object-contain"
           priority
         />
       </Link>
-
-      <p
-        className={`absolute left-1/2 hidden -translate-x-1/2 text-base min-[1200px]:block ${
-          isHome ? "font-medium text-white/70" : "font-normal text-neutral-500"
-        }`}
-      >
-        Based in:{" "}
-        <span
-          className={
-            isHome ? "text-white" : "font-medium text-[var(--color-primary)]"
-          }
-        >
-          Mohali, India
-        </span>
-      </p>
 
       <div className="ml-auto flex items-center gap-8">
         <nav
@@ -132,9 +117,12 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         loop
         muted
         playsInline
+        preload="metadata"
+        poster="/images/herovideo-poster.webp"
         aria-hidden="true"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       >
+        <source src="/videos/herovideo.webm" type="video/webm" />
         <source src="/videos/herovideo.mp4" type="video/mp4" />
       </video>
 

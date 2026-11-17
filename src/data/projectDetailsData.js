@@ -1,11 +1,253 @@
 import { projectData } from "./projectData";
 
 export const projectDetailsData = {
+  aeko: {
+    slug: "aeko",
+    title: "Aeko",
+    scriptTitle: "Australia",
+    heroImage: "/projects/aeko/hero.webp",
+    overview: {
+      badge: "Overview",
+      description:
+        "Aeko is an Australian luxury architectural brand specializing in bespoke wrought iron doors, high-strength steel doors, pivot systems, and architectural living solutions. The company combines timeless hand-crafted metallurgy with contemporary minimalist design, delivering premium residential and commercial entrance solutions across Australia. The platform was developed to provide architects, builders, and homeowners with an inspiring digital catalogue, interactive product exploration, and a seamless quote-request workflow.",
+      meta: [
+        { label: "Client:", value: "Aeko Australia" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Architectural Doors & Luxury Interiors / E-Commerce" },
+        { label: "Location:", value: "Australia" },
+      ],
+      liveSiteUrl: "https://aekoaustralia.com.au/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/aeko/showcase.webp",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Aeko needed a refined, high-end digital presence to showcase its bespoke architectural collections while conveying craftsmanship, engineering precision, and luxury. The website needed an intuitive digital catalogue that highlights intricate finishes, glass options, and custom sizing, making it effortless for architects and premium homeowners to request bespoke specifications.",
+      bullets: [
+        "Architectural Product Showcase: Presenting custom wrought iron, steel, and pivot door collections with high-resolution detail",
+        "Interactive Catalog & Customization: Enabling clients to explore collections, custom finishes, glass specifications, and hardware options",
+        "Seamless Consultation & Quotes: Structured multi-step quote request workflow designed specifically for custom architectural builds",
+        "Modern Responsive Performance: Lightning-fast headless Next.js architecture with global CDN caching for rich imagery",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares built a luxury, responsive web platform for Aeko using Next.js, React, and Tailwind CSS. The design pairs editorial typography with clean architectural layouts, showcasing Aeko's product lines through high-resolution galleries, technical specifications, and an intuitive custom consultation request flow.",
+    },
+    gallery: [
+      "/projects/aeko/gallery-1.webp",
+      "/projects/aeko/gallery-2.webp",
+      "/projects/aeko/gallery-3.webp",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The digital experience establishes Aeko as a premier luxury architectural brand in Australia, driving higher architect engagement and streamlining custom project inquiries.",
+      stats: [
+        { count: "100", symbol: "%", label: "Custom Architectural Design" },
+        { count: "4", symbol: "+", label: "Core Door & Iron Collections" },
+        { count: "24/7", symbol: "", label: "Digital Catalogue & Consultation" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was exceptional. They perfectly captured our architectural luxury aesthetic and crafted a digital experience that our clients and designers love.",
+      author: "Aeko Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["shopraftaar", "dav"],
+  },
+  dav: {
+    slug: "dav",
+    title: "DAV",
+    scriptTitle: "NZ",
+    heroImage: "/projects/dav/hero.webp",
+    overview: {
+      badge: "Overview",
+      description:
+        "DAV Transport is a leading New Zealand transport and logistics service provider specializing in furniture moving, commercial freight, fragile freight, and general deliveries across the North Island. Operating with 6 strategically positioned regional terminals, the company provides weekly freight movements, B2B retail transfers, house and office relocations, and specialized fragile handling. The website was developed to provide customers and businesses with a modern, dependable digital platform where they can explore transport services, calculate moving requirements, request instant quotes, and book relocations seamlessly.",
+      meta: [
+        { label: "Client:", value: "DAV Transport Ltd" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Logistics & Freight / Transportation Services" },
+        { label: "Location:", value: "Auckland, New Zealand" },
+      ],
+      liveSiteUrl: "https://davtransport.co.nz/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/dav/showcase.webp",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "DAV Transport needed a robust, high-performance digital presence to clearly present its wide range of commercial freight and residential moving services across New Zealand. The platform needed an intuitive multi-step quote and booking workflow (from origin to destination and packaging state), transparent service coverage across North Island terminals, and a responsive design that builds trust with both B2B enterprise partners and residential movers.",
+      bullets: [
+        "End-to-End Moving Calculator: Multi-step quote request workflow capturing address details, collection and destination specifics, and packaging options",
+        "B2B & Retail Logistics Showcase: Clear presentation of commercial freight schedules connecting retail stores across North Island terminals",
+        "Specialized Fragile Freight: Highlighting dedicated handling procedures for delicate goods, high-value cargo, and white ware",
+        "Interactive Regional Coverage: Visual representation of North Island logistics routes and terminal connectivity",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive, performance-driven web platform designed around DAV Transport's operational footprint. The website features interactive 3D globe visualization representing regional connectivity, a streamlined 4-step quote calculation system, dedicated B2B and residential moving portals, and transparent terminal service details.",
+    },
+    gallery: [
+      "/projects/dav/gallery-1.webp",
+      "/projects/dav/gallery-2.webp",
+      "/projects/dav/gallery-3.webp",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The new digital platform establishes a strong online presence for DAV Transport, simplifying customer booking inquiries and significantly accelerating quote turnaround times across New Zealand's North Island.",
+      stats: [
+        { count: "612", symbol: "K+", label: "Delivered Goods Handled" },
+        { count: "2500", symbol: "+", label: "Freight Movements Completed" },
+        { count: "6", symbol: "", label: "Regional Terminals Across North Island" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience for DAV Transport. The team understood the logistics industry deeply and created a modern, intuitive website that streamlines our quote requests and presents our freight services with authority. We appreciate their technical expertise, communication, and attention to detail.",
+      author: "DAV Transport Team",
+      role: "Client",
+      avatar: "/images/testimonials/david-martinez.jpg",
+    },
+    relatedProjectIds: ["mannbros", "iris"],
+  },
+  iris: {
+    slug: "iris",
+    title: "IRIS",
+    scriptTitle: "USA",
+    heroImage: "/projects/iris/hero.webp",
+    overview: {
+      badge: "Overview",
+      description:
+        "IRIS is an intelligent AI-powered personal assistant designed to simplify daily business operations, enhance productivity, and automate complex workflows through natural-language interactions. The platform combines conversational artificial intelligence with enterprise applications, allowing users to interact with business data, manage tasks, analyze information, and initiate automated workflows without navigating multiple software systems. Powered by OpenAI’s language models and integrated with third-party business tools, IRIS transforms everyday instructions into actionable processes, helping professionals reduce repetitive work and make more informed decisions.",
+      meta: [
+        { label: "Client:", value: "IRIS AI" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "AI Agents & Business Automation" },
+        { label: "Tech Stack:", value: "React.js, Python, OpenAI GPT, RAG, Salesforce API, n8n" },
+      ],
+      liveSiteUrl: "",
+      liveSiteLabel: "",
+    },
+    showcaseImage: "/projects/iris/showcase.webp",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Modern enterprise teams face productivity bottlenecks switching between disconnected systems—digging through CRM records, re-watching meeting recordings, manually preparing presentations, and coordinating routine follow-ups. IRIS needed to unify these disparate workflows into a single conversational assistant capable of real-time tool orchestration.",
+      bullets: [
+        "Conversational AI Assistant: Real-time natural language query processing, context-aware responses, and multi-step business instruction execution",
+        "Intelligent Meeting Analysis: Automated video/audio meeting transcription, structured summaries, and conversational Q&A on past discussions",
+        "Salesforce CRM Integration: Deep API integration to retrieve leads, pipeline opportunities, and execute conversational CRM updates",
+        "Automated Presentation Generation: Dynamic Google Slides deck generation pulling live business intelligence from connected databases",
+        "AI Agents & Workflow Orchestration: OpenAI function calling coordinating actions across Google Workspace APIs, REST endpoints, and n8n automation pipelines",
+        "Context-Aware Knowledge Retrieval: Retrieval-Augmented Generation (RAG) delivering accurate, context-grounded business answers",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares built IRIS using React.js and Python, powered by OpenAI GPT models and the Assistants API. The architecture integrates Retrieval-Augmented Generation (RAG) for enterprise knowledge retrieval, OpenAI function calling for tool orchestration, and automated pipelines connecting Salesforce CRM, Google Workspace APIs (Slides, Gmail, Calendar), and n8n automation.",
+    },
+    gallery: [
+      "/projects/iris/gallery-1.webp",
+      "/projects/iris/gallery-2.webp",
+      "/projects/iris/gallery-3.webp",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "IRIS demonstrates the practical application of generative AI, intelligent agents, and enterprise automation in a unified productivity platform. By combining conversational AI with business applications and automated workflows, the project showcases how artificial intelligence simplifies complex processes, improves operational efficiency, and creates an intelligent digital work environment.",
+      stats: [
+        { count: "85", symbol: "%", label: "Reduction in Manual CRM Tasks" },
+        { count: "4", symbol: "x", label: "Faster Presentation Preparation" },
+        { count: "100", symbol: "%", label: "Automated Meeting Summaries & Insights" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Netsquare Softwares brought our vision of an enterprise AI assistant to life. IRIS seamlessly bridges Salesforce, meeting transcription, and automated presentations into an indispensable conversational workspace.",
+      author: "IRIS Product Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["dav", "fingerprint"],
+  },
+  fingerprint: {
+    slug: "fingerprint",
+    title: "Fingerprint",
+    scriptTitle: "USA",
+    heroImage: "/projects/fingerprint/hero.webp",
+    overview: {
+      badge: "Overview",
+      description:
+        "Fingerprint is a social video-sharing mobile application designed to connect friends through personalized video experiences. The application allows users to record videos directly from their smartphones, share memorable moments with friends, and watch videos shared by people in their social network. Combining in-app video recording, social sharing, and content discovery, Fingerprint provides an interactive platform for communicating and connecting through video.",
+      meta: [
+        { label: "Client:", value: "Fingerprint" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Social Networking & Entertainment / Mobile App" },
+        { label: "Tech Stack:", value: "React Native, JavaScript, REST APIs, Deep Linking" },
+      ],
+      liveSiteUrl: "",
+      liveSiteLabel: "",
+    },
+    showcaseImage: "/projects/fingerprint/showcase.webp",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Developing a seamless mobile-first social experience that integrates real-time camera capture, video processing, friend invitation networks, and frictionless deep linking across devices.",
+      bullets: [
+        "In-App Video Recording: Direct camera recording, personalized video creation, and seamless transition from recording to sharing",
+        "Social Video Sharing & Viewing: Peer-to-peer video exchange, secure social circles, and responsive video feed discovery",
+        "Invitation & Deep Linking Workflows: Deep link architecture for instant onboarding and friend circle invitation routing",
+        "Full-Stack API Integration: Robust REST API communication connecting dynamic mobile screens with cloud video storage and user state",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed Fingerprint using React Native, providing a component-based architecture for mobile application development. The application integrates smartphone camera functionality for video recording, backend APIs for data communication, and deep linking for navigation and invitation workflows.",
+    },
+    gallery: [
+      "/projects/fingerprint/gallery-1.webp",
+      "/projects/fingerprint/gallery-2.webp",
+      "/projects/fingerprint/gallery-3.webp",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "Fingerprint simplifies social video communication by allowing users to capture and share moments directly with friends. Its combination of video recording, sharing, and viewing functionality creates an engaging social experience centered on personal connections.",
+      stats: [
+        { count: "100", symbol: "%", label: "Native Camera & Video Performance" },
+        { count: "60", symbol: "%", label: "Faster Onboarding via Deep Links" },
+        { count: "1080", symbol: "p", label: "HD Social Video Recording" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team delivered a high-performance React Native application with flawless camera integration and intuitive social sharing workflows.",
+      author: "Fingerprint Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["iris", "mannbros"],
+  },
   shopraftaar: {
     slug: "shopraftaar",
     title: "Raftaar",
-    scriptTitle: "E-Commerce",
-    heroImage: "/projects/shopraftaar/hero.png",
+    scriptTitle: "NZ",
+    heroImage: "/projects/shopraftaar/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -19,7 +261,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://shopraftaar.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/shopraftaar/showcase.png",
+    showcaseImage: "/projects/shopraftaar/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -37,9 +279,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive e-commerce website with organized product collections, detailed product pages, and a streamlined shopping experience. The design combines modern aesthetics with Raftaar's cultural identity and premium streetwear positioning.",
     },
     gallery: [
-      "/projects/shopraftaar/gallery-1.png",
-      "/projects/shopraftaar/gallery-2.png",
-      "/projects/shopraftaar/gallery-3.png",
+      "/projects/shopraftaar/gallery-1.webp",
+      "/projects/shopraftaar/gallery-2.webp",
+      "/projects/shopraftaar/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -64,8 +306,8 @@ export const projectDetailsData = {
   mannbros: {
     slug: "mannbros",
     title: "Mann Bros",
-    scriptTitle: "Leasing",
-    heroImage: "/projects/mannbros/hero.png",
+    scriptTitle: "USA",
+    heroImage: "/projects/mannbros/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -79,7 +321,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.mannbrosleasing.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/mannbros/showcase.png",
+    showcaseImage: "/projects/mannbros/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -97,9 +339,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a role-based management platform with separate access and permissions for Super Admin, Admin, Manager, and Staff. The system centralizes operational activities and helps the team manage trailer and leasing-related processes through a single, intuitive platform.",
     },
     gallery: [
-      "/projects/mannbros/gallery-1.png",
-      "/projects/mannbros/gallery-2.png",
-      "/projects/mannbros/gallery-3.png",
+      "/projects/mannbros/gallery-1.webp",
+      "/projects/mannbros/gallery-2.webp",
+      "/projects/mannbros/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -117,7 +359,7 @@ export const projectDetailsData = {
         "Working with Netsquare Softwares was a great experience. The team understood our operational requirements and developed a structured management system that helps our Super Admin, Admin, Managers, and Staff handle their responsibilities efficiently.",
       author: "Mann Bros Leasing Team",
       role: "Client",
-      avatar: "/images/testimonials/daniel-rios.jpg",
+      avatar: "/images/testimonials/daniel-rios.webp",
     },
     relatedProjectIds: ["shopraftaar", "shahikhuraak"],
   },
@@ -125,7 +367,7 @@ export const projectDetailsData = {
     slug: "shahikhuraak",
     title: "Shahi",
     scriptTitle: "Khuraak",
-    heroImage: "/projects/shahikhuraak/hero.png",
+    heroImage: "/projects/shahikhuraak/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -139,7 +381,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.shahikhuraak.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/shahikhuraak/showcase.png",
+    showcaseImage: "/projects/shahikhuraak/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -157,9 +399,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive e-commerce website featuring organized product collections, product details, shopping cart functionality, and a clean food-focused design. The platform highlights Shahi Khuraak's traditional recipes and premium ingredients.",
     },
     gallery: [
-      "/projects/shahikhuraak/gallery-1.png",
-      "/projects/shahikhuraak/gallery-2.png",
-      "/projects/shahikhuraak/gallery-3.png",
+      "/projects/shahikhuraak/gallery-1.webp",
+      "/projects/shahikhuraak/gallery-2.webp",
+      "/projects/shahikhuraak/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -177,7 +419,7 @@ export const projectDetailsData = {
         "Working with Netsquare Softwares was a great experience. The team created a professional e-commerce website that beautifully represents our Punjabi food heritage and makes our products easy for customers to explore and purchase.",
       author: "Shahi Khuraak Team",
       role: "Client",
-      avatar: "/images/testimonials/daniel-rios.jpg",
+      avatar: "/images/testimonials/daniel-rios.webp",
     },
     relatedProjectIds: ["shopraftaar", "mannbros"],
   },
@@ -185,7 +427,7 @@ export const projectDetailsData = {
     slug: "nextwave",
     title: "Next Wave",
     scriptTitle: "Mechanical",
-    heroImage: "/projects/nextwave/hero.png",
+    heroImage: "/projects/nextwave/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -199,7 +441,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.nextwavemech.ca/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/nextwave/showcase.png",
+    showcaseImage: "/projects/nextwave/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -217,9 +459,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive corporate website featuring dedicated service sections, interactive service process breakdowns, project mapping, testimonials, and a streamlined quote form. The website provides visitors with a clear and simple way to understand the company's services and get in touch.",
     },
     gallery: [
-      "/projects/nextwave/gallery-1.png",
-      "/projects/nextwave/gallery-2.png",
-      "/projects/nextwave/gallery-3.png",
+      "/projects/nextwave/gallery-1.webp",
+      "/projects/nextwave/gallery-2.webp",
+      "/projects/nextwave/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -245,7 +487,7 @@ export const projectDetailsData = {
     slug: "phf",
     title: "Punjabi Heritage",
     scriptTitle: "& Folk",
-    heroImage: "/projects/phf/hero.png",
+    heroImage: "/projects/phf/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -259,7 +501,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.phfcanada.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/phf/showcase.png",
+    showcaseImage: "/projects/phf/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -277,9 +519,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive and culturally focused website that presents PHF's mission, heritage initiatives, training activities, and organizational information in a structured and engaging format. The platform provides a centralized digital presence where visitors can learn about PHF's work, submit registrations, and explore community events.",
     },
     gallery: [
-      "/projects/phf/gallery-1.png",
-      "/projects/phf/gallery-2.png",
-      "/projects/phf/gallery-3.png",
+      "/projects/phf/gallery-1.webp",
+      "/projects/phf/gallery-2.webp",
+      "/projects/phf/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -305,7 +547,7 @@ export const projectDetailsData = {
     slug: "mykeys",
     title: "My Keys",
     scriptTitle: "Driving School",
-    heroImage: "/projects/mykeys/hero.png",
+    heroImage: "/projects/mykeys/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -319,7 +561,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://mykeysdrivingschool.ca/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/mykeys/showcase.png",
+    showcaseImage: "/projects/mykeys/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -337,9 +579,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive, service-focused website that organizes the school's driving programs, training information, pricing, and contact options into clear sections. The platform provides an easy-to-navigate experience that helps prospective students find suitable courses and connect with the school for further assistance.",
     },
     gallery: [
-      "/projects/mykeys/gallery-1.png",
-      "/projects/mykeys/gallery-2.png",
-      "/projects/mykeys/gallery-3.png",
+      "/projects/mykeys/gallery-1.webp",
+      "/projects/mykeys/gallery-2.webp",
+      "/projects/mykeys/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -365,7 +607,7 @@ export const projectDetailsData = {
     slug: "allsydneytowtruck",
     title: "All Sydney",
     scriptTitle: "Tow Truck",
-    heroImage: "/projects/allsydneytowtruck/hero.png",
+    heroImage: "/projects/allsydneytowtruck/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -379,7 +621,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://allsydneytowtruck.com.au/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/allsydneytowtruck/showcase.png",
+    showcaseImage: "/projects/allsydneytowtruck/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -397,9 +639,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a responsive, service-focused website that organizes All Sydney Tow Truck's towing, recovery, emergency, heavy transport, and roadside assistance services into clear sections. The platform also provides an easy quote-request process and prominent contact options, helping customers quickly understand the available services and connect with the team when assistance is needed.",
     },
     gallery: [
-      "/projects/allsydneytowtruck/gallery-1.png",
-      "/projects/allsydneytowtruck/gallery-2.png",
-      "/projects/allsydneytowtruck/gallery-3.png",
+      "/projects/allsydneytowtruck/gallery-1.webp",
+      "/projects/allsydneytowtruck/gallery-2.webp",
+      "/projects/allsydneytowtruck/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -425,7 +667,7 @@ export const projectDetailsData = {
     slug: "lynixworld",
     title: "Lynix",
     scriptTitle: "World",
-    heroImage: "/projects/lynixworld/hero.png",
+    heroImage: "/projects/lynixworld/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -439,7 +681,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.lynixworld.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/lynixworld/showcase.png",
+    showcaseImage: "/projects/lynixworld/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -457,9 +699,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a user-friendly, responsive website that organizes Lynix World's repair services, device categories, locations, pricing, and support information into clear sections. The platform also provides convenient booking and quote-request options, helping customers quickly identify their repair needs and connect with the service team.",
     },
     gallery: [
-      "/projects/lynixworld/gallery-1.png",
-      "/projects/lynixworld/gallery-2.png",
-      "/projects/lynixworld/gallery-3.png",
+      "/projects/lynixworld/gallery-1.webp",
+      "/projects/lynixworld/gallery-2.webp",
+      "/projects/lynixworld/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -485,7 +727,7 @@ export const projectDetailsData = {
     slug: "aminabazaar",
     title: "Amina",
     scriptTitle: "Bazaar",
-    heroImage: "/projects/aminabazaar/hero.png",
+    heroImage: "/projects/aminabazaar/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -499,7 +741,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://aminabazaar.in/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/aminabazaar/showcase.png",
+    showcaseImage: "/projects/aminabazaar/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -517,9 +759,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a structured e-commerce platform with advanced number categories, price-based filtering, product listings, and detailed number information. The platform simplifies the buying journey by allowing customers to discover suitable VIP numbers, understand their availability and porting status, and proceed with online purchases through a streamlined interface.",
     },
     gallery: [
-      "/projects/aminabazaar/gallery-1.png",
-      "/projects/aminabazaar/gallery-2.png",
-      "/projects/aminabazaar/gallery-3.png",
+      "/projects/aminabazaar/gallery-1.webp",
+      "/projects/aminabazaar/gallery-2.webp",
+      "/projects/aminabazaar/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -545,7 +787,7 @@ export const projectDetailsData = {
     slug: "ibsp",
     title: "IBSP",
     scriptTitle: "Chris21 HR",
-    heroImage: "/projects/ibsp/hero.png",
+    heroImage: "/projects/ibsp/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -559,7 +801,7 @@ export const projectDetailsData = {
       liveSiteUrl: "http://ibsp.net.au/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/ibsp/showcase.png",
+    showcaseImage: "/projects/ibsp/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -577,9 +819,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a structured, user-friendly website that organizes IBSP's Chris21, payroll, HR, training, reporting, and support services into clear sections. The platform provides an intuitive way for businesses to understand IBSP's expertise, explore its solutions, and connect with the team for customized support.",
     },
     gallery: [
-      "/projects/ibsp/gallery-1.png",
-      "/projects/ibsp/gallery-2.png",
-      "/projects/ibsp/gallery-3.png",
+      "/projects/ibsp/gallery-1.webp",
+      "/projects/ibsp/gallery-2.webp",
+      "/projects/ibsp/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -605,7 +847,7 @@ export const projectDetailsData = {
     slug: "rentexcar",
     title: "Rentex",
     scriptTitle: "Car Rental",
-    heroImage: "/projects/rentexcar/hero.png",
+    heroImage: "/projects/rentexcar/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -619,7 +861,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://www.rentexcarrental.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/rentexcar/showcase.png",
+    showcaseImage: "/projects/rentexcar/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -637,9 +879,9 @@ export const projectDetailsData = {
         "Netsquare Softwares developed a user-friendly, responsive website with an integrated booking experience, allowing customers to easily select rental details and explore available vehicles. The platform also organizes Rentex's key services and fleet into clear sections, creating a streamlined digital experience focused on convenience, accessibility, and easy navigation.",
     },
     gallery: [
-      "/projects/rentexcar/gallery-1.png",
-      "/projects/rentexcar/gallery-2.png",
-      "/projects/rentexcar/gallery-3.png",
+      "/projects/rentexcar/gallery-1.webp",
+      "/projects/rentexcar/gallery-2.webp",
+      "/projects/rentexcar/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -663,9 +905,9 @@ export const projectDetailsData = {
   },
   bottlepos: {
     slug: "bottlepos",
-    title: "Bottle",
-    scriptTitle: "POS",
-    heroImage: "/projects/bottlepos/hero.png",
+    title: "Bottle POS",
+    scriptTitle: "USA",
+    heroImage: "/projects/bottlepos/hero.webp",
     overview: {
       badge: "Overview",
       description:
@@ -679,7 +921,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://bottlepos.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/bottlepos/showcase.png",
+    showcaseImage: "/projects/bottlepos/showcase.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -697,9 +939,9 @@ export const projectDetailsData = {
         "Netsquare Softwares delivered a high-performance, modern web application highlighting Bottle POS's core value propositions through interactive feature walkthroughs, clear hardware bundle breakdowns, and seamless demo scheduling. The design couples crisp enterprise typography with engaging product visualizations that showcase the software in action.",
     },
     gallery: [
-      "/projects/bottlepos/gallery-1.png",
-      "/projects/bottlepos/gallery-2.png",
-      "/projects/bottlepos/gallery-3.png",
+      "/projects/bottlepos/gallery-1.webp",
+      "/projects/bottlepos/gallery-2.webp",
+      "/projects/bottlepos/gallery-3.webp",
     ],
     results: {
       badge: "The Result",
@@ -769,8 +1011,8 @@ export function getProjectBySlug(slug) {
         "We designed a modular design system and focused typography hierarchy to enhance clarity and user engagement.",
     },
     gallery: [
-      "/projects/shopraftaar/hero.png",
-      "/projects/mannbros/hero.png",
+      "/projects/shopraftaar/hero.webp",
+      "/projects/mannbros/hero.webp",
     ],
     results: {
       badge: "The Result",
@@ -788,7 +1030,7 @@ export function getProjectBySlug(slug) {
         "A transformative digital experience that exceeded our expectations in aesthetic and function.",
       author: "Alex Morgan",
       role: "Design Lead",
-      avatar: "/images/testimonials/daniel-rios.jpg",
+      avatar: "/images/testimonials/daniel-rios.webp",
     },
     relatedProjectIds: ["nova-wallet", "echo-studio"].filter(
       (id) => id !== base.id,

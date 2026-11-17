@@ -17,7 +17,7 @@ export default function ServicesSection() {
       id="services"
       spacing="none"
       background="transparent"
-      className="py-20 sm:py-28 lg:py-36"
+      className="pt-20 sm:pt-28 lg:pt-36 pb-12 sm:pb-16 lg:pb-20"
     >
       <Container size="2xl" className="px-5 sm:px-8 lg:px-12">
         {/* Section Heading */}

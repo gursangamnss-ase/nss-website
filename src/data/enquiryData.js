@@ -1,4 +1,6 @@
 export const enquiryData = {
+  videoWebm: "/videos/enquirysection.webm",
+  videoMp4: "/videos/enquirysection.mp4",
   videoSrc: "/videos/enquirysection.mp4",
   badge: "Start the conversation today",
   heading: {
@@ -33,7 +35,7 @@ export const enquiryData = {
     ],
     submitText: "Submit",
     preferEmailText: "Do you prefer email?",
-    email: "info@netsquaresoftwares.com",
+    email: "admin@netsquaresoftwares.com",
   },
   info: {
     title: "How do we connect?",
@@ -45,7 +47,7 @@ export const enquiryData = {
     teamLeader: {
       name: "Amanda Ferguson",
       role: "Team leader",
-      avatar: "/brand/enquiry-avatar.jpg",
+      avatar: "/brand/enquiry-avatar.webp",
     },
     cta: {
       text: "Book a discovery call",

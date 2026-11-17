@@ -8,7 +8,7 @@ import Button from "@/components/ui/Button";
 import { featuredProjectsData } from "@/data/featuredProjectsData";
 
 export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
-  const [currentIndex, setCurrentIndex] = useState(1); // Default to Echo Studio (02 / 04)
+  const [currentIndex, setCurrentIndex] = useState(0); // Default to first project (01 / 07)
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef(null);
 
@@ -114,22 +114,11 @@ export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
       </div>
 
       {/* Foreground Content */}
-      <Container size="2xl" className="relative z-20 flex h-full flex-col justify-between py-6 sm:py-10 lg:py-16">
-        {/* Top-Left Project Heading */}
-        <div className="flex flex-col items-start pt-2 sm:pt-4">
-          <h2
-            key={`title1-${currentIndex}`}
-            className="text-[clamp(3.5rem,7.5vw,7.5rem)] font-medium leading-[0.88] tracking-[-0.04em] text-white"
-          >
-            {currentProject.titleLine1}
-          </h2>
-          <h2
-            key={`title2-${currentIndex}`}
-            className="font-script text-[clamp(4.25rem,8.5vw,8.5rem)] font-normal leading-[0.85] tracking-[-0.02em] text-white mt-2 sm:-mt-5 lg:mt-5 ml-6"
-          >
-            {currentProject.titleLine2}
-          </h2>
-        </div>
+      <Container size="2xl" className="relative z-20 flex h-full flex-col justify-end pb-6 sm:pb-10 lg:pb-16">
+        {/* Screen-reader accessible heading */}
+        <h2 className="sr-only">
+          {currentProject.titleLine1} {currentProject.titleLine2}
+        </h2>
 
         {/* Bottom Control Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 sm:gap-4 w-full">

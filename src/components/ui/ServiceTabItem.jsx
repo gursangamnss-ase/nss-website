@@ -13,7 +13,7 @@ export default function ServiceTabItem({
     <button
       type="button"
       onClick={onClick}
-      className={`group relative flex w-full items-center justify-between border-b py-5 text-left transition-all duration-300 sm:py-6 lg:py-7.5 ${isActive
+      className={`group relative flex w-full items-center justify-between border-b py-5 text-left transition-all duration-300 sm:py-6 lg:py-4 ${isActive
         ? "border-white/50"
         : "border-white/15 hover:border-white/35"
         } ${className}`}

@@ -1,7 +1,7 @@
 export const footerData = {
-  bgImage: "/images/services/services-bg.jpg",
+  bgImage: "/images/services/services-bg.webp",
   brand: {
-    logo: "/images/logo.png",
+    logo: "/NetSquare_Logo_White_Without_Tagline_Transparent.png",
     alt: "NetSquare Softwares",
     tagline: "Build • Automate • Grow",
     description: "Empowering forward-thinking companies through world-class digital experiences, scalable software, and modern design.",
@@ -17,7 +17,7 @@ export const footerData = {
   contact: {
     phoneLabel: "082830 30094",
     phoneTel: "+918283030094",
-    email: "info@netsquaresoftwares.com",
+    email: "admin@netsquaresoftwares.com",
     offlineTitle: "Registered Office",
     companyTitle: "NetSquare Software Pvt Ltd",
     address: "D-234, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 140307",

@@ -1,19 +1,23 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/layout/Navbar/Navbar";
 import InsideStudioSection from "@/components/sections/InsideStudioSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TrustedClientsSection from "@/components/sections/TrustedClientsSection";
-import CreativeCollabsSection from "@/components/sections/CreativeCollabsSection";
-import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
-import BrandStoriesSection from "@/components/sections/BrandStoriesSection";
-import WhyChooseSection from "@/components/sections/WhyChooseSection";
-import TrackRecordSection from "@/components/sections/TrackRecordSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import TeamSection from "@/components/sections/TeamSection";
-import ProofSection from "@/components/sections/ProofSection";
-import BlogSection from "@/components/sections/BlogSection";
-import EnquirySection from "@/components/sections/EnquirySection";
 import Footer from "@/components/layout/Footer/Footer";
+
+// Lazy-load sections for optimal mobile performance and minimal Total Blocking Time (TBT)
+const IndustriesSection = dynamic(() => import("@/components/sections/IndustriesSection"));
+const CreativeCollabsSection = dynamic(() => import("@/components/sections/CreativeCollabsSection"));
+const FeaturedProjectsSection = dynamic(() => import("@/components/sections/FeaturedProjectsSection"));
+const BrandStoriesSection = dynamic(() => import("@/components/sections/BrandStoriesSection"));
+const WhyChooseSection = dynamic(() => import("@/components/sections/WhyChooseSection"));
+const TrackRecordSection = dynamic(() => import("@/components/sections/TrackRecordSection"));
+const TestimonialsSection = dynamic(() => import("@/components/sections/TestimonialsSection"));
+const TeamSection = dynamic(() => import("@/components/sections/TeamSection"));
+const ProofSection = dynamic(() => import("@/components/sections/ProofSection"));
+const BlogSection = dynamic(() => import("@/components/sections/BlogSection"));
+const EnquirySection = dynamic(() => import("@/components/sections/EnquirySection"));
 
 export const metadata = {
   title: "NetSquare Softwares | Digital Product & Creative Agency",
@@ -34,7 +38,7 @@ export default function Home() {
           {/* Background */}
           <div className="pointer-events-none absolute inset-0 z-0">
             <Image
-              src="/images/services/services-bg.jpg"
+              src="/images/services/services-bg.webp"
               alt=""
               aria-hidden="true"
               fill
@@ -47,6 +51,7 @@ export default function Home() {
 
           <div className="relative z-10">
             <ServicesSection />
+            <IndustriesSection />
             <TrustedClientsSection />
           </div>
         </section>

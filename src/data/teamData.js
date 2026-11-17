@@ -13,7 +13,7 @@ export const teamData = {
       id: "taylor-grant",
       name: "Taylor Grant",
       role: "Creative Director",
-      image: "/images/team/taylor-grant.jpg",
+      image: "/images/team/taylor-grant.webp",
       socials: [
         { platform: "facebook", url: "https://www.facebook.com/" },
         { platform: "twitter", url: "https://x.com/" },
@@ -23,7 +23,7 @@ export const teamData = {
       id: "amanda-reeds",
       name: "Amanda Reeds",
       role: "Founder & CEO",
-      image: "/images/team/amanda-reeds.jpg",
+      image: "/images/team/amanda-reeds.webp",
       socials: [
         { platform: "facebook", url: "https://www.facebook.com/" },
         { platform: "twitter", url: "https://x.com/" },
