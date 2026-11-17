@@ -18,7 +18,7 @@ export const whyChooseData = {
     maxRating: "/5.0",
     clientCount: "150+",
     clientLabel: "Happy clients worldwide",
-    centerLogo: "/images/logo.webp",
+    centerLogo: "/Netsquare_Logo_White_Without_Tagline_Transparent.png",
     avatars: [
       { src: "/brand/avatar-1.webp", alt: "Client 1", position: "top-[14%] left-[50%] -translate-x-1/2" },
       { src: "/brand/avatar-2.webp", alt: "Client 2", position: "top-[40%] left-[14%]" },

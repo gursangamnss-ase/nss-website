@@ -49,7 +49,7 @@ export default function HeroContent() {
                 <path d="m1 32 25 6 6 25 6-25 25-6-25-6-6-25-6 25z" />
               </svg>
             </span>
-            We turn bold ideas into standout brands and sleek websites. Let&apos;s
+            We turn bold ideas into standout brands and sleek Web App. Let&apos;s
             bring your vision to life.
           </p>
 
@@ -61,8 +61,8 @@ export default function HeroContent() {
 
       {/* Bottom Row / Services Block */}
       <div className="w-full flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 sm:gap-10 lg:gap-8 mt-8">
-        {/* Desktop-only Left Column (Statement & Copyright) */}
-        <div className="hidden sm:flex w-full max-w-[380px] flex-col gap-6 lg:gap-7">
+        {/* Desktop & Tablet Left Column (Statement, CTA Button, Copyright) */}
+        <div className="hidden sm:flex w-full max-w-[380px] lg:max-w-[420px] flex-col gap-4 sm:gap-5 lg:gap-6">
           <p className="text-[18px] lg:text-[20px] font-medium leading-[1.25] tracking-[-0.02em] text-white">
             <span
               className="inline-flex items-center justify-center align-middle mr-4 select-none shrink-0 -mt-1"
@@ -76,26 +76,35 @@ export default function HeroContent() {
                 <path d="m1 32 25 6 6 25 6-25 25-6-25-6-6-25-6 25z" />
               </svg>
             </span>
-            We turn bold ideas into standout brands and sleek websites. Let&apos;s
+            We turn bold ideas into standout brands and sleek Web App. Let&apos;s
             bring your vision to life.
           </p>
+
+          {/* Desktop-only CTA Button (lg+: 1024px and up): Positioned between text and copyright */}
+          <div className="hidden lg:block pt-0.5">
+            <Button
+              href="#contact"
+              variant="light"
+              size="md"
+            >
+              Let&apos;s work together
+            </Button>
+          </div>
 
           <p className="text-[15px] lg:text-[16px] font-medium leading-[1.2] text-white/70 tracking-[-0.02em]">
             © Netsquare Softwares, 2026.
           </p>
         </div>
 
-        {/* Right Column (Services List & Pill CTA Button) */}
+        {/* Right Column (Services List & Mobile-only Pill CTA Button) */}
         <div className="w-full max-w-[320px] sm:max-w-[380px] ml-auto flex flex-col items-end">
           <ul className="space-y-1.5 sm:space-y-2 lg:space-y-2.5 w-full flex flex-col items-end text-right">
             {servicesData.map((service, index) => (
               <li
                 key={service.id || service.title}
-                className={`text-lg sm:text-xl lg:text-[24px] font-medium tracking-[-0.02em] leading-tight text-white flex items-baseline justify-end gap-2 sm:gap-2.5 ${
-                  index >= 4 ? "hidden sm:flex" : ""
-                }`}
+                className="text-base sm:text-xl lg:text-[24px] font-medium tracking-[-0.02em] leading-tight text-white flex items-baseline justify-end gap-2 sm:gap-2.5"
               >
-                <span className="font-script text-[19px] sm:text-2xl lg:text-[24px] font-normal text-white">
+                <span className="font-script text-[17px] sm:text-2xl lg:text-[24px] font-normal text-white">
                   {service.number || `(${String(index + 1).padStart(2, "0")})`}
                 </span>
                 <span>{service.title}</span>
@@ -103,7 +112,8 @@ export default function HeroContent() {
             ))}
           </ul>
 
-          <div className="mt-3 sm:mt-6 lg:mt-8">
+          {/* Tablet & Mobile CTA (below lg / 1024px: shows on services right side) */}
+          <div className="mt-3 sm:mt-6 lg:hidden">
             <Button
               href="#contact"
               variant="light"

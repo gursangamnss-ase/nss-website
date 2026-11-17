@@ -1,6 +1,248 @@
 import { projectData } from "./projectData";
 
 export const projectDetailsData = {
+  aeko: {
+    slug: "aeko",
+    title: "Aeko",
+    scriptTitle: "Australia",
+    heroImage: "/projects/aeko/hero.webp",
+    overview: {
+      badge: "Overview",
+      description:
+        "Aeko is an Australian luxury architectural brand specializing in bespoke wrought iron doors, high-strength steel doors, pivot systems, and architectural living solutions. The company combines timeless hand-crafted metallurgy with contemporary minimalist design, delivering premium residential and commercial entrance solutions across Australia. The platform was developed to provide architects, builders, and homeowners with an inspiring digital catalogue, interactive product exploration, and a seamless quote-request workflow.",
+      meta: [
+        { label: "Client:", value: "Aeko Australia" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Architectural Doors & Luxury Interiors / E-Commerce" },
+        { label: "Location:", value: "Australia" },
+      ],
+      liveSiteUrl: "https://aekoaustralia.com.au/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/aeko/showcase.webp",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Aeko needed a refined, high-end digital presence to showcase its bespoke architectural collections while conveying craftsmanship, engineering precision, and luxury. The website needed an intuitive digital catalogue that highlights intricate finishes, glass options, and custom sizing, making it effortless for architects and premium homeowners to request bespoke specifications.",
+      bullets: [
+        "Architectural Product Showcase: Presenting custom wrought iron, steel, and pivot door collections with high-resolution detail",
+        "Interactive Catalog & Customization: Enabling clients to explore collections, custom finishes, glass specifications, and hardware options",
+        "Seamless Consultation & Quotes: Structured multi-step quote request workflow designed specifically for custom architectural builds",
+        "Modern Responsive Performance: Lightning-fast headless Next.js architecture with global CDN caching for rich imagery",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares built a luxury, responsive web platform for Aeko using Next.js, React, and Tailwind CSS. The design pairs editorial typography with clean architectural layouts, showcasing Aeko's product lines through high-resolution galleries, technical specifications, and an intuitive custom consultation request flow.",
+    },
+    gallery: [
+      "/projects/aeko/gallery-1.webp",
+      "/projects/aeko/gallery-2.webp",
+      "/projects/aeko/gallery-3.webp",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The digital experience establishes Aeko as a premier luxury architectural brand in Australia, driving higher architect engagement and streamlining custom project inquiries.",
+      stats: [
+        { count: "100", symbol: "%", label: "Custom Architectural Design" },
+        { count: "4", symbol: "+", label: "Core Door & Iron Collections" },
+        { count: "24/7", symbol: "", label: "Digital Catalogue & Consultation" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was exceptional. They perfectly captured our architectural luxury aesthetic and crafted a digital experience that our clients and designers love.",
+      author: "Aeko Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["shopraftaar", "dav"],
+  },
+  dav: {
+    slug: "dav",
+    title: "DAV Transport",
+    scriptTitle: "Logistics",
+    heroImage: "/projects/dav/hero.webp",
+    overview: {
+      badge: "Overview",
+      description:
+        "DAV Transport is a leading New Zealand transport and logistics service provider specializing in furniture moving, commercial freight, fragile freight, and general deliveries across the North Island. Operating with 6 strategically positioned regional terminals, the company provides weekly freight movements, B2B retail transfers, house and office relocations, and specialized fragile handling. The website was developed to provide customers and businesses with a modern, dependable digital platform where they can explore transport services, calculate moving requirements, request instant quotes, and book relocations seamlessly.",
+      meta: [
+        { label: "Client:", value: "DAV Transport Ltd" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Logistics & Freight / Transportation Services" },
+        { label: "Location:", value: "Auckland, New Zealand" },
+      ],
+      liveSiteUrl: "https://davtransport.co.nz/",
+      liveSiteLabel: "View live site",
+    },
+    showcaseImage: "/projects/dav/showcase.webp",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "DAV Transport needed a robust, high-performance digital presence to clearly present its wide range of commercial freight and residential moving services across New Zealand. The platform needed an intuitive multi-step quote and booking workflow (from origin to destination and packaging state), transparent service coverage across North Island terminals, and a responsive design that builds trust with both B2B enterprise partners and residential movers.",
+      bullets: [
+        "End-to-End Moving Calculator: Multi-step quote request workflow capturing address details, collection and destination specifics, and packaging options",
+        "B2B & Retail Logistics Showcase: Clear presentation of commercial freight schedules connecting retail stores across North Island terminals",
+        "Specialized Fragile Freight: Highlighting dedicated handling procedures for delicate goods, high-value cargo, and white ware",
+        "Interactive Regional Coverage: Visual representation of North Island logistics routes and terminal connectivity",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed a responsive, performance-driven web platform designed around DAV Transport's operational footprint. The website features interactive 3D globe visualization representing regional connectivity, a streamlined 4-step quote calculation system, dedicated B2B and residential moving portals, and transparent terminal service details.",
+    },
+    gallery: [
+      "/projects/dav/gallery-1.webp",
+      "/projects/dav/gallery-2.webp",
+      "/projects/dav/gallery-3.webp",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "The new digital platform establishes a strong online presence for DAV Transport, simplifying customer booking inquiries and significantly accelerating quote turnaround times across New Zealand's North Island.",
+      stats: [
+        { count: "612", symbol: "K+", label: "Delivered Goods Handled" },
+        { count: "2500", symbol: "+", label: "Freight Movements Completed" },
+        { count: "6", symbol: "", label: "Regional Terminals Across North Island" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience for DAV Transport. The team understood the logistics industry deeply and created a modern, intuitive website that streamlines our quote requests and presents our freight services with authority. We appreciate their technical expertise, communication, and attention to detail.",
+      author: "DAV Transport Team",
+      role: "Client",
+      avatar: "/images/testimonials/david-martinez.jpg",
+    },
+    relatedProjectIds: ["mannbros", "iris"],
+  },
+  iris: {
+    slug: "iris",
+    title: "IRIS",
+    scriptTitle: "AI Platform",
+    heroImage: "/projects/iris/hero.webp",
+    overview: {
+      badge: "Overview",
+      description:
+        "IRIS is an intelligent AI-powered personal assistant designed to simplify daily business operations, enhance productivity, and automate complex workflows through natural-language interactions. The platform combines conversational artificial intelligence with enterprise applications, allowing users to interact with business data, manage tasks, analyze information, and initiate automated workflows without navigating multiple software systems. Powered by OpenAI’s language models and integrated with third-party business tools, IRIS transforms everyday instructions into actionable processes, helping professionals reduce repetitive work and make more informed decisions.",
+      meta: [
+        { label: "Client:", value: "IRIS AI" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "AI Agents & Business Automation" },
+        { label: "Tech Stack:", value: "React.js, Python, OpenAI GPT, RAG, Salesforce API, n8n" },
+      ],
+      liveSiteUrl: "",
+      liveSiteLabel: "",
+    },
+    showcaseImage: "/projects/iris/showcase.webp",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Modern enterprise teams face productivity bottlenecks switching between disconnected systems—digging through CRM records, re-watching meeting recordings, manually preparing presentations, and coordinating routine follow-ups. IRIS needed to unify these disparate workflows into a single conversational assistant capable of real-time tool orchestration.",
+      bullets: [
+        "Conversational AI Assistant: Real-time natural language query processing, context-aware responses, and multi-step business instruction execution",
+        "Intelligent Meeting Analysis: Automated video/audio meeting transcription, structured summaries, and conversational Q&A on past discussions",
+        "Salesforce CRM Integration: Deep API integration to retrieve leads, pipeline opportunities, and execute conversational CRM updates",
+        "Automated Presentation Generation: Dynamic Google Slides deck generation pulling live business intelligence from connected databases",
+        "AI Agents & Workflow Orchestration: OpenAI function calling coordinating actions across Google Workspace APIs, REST endpoints, and n8n automation pipelines",
+        "Context-Aware Knowledge Retrieval: Retrieval-Augmented Generation (RAG) delivering accurate, context-grounded business answers",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares built IRIS using React.js and Python, powered by OpenAI GPT models and the Assistants API. The architecture integrates Retrieval-Augmented Generation (RAG) for enterprise knowledge retrieval, OpenAI function calling for tool orchestration, and automated pipelines connecting Salesforce CRM, Google Workspace APIs (Slides, Gmail, Calendar), and n8n automation.",
+    },
+    gallery: [
+      "/projects/iris/gallery-1.webp",
+      "/projects/iris/gallery-2.webp",
+      "/projects/iris/gallery-3.webp",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "IRIS demonstrates the practical application of generative AI, intelligent agents, and enterprise automation in a unified productivity platform. By combining conversational AI with business applications and automated workflows, the project showcases how artificial intelligence simplifies complex processes, improves operational efficiency, and creates an intelligent digital work environment.",
+      stats: [
+        { count: "85", symbol: "%", label: "Reduction in Manual CRM Tasks" },
+        { count: "4", symbol: "x", label: "Faster Presentation Preparation" },
+        { count: "100", symbol: "%", label: "Automated Meeting Summaries & Insights" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Netsquare Softwares brought our vision of an enterprise AI assistant to life. IRIS seamlessly bridges Salesforce, meeting transcription, and automated presentations into an indispensable conversational workspace.",
+      author: "IRIS Product Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["dav", "fingerprint"],
+  },
+  fingerprint: {
+    slug: "fingerprint",
+    title: "Fingerprint",
+    scriptTitle: "Social App",
+    heroImage: "/projects/fingerprint/hero.webp",
+    overview: {
+      badge: "Overview",
+      description:
+        "Fingerprint is a social video-sharing mobile application designed to connect friends through personalized video experiences. The application allows users to record videos directly from their smartphones, share memorable moments with friends, and watch videos shared by people in their social network. Combining in-app video recording, social sharing, and content discovery, Fingerprint provides an interactive platform for communicating and connecting through video.",
+      meta: [
+        { label: "Client:", value: "Fingerprint" },
+        { label: "Year:", value: "2026" },
+        { label: "Category:", value: "Social Networking & Entertainment / Mobile App" },
+        { label: "Tech Stack:", value: "React Native, JavaScript, REST APIs, Deep Linking" },
+      ],
+      liveSiteUrl: "",
+      liveSiteLabel: "",
+    },
+    showcaseImage: "/projects/fingerprint/showcase.webp",
+    challenge: {
+      badge: "The Challenge",
+      description:
+        "Developing a seamless mobile-first social experience that integrates real-time camera capture, video processing, friend invitation networks, and frictionless deep linking across devices.",
+      bullets: [
+        "In-App Video Recording: Direct camera recording, personalized video creation, and seamless transition from recording to sharing",
+        "Social Video Sharing & Viewing: Peer-to-peer video exchange, secure social circles, and responsive video feed discovery",
+        "Invitation & Deep Linking Workflows: Deep link architecture for instant onboarding and friend circle invitation routing",
+        "Full-Stack API Integration: Robust REST API communication connecting dynamic mobile screens with cloud video storage and user state",
+      ],
+    },
+    solution: {
+      badge: "The Solution",
+      description:
+        "Netsquare Softwares developed Fingerprint using React Native, providing a component-based architecture for mobile application development. The application integrates smartphone camera functionality for video recording, backend APIs for data communication, and deep linking for navigation and invitation workflows.",
+    },
+    gallery: [
+      "/projects/fingerprint/gallery-1.webp",
+      "/projects/fingerprint/gallery-2.webp",
+      "/projects/fingerprint/gallery-3.webp",
+    ],
+    results: {
+      badge: "The Result",
+      description:
+        "Fingerprint simplifies social video communication by allowing users to capture and share moments directly with friends. Its combination of video recording, sharing, and viewing functionality creates an engaging social experience centered on personal connections.",
+      stats: [
+        { count: "100", symbol: "%", label: "Native Camera & Video Performance" },
+        { count: "60", symbol: "%", label: "Faster Onboarding via Deep Links" },
+        { count: "1080", symbol: "p", label: "HD Social Video Recording" },
+      ],
+    },
+    feedback: {
+      badge: "Client feedback",
+      quote:
+        "Working with Netsquare Softwares was a great experience. The team delivered a high-performance React Native application with flawless camera integration and intuitive social sharing workflows.",
+      author: "Fingerprint Team",
+      role: "Client",
+      avatar: "/images/testimonials/sarah-jenkins.jpg",
+    },
+    relatedProjectIds: ["iris", "mannbros"],
+  },
   shopraftaar: {
     slug: "shopraftaar",
     title: "Raftaar",

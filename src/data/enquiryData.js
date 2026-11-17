@@ -35,7 +35,7 @@ export const enquiryData = {
     ],
     submitText: "Submit",
     preferEmailText: "Do you prefer email?",
-    email: "info@netsquaresoftwares.com",
+    email: "admin@netsquaresoftwares.com",
   },
   info: {
     title: "How do we connect?",

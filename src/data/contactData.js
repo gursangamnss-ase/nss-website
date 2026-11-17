@@ -10,7 +10,7 @@ export const contactData = {
   hero: {
     badgeContact: "Contact us on",
     phone: "+ 91 82830 30094",
-    email: "info@netsquaresoftwares.com",
+    email: "admin@netsquaresoftwares.com",
     badgeVisit: "Visit us",
     registeredOfficeTitle: "Registered Office",
     agency: "NetSquare Software Pvt Ltd",
