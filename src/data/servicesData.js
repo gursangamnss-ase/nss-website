@@ -47,8 +47,27 @@ export const servicesData = [
   },
 
   {
-    id: "digital-marketing",
+    id: "ai-development",
     number: "(03)",
+    title: "AI Development",
+    description:
+      "We build intelligent AI solutions, LLM integrations and custom machine learning models that automate workflows, drive actionable insights and transform digital interactions.",
+    features: [
+      "Custom LLM & AI agent development",
+      "Intelligent workflow automation",
+      "Predictive analytics & ML models",
+      "Conversational AI & smart chatbots",
+    ],
+    duration: "4 - 8 weeks",
+    image: "/images/services/ai-development.webp",
+    imageAlt:
+      "Modern artificial intelligence and machine learning solution showcase",
+    icon: Bot,
+  },
+
+  {
+    id: "digital-marketing",
+    number: "(04)",
     title: "Digital Marketing",
     description:
       "We help businesses build a strong digital presence through strategic marketing, SEO and engaging campaigns that increase visibility, attract audiences and drive meaningful growth.",
@@ -67,7 +86,7 @@ export const servicesData = [
 
   {
     id: "ui-ux-development",
-    number: "(04)",
+    number: "(05)",
     title: "UI/UX Development",
     description:
       "We create intuitive interfaces and engaging user experiences that combine visual appeal, functionality and simplicity to make every digital interaction meaningful.",
@@ -82,25 +101,6 @@ export const servicesData = [
     imageAlt:
       "Modern UI/UX interface design and user experience showcase",
     icon: Lightbulb,
-  },
-
-  {
-    id: "ai-development",
-    number: "(05)",
-    title: "AI Development",
-    description:
-      "We build intelligent AI solutions, LLM integrations and custom machine learning models that automate workflows, drive actionable insights and transform digital interactions.",
-    features: [
-      "Custom LLM & AI agent development",
-      "Intelligent workflow automation",
-      "Predictive analytics & ML models",
-      "Conversational AI & smart chatbots",
-    ],
-    duration: "4 - 8 weeks",
-    image: "/images/services/ai-development.webp",
-    imageAlt:
-      "Modern artificial intelligence and machine learning solution showcase",
-    icon: Bot,
   },
 
   {

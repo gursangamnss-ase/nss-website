@@ -31,6 +31,11 @@ export const footerData = {
       type: "facebook",
     },
     {
+      name: "Instagram",
+      href: "https://www.instagram.com/",
+      type: "instagram",
+    },
+    {
       name: "LinkedIn",
       href: "https://www.linkedin.com/",
       type: "linkedin",
@@ -39,11 +44,6 @@ export const footerData = {
       name: "Twitter/X",
       href: "https://x.com/",
       type: "twitter",
-    },
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/",
-      type: "instagram",
     },
   ],
   copyright: `© ${new Date().getFullYear()} NetSquare Softwares. All rights reserved`,

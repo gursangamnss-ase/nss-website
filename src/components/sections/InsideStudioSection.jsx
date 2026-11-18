@@ -45,7 +45,7 @@ export default function InsideStudioSection() {
             className="font-medium"
           />
           <p className="text-center text-[var(--color-text-secondary)]">(©19-26)</p>
-          <p className="text-right text-[var(--color-primary)]">(21.0278° N, 105.8342° E)</p>
+          <p className="text-right text-[var(--color-primary)]">(30.7046° N, 76.7179° E)</p>
         </div>
 
         <div className="mx-auto max-w-[1100px] md:mt-24 lg:mt-28">
@@ -98,7 +98,7 @@ export default function InsideStudioSection() {
 
         <div className="mx-auto mt-8 sm:mt-14 flex max-w-xl sm:max-w-2xl flex-col items-center text-center">
           <p className="text-[16px] sm:text-[18px] lg:text-xl font-normal leading-[1.55] sm:leading-[1.6] text-neutral-600 tracking-normal max-w-[440px] sm:max-w-xl">
-            We’re not just designers or developers — we’re{" "}
+            We’re not just designers or developers we’re{" "}
             <strong className="font-semibold text-neutral-900">
               storytellers
             </strong>

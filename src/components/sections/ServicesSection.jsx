@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "motion/react";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
@@ -51,19 +52,41 @@ export default function ServicesSection() {
             {/* Tabs grid: 1 col on mobile, 2 cols on tablet, 1 col on desktop */}
             <div className="grid grid-cols-1 md:grid-cols-2 min-[1200px]:grid-cols-1 gap-x-8 lg:gap-x-12 gap-y-1 sm:gap-y-2 min-[1200px]:gap-y-0 min-[1200px]:flex min-[1200px]:flex-col min-[1200px]:justify-between">
               {servicesData.map((service, index) => (
-                <ServiceTabItem
+                <motion.div
                   key={service.id}
-                  number={service.number}
-                  title={service.title}
-                  isActive={activeTabIndex === index}
-                  onClick={() => setActiveTabIndex(index)}
-                  className="flex-1"
-                />
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: Math.min(index * 0.08, 0.45),
+                    ease: [0.25, 0.1, 0.25, 1],
+                  }}
+                  className="flex-1 w-full"
+                >
+                  <ServiceTabItem
+                    number={service.number}
+                    title={service.title}
+                    isActive={activeTabIndex === index}
+                    onClick={() => setActiveTabIndex(index)}
+                    className="h-full"
+                  />
+                </motion.div>
               ))}
             </div>
 
             {/* Pricing CTA */}
-            <div className="mt-6 sm:mt-8 min-[1200px]:mt-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{
+                duration: 0.5,
+                delay: Math.min(servicesData.length * 0.08, 0.55),
+                ease: [0.25, 0.1, 0.25, 1],
+              }}
+              className="mt-6 sm:mt-8 min-[1200px]:mt-10"
+            >
               <Button
                 href="#contact"
                 variant="light"
@@ -71,7 +94,7 @@ export default function ServicesSection() {
               >
                 See pricing
               </Button>
-            </div>
+            </motion.div>
           </div>
 
           {/* Service card */}
