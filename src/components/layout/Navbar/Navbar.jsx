@@ -57,6 +57,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
           alt="NetSquare Softwares"
           width={120}
           height={48}
+          style={{ width: "auto", height: "auto" }}
           className="h-10 sm:h-12 w-auto object-contain"
           priority
         />
@@ -122,7 +123,7 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         aria-hidden="true"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       >
-        <source src="/videos/herovideo.webm" type="video/webm" />
+        {/* <source src="/videos/herovideo.webm" type="video/webm" /> */}
         <source src="/videos/herovideo.mp4" type="video/mp4" />
       </video>
 

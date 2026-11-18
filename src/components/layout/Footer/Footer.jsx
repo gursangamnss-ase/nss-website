@@ -85,6 +85,7 @@ export default function Footer() {
                 alt={brand.alt}
                 width={280}
                 height={80}
+                style={{ width: "auto", height: "auto" }}
                 className="h-auto w-[230px] sm:w-[270px] object-contain"
               />
             </Link>
