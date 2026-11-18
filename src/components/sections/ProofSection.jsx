@@ -94,8 +94,8 @@ export default function ProofSection() {
           {/* Card 2: Client Trust & Webestica Showreel */}
           <div className="bg-[var(--color-surface-darker)] text-white rounded-[20px] p-2 sm:p-2.5 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.18)] min-h-[350px] sm:min-h-[440px] lg:min-h-[455px] flex flex-col transition-transform duration-300 hover:-translate-y-1">
             <div className="rounded-[14px] border border-white/10 p-4 sm:p-5 flex flex-col justify-between h-full">
-              {/* Top Rating & Avatar Group - Inline side-by-side matching Image 1 */}
-              <div className="flex items-center justify-between gap-3 flex-wrap sm:flex-nowrap">
+              {/* Top Avatar Group with Rating & Sentence below */}
+              <div className="flex flex-col items-start gap-2.5 sm:gap-3">
                 <div className="flex items-center -space-x-2.5 shrink-0">
                   {cards.card2.avatars.map((av, idx) => (
                     <div
@@ -116,10 +116,10 @@ export default function ProofSection() {
                   </div>
                 </div>
 
-                {/* Stars & Label next to avatars */}
+                {/* Stars & Label below avatars */}
                 <div className="flex flex-col items-start gap-1">
                   <RatingStars rating={5} variant="light" size={13} />
-                  <p className="text-[11.5px] sm:text-[12px] text-[var(--color-text-light)] font-normal whitespace-nowrap">
+                  <p className="text-[12px] sm:text-[13px] text-[var(--color-text-light)] font-normal leading-tight">
                     {cards.card2.ratingText}
                   </p>
                 </div>
