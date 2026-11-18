@@ -246,7 +246,7 @@ export const projectDetailsData = {
   shopraftaar: {
     slug: "shopraftaar",
     title: "Raftaar",
-    scriptTitle: "NZ",
+    scriptTitle: "Australia",
     heroImage: "/projects/shopraftaar/hero.webp",
     overview: {
       badge: "Overview",
@@ -365,8 +365,8 @@ export const projectDetailsData = {
   },
   shahikhuraak: {
     slug: "shahikhuraak",
-    title: "Shahi",
-    scriptTitle: "Khuraak",
+    title: "Shahi Khuraak",
+    scriptTitle: "NZ",
     heroImage: "/projects/shahikhuraak/hero.webp",
     overview: {
       badge: "Overview",

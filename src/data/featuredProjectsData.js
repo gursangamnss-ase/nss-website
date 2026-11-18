@@ -63,10 +63,10 @@ export const featuredProjectsData = [
     id: "shopraftaar",
     number: "07",
     titleLine1: "Raftaar",
-    titleLine2: "NZ",
+    titleLine2: "Australia",
     tags: ["Fashion & Apparel", "Punjabi Streetwear"],
     href: "/project/shopraftaar",
     image: "/projects/cover-image/RAFTAAR Website Mockup with Tote Bag.webp",
-    alt: "Raftaar NZ Punjabi Streetwear E-Commerce digital storefront",
+    alt: "Raftaar Australia Punjabi Streetwear E-Commerce digital storefront",
   },
 ];
