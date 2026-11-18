@@ -10,7 +10,7 @@ export default function ProjectCard({ project }) {
       {/* Clickable Image Box with Hover Zoom & Centered Title */}
       <Link
         href={href}
-        className="relative aspect-[16/10.5] sm:aspect-[16/8] md:aspect-[16/6] lg:aspect-[16/10] xl:aspect-[16/11] w-full overflow-hidden rounded-[20px] sm:rounded-[24px] bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+        className="relative aspect-[16/10.5] sm:aspect-[16/8] md:aspect-[16/6] lg:aspect-[16/10] xl:aspect-[16/11] w-full overflow-hidden rounded-[20px] sm:rounded-[24px] isolate [transform:translateZ(0)] [mask-image:-webkit-radial-gradient(white,black)] bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
         aria-label={`View details for ${title} ${scriptTitle}`}
       >
         <Image
@@ -18,12 +18,12 @@ export default function ProjectCard({ project }) {
           alt={alt || `${title} ${scriptTitle}`}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+          className="object-cover object-center rounded-[inherit] will-change-transform transition-transform duration-700 ease-out group-hover:scale-105"
         />
 
         {/* Gradient Overlay for Text Contrast */}
         <div
-          className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/15 transition-opacity duration-300 group-hover:opacity-90"
+          className="absolute inset-0 rounded-[inherit] bg-gradient-to-t from-black/80 via-black/35 to-black/15 transition-opacity duration-300 group-hover:opacity-90"
           aria-hidden="true"
         />
 
@@ -39,7 +39,7 @@ export default function ProjectCard({ project }) {
       </Link>
 
       {/* Card Footer: Category Tags & Details Link */}
-      <div className="flex flex-col items-start gap-2.5 sm:gap-3 px-1 pt-1">
+      <div className="flex items-center justify-between gap-3 px-1 pt-1">
         {/* Category Pill Tags */}
         <div className="flex flex-wrap items-center gap-2">
           {tags.map((tag) => (
@@ -52,12 +52,12 @@ export default function ProjectCard({ project }) {
           ))}
         </div>
 
-        {/* View Details Button (without bg, left-aligned below tags) */}
+        {/* View Details Button (aligned to right side) */}
         <Button
           href={href}
           variant="link"
           size="sm"
-          className="shrink-0 -ml-1"
+          className="shrink-0 ml-auto"
         >
           View details
         </Button>

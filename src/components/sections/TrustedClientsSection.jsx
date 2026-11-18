@@ -62,6 +62,7 @@ export default function TrustedClientsSection() {
                     imgClassName={card.imgClassName}
                     interval={card.interval}
                     logos={card.logos}
+                    href={card.href}
                   />
                 );
               }
