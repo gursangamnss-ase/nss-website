@@ -55,8 +55,8 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
               : "/netsquare_black_logo.webp"
           }
           alt="NetSquare Softwares"
-          width={180}
-          height={76}
+          width={120}
+          height={48}
           className="h-10 sm:h-12 w-auto object-contain"
           priority
         />

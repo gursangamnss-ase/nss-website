@@ -67,7 +67,7 @@ export const projectData = {
     {
       id: "shopraftaar",
       title: "Raftaar",
-      scriptTitle: "NZ",
+      scriptTitle: "Australia",
       tags: ["Fashion & Apparel", "Punjabi Streetwear"],
       image: "/projects/cover-image/RAFTAAR Website Mockup with Tote Bag.webp",
       href: "/project/shopraftaar",
@@ -75,8 +75,8 @@ export const projectData = {
     },
     {
       id: "shahikhuraak",
-      title: "Shahi",
-      scriptTitle: "Khuraak",
+      title: "Shahi Khuraak",
+      scriptTitle: "NZ",
       tags: ["E-Commerce", "Food & Beverage"],
       image: "/projects/cover-image/Shahi Khuraak Digital Feast.webp",
       href: "/project/shahikhuraak",
