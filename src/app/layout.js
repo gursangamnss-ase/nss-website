@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Great_Vibes } from "next/font/google";
 import "./globals.css";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist",
@@ -89,7 +90,10 @@ export default function RootLayout({ children }) {
           fetchPriority="high"
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }
