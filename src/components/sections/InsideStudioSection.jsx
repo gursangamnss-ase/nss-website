@@ -50,7 +50,7 @@ export default function InsideStudioSection() {
 
         <div className="mx-auto max-w-[1100px] md:mt-24 lg:mt-28">
           <h2 className="text-center text-[clamp(2.50rem,5vw,4rem)] font-medium leading-[1.2] sm:leading-[1.16] tracking-[-0.035em] text-[var(--color-primary)]">
-            {/* Mobile concise version (Option 3) */}
+            {/* Mobile concise version */}
             <span className="md:hidden">
               Driven by{" "}
               <span className="font-script inline-block text-[1.16em] font-normal leading-[0.8] tracking-[-0.02em]">
@@ -69,11 +69,11 @@ export default function InsideStudioSection() {
               <span className="font-script inline-block text-[1.16em] font-normal leading-[0.8] tracking-[-0.02em]">
                 Innovation,
               </span>{" "}
-              powered by creativity. We combine strategy, design and technology to build impactful{" "}
+              we blend strategy, design and technology to create impactful{" "}
               <span className="font-script inline-block text-[1.16em] font-normal leading-[0.8] tracking-[-0.02em]">
                 Digital
               </span>{" "}
-              experiences that help businesses grow, connect and thrive.
+              experiences that help businesses grow.
             </span>
           </h2>
         </div>

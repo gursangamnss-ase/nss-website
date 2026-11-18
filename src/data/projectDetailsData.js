@@ -921,7 +921,7 @@ export const projectDetailsData = {
       liveSiteUrl: "https://bottlepos.com/",
       liveSiteLabel: "View live site",
     },
-    showcaseImage: "/projects/bottlepos/showcase.webp",
+    showcaseImage: "/projects/bottlepos/showcase-latest.webp",
     challenge: {
       badge: "The Challenge",
       description:
@@ -940,7 +940,7 @@ export const projectDetailsData = {
     },
     gallery: [
       "/projects/bottlepos/gallery-1.webp",
-      "/projects/bottlepos/gallery-2.webp",
+      "/projects/bottlepos/gallery-2-latest.webp",
       "/projects/bottlepos/gallery-3.webp",
     ],
     results: {
