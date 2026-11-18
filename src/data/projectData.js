@@ -71,7 +71,7 @@ export const projectData = {
       tags: ["Fashion & Apparel", "Punjabi Streetwear"],
       image: "/projects/cover-image/RAFTAAR Website Mockup with Tote Bag.webp",
       href: "/project/shopraftaar",
-      alt: "Raftaar NZ Punjabi Streetwear E-Commerce digital storefront",
+      alt: "Raftaar Australia Punjabi Streetwear E-Commerce digital storefront",
     },
     {
       id: "shahikhuraak",
