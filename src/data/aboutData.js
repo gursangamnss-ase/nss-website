@@ -167,6 +167,12 @@ export const aboutData = {
         techs: ["Node.js", "Python", "PostgreSQL", "REST & GraphQL", "AWS"],
       },
       {
+        id: "stack-ai",
+        title: "AI & Machine Learning",
+        category: "AI",
+        techs: ["OpenAI", "LangChain", "LLMs & RAG", "AI Agents", "Python"],
+      },
+      {
         id: "stack-ecommerce",
         title: "eCommerce & CMS",
         category: "eCommerce",

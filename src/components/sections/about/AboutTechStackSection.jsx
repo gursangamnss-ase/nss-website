@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "motion/react";
 import Container from "@/components/layout/Container";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
@@ -27,7 +30,13 @@ export default function AboutTechStackSection() {
       <Container size="2xl" className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Badge, Headline & Editorial Copy */}
-          <div className="lg:col-span-5 flex flex-col items-start lg:sticky">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+            className="lg:col-span-5 flex flex-col items-start lg:sticky"
+          >
             <Badge
               text={data.badge}
               disabled
@@ -49,7 +58,7 @@ export default function AboutTechStackSection() {
                 {data.description}
               </p>
             )}
-          </div>
+          </motion.div>
 
           {/* Right Column: Section Tag & Interactive Tech Capsule Rows */}
           <div className="lg:col-span-7 flex flex-col">
@@ -58,9 +67,17 @@ export default function AboutTechStackSection() {
             </p>
 
             <div className="flex flex-col">
-              {stacks.map((stack) => (
-                <div
+              {stacks.map((stack, idx) => (
+                <motion.div
                   key={stack.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: Math.min(idx * 0.08, 0.5),
+                    ease: [0.25, 0.1, 0.25, 1],
+                  }}
                   className="flex flex-col sm:flex-row sm:items-center justify-between py-6 sm:py-7 border-b border-[var(--color-border)] transition-colors hover:border-[var(--color-primary)]/40 gap-4 sm:gap-6"
                 >
                   {/* Service Domain Title on the left */}
@@ -84,7 +101,7 @@ export default function AboutTechStackSection() {
                       </Button>
                     ))}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

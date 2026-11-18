@@ -14,9 +14,10 @@ const menuItems = [
 ];
 
 const socialItems = [
-  { label: "Twitter", link: "https://twitter.com" },
-  { label: "GitHub", link: "https://github.com" },
-  { label: "LinkedIn", link: "https://linkedin.com" },
+  { label: "Facebook", link: "https://www.facebook.com/" },
+  { label: "Instagram", link: "https://www.instagram.com/" },
+  { label: "LinkedIn", link: "https://www.linkedin.com/" },
+  { label: "Twitter", link: "https://x.com/" },
 ];
 
 const projectCountBadge = `(${String(projectData.projects.length).padStart(2, "0")})`;

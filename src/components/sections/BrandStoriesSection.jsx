@@ -87,7 +87,7 @@ export default function BrandStoriesSection() {
           <motion.div
             ref={leftColRef}
             style={{ x: leftX }}
-            className="sticky top-[calc(30vh-150px)] h-[440px] xl:h-[460px] w-[340px] xl:w-[380px] shrink-0 flex flex-col justify-center items-end text-right select-none pointer-events-none z-10"
+            className="sticky top-[calc(30vh-150px)] h-[250px] xl:h-[300px] w-[340px] xl:w-[380px] shrink-0 flex flex-col justify-center items-end text-right select-none pointer-events-none z-10"
           >
             <div className="flex flex-col items-end">
               <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[var(--color-primary)] leading-[1.12]">
@@ -107,10 +107,10 @@ export default function BrandStoriesSection() {
           {/* Center Column: Spacer + 3 Scrolling Cards */}
           <div className="w-[380px] shrink-0 flex flex-col items-center z-20">
             {/* Top spacer so the centered titles have clear space before cards scroll up */}
-            <div className="h-[460px] xl:h-[520px] w-full" aria-hidden="true" />
+            <div className="h-[350px] xl:h-[440px] w-full" aria-hidden="true" />
 
             {/* Cards Stack with generous spacing for slower, comfortable scroll progression */}
-            <div className="flex flex-col items-center gap-[300px] xl:gap-[380px] w-full">
+            <div className="flex flex-col items-center gap-[150px] xl:gap-[150px] w-full">
               {steps.map((step) => (
                 <BrandStoriesCard
                   key={step.id}
@@ -125,7 +125,7 @@ export default function BrandStoriesSection() {
           <motion.div
             ref={rightColRef}
             style={{ x: rightX }}
-            className="sticky top-[calc(30vh-150px)] h-[440px] xl:h-[460px] w-[340px] xl:w-[380px] shrink-0 flex flex-col justify-center items-start text-left select-none pointer-events-none z-10"
+            className="sticky top-[calc(30vh-150px)] h-[250px] xl:h-[300px] w-[340px] xl:w-[380px] shrink-0 flex flex-col justify-center items-start text-left select-none pointer-events-none z-10"
           >
             <div className="flex flex-col items-start">
               <span className="text-[clamp(2.75rem,3.8vw,4.25rem)] font-medium tracking-[-0.04em] text-[var(--color-primary)] leading-[1.12]">
