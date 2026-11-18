@@ -51,13 +51,13 @@ export default function Navbar({ isHome = true, activePath = "/" }) {
         <Image
           src={
             isHome
-              ? "/Netsquare_Logo_White_Without_Tagline_Transparent.png"
-              : "/Netsquare Softwares Logo.webp"
+              ? "/netSquare_white_logo.webp"
+              : "/netsquare_black_logo.webp"
           }
           alt="NetSquare Softwares"
-          width={160}
-          height={55}
-          className="h-10 sm:h-18 w-auto object-contain"
+          width={180}
+          height={76}
+          className="h-10 sm:h-12 w-auto object-contain"
           priority
         />
       </Link>

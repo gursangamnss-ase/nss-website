@@ -1,7 +1,7 @@
 export const footerData = {
   bgImage: "/images/services/services-bg.webp",
   brand: {
-    logo: "/NetSquare_Logo_White_Without_Tagline_Transparent.png",
+    logo: "/netSquare_white_logo.webp",
     alt: "NetSquare Softwares",
     tagline: "Build • Automate • Grow",
     description: "Empowering forward-thinking companies through world-class digital experiences, scalable software, and modern design.",
