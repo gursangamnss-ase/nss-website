@@ -53,6 +53,7 @@ export default function Button({
   type = "button",
   className = "",
   showArrow = true,
+  arrow,
   circleArrow,
   href,
   target,
@@ -61,6 +62,8 @@ export default function Button({
   disabled,
   ...props
 }) {
+
+  const shouldShowArrow = arrow !== undefined ? arrow : showArrow;
   const isExternal = href && (href.startsWith("http://") || href.startsWith("https://") || target === "_blank");
   const computedRel = isExternal && target === "_blank" && !rel ? "noopener noreferrer" : rel;
   const isLinkVariant = variant === "link";

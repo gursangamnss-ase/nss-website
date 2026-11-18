@@ -1,0 +1,45 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M6 25V19"
+        stroke="#05080c"
+        stroke-width="1.8"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M13 25V15"
+        stroke="#05080c"
+        stroke-width="1.8"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M20 25V11"
+        stroke="#05080c"
+        stroke-width="1.8"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M27 25V6"
+        stroke="#05080c"
+        stroke-width="1.8"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M5 10L11 8L16 11L26 4"
+        stroke="#05080c"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <path
+        d="M22 4H26V8"
+        stroke="#05080c"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
