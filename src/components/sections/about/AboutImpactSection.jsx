@@ -28,8 +28,8 @@ export default function AboutImpactSection() {
     offset: ["start end", "end start"],
   });
 
-  // Smoothly zoom out from 1.25 to 1.0 as the user scrolls
-  const rawScale = useTransform(scrollYProgress, [0, 1], [1.25, 1.0]);
+  // Smoothly zoom out from 1.12 to 1.0 as the user scrolls
+  const rawScale = useTransform(scrollYProgress, [0, 1], [1.12, 1.0]);
   const scale = useSpring(rawScale, {
     stiffness: 400,
     damping: 50,
@@ -37,7 +37,7 @@ export default function AboutImpactSection() {
   });
 
   return (
-    <section className="relative bg-white pt-12 sm:pt-16 lg:pt-20 pb-20 sm:pb-32 overflow-hidden">
+    <section className="relative bg-white pt-12 sm:pt-16 lg:pt-20 overflow-hidden">
       <Container size="2xl">
         {/* Top Header Row: Badge, Impact Statement, Join Us CTA */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start mb-16 sm:mb-24">
@@ -129,7 +129,7 @@ export default function AboutImpactSection() {
       <Container size="full" className="p-0">
         <div
           ref={bannerRef}
-          className="relative w-full aspect-[16/7] sm:aspect-[21/9] overflow-hidden bg-[var(--color-surface)]"
+          className="relative w-full aspect-[16/6] sm:aspect-[21/7] overflow-hidden bg-[var(--color-surface)]"
         >
           <motion.div
             style={{
