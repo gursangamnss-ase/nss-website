@@ -80,21 +80,11 @@ export default function CareerJobCard({
             </div>
 
             {/* =========================================
-                FLOATING ICON
-            ========================================== */}
-
-            <div
-                className="relative z-20 -mt-7 ml-6 flex h-14 w-14 shrink-0 items-center justify-center rounded-[17px] border border-black/[0.08] bg-white text-black shadow-[0_12px_30px_rgba(0,0,0,0.12)] transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_16px_35px_rgba(0,0,0,0.15)]"
-            >
-                <CareerJobIcon type={job.icon} />
-            </div>
-
-            {/* =========================================
                 CONTENT
             ========================================== */}
 
             <div
-                className="flex flex-1 flex-col px-6 pb-6 pt-5 sm:px-7 sm:pb-7"
+                className="flex flex-1 flex-col px-6 pb-6 pt-6 sm:px-7 sm:pb-7 sm:pt-7"
             >
                 {/* TITLE */}
 

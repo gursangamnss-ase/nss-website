@@ -68,7 +68,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="rounded-[26px] bg-[var(--color-surface)] p-7 sm:p-10 shadow-sm border border-neutral-100/60">
+    <div className="rounded-[28px] sm:rounded-[32px] bg-[#f8f9fa] p-8 sm:p-10 lg:p-12 shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-neutral-200/60">
       <h2 className="text-2xl sm:text-3xl font-semibold text-[var(--color-primary)] tracking-tight mb-8">
         {form.heading}
       </h2>
@@ -174,7 +174,7 @@ export default function ContactForm() {
             size="md"
             showArrow={false}
             disabled={status === "submitting"}
-            className="w-auto px-9 py-3 text-base font-semibold shadow-md hover:shadow-lg disabled:opacity-60"
+            className="w-auto !rounded-full bg-black hover:bg-neutral-800 text-white px-9 py-3.5 text-sm font-semibold shadow-md hover:shadow-lg disabled:opacity-60 transition-all cursor-pointer"
           >
             {status === "submitting" ? "Sending..." : form.submitButton}
           </Button>
