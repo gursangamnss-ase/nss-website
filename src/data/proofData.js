@@ -5,30 +5,25 @@ export const proofData = {
   titleSuffix: "volumes",
   cards: {
     card1: {
-      title: "Revamping Brand & Web presence for Studio Mellow",
+      title: "Revamping Brand & Web presence for Bottle POS",
       description:
-        "They brought clarity, style, and structure to our brand. The team felt like an extension of ours.",
+        "They brought clarity, style, and structure to our platform. The team felt like an extension of ours.",
       stats: [
         { value: "60%", label: "Increase in user engagement" },
         { value: "45%", label: "Online sales growth" },
       ],
-      author: {
-        name: "Amanda Ferguson",
-        role: "Team leader",
-        avatar: "/images/team-lead-avatar.avif",
-      },
     },
     card2: {
-      clientCount: "72+",
+      clientCount: "24+",
       ratingText: "Happy clients worldwide",
       avatars: [
-        "/images/testimonials/client-avatar-1.webp",
-        "/images/testimonials/client-avatar-2.webp",
-        "/images/testimonials/client-avatar-3.webp",
-        "/images/testimonials/client-avatar-4.webp",
+        "/images/testimonials/jaspreet-soni.webp",
+        "/images/testimonials/aurevia-events.webp",
+        "/images/testimonials/jagjot-singh.webp",
+        "/images/testimonials/harshdeep-singh.webp",
       ],
       comingSoonTag: "Coming Soon:",
-      headline: "A Brand Transformation for Webestica.",
+      headline: "A Brand Transformation for Aeko.",
       showreelImage: "/images/case-studies/webestica-showreel.webp",
       showreelButtonText: "Showreel",
     },
@@ -36,7 +31,7 @@ export const proofData = {
       image: "/images/case-studies/desert-campaign.webp",
       title: "Digital campaign that converts",
       description:
-        "Their work didn’t just look good — it drove real, measurable growth. We’re thrilled.",
+        "Their work didn’t just look good it drove real, measurable growth. We’re thrilled.",
     },
     card4: {
       title: "UX/UI that helped secure funding",
@@ -47,8 +42,8 @@ export const proofData = {
         label: "Raised in seed funding",
       },
       client: {
-        name: "BoldCraft Co.",
-        tagline: "Creativity that connects",
+        name: "Fingerprint",
+        tagline: "Social video innovation",
       },
     },
   },

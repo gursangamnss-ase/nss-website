@@ -74,11 +74,11 @@ export default function Footer() {
         <div className="absolute inset-0 bg-black/65" />
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-8 xl:px-16">
         {/* Content Top: Brand Box & Navigation / Contact */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-8 xl:gap-16 items-start">
           {/* Left Brand Info */}
-          <div className="flex flex-col gap-4 max-w-[380px]">
+          <div className="md:col-span-12 lg:col-span-4 flex flex-col gap-4 max-w-[380px]">
             <Link href="/" className="inline-block" aria-label="Go to homepage">
               <Image
                 src={brand.logo}
@@ -94,76 +94,73 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Right Area: Main Links & Contact */}
-          <div className="flex-1 flex flex-col sm:flex-row gap-12 sm:gap-16 lg:gap-24 justify-end w-full">
-            {/* Main Links (2 columns) */}
-            <div className="min-w-[280px]">
-              <p className="text-lg font-medium text-[var(--color-text-muted)] tracking-wide mb-5">
-                Main links
+          {/* Main Links (2 columns) */}
+          <div className="md:col-span-6 lg:col-span-3 xl:col-span-4 min-w-0">
+            <p className="text-lg font-medium text-[var(--color-text-muted)] tracking-wide mb-5">
+              Main links
+            </p>
+            <div className="grid grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
+              {mainLinks.map((link, idx) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`text-base sm:text-[17px] font-medium transition-colors duration-200 ${
+                    idx === 0
+                      ? "text-white hover:text-white/80"
+                      : "text-[var(--color-text-muted)] hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Get in Touch & Offline */}
+          <div className="md:col-span-6 lg:col-span-5 xl:col-span-4 flex flex-col gap-8 min-w-0">
+            {/* Phone & Email */}
+            <div className="flex flex-col gap-2">
+              <p className="text-lg font-medium text-[var(--color-text-muted)] tracking-wide">
+                Get in touch
               </p>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-3.5">
-                {mainLinks.map((link, idx) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className={`text-base sm:text-[17px] font-medium transition-colors duration-200 ${
-                      idx === 0
-                        ? "text-white hover:text-white/80"
-                        : "text-[var(--color-text-muted)] hover:text-white"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
+              <a
+                href={`tel:${contact.phoneTel}`}
+                className="text-lg sm:text-xl font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap"
+              >
+                {contact.phoneLabel}
+              </a>
+              <a
+                href={`mailto:${contact.email}`}
+                className="text-base sm:text-lg xl:text-xl font-medium text-white hover:text-white/80 transition-colors break-words"
+              >
+                {contact.email}
+              </a>
             </div>
 
-            {/* Get in Touch & Offline */}
-            <div className="flex flex-col gap-8">
-              {/* Phone & Email */}
-              <div className="flex flex-col gap-2">
+            {/* Registered & Branch Office studio address */}
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-1.5">
                 <p className="text-lg font-medium text-[var(--color-text-muted)] tracking-wide">
-                  Get in touch
+                  {contact.offlineTitle || "Registered Office"}
                 </p>
-                <a
-                  href={`tel:${contact.phoneTel}`}
-                  className="text-lg sm:text-xl font-medium text-white hover:text-white/80 transition-colors"
-                >
-                  {contact.phoneLabel}
-                </a>
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="text-lg sm:text-xl font-medium text-white hover:text-white/80 transition-colors break-all"
-                >
-                  {contact.email}
-                </a>
+                <p className="text-base font-medium text-white">
+                  {contact.companyTitle}
+                </p>
+                <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs sm:max-w-sm">
+                  {contact.address}
+                </p>
               </div>
 
-              {/* Registered & Branch Office studio address */}
-              <div className="flex flex-col gap-4">
+              {contact.canadaAddress && (
                 <div className="flex flex-col gap-1.5">
-                  <p className="text-lg font-medium text-[var(--color-text-muted)] tracking-wide">
-                    {contact.offlineTitle || "Registered Office"}
-                  </p>
                   <p className="text-base font-medium text-white">
-                    {contact.companyTitle}
+                    {contact.canadaTitle || "Branch Office"}
                   </p>
-                  <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs">
-                    {contact.address}
+                  <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs sm:max-w-sm">
+                    {contact.canadaAddress}
                   </p>
                 </div>
-
-                {contact.canadaAddress && (
-                  <div className="flex flex-col gap-1.5">
-                    <p className="text-base font-medium text-white">
-                      {contact.canadaTitle || "Branch Office"}
-                    </p>
-                    <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs">
-                      {contact.canadaAddress}
-                    </p>
-                  </div>
-                )}
-              </div>
+              )}
             </div>
           </div>
         </div>

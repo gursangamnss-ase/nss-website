@@ -38,10 +38,10 @@ export default function WhyChooseSection() {
           </h2>
         </div>
 
-        {/* Bento Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
+        {/* Bento Grid: 1 col on mobile/tablet/1024px (<xl), 12 cols on desktop (>=xl) matching 768px layout */}
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 sm:gap-6">
           {/* Left Column: 2x2 Bento Subgrid */}
-          <div className="lg:col-span-8 flex flex-col gap-5 sm:gap-6">
+          <div className="xl:col-span-8 flex flex-col gap-5 sm:gap-6">
             {/* Top Row: Card 1 (Cost-Effective) & Card 2 (Happy Clients) */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
               {/* Card 1: Cost-Effective plans */}
@@ -294,8 +294,8 @@ export default function WhyChooseSection() {
           </div>
 
           {/* Right Column: Strategic Solutions Dark Card */}
-          <div className="lg:col-span-4">
-            <div className="rounded-[22px] sm:rounded-[26px] bg-[var(--color-primary)] text-white p-7 sm:p-9 flex flex-col justify-between h-full min-h-[580px] lg:min-h-[700px] relative overflow-hidden">
+          <div className="xl:col-span-4">
+            <div className="rounded-[22px] sm:rounded-[26px] bg-[var(--color-primary)] text-white p-7 sm:p-9 flex flex-col justify-between h-full min-h-[580px] xl:min-h-[700px] relative overflow-hidden">
               {/* Top Section */}
               <div className="relative z-10">
                 <h3 className="text-2xl sm:text-[28px] font-medium tracking-tight leading-tight text-white mb-8">

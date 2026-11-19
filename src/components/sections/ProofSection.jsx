@@ -42,7 +42,7 @@ export default function ProofSection() {
 
         {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-4 xl:gap-5 items-stretch">
-          {/* Card 1: Studio Mellow Case Study */}
+          {/* Card 1: Bottle POS Case Study */}
           <div className="bg-white rounded-[20px] p-5 sm:p-6 flex flex-col justify-between border border-[var(--color-border-light)] shadow-[0_2px_10px_rgba(0,0,0,0.03)] min-h-[350px] sm:min-h-[440px] lg:min-h-[455px] transition-transform duration-300 hover:-translate-y-1">
             <div>
               <h3 className="text-[18px] lg:text-2xl font-medium text-[var(--color-primary)] leading-[1.3] tracking-[-0.02em]">
@@ -53,7 +53,7 @@ export default function ProofSection() {
               </p>
             </div>
 
-            <div className="mt-5">
+            <div className="mt-auto pt-6">
               {/* Stats Row */}
               <div className="flex items-start gap-7 pt-1">
                 {cards.card1.stats.map((stat) => (
@@ -67,27 +67,6 @@ export default function ProofSection() {
                   </div>
                 ))}
               </div>
-
-              {/* Divider & Author */}
-              <div className="border-t border-[var(--color-border-subtle)] mt-5 pt-3.5 flex items-center justify-between">
-                <div>
-                  <h4 className="text-base sm:text-xl font-medium text-[var(--color-primary)]">
-                    {cards.card1.author.name}
-                  </h4>
-                  <p className="text-sm sm:text-base text-[var(--color-text-secondary)] mt-0.5">
-                    {cards.card1.author.role}
-                  </p>
-                </div>
-                <div className="relative size-12 rounded-[12px] overflow-hidden shrink-0 border border-black/5">
-                  <Image
-                    src={cards.card1.author.avatar}
-                    alt={cards.card1.author.name}
-                    fill
-                    sizes="48px"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
             </div>
           </div>
 
@@ -96,23 +75,25 @@ export default function ProofSection() {
             <div className="rounded-[14px] border border-white/10 p-4 sm:p-5 flex flex-col justify-between h-full">
               {/* Top Avatar Group with Rating & Sentence below */}
               <div className="flex flex-col items-start gap-2.5 sm:gap-3">
-                <div className="flex items-center -space-x-2.5 shrink-0">
-                  {cards.card2.avatars.map((av, idx) => (
-                    <div
-                      key={av || idx}
-                      className="relative size-[34px] sm:size-[36px] rounded-[8px] sm:rounded-[10px] border-2 border-[var(--color-surface-darker)] overflow-hidden shrink-0"
-                    >
-                      <Image
-                        src={av}
-                        alt="Client avatar"
-                        fill
-                        sizes="38px"
-                        className="object-cover object-center"
-                      />
-                    </div>
-                  ))}
-                  <div className="relative w-[38px] sm:w-[42px] h-[34px] sm:h-[36px] rounded-[8px] sm:rounded-[10px] bg-[var(--color-surface)] text-[var(--color-primary)] font-medium text-[13px] sm:text-[14px] flex items-center justify-center border-2 border-[var(--color-surface-darker)] shrink-0 tracking-tight">
-                    {cards.card2.clientCount}
+                <div className="flex items-center">
+                  <div className="flex items-center -space-x-2 shrink-0">
+                    {cards.card2.avatars.map((av, idx) => (
+                      <div
+                        key={av || idx}
+                        className="relative size-[34px] sm:size-[36px] rounded-[10px] border-2 border-[var(--color-surface-darker)] overflow-hidden shrink-0 shadow-sm"
+                      >
+                        <Image
+                          src={av}
+                          alt={`Client review avatar ${idx + 1}`}
+                          fill
+                          sizes="40px"
+                          className="object-cover object-center"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="ml-2.5 px-3 py-1 rounded-full bg-white text-black text-xs sm:text-[13px] font-bold flex items-center justify-center shrink-0 shadow-sm leading-none">
+                    {cards.card2.clientCount || "24+"}
                   </div>
                 </div>
 
@@ -177,7 +158,7 @@ export default function ProofSection() {
             </div>
           </div>
 
-          {/* Card 4: Funding / BoldCraft Case Study */}
+          {/* Card 4: Funding / Fingerprint Case Study */}
           <div className="bg-white rounded-[20px] p-5 sm:p-6 flex flex-col justify-between border border-[var(--color-border-light)] shadow-[0_2px_10px_rgba(0,0,0,0.03)] min-h-[350px] sm:min-h-[440px] lg:min-h-[455px] transition-transform duration-300 hover:-translate-y-1">
             <div>
               <h3 className="text-[18px] lg:text-2xl font-medium text-[var(--color-primary)] leading-[1.3] tracking-[-0.02em]">

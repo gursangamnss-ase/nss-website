@@ -35,9 +35,9 @@ export default function ContactHeroSection() {
         </h1>
 
         {/* 2-Column Responsive Grid */}
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-16">
           {/* Left Column: Direct Info & Founder Note */}
-          <div className="flex flex-col justify-between space-y-10 sm:space-y-12 lg:col-span-5 lg:h-full lg:py-2">
+          <div className="flex flex-col justify-between space-y-10 sm:space-y-12 lg:col-span-6 xl:col-span-5 lg:h-full lg:py-2 min-w-0">
             {/* Contact Details */}
             <div className="space-y-3">
               <Badge
@@ -47,13 +47,13 @@ export default function ContactHeroSection() {
               <div className="pt-1">
                 <a
                   href={`tel:${hero.phone.replace(/[^0-9+]/g, "")}`}
-                  className="block text-2xl sm:text-3xl font-medium text-[var(--color-primary)] hover:opacity-75 transition-opacity"
+                  className="block text-xl sm:text-2xl lg:text-[22px] xl:text-3xl font-medium text-[var(--color-primary)] hover:opacity-75 transition-opacity whitespace-nowrap"
                 >
                   {hero.phone}
                 </a>
                 <a
                   href={`mailto:${hero.email}`}
-                  className="block text-2xl sm:text-3xl font-medium text-[var(--color-primary)] hover:opacity-75 transition-opacity pt-1"
+                  className="block text-xl sm:text-2xl lg:text-[22px] xl:text-3xl font-medium text-[var(--color-primary)] hover:opacity-75 transition-opacity pt-1 break-words"
                 >
                   {hero.email}
                 </a>
@@ -96,7 +96,7 @@ export default function ContactHeroSection() {
           </div>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6 xl:col-span-7 min-w-0">
             <ContactForm />
           </div>
         </div>

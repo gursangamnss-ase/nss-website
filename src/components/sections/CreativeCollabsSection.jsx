@@ -71,10 +71,10 @@ export default function CreativeCollabsSection() {
         </div>
 
         {/* Desktop & Laptop Heading (>= lg: 1024px+) - Staggered layout */}
-        <div className="hidden lg:flex flex-row items-start lg:gap-28 xl:gap-47 2xl:gap-50 relative">
+        <div className="hidden lg:flex flex-row items-start lg:gap-14 xl:gap-24 2xl:gap-32 relative">
           {/* Left: Ideas + Script Ampersand overlapping */}
           <div className="relative inline-flex items-center shrink-0">
-            <h2 className="text-[clamp(5.2rem,8.5vw,9.5rem)] font-semibold leading-[0.8] tracking-[-0.04em] text-[var(--color-primary)] select-none">
+            <h2 className="text-[clamp(5rem,8.33vw,7.5rem)] font-semibold leading-[0.8] tracking-[-0.04em] text-[var(--color-primary)] select-none">
               {header.titleLine1}
             </h2>
 
@@ -93,30 +93,30 @@ export default function CreativeCollabsSection() {
 
           {/* Right: Execution pushed down to align on line 2 */}
           <div className="pt-20 lg:pt-28 xl:pt-36 2xl:pt-44 w-full">
-            <h2 className="text-[clamp(5.5rem,12vw,14rem)] font-semibold leading-[0.8] tracking-[-0.04em] text-[var(--color-primary)] select-none">
+            <h2 className="text-[clamp(5rem,8.33vw,7.5rem)] font-semibold leading-[0.8] tracking-[-0.04em] text-[var(--color-primary)] select-none whitespace-nowrap ml-6 xl:ml-16">
               {header.titleLine2}
             </h2>
           </div>
         </div>
 
-        {/* Lower Content: (@2K26) on left/top + Narrative & Back Catalog */}
-        <div className="mt-10 sm:mt-14 lg:mt-20 flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-12 xl:gap-40">
-          {/* Left: Year tag */}
-          <div className="shrink-0 lg:w-[20%] xl:w-[22%]">
-            <h3 className="text-xl sm:text-2xl lg:text-[28px] font-medium tracking-[-0.03em] text-[var(--color-primary)] whitespace-nowrap">
+        {/* Lower Content: Tagline on left + Narrative & Back Catalog */}
+        <div className="mt-10 sm:mt-14 lg:mt-20 flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-10 xl:gap-20 2xl:gap-32">
+          {/* Left: Tagline */}
+          <div className="shrink-0 w-full lg:w-[260px] xl:w-[300px]">
+            <h3 className="text-xl sm:text-2xl lg:text-[24px] xl:text-[28px] font-medium tracking-[-0.03em] text-[var(--color-primary)] leading-snug">
               {header.yearTag}
             </h3>
           </div>
 
           {/* Right: Narrative Description and Catalog Gallery */}
-          <div className="flex-1 flex flex-col items-start w-full">
+          <div className="flex-1 flex flex-col items-start w-full min-w-0 max-w-[840px]">
             {/* Paragraph with bold accents */}
             {typeof header.description === "string" ? (
-              <p className="text-base sm:text-lg lg:text-xl font-normal leading-[1.38] tracking-[-0.015em] text-[var(--color-text-secondary)]">
+              <p className="text-base sm:text-lg lg:text-[17px] xl:text-lg font-normal leading-[1.45] tracking-[-0.015em] text-[var(--color-text-secondary)]">
                 {header.description}
               </p>
             ) : (
-              <p className="text-base sm:text-lg lg:text-xl font-normal leading-[1.38] tracking-[-0.015em] text-[var(--color-text-secondary)]">
+              <p className="text-base sm:text-lg lg:text-[17px] xl:text-lg font-normal leading-[1.45] tracking-[-0.015em] text-[var(--color-text-secondary)]">
                 {header.description?.lead}
                 <span className="font-medium text-[var(--color-primary)]">
                   {header.description?.highlight1}

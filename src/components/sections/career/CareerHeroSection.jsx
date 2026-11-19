@@ -37,49 +37,38 @@ export default function CareerHeroSection() {
         <Section
             spacing="none"
             background="dark"
-            className="
-                relative
-                min-h-[720px]
-                overflow-hidden
-                lg:min-h-[820px]
-            "
+            className="relative min-h-[720px] overflow-hidden lg:min-h-[820px]"
         >
             {/* =====================================================
                 BACKGROUND
             ====================================================== */}
             <div
-                className="pointer-events-none absolute inset-0"
+                className="pointer-events-none absolute inset-0 overflow-hidden"
                 aria-hidden="true"
             >
                 {/* Main background */}
                 <div className="absolute inset-0 bg-[var(--color-primary)]" />
 
+                {/* Background image texture */}
+                <div className="absolute inset-0">
+                    <Image
+                        src="/career/career-black-bg.webp"
+                        alt=""
+                        fill
+                        priority
+                        sizes="100vw"
+                        className="object-cover object-center opacity-75"
+                    />
+                </div>
+
                 {/* Subtle left glow */}
                 <div
-                    className="
-                        absolute
-                        -left-32
-                        top-1/4
-                        h-[420px]
-                        w-[420px]
-                        rounded-full
-                        bg-white/[0.025]
-                        blur-3xl
-                    "
+                    className="absolute -left-32 top-1/4 h-[420px] w-[420px] rounded-full bg-white/[0.025] blur-3xl"
                 />
 
                 {/* Subtle bottom-right glow */}
                 <div
-                    className="
-                        absolute
-                        -right-[180px]
-                        -bottom-[200px]
-                        h-[500px]
-                        w-[500px]
-                        rounded-full
-                        bg-[var(--color-accent-orange)]/[0.025]
-                        blur-3xl
-                    "
+                    className="absolute -right-[180px] -bottom-[200px] h-[500px] w-[500px] rounded-full bg-[var(--color-accent-orange)]/[0.025] blur-3xl"
                 />
             </div>
 
@@ -88,27 +77,10 @@ export default function CareerHeroSection() {
             ====================================================== */}
             <Container
                 size="2xl"
-                className="
-                    relative
-                    z-10
-                    flex
-                    items-center
-                "
+                className="relative z-10 flex items-center"
             >
                 <div
-                    className="
-                        grid
-                        w-full
-                        items-center
-                        gap-12
-                        py-24
-
-                        lg:grid-cols-[0.92fr_1.08fr]
-                        lg:gap-10
-                        lg:py-28
-
-                        xl:gap-16
-                    "
+                    className="grid w-full items-center gap-12 py-24 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10 lg:py-28 xl:gap-16"
                 >
                     {/* =================================================
                         LEFT CONTENT
@@ -135,11 +107,7 @@ export default function CareerHeroSection() {
                             delay: 0.05,
                             ease: [0.22, 1, 0.36, 1],
                         }}
-                        className="
-                            relative
-                            z-20
-                            max-w-[700px]
-                        "
+                        className="relative z-20 max-w-[700px]"
                     >
                         {/* =================================================
                             CAREERS LABEL
@@ -147,41 +115,19 @@ export default function CareerHeroSection() {
                         <Badge
                             text="CAREERS"
                             color="#ffffff"
-                            className="
-                                mb-5
-                                text-sm
-                                font-medium
-                                tracking-[0.08em]
-                            "
+                            className="mb-5 text-sm font-medium tracking-[0.08em]"
                         />
 
                         {/* =================================================
                             MAIN HEADING
                         ================================================== */}
                         <h1
-                            className="
-                                max-w-[700px]
-                                text-[clamp(3.2rem,7vw,7rem)]
-                                font-semibold
-                                leading-[0.88]
-                                tracking-[-0.055em]
-                                text-white
-
-                                sm:text-[clamp(3.8rem,7vw,7rem)]
-                            "
+                            className="max-w-[700px] text-[clamp(3.2rem,7vw,7rem)] font-semibold leading-[0.88] tracking-[-0.055em] text-white sm:text-[clamp(3.8rem,7vw,7rem)]"
                         >
                             Build Your
 
                             <span
-                                className="
-                                    block
-                                    mt-4
-                                    font-script
-                                    text-[clamp(4.5rem,8vw,8rem)]
-                                    font-normal
-                                    leading-[0.75]
-                                    tracking-[-0.02em]
-                                "
+                                className="block mt-4 font-script text-[clamp(4.5rem,8vw,8rem)] font-normal leading-[0.75] tracking-[-0.02em]"
                             >
                                 Future
                             </span>
@@ -192,16 +138,7 @@ export default function CareerHeroSection() {
                             DESCRIPTION
                         ================================================== */}
                         <p
-                            className="
-                                mt-8
-                                max-w-[640px]
-                                text-base
-                                leading-7
-                                text-white/65
-
-                                sm:text-lg
-                                sm:leading-8
-                            "
+                            className="mt-8 max-w-[640px] text-base leading-7 text-white/65 sm:text-lg sm:leading-8"
                         >
                             At NetSquare Softwares, we believe great careers
                             are built through meaningful work, continuous
@@ -219,11 +156,7 @@ export default function CareerHeroSection() {
                                 href="#openings"
                                 variant="light"
                                 size="lg"
-                                className="
-                                    rounded-full
-                                    !px-7
-                                    !py-4
-                                "
+                                className="rounded-full !px-7 !py-4"
                             >
                                 <span className="inline-flex items-center gap-2">
                                     <span>Explore Opportunities</span>
@@ -237,26 +170,13 @@ export default function CareerHeroSection() {
                         RIGHT VISUAL
                     ================================================== */}
                     <div
-                        className="
-                            relative
-                            mx-auto
-                            w-full
-                            max-w-[720px]
-                            lg:ml-auto
-                        "
+                        className="relative mx-auto w-full max-w-[720px] lg:ml-auto"
                     >
                         {/* =================================================
                             IMAGE WRAPPER
                         ================================================== */}
                         <div
-                            className="
-                                relative
-                                mx-auto
-                                aspect-[0.94]
-                                w-full
-                                max-w-[680px]
-                                overflow-visible
-                            "
+                            className="relative mx-auto aspect-[0.94] w-full max-w-[680px] overflow-visible"
                         >
                             {/* =================================================
                                 MAIN IMAGE
@@ -280,22 +200,7 @@ export default function CareerHeroSection() {
                                             },
                                         }
                                 }
-                                className="
-                                    group
-                                    relative
-                                    h-full
-                                    w-full
-                                    overflow-hidden
-                                    rounded-[42px]
-                                    border
-                                    border-white/10
-                                    shadow-2xl
-                                    rotate-[-2deg]
-
-                                    sm:rounded-[50px]
-
-                                    lg:rounded-[58px]
-                                "
+                                className="group relative h-full w-full overflow-hidden rounded-[42px] border border-white/10 shadow-2xl rotate-[-2deg] sm:rounded-[50px] lg:rounded-[58px]"
                             >
                                 <Image
                                     src="/career/career-hero-section.webp"
@@ -304,28 +209,12 @@ export default function CareerHeroSection() {
                                     priority
                                     sizes="(max-width: 639px) 90vw, (max-width: 1023px) 80vw, 50vw"
 
-                                    className="
-                                        object-cover
-                                        transition-transform
-                                        duration-700
-                                        ease-out
-                                        group-hover:scale-105
-                                    "
+                                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                                 />
 
                                 {/* Image overlay */}
                                 <div
-                                    className="
-                                        pointer-events-none
-                                        absolute
-                                        inset-0
-                                        bg-gradient-to-t
-                                        from-black/20
-                                        via-transparent
-                                        to-black/5
-                                        transition-opacity
-                                        duration-500
-                                    "
+                                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/5 transition-opacity duration-500"
                                     aria-hidden="true"
                                 />
                             </motion.div>
@@ -367,63 +256,11 @@ export default function CareerHeroSection() {
                                             },
                                         }
                                 }
-                                className="
-                                    group
-                                    absolute
-                                    right-[-12px]
-                                    top-[8%]
-                                    z-20
-
-                                    flex
-                                    items-center
-                                    gap-3
-
-                                    rounded-full
-                                    border
-                                    border-white/20
-                                    bg-black/65
-                                    px-5
-                                    py-3
-                                    backdrop-blur-xl
-
-                                    transition-all
-                                    duration-300
-                                    ease-out
-
-                                    hover:border-white/40
-                                    hover:bg-black/80
-                                    hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]
-
-                                    sm:right-[-22px]
-                                    sm:px-6
-                                    sm:py-4
-
-                                    max-[480px]:right-[-4px]
-                                    max-[480px]:px-4
-                                    max-[480px]:py-3
-                                "
+                                className="group absolute right-[-12px] top-[8%] z-20 flex items-center gap-3 rounded-full border border-white/20 bg-black/65 px-5 py-3 backdrop-blur-xl transition-all duration-300 ease-out hover:border-white/40 hover:bg-black/80 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] sm:right-[-22px] sm:px-6 sm:py-4 max-[480px]:right-[-4px] max-[480px]:px-4 max-[480px]:py-3"
                             >
                                 {/* SVG PEOPLE ICON */}
                                 <div
-                                    className="
-                                        flex
-                                        h-9
-                                        w-9
-                                        shrink-0
-                                        items-center
-                                        justify-center
-                                        text-white
-
-                                        transition-transform
-                                        duration-300
-                                        ease-out
-
-                                        group-hover:scale-110
-                                        group-hover:-rotate-3
-
-                                        sm:h-10
-                                        sm:w-10
-                                    "
+                                    className="flex h-9 w-9 shrink-0 items-center justify-center text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:-rotate-3 sm:h-10 sm:w-10"
                                 >
                                     <svg
                                         width="28"
@@ -432,13 +269,7 @@ export default function CareerHeroSection() {
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
                                         aria-hidden="true"
-                                        className="
-                                            transition-all
-                                            duration-300
-                                            ease-out
-
-                                            group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.35)]
-                                        "
+                                        className="transition-all duration-300 ease-out group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.35)]"
                                     >
                                         {/* Main person */}
                                         <path
@@ -475,23 +306,7 @@ export default function CareerHeroSection() {
 
                                 {/* CARD TEXT */}
                                 <span
-                                    className="
-                                        max-w-[150px]
-                                        text-sm
-                                        font-medium
-                                        leading-5
-                                        text-white
-
-                                        transition-all
-                                        duration-300
-
-                                        group-hover:tracking-[0.01em]
-
-                                        sm:max-w-none
-                                        sm:text-base
-
-                                        max-[480px]:text-xs
-                                    "
+                                    className="max-w-[150px] text-sm font-medium leading-5 text-white transition-all duration-300 group-hover:tracking-[0.01em] sm:max-w-none sm:text-base max-[480px]:text-xs"
                                 >
                                     Collaborative
 
@@ -540,60 +355,11 @@ export default function CareerHeroSection() {
                                             },
                                         }
                                 }
-                                className="
-                                    group
-                                    absolute
-                                    bottom-[8%]
-                                    left-[-10px]
-                                    z-20
-
-                                    flex
-                                    items-center
-                                    gap-3
-
-                                    rounded-full
-                                    border
-                                    border-white/20
-                                    bg-black/70
-                                    px-5
-                                    py-3
-                                    backdrop-blur-xl
-
-                                    transition-all
-                                    duration-300
-                                    ease-out
-
-                                    hover:border-white/40
-                                    hover:bg-black/80
-                                    hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]
-
-                                    sm:left-[-30px]
-                                    sm:px-6
-                                    sm:py-4
-
-                                    max-[480px]:left-[-4px]
-                                    max-[480px]:px-4
-                                    max-[480px]:py-3
-                                "
+                                className="group absolute bottom-[8%] left-[-10px] z-20 flex items-center gap-3 rounded-full border border-white/20 bg-black/70 px-5 py-3 backdrop-blur-xl transition-all duration-300 ease-out hover:border-white/40 hover:bg-black/80 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] sm:left-[-30px] sm:px-6 sm:py-4 max-[480px]:left-[-4px] max-[480px]:px-4 max-[480px]:py-3"
                             >
                                 {/* SVG LIGHTNING ICON */}
                                 <span
-                                    className="
-                                        flex
-                                        h-8
-                                        w-8
-                                        shrink-0
-                                        items-center
-                                        justify-center
-                                        text-white
-
-                                        transition-transform
-                                        duration-300
-                                        ease-out
-
-                                        group-hover:rotate-12
-                                        group-hover:scale-110
-                                    "
+                                    className="flex h-8 w-8 shrink-0 items-center justify-center text-white transition-transform duration-300 ease-out group-hover:rotate-12 group-hover:scale-110"
                                     aria-hidden="true"
                                 >
                                     <svg
@@ -602,13 +368,7 @@ export default function CareerHeroSection() {
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="
-                                            transition-all
-                                            duration-300
-                                            ease-out
-
-                                            group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]
-                                        "
+                                        className="transition-all duration-300 ease-out group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                                     >
                                         <path
                                             d="M13 2L4 14H11L10 22L20 9H13L13 2Z"
@@ -622,30 +382,12 @@ export default function CareerHeroSection() {
 
                                 {/* CARD TEXT */}
                                 <span
-                                    className="
-                                        text-sm
-                                        font-medium
-                                        text-white
-
-                                        transition-colors
-                                        duration-300
-
-                                        sm:text-base
-
-                                        max-[480px]:text-xs
-                                    "
+                                    className="text-sm font-medium text-white transition-colors duration-300 sm:text-base max-[480px]:text-xs"
                                 >
                                     Learn
 
                                     <span
-                                        className="
-                                            mx-1.5
-                                            text-white/50
-                                            transition-colors
-                                            duration-300
-
-                                            group-hover:text-white/80
-                                        "
+                                        className="mx-1.5 text-white/50 transition-colors duration-300 group-hover:text-white/80"
                                     >
                                         ·
                                     </span>
@@ -653,14 +395,7 @@ export default function CareerHeroSection() {
                                     Create
 
                                     <span
-                                        className="
-                                            mx-1.5
-                                            text-white/50
-                                            transition-colors
-                                            duration-300
-
-                                            group-hover:text-white/80
-                                        "
+                                        className="mx-1.5 text-white/50 transition-colors duration-300 group-hover:text-white/80"
                                     >
                                         ·
                                     </span>

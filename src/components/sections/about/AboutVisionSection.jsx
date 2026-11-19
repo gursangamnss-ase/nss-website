@@ -142,7 +142,7 @@ export default function AboutVisionSection() {
         </div>
 
         {/* Bottom Bento Row: 4 Metric Counter Cards matching Image 1 */}
-        <div className="mt-16 sm:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 lg:gap-[10px]">
+        <div className="mt-16 sm:mt-24 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 sm:gap-3 lg:gap-[10px]">
           {vision.metrics.map((metric, idx) => {
             const isDark = metric.isRating;
 
