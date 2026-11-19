@@ -79,21 +79,7 @@ function CareerBenefitCard({
         >
             {/* SUBTLE CARD HOVER LIGHT */}
             <div
-                className="
-                    pointer-events-none
-                    absolute
-                    -right-20
-                    -top-20
-                    h-40
-                    w-40
-                    rounded-full
-                    bg-black/[0.025]
-                    opacity-0
-                    blur-3xl
-                    transition-opacity
-                    duration-500
-                    group-hover:opacity-100
-                "
+                className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-black/[0.025] opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
                 aria-hidden="true"
             />
 
@@ -112,55 +98,19 @@ function CareerBenefitCard({
                 ========================================== */}
                 {hasImage && (
                     <div
-                        className="
-                            relative
-                            h-[120px]
-                            w-[120px]
-                            shrink-0
-                            overflow-hidden
-                            rounded-[18px]
-                            bg-[#eeeeee]
-
-                            sm:h-[128px]
-                            sm:w-[128px]
-                        "
+                        className="relative h-[120px] w-[120px] shrink-0 overflow-hidden rounded-[18px] bg-[#eeeeee] sm:h-[128px] sm:w-[128px]"
                     >
                         <Image
                             src={image}
                             alt=""
                             fill
-                            sizes="
-                                (max-width: 639px) 120px,
-                                128px
-                            "
-                            className="
-                                object-cover
-
-                                transition-transform
-                                duration-700
-                                ease-out
-
-                                group-hover:scale-[1.06]
-                            "
+                            sizes="(max-width: 639px) 120px, 128px"
+                            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                         />
 
                         {/* IMAGE OVERLAY */}
                         <div
-                            className="
-                                pointer-events-none
-                                absolute
-                                inset-0
-                                bg-gradient-to-tr
-                                from-black/10
-                                via-transparent
-                                to-white/10
-
-                                opacity-60
-                                transition-opacity
-                                duration-500
-
-                                group-hover:opacity-100
-                            "
+                            className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10 opacity-60 transition-opacity duration-500 group-hover:opacity-100"
                             aria-hidden="true"
                         />
                     </div>
@@ -171,41 +121,10 @@ function CareerBenefitCard({
                 ========================================== */}
                 {!hasImage && icon && (
                     <div
-                        className="
-                            relative
-                            flex
-                            h-16
-                            w-16
-                            shrink-0
-                            items-center
-                            justify-center
-                            rounded-2xl
-                            bg-white
-                            shadow-[0_4px_16px_rgba(0,0,0,0.04)]
-
-                            transition-transform
-                            duration-300
-                            ease-out
-
-                            group-hover:-translate-y-1
-                        "
+                        className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)] transition-transform duration-300 ease-out group-hover:-translate-y-1"
                     >
                         <span
-                            className="
-                                pointer-events-none
-                                absolute
-                                inset-0
-                                rounded-2xl
-                                border
-                                border-black/[0.04]
-                                opacity-0
-
-                                transition-all
-                                duration-500
-
-                                group-hover:scale-110
-                                group-hover:opacity-100
-                            "
+                            className="pointer-events-none absolute inset-0 rounded-2xl border border-black/[0.04] opacity-0 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100"
                             aria-hidden="true"
                         />
 
@@ -235,16 +154,7 @@ function CareerBenefitCard({
                                 alt=""
                                 width={32}
                                 height={32}
-                                className="
-                                    h-8
-                                    w-8
-                                    object-contain
-
-                                    transition-transform
-                                    duration-300
-
-                                    group-hover:scale-110
-                                "
+                                className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-110"
                                 aria-hidden="true"
                             />
                         </motion.div>
@@ -256,29 +166,13 @@ function CareerBenefitCard({
                 ========================================== */}
                 <div className="min-w-0">
                     <h3
-                        className="
-                            text-lg
-                            font-semibold
-                            leading-[1.25]
-                            tracking-[-0.025em]
-                            text-[var(--color-primary)]
-
-                            sm:text-xl
-                        "
+                        className="text-lg font-semibold leading-[1.25] tracking-[-0.025em] text-[var(--color-primary)] sm:text-xl"
                     >
                         {title}
                     </h3>
 
                     <p
-                        className="
-                            mt-2.5
-                            text-sm
-                            leading-6
-                            text-[var(--color-text-secondary)]
-
-                            sm:text-base
-                            sm:leading-7
-                        "
+                        className="mt-2.5 text-sm leading-6 text-[var(--color-text-secondary)] sm:text-base sm:leading-7"
                     >
                         {description}
                     </p>
@@ -287,24 +181,7 @@ function CareerBenefitCard({
 
             {/* SUBTLE BOTTOM ACCENT */}
             <div
-                className="
-                    absolute
-                    bottom-0
-                    left-6
-                    right-6
-                    h-[2px]
-                    origin-left
-                    scale-x-0
-                    rounded-full
-                    bg-black
-                    opacity-60
-
-                    transition-transform
-                    duration-500
-                    ease-out
-
-                    group-hover:scale-x-100
-                "
+                className="absolute bottom-0 left-6 right-6 h-[2px] origin-left scale-x-0 rounded-full bg-black opacity-60 transition-transform duration-500 ease-out group-hover:scale-x-100"
                 aria-hidden="true"
             />
         </motion.article>

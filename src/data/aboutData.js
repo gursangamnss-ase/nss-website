@@ -199,8 +199,8 @@ export const aboutData = {
       href: "/contact",
     },
     studioBanner: {
-      src: "/images/about/studio-banner.webp",
-      alt: "NetSquare Softwares creative studio team and architectural workspace",
+      src: "/images/about/about-page-impact.png",
+      alt: "NetSquare Softwares team collaborating in modern tech office workspace",
     },
   },
   team: {

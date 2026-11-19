@@ -34,20 +34,7 @@ export default function CareerJobDetailsModal({
 
     return (
         <div
-            className="
-                fixed
-                inset-0
-                z-[100]
-                flex
-                items-center
-                justify-center
-                bg-black/65
-                p-3
-                backdrop-blur-md
-
-                sm:p-5
-                lg:p-8
-            "
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/65 p-3 backdrop-blur-md sm:p-5 lg:p-8"
             onMouseDown={(event) => {
                 if (event.target === event.currentTarget) {
                     onClose();
@@ -77,18 +64,7 @@ export default function CareerJobDetailsModal({
                     duration: 0.35,
                     ease: [0.22, 1, 0.36, 1],
                 }}
-                className="
-                    relative
-                    max-h-[92vh]
-                    w-full
-                    max-w-4xl
-                    overflow-hidden
-                    rounded-[28px]
-                    border
-                    border-black/[0.08]
-                    bg-white
-                    shadow-[0_30px_100px_rgba(0,0,0,0.3)]
-                "
+                className="relative max-h-[92vh] w-full max-w-4xl overflow-hidden rounded-[28px] border border-black/[0.08] bg-white shadow-[0_30px_100px_rgba(0,0,0,0.3)]"
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="career-job-title"
@@ -101,32 +77,7 @@ export default function CareerJobDetailsModal({
                     type="button"
                     onClick={onClose}
                     aria-label="Close job details"
-                    className="
-                        absolute
-                        right-5
-                        top-5
-                        z-30
-                        flex
-                        h-11
-                        w-11
-                        items-center
-                        justify-center
-                        rounded-full
-                        border
-                        border-white/30
-                        bg-black/35
-                        text-white
-                        backdrop-blur-md
-                        transition-all
-                        duration-300
-
-                        hover:bg-white
-                        hover:text-black
-                        hover:border-white
-
-                        sm:right-6
-                        sm:top-6
-                    "
+                    className="absolute right-5 top-5 z-30 flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-black/35 text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-black hover:border-white sm:right-6 sm:top-6"
                 >
                     <svg
                         width="18"
@@ -157,85 +108,36 @@ export default function CareerJobDetailsModal({
                 ========================================== */}
 
                 <div
-                    className="
-                        max-h-[92vh]
-                        overflow-y-auto
-                        overscroll-contain
-                    "
+                    className="max-h-[92vh] overflow-y-auto overscroll-contain"
                 >
                     {/* =========================================
                         HERO IMAGE
                     ========================================== */}
 
                     <div
-                        className="
-                            relative
-                            h-[230px]
-                            w-full
-                            overflow-hidden
-                            bg-[#111]
-
-                            sm:h-[290px]
-                            lg:h-[340px]
-                        "
+                        className="relative h-[230px] w-full overflow-hidden bg-[#111] sm:h-[290px] lg:h-[340px]"
                     >
                         <Image
                             src={job.image}
                             alt={`${job.title} at NetSquare Softwares`}
                             fill
-                            sizes="
-                                (max-width: 639px) 100vw,
-                                (max-width: 1023px) 90vw,
-                                896px
-                            "
-                            className="
-                                object-cover
-                            "
+                            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 90vw, 896px"
+                            className="object-cover"
                         />
 
                         {/* DARK GRADIENT */}
 
                         <div
-                            className="
-                                absolute
-                                inset-0
-                                bg-gradient-to-t
-                                from-black/75
-                                via-black/20
-                                to-black/10
-                            "
+                            className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/10"
                         />
 
                         {/* CATEGORY */}
 
                         <div
-                            className="
-                                absolute
-                                bottom-6
-                                left-6
-                                z-10
-
-                                sm:bottom-8
-                                sm:left-8
-                            "
+                            className="absolute bottom-6 left-6 z-10 sm:bottom-8 sm:left-8"
                         >
                             <span
-                                className="
-                                    inline-flex
-                                    items-center
-                                    rounded-full
-                                    border
-                                    border-white/25
-                                    bg-black/35
-                                    px-3.5
-                                    py-2
-                                    text-[10px]
-                                    font-medium
-                                    uppercase
-                                    tracking-[0.1em]
-                                    text-white
-                                    backdrop-blur-md
-                                "
+                                className="inline-flex items-center rounded-full border border-white/25 bg-black/35 px-3.5 py-2 text-[10px] font-medium uppercase tracking-[0.1em] text-white backdrop-blur-md"
                             >
                                 {job.category}
                             </span>
@@ -247,46 +149,21 @@ export default function CareerJobDetailsModal({
                     ========================================== */}
 
                     <div
-                        className="
-                            px-6
-                            pb-8
-                            pt-7
-
-                            sm:px-9
-                            sm:pb-10
-                            sm:pt-8
-
-                            lg:px-10
-                            lg:pb-12
-                        "
+                        className="px-6 pb-8 pt-7 sm:px-9 sm:pb-10 sm:pt-8 lg:px-10 lg:pb-12"
                     >
                         {/* =====================================
                             HEADER
                         ====================================== */}
 
                         <div
-                            className="
-                                flex
-                                flex-col
-                                gap-6
-
-                                lg:flex-row
-                                lg:items-end
-                                lg:justify-between
-                            "
+                            className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
                         >
                             {/* TITLE */}
 
                             <div className="max-w-[680px]">
                                 <h2
                                     id="career-job-title"
-                                    className="
-                                        text-[clamp(2.2rem,5vw,3.8rem)]
-                                        font-semibold
-                                        leading-[0.95]
-                                        tracking-[-0.055em]
-                                        text-black
-                                    "
+                                    className="text-[clamp(2.2rem,5vw,3.8rem)] font-semibold leading-[0.95] tracking-[-0.055em] text-black"
                                 >
                                     {job.title}
                                 </h2>
@@ -294,26 +171,12 @@ export default function CareerJobDetailsModal({
                                 {/* META */}
 
                                 <div
-                                    className="
-                                        mt-5
-                                        flex
-                                        flex-wrap
-                                        items-center
-                                        gap-x-5
-                                        gap-y-3
-                                        text-sm
-                                        font-medium
-                                        text-black/55
-                                    "
+                                    className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm font-medium text-black/55"
                                 >
                                     {/* LOCATION */}
 
                                     <div
-                                        className="
-                                            flex
-                                            items-center
-                                            gap-2
-                                        "
+                                        className="flex items-center gap-2"
                                     >
                                         <LocationIcon />
 
@@ -325,25 +188,14 @@ export default function CareerJobDetailsModal({
                                     {/* DIVIDER */}
 
                                     <span
-                                        className="
-                                            hidden
-                                            h-4
-                                            w-px
-                                            bg-black/15
-
-                                            sm:block
-                                        "
+                                        className="hidden h-4 w-px bg-black/15 sm:block"
                                         aria-hidden="true"
                                     />
 
                                     {/* TYPE */}
 
                                     <div
-                                        className="
-                                            flex
-                                            items-center
-                                            gap-2
-                                        "
+                                        className="flex items-center gap-2"
                                     >
                                         <BriefcaseIcon />
 
@@ -357,19 +209,7 @@ export default function CareerJobDetailsModal({
                             {/* JOB ICON */}
 
                             <div
-                                className="
-                                    hidden
-                                    h-16
-                                    w-16
-                                    shrink-0
-                                    items-center
-                                    justify-center
-                                    rounded-[20px]
-                                    bg-black
-                                    text-white
-
-                                    lg:flex
-                                "
+                                className="hidden h-16 w-16 shrink-0 items-center justify-center rounded-[20px] bg-black text-white lg:flex"
                             >
                                 <CareerJobIcon type={job.icon} />
                             </div>
@@ -378,13 +218,7 @@ export default function CareerJobDetailsModal({
                         {/* DIVIDER */}
 
                         <div
-                            className="
-                                my-8
-                                h-px
-                                bg-black/[0.09]
-
-                                sm:my-9
-                            "
+                            className="my-8 h-px bg-black/[0.09] sm:my-9"
                         />
 
                         {/* =====================================
@@ -397,16 +231,7 @@ export default function CareerJobDetailsModal({
                             </SectionHeading>
 
                             <p
-                                className="
-                                    mt-3
-                                    max-w-[760px]
-                                    text-[15px]
-                                    leading-7
-                                    text-black/60
-
-                                    sm:text-base
-                                    sm:leading-8
-                                "
+                                className="mt-3 max-w-[760px] text-[15px] leading-7 text-black/60 sm:text-base sm:leading-8"
                             >
                                 {job.description}
                             </p>
@@ -422,35 +247,15 @@ export default function CareerJobDetailsModal({
                             </SectionHeading>
 
                             <ul
-                                className="
-                                    mt-4
-                                    grid
-                                    gap-3
-
-                                    lg:grid-cols-2
-                                    lg:gap-x-10
-                                "
+                                className="mt-4 grid gap-3 lg:grid-cols-2 lg:gap-x-10"
                             >
                                 {job.responsibilities.map((item) => (
                                     <li
                                         key={item}
-                                        className="
-                                            flex
-                                            gap-3
-                                            text-[15px]
-                                            leading-7
-                                            text-black/60
-                                        "
+                                        className="flex gap-3 text-[15px] leading-7 text-black/60"
                                     >
                                         <span
-                                            className="
-                                                mt-[11px]
-                                                h-1.5
-                                                w-1.5
-                                                shrink-0
-                                                rounded-full
-                                                bg-black
-                                            "
+                                            className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-black"
                                         />
 
                                         <span>
@@ -471,35 +276,15 @@ export default function CareerJobDetailsModal({
                             </SectionHeading>
 
                             <ul
-                                className="
-                                    mt-4
-                                    grid
-                                    gap-3
-
-                                    lg:grid-cols-2
-                                    lg:gap-x-10
-                                "
+                                className="mt-4 grid gap-3 lg:grid-cols-2 lg:gap-x-10"
                             >
                                 {job.requirements.map((item) => (
                                     <li
                                         key={item}
-                                        className="
-                                            flex
-                                            gap-3
-                                            text-[15px]
-                                            leading-7
-                                            text-black/60
-                                        "
+                                        className="flex gap-3 text-[15px] leading-7 text-black/60"
                                     >
                                         <span
-                                            className="
-                                                mt-[11px]
-                                                h-1.5
-                                                w-1.5
-                                                shrink-0
-                                                rounded-full
-                                                bg-black
-                                            "
+                                            className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-black"
                                         />
 
                                         <span>
@@ -515,45 +300,20 @@ export default function CareerJobDetailsModal({
                         ====================================== */}
 
                         <div
-                            className="
-                                mt-10
-                                rounded-[20px]
-                                bg-[#f5f5f5]
-                                p-5
-
-                                sm:mt-12
-                                sm:p-6
-                            "
+                            className="mt-10 rounded-[20px] bg-[#f5f5f5] p-5 sm:mt-12 sm:p-6"
                         >
                             <div
-                                className="
-                                    flex
-                                    flex-col
-                                    gap-4
-
-                                    sm:flex-row
-                                    sm:items-center
-                                    sm:justify-between
-                                "
+                                className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
                             >
                                 <div>
                                     <p
-                                        className="
-                                            text-sm
-                                            font-semibold
-                                            text-black
-                                        "
+                                        className="text-sm font-semibold text-black"
                                     >
                                         Interested in this role?
                                     </p>
 
                                     <p
-                                        className="
-                                            mt-1
-                                            text-xs
-                                            leading-5
-                                            text-black/50
-                                        "
+                                        className="mt-1 text-xs leading-5 text-black/50"
                                     >
                                         Take the next step and join our team.
                                     </p>
@@ -561,27 +321,17 @@ export default function CareerJobDetailsModal({
 
                                 <a
                                     href="#application"
-                                    onClick={onClose}
-                                    className="
-                                        inline-flex
-                                        shrink-0
-                                        items-center
-                                        justify-center
-                                        gap-3
-                                        rounded-full
-                                        bg-black
-                                        px-6
-                                        py-3.5
-                                        text-sm
-                                        font-semibold
-                                        text-white
-                                        transition-all
-                                        duration-300
-
-                                        hover:-translate-y-0.5
-                                        hover:bg-[#1c1c1c]
-                                        hover:shadow-[0_10px_30px_rgba(0,0,0,0.18)]
-                                    "
+                                    onClick={() => {
+                                        onClose();
+                                        if (typeof window !== "undefined") {
+                                            window.dispatchEvent(
+                                                new CustomEvent("nss:apply-job", {
+                                                    detail: { jobTitle: job.title, jobId: job.id },
+                                                })
+                                            );
+                                        }
+                                    }}
+                                    className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-black px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1c1c1c] hover:shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
                                 >
                                     Apply for this position
 
@@ -626,14 +376,7 @@ export default function CareerJobDetailsModal({
 function SectionHeading({ children }) {
     return (
         <h3
-            className="
-                text-[17px]
-                font-semibold
-                tracking-[-0.025em]
-                text-black
-
-                sm:text-lg
-            "
+            className="text-[17px] font-semibold tracking-[-0.025em] text-black sm:text-lg"
         >
             {children}
         </h3>

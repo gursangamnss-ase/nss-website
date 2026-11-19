@@ -25,10 +25,12 @@ export default function Section({
   className = "",
   ...props
 }) {
+  const combinedClassName = `${spacingClasses[spacing] || ""} ${backgroundClasses[background] || ""} ${className}`.replace(/\s+/g, " ").trim();
+
   return (
     <section
       id={id}
-      className={`${spacingClasses[spacing] || ""} ${backgroundClasses[background] || ""} ${className}`}
+      className={combinedClassName}
       {...props}
     >
       {children}

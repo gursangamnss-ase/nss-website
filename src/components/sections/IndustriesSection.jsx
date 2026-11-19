@@ -67,7 +67,7 @@ export default function IndustriesSection({
         </motion.div>
 
         {/* 8 Simple Industry Cards (Number, Title, Description) */}
-        <div className="mt-8 sm:mt-16 lg:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 md:gap-3.5">
+        <div className="mt-8 sm:mt-16 lg:mt-24 grid grid-cols-2 xl:grid-cols-4 gap-2.5 sm:gap-3 md:gap-3.5">
           {industries.map((item, idx) => (
             <motion.div
               key={`${id}-${item.id}`}

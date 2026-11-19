@@ -1,18 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Button from "@/components/ui/Button";
+import careerJobsData from "@/data/careerJobsData";
+
+function ChevronDownIcon({ className = "h-4 w-4" }) {
+    return (
+        <svg
+            className={className}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+        >
+            <path d="M6 9l6 6 6-6" />
+        </svg>
+    );
+}
 
 export default function CareerApplicationSection() {
     const shouldReduceMotion = useReducedMotion();
+    const positionSelectRef = useRef(null);
+    const [isPositionHighlighted, setIsPositionHighlighted] = useState(false);
 
     const [formData, setFormData] = useState({
-        applyFor: "",
+        applyPosition: "",
+        experience: "",
+        contactTiming: "Anytime during business hours",
         name: "",
         email: "",
         phone: "",
@@ -26,6 +48,53 @@ export default function CareerApplicationSection() {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
+
+    // Listen for "Apply for this position" event from modal / job openings
+    useEffect(() => {
+        const handleJobSelection = (event) => {
+            const jobTitle = event.detail?.jobTitle;
+            if (jobTitle) {
+                setFormData((previous) => ({
+                    ...previous,
+                    applyPosition: jobTitle,
+                }));
+                setError("");
+
+                // Smooth scroll to application form
+                const section = document.getElementById("application");
+                if (section) {
+                    section.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+
+                // Temporary highlight ring effect
+                setIsPositionHighlighted(true);
+                setTimeout(() => setIsPositionHighlighted(false), 2400);
+
+                // Focus select dropdown
+                setTimeout(() => {
+                    positionSelectRef.current?.focus();
+                }, 450);
+            }
+        };
+
+        window.addEventListener("nss:apply-job", handleJobSelection);
+
+        // Also check URL parameters on initial load (?position=... or ?job=...)
+        if (typeof window !== "undefined") {
+            const params = new URLSearchParams(window.location.search);
+            const paramPosition = params.get("position") || params.get("job");
+            if (paramPosition) {
+                setFormData((previous) => ({
+                    ...previous,
+                    applyPosition: paramPosition,
+                }));
+            }
+        }
+
+        return () => {
+            window.removeEventListener("nss:apply-job", handleJobSelection);
+        };
+    }, []);
 
     const handleChange = (event) => {
         const { name, value, files } = event.target;
@@ -76,8 +145,18 @@ export default function CareerApplicationSection() {
         setError("");
         setSuccess("");
 
-        if (!formData.applyFor) {
-            setError("Please select what you are applying for.");
+        if (!formData.applyPosition) {
+            setError("Please select the position you are applying for.");
+            return;
+        }
+
+        if (!formData.experience) {
+            setError("Please select your total experience.");
+            return;
+        }
+
+        if (!formData.contactTiming) {
+            setError("Please select your preferred contact timing.");
             return;
         }
 
@@ -130,22 +209,8 @@ export default function CareerApplicationSection() {
             setIsSubmitting(true);
 
             /*
-             * Connect your backend API here.
-             *
-             * Example:
-             *
-             * const data = new FormData();
-             *
-             * Object.entries(formData).forEach(([key, value]) => {
-             *     data.append(key, value);
-             * });
-             *
-             * await fetch(`${process.env.NEXT_PUBLIC_API_URL}/career/apply`, {
-             *     method: "POST",
-             *     body: data,
-             * });
+             * Connect backend API here when ready.
              */
-
             await new Promise((resolve) => setTimeout(resolve, 900));
 
             setSuccess(
@@ -153,7 +218,9 @@ export default function CareerApplicationSection() {
             );
 
             setFormData({
-                applyFor: "",
+                applyPosition: "",
+                experience: "",
+                contactTiming: "Anytime during business hours",
                 name: "",
                 email: "",
                 phone: "",
@@ -246,13 +313,7 @@ export default function CareerApplicationSection() {
             id="application"
             spacing="none"
             background="dark"
-            className="
-                relative
-                overflow-hidden
-                py-20
-                sm:py-24
-                lg:py-32
-            "
+            className="relative overflow-hidden py-20 sm:py-24 lg:py-32"
         >
             {/* =========================================================
                 BACKGROUND
@@ -286,11 +347,7 @@ export default function CareerApplicationSection() {
                                   ease: "easeInOut",
                               }
                     }
-                    className="
-                        absolute
-                        inset-[-3%]
-                        will-change-transform
-                    "
+                    className="absolute inset-[-3%] will-change-transform"
                 >
                     <Image
                         src="/career/career-application-back.webp"
@@ -298,11 +355,7 @@ export default function CareerApplicationSection() {
                         fill
                         loading="lazy"
                         sizes="100vw"
-                        className="
-                            object-cover
-                            object-center
-                            opacity-[0.52]
-                        "
+                        className="object-cover object-center opacity-[0.52]"
                     />
                 </motion.div>
 
@@ -311,14 +364,7 @@ export default function CareerApplicationSection() {
 
                 {/* Gradient for text readability */}
                 <div
-                    className="
-                        absolute
-                        inset-0
-                        bg-gradient-to-b
-                        from-black/10
-                        via-black/20
-                        to-black/55
-                    "
+                    className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/55"
                 />
 
                 {/* Very subtle floating glow */}
@@ -341,17 +387,7 @@ export default function CareerApplicationSection() {
                                   ease: "easeInOut",
                               }
                     }
-                    className="
-                        absolute
-                        -left-48
-                        top-[15%]
-                        h-[420px]
-                        w-[420px]
-                        rounded-full
-                        bg-white/[0.025]
-                        blur-[120px]
-                        will-change-transform
-                    "
+                    className="absolute -left-48 top-[15%] h-[420px] w-[420px] rounded-full bg-white/[0.025] blur-[120px] will-change-transform"
                 />
             </div>
 
@@ -392,25 +428,12 @@ export default function CareerApplicationSection() {
                         duration: 0.7,
                         ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="
-                        mx-auto
-                        max-w-4xl
-                        text-center
-                    "
+                    className="mx-auto max-w-4xl text-center"
                 >
                     {/* Small Label */}
 
                     <div
-                        className="
-                            flex
-                            items-center
-                            justify-center
-                            gap-2
-                            text-sm
-                            font-medium
-                            tracking-[0.02em]
-                            text-white/75
-                        "
+                        className="flex items-center justify-center gap-2 text-sm font-medium tracking-[0.02em] text-white/75"
                     >
                         <span
                             className="text-white"
@@ -427,28 +450,12 @@ export default function CareerApplicationSection() {
                     {/* Heading */}
 
                     <h2
-                        className="
-                            mt-5
-                            text-[clamp(2.5rem,6.5vw,4.5rem)]
-                            font-medium
-                            leading-[0.88]
-                            tracking-[-0.055em]
-                            text-white
-                        "
+                        className="mt-5 text-[clamp(2.5rem,6.5vw,4.5rem)] font-medium leading-[0.88] tracking-[-0.055em] text-white"
                     >
                         Start Your
 
                         <span
-                            className="
-                                block
-                                font-script
-                                mt-8
-                                text-[clamp(2.5rem,6.5vw,4.5rem)]
-                                font-normal
-                                leading-[0.75]
-                                tracking-[-0.02em]
-                                text-white/90
-                            "
+                            className="block font-script mt-8 text-[clamp(2.5rem,6.5vw,4.5rem)] font-normal leading-[0.75] tracking-[-0.02em] text-white/90"
                         >
                             Journey
                         </span>
@@ -457,16 +464,7 @@ export default function CareerApplicationSection() {
                     {/* Description */}
 
                     <p
-                        className="
-                            mx-auto
-                            mt-7
-                            max-w-2xl
-                            text-sm
-                            leading-6
-                            text-white/65
-                            sm:text-base
-                            sm:leading-7
-                        "
+                        className="mx-auto mt-7 max-w-2xl text-sm leading-6 text-white/65 sm:text-base sm:leading-7"
                     >
                         Tell us about yourself and explore an opportunity
                         to grow, learn, create, and build your future with
@@ -504,91 +502,41 @@ export default function CareerApplicationSection() {
                         delay: 0.08,
                         ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="
-                        mt-12
-                        overflow-hidden
-                        rounded-[28px]
-                        border
-                        border-white/15
-                        bg-white
-                        shadow-[0_30px_100px_rgba(0,0,0,0.30)]
-                        sm:mt-16
-                        sm:rounded-[36px]
-                        lg:mt-20
-                    "
+                    className="mt-12 overflow-hidden rounded-[28px] border border-white/15 bg-white shadow-[0_30px_100px_rgba(0,0,0,0.30)] sm:mt-16 sm:rounded-[36px] lg:mt-20"
                 >
                     <div
-                        className="
-                            grid
-                            grid-cols-1
-                            lg:grid-cols-[minmax(0,1.65fr)_minmax(300px,0.75fr)]
-                        "
+                        className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.65fr)_minmax(300px,0.75fr)]"
                     >
                         {/* =================================================
                             FORM
                         ================================================== */}
 
                         <div
-                            className="
-                                p-6
-                                sm:p-8
-                                lg:p-10
-                                xl:p-12
-                            "
+                            className="p-6 sm:p-8 lg:p-10 xl:p-12"
                         >
                             {/* Form Heading */}
 
                             <div>
                                 <div
-                                    className="
-                                        mb-3
-                                        flex
-                                        items-center
-                                        gap-2
-                                        text-xs
-                                        font-semibold
-                                        uppercase
-                                        tracking-[0.12em]
-                                        text-black/45
-                                    "
+                                    className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-black/45"
                                 >
                                     <span
-                                        className="
-                                            h-2
-                                            w-2
-                                            rounded-full
-                                            bg-black
-                                        "
+                                        className="h-2 w-2 rounded-full bg-black"
                                     />
 
                                     Application Form
                                 </div>
 
                                 <h3
-                                    className="
-                                        text-2xl
-                                        font-semibold
-                                        tracking-[-0.035em]
-                                        text-black
-                                        sm:text-3xl
-                                    "
+                                    className="text-2xl font-semibold tracking-[-0.035em] text-black sm:text-3xl"
                                 >
                                     Apply for an Opportunity
                                 </h3>
 
                                 <p
-                                    className="
-                                        mt-2
-                                        max-w-xl
-                                        text-sm
-                                        leading-6
-                                        text-[#5b5b5b]
-                                        sm:text-base
-                                    "
+                                    className="mt-2 max-w-xl text-sm leading-relaxed text-[#5b5b5b] sm:text-base"
                                 >
-                                    Apply for a job, internship, or
-                                    industrial training opportunity
-                                    at NetSquare Softwares.
+                                    Apply for open positions, internships, or career opportunities at NetSquare Softwares.
                                 </p>
                             </div>
 
@@ -604,18 +552,7 @@ export default function CareerApplicationSection() {
                                         opacity: 1,
                                         y: 0,
                                     }}
-                                    className="
-                                        mt-6
-                                        rounded-2xl
-                                        border
-                                        border-red-200
-                                        bg-red-50
-                                        px-4
-                                        py-3
-                                        text-sm
-                                        font-medium
-                                        text-red-600
-                                    "
+                                    className="mt-6 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-600"
                                 >
                                     {error}
                                 </motion.div>
@@ -633,18 +570,7 @@ export default function CareerApplicationSection() {
                                         opacity: 1,
                                         y: 0,
                                     }}
-                                    className="
-                                        mt-6
-                                        rounded-2xl
-                                        border
-                                        border-green-200
-                                        bg-green-50
-                                        px-4
-                                        py-3
-                                        text-sm
-                                        font-medium
-                                        text-green-700
-                                    "
+                                    className="mt-6 rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-medium text-green-700"
                                 >
                                     {success}
                                 </motion.div>
@@ -657,261 +583,188 @@ export default function CareerApplicationSection() {
                                 className="mt-8"
                             >
                                 {/* =================================================
-                                    APPLY FOR
+                                    ROW 1: OPEN POSITION & TOTAL EXPERIENCE
                                 ================================================== */}
 
-                                <fieldset>
-                                    <legend
-                                        className="
-                                            mb-3
-                                            text-sm
-                                            font-semibold
-                                            text-black
-                                        "
-                                    >
-                                        Apply For
-                                        <span className="ml-1 text-red-500">
-                                            *
-                                        </span>
-                                    </legend>
+                                <div className="grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
+                                    {/* Applying For Position */}
+                                    <div>
+                                        <label
+                                            htmlFor="applyPosition"
+                                            className="mb-2 block text-sm font-semibold text-black"
+                                        >
+                                            Applying For Position
+                                            <span className="ml-1 text-red-500">
+                                                *
+                                            </span>
+                                        </label>
 
-                                    <div
-                                        className="
-                                            grid
-                                            grid-cols-1
-                                            gap-3
-                                            sm:grid-cols-3
-                                        "
-                                    >
-                                        {[
-                                            {
-                                                id: "job",
-                                                label: "Job",
-                                            },
-                                            {
-                                                id: "internship",
-                                                label: "Internship",
-                                            },
-                                            {
-                                                id: "training",
-                                                label: "Industrial Training",
-                                            },
-                                        ].map((option) => (
-                                            <label
-                                                key={option.id}
-                                                className="
-                                                    group
-                                                    flex
-                                                    min-h-[52px]
-                                                    cursor-pointer
-                                                    items-center
-                                                    gap-3
-                                                    rounded-full
-                                                    border
-                                                    border-black/15
-                                                    px-4
-                                                    transition-all
-                                                    duration-300
-                                                    hover:border-black/50
-                                                "
+                                        <div className="relative">
+                                            <select
+                                                id="applyPosition"
+                                                name="applyPosition"
+                                                ref={positionSelectRef}
+                                                value={formData.applyPosition}
+                                                onChange={handleChange}
+                                                className={`h-12 w-full appearance-none rounded-full border bg-white px-5 pr-11 text-sm text-black outline-none transition-all duration-300 focus:border-black focus:ring-4 focus:ring-black/[0.05] ${
+                                                    isPositionHighlighted
+                                                        ? "border-black ring-4 ring-black/15 shadow-[0_0_20px_rgba(0,0,0,0.12)]"
+                                                        : "border-black/15"
+                                                } ${!formData.applyPosition ? "text-black/45" : "text-black font-medium"}`}
                                             >
-                                                <input
-                                                    type="radio"
-                                                    name="applyFor"
-                                                    value={option.id}
-                                                    checked={
-                                                        formData.applyFor ===
-                                                        option.id
-                                                    }
-                                                    onChange={
-                                                        handleChange
-                                                    }
-                                                    className="
-                                                        h-4
-                                                        w-4
-                                                        accent-black
-                                                    "
-                                                />
-
-                                                <span
-                                                    className="
-                                                        text-sm
-                                                        font-medium
-                                                        text-black
-                                                    "
+                                                <option value="" disabled>
+                                                    Select an open position
+                                                </option>
+                                                {careerJobsData.map((job) => (
+                                                    <option
+                                                        key={job.id}
+                                                        value={job.title}
+                                                        className="text-black"
+                                                    >
+                                                        {job.title} ({job.category})
+                                                    </option>
+                                                ))}
+                                                <option
+                                                    value="Internship / Industrial Training"
+                                                    className="text-black"
                                                 >
-                                                    {option.label}
-                                                </span>
-                                            </label>
-                                        ))}
+                                                    Internship / Industrial Training
+                                                </option>
+                                                <option
+                                                    value="Other / General Application"
+                                                    className="text-black"
+                                                >
+                                                    Other / General Application
+                                                </option>
+                                            </select>
+
+                                            <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-black/45">
+                                                <ChevronDownIcon />
+                                            </div>
+                                        </div>
                                     </div>
-                                </fieldset>
+
+                                    {/* Total Experience */}
+                                    <div>
+                                        <label
+                                            htmlFor="experience"
+                                            className="mb-2 block text-sm font-semibold text-black"
+                                        >
+                                            Total Experience
+                                            <span className="ml-1 text-red-500">
+                                                *
+                                            </span>
+                                        </label>
+
+                                        <div className="relative">
+                                            <select
+                                                id="experience"
+                                                name="experience"
+                                                value={formData.experience}
+                                                onChange={handleChange}
+                                                className={`h-12 w-full appearance-none rounded-full border border-black/15 bg-white px-5 pr-11 text-sm outline-none transition-all duration-300 focus:border-black focus:ring-4 focus:ring-black/[0.05] ${
+                                                    !formData.experience
+                                                        ? "text-black/45"
+                                                        : "text-black font-medium"
+                                                }`}
+                                            >
+                                                <option value="" disabled>
+                                                    Select total experience
+                                                </option>
+                                                <option
+                                                    value="Fresher / Entry Level (< 1 Year)"
+                                                    className="text-black"
+                                                >
+                                                    Fresher / Entry Level (&lt; 1 Year)
+                                                </option>
+                                                <option
+                                                    value="1 – 2 Years"
+                                                    className="text-black"
+                                                >
+                                                    1 – 2 Years
+                                                </option>
+                                                <option
+                                                    value="3 – 5 Years"
+                                                    className="text-black"
+                                                >
+                                                    3 – 5 Years
+                                                </option>
+                                                <option
+                                                    value="5+ Years"
+                                                    className="text-black"
+                                                >
+                                                    5+ Years
+                                                </option>
+                                            </select>
+
+                                            <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-black/45">
+                                                <ChevronDownIcon />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 {/* =================================================
-                                    PERSONAL DETAILS
+                                    ROW 2: CONTACT TIMING & GENDER
                                 ================================================== */}
 
-                                <div
-                                    className="
-                                        mt-7
-                                        grid
-                                        grid-cols-1
-                                        gap-x-6
-                                        gap-y-5
-                                        sm:grid-cols-2
-                                    "
-                                >
-                                    {/* Name */}
-
+                                <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
+                                    {/* Preferred Contact Timing */}
                                     <div>
                                         <label
-                                            htmlFor="name"
-                                            className="
-                                                mb-2
-                                                block
-                                                text-sm
-                                                font-semibold
-                                                text-black
-                                            "
+                                            htmlFor="contactTiming"
+                                            className="mb-2 block text-sm font-semibold text-black"
                                         >
-                                            Name
+                                            Preferred Contact Timing
                                             <span className="ml-1 text-red-500">
                                                 *
                                             </span>
                                         </label>
 
-                                        <input
-                                            id="name"
-                                            name="name"
-                                            type="text"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            placeholder="Enter your full name"
-                                            className="
-                                                h-12
-                                                w-full
-                                                rounded-full
-                                                border
-                                                border-black/15
-                                                bg-white
-                                                px-5
-                                                text-sm
-                                                text-black
-                                                outline-none
-                                                transition-all
-                                                duration-300
-                                                placeholder:text-black/35
-                                                focus:border-black
-                                                focus:ring-4
-                                                focus:ring-black/[0.05]
-                                            "
-                                        />
-                                    </div>
+                                        <div className="relative">
+                                            <select
+                                                id="contactTiming"
+                                                name="contactTiming"
+                                                value={formData.contactTiming}
+                                                onChange={handleChange}
+                                                className="h-12 w-full appearance-none rounded-full border border-black/15 bg-white px-5 pr-11 text-sm font-medium text-black outline-none transition-all duration-300 focus:border-black focus:ring-4 focus:ring-black/[0.05]"
+                                            >
+                                                <option
+                                                    value="Anytime during business hours"
+                                                    className="text-black"
+                                                >
+                                                    Anytime during business hours
+                                                </option>
+                                                <option
+                                                    value="Morning (9:00 AM – 12:00 PM)"
+                                                    className="text-black"
+                                                >
+                                                    Morning (9:00 AM – 12:00 PM)
+                                                </option>
+                                                <option
+                                                    value="Afternoon (12:00 PM – 4:00 PM)"
+                                                    className="text-black"
+                                                >
+                                                    Afternoon (12:00 PM – 4:00 PM)
+                                                </option>
+                                                <option
+                                                    value="Evening (4:00 PM – 7:00 PM)"
+                                                    className="text-black"
+                                                >
+                                                    Evening (4:00 PM – 7:00 PM)
+                                                </option>
+                                            </select>
 
-                                    {/* Email */}
-
-                                    <div>
-                                        <label
-                                            htmlFor="email"
-                                            className="
-                                                mb-2
-                                                block
-                                                text-sm
-                                                font-semibold
-                                                text-black
-                                            "
-                                        >
-                                            Email Address
-                                            <span className="ml-1 text-red-500">
-                                                *
-                                            </span>
-                                        </label>
-
-                                        <input
-                                            id="email"
-                                            name="email"
-                                            type="email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            placeholder="Enter your email address"
-                                            className="
-                                                h-12
-                                                w-full
-                                                rounded-full
-                                                border
-                                                border-black/15
-                                                bg-white
-                                                px-5
-                                                text-sm
-                                                text-black
-                                                outline-none
-                                                transition-all
-                                                duration-300
-                                                placeholder:text-black/35
-                                                focus:border-black
-                                                focus:ring-4
-                                                focus:ring-black/[0.05]
-                                            "
-                                        />
-                                    </div>
-
-                                    {/* Phone */}
-
-                                    <div>
-                                        <label
-                                            htmlFor="phone"
-                                            className="
-                                                mb-2
-                                                block
-                                                text-sm
-                                                font-semibold
-                                                text-black
-                                            "
-                                        >
-                                            Phone
-                                            <span className="ml-1 text-red-500">
-                                                *
-                                            </span>
-                                        </label>
-
-                                        <input
-                                            id="phone"
-                                            name="phone"
-                                            type="tel"
-                                            value={formData.phone}
-                                            onChange={handleChange}
-                                            placeholder="Enter your contact number"
-                                            className="
-                                                h-12
-                                                w-full
-                                                rounded-full
-                                                border
-                                                border-black/15
-                                                bg-white
-                                                px-5
-                                                text-sm
-                                                text-black
-                                                outline-none
-                                                transition-all
-                                                duration-300
-                                                placeholder:text-black/35
-                                                focus:border-black
-                                                focus:ring-4
-                                                focus:ring-black/[0.05]
-                                            "
-                                        />
+                                            <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-black/45">
+                                                <ChevronDownIcon />
+                                            </div>
+                                        </div>
                                     </div>
 
                                     {/* Gender */}
-
                                     <fieldset>
                                         <legend
-                                            className="
-                                                mb-2
-                                                text-sm
-                                                font-semibold
-                                                text-black
-                                            "
+                                            className="mb-2 text-sm font-semibold text-black"
                                         >
                                             Gender
                                             <span className="ml-1 text-red-500">
@@ -920,18 +773,7 @@ export default function CareerApplicationSection() {
                                         </legend>
 
                                         <div
-                                            className="
-                                                flex
-                                                min-h-[48px]
-                                                flex-wrap
-                                                items-center
-                                                gap-5
-                                                rounded-full
-                                                border
-                                                border-black/15
-                                                px-4
-                                                sm:gap-7
-                                            "
+                                            className="flex h-12 items-center justify-between rounded-full border border-black/15 bg-white px-3.5 sm:px-4 lg:px-3 xl:px-4"
                                         >
                                             {[
                                                 {
@@ -949,15 +791,7 @@ export default function CareerApplicationSection() {
                                             ].map((option) => (
                                                 <label
                                                     key={option.id}
-                                                    className="
-                                                        flex
-                                                        cursor-pointer
-                                                        items-center
-                                                        gap-2
-                                                        text-sm
-                                                        font-medium
-                                                        text-black
-                                                    "
+                                                    className="flex cursor-pointer items-center gap-1.5 sm:gap-2 text-[13px] sm:text-sm font-medium text-black whitespace-nowrap select-none"
                                                 >
                                                     <input
                                                         type="radio"
@@ -970,172 +804,101 @@ export default function CareerApplicationSection() {
                                                         onChange={
                                                             handleChange
                                                         }
-                                                        className="
-                                                            h-4
-                                                            w-4
-                                                            accent-black
-                                                        "
+                                                        className="h-4 w-4 shrink-0 accent-black"
                                                     />
 
-                                                    {option.label}
+                                                    <span>{option.label}</span>
                                                 </label>
                                             ))}
                                         </div>
                                     </fieldset>
+                                </div>
 
-                                    {/* Country */}
+                                {/* =================================================
+                                    ROW 3: NAME & EMAIL
+                                ================================================== */}
 
+                                <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
+                                    {/* Name */}
                                     <div>
                                         <label
-                                            htmlFor="country"
-                                            className="
-                                                mb-2
-                                                block
-                                                text-sm
-                                                font-semibold
-                                                text-black
-                                            "
+                                            htmlFor="name"
+                                            className="mb-2 block text-sm font-semibold text-black"
                                         >
-                                            Country
+                                            Name
                                             <span className="ml-1 text-red-500">
                                                 *
                                             </span>
                                         </label>
 
                                         <input
-                                            id="country"
-                                            name="country"
+                                            id="name"
+                                            name="name"
                                             type="text"
-                                            value={formData.country}
+                                            value={formData.name}
                                             onChange={handleChange}
-                                            placeholder="Enter your country"
-                                            className="
-                                                h-12
-                                                w-full
-                                                rounded-full
-                                                border
-                                                border-black/15
-                                                bg-white
-                                                px-5
-                                                text-sm
-                                                text-black
-                                                outline-none
-                                                transition-all
-                                                duration-300
-                                                placeholder:text-black/35
-                                                focus:border-black
-                                                focus:ring-4
-                                                focus:ring-black/[0.05]
-                                            "
+                                            placeholder="Enter your full name"
+                                            className="h-12 w-full rounded-full border border-black/15 bg-white px-5 text-sm text-black outline-none transition-all duration-300 placeholder:text-black/35 focus:border-black focus:ring-4 focus:ring-black/[0.05]"
                                         />
                                     </div>
 
-                                    {/* State */}
-
+                                    {/* Email */}
                                     <div>
                                         <label
-                                            htmlFor="state"
-                                            className="
-                                                mb-2
-                                                block
-                                                text-sm
-                                                font-semibold
-                                                text-black
-                                            "
+                                            htmlFor="email"
+                                            className="mb-2 block text-sm font-semibold text-black"
                                         >
-                                            State
+                                            Email Address
                                             <span className="ml-1 text-red-500">
                                                 *
                                             </span>
                                         </label>
 
                                         <input
-                                            id="state"
-                                            name="state"
-                                            type="text"
-                                            value={formData.state}
+                                            id="email"
+                                            name="email"
+                                            type="email"
+                                            value={formData.email}
                                             onChange={handleChange}
-                                            placeholder="Enter your state"
-                                            className="
-                                                h-12
-                                                w-full
-                                                rounded-full
-                                                border
-                                                border-black/15
-                                                bg-white
-                                                px-5
-                                                text-sm
-                                                text-black
-                                                outline-none
-                                                transition-all
-                                                duration-300
-                                                placeholder:text-black/35
-                                                focus:border-black
-                                                focus:ring-4
-                                                focus:ring-black/[0.05]
-                                            "
+                                            placeholder="Enter your email address"
+                                            className="h-12 w-full rounded-full border border-black/15 bg-white px-5 text-sm text-black outline-none transition-all duration-300 placeholder:text-black/35 focus:border-black focus:ring-4 focus:ring-black/[0.05]"
                                         />
                                     </div>
+                                </div>
 
-                                    {/* City */}
+                                {/* =================================================
+                                    ROW 4: PHONE & CV UPLOAD
+                                ================================================== */}
 
+                                <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
+                                    {/* Phone */}
                                     <div>
                                         <label
-                                            htmlFor="city"
-                                            className="
-                                                mb-2
-                                                block
-                                                text-sm
-                                                font-semibold
-                                                text-black
-                                            "
+                                            htmlFor="phone"
+                                            className="mb-2 block text-sm font-semibold text-black"
                                         >
-                                            City
+                                            Phone
                                             <span className="ml-1 text-red-500">
                                                 *
                                             </span>
                                         </label>
 
                                         <input
-                                            id="city"
-                                            name="city"
-                                            type="text"
-                                            value={formData.city}
+                                            id="phone"
+                                            name="phone"
+                                            type="tel"
+                                            value={formData.phone}
                                             onChange={handleChange}
-                                            placeholder="Enter your city"
-                                            className="
-                                                h-12
-                                                w-full
-                                                rounded-full
-                                                border
-                                                border-black/15
-                                                bg-white
-                                                px-5
-                                                text-sm
-                                                text-black
-                                                outline-none
-                                                transition-all
-                                                duration-300
-                                                placeholder:text-black/35
-                                                focus:border-black
-                                                focus:ring-4
-                                                focus:ring-black/[0.05]
-                                            "
+                                            placeholder="Enter your contact number"
+                                            className="h-12 w-full rounded-full border border-black/15 bg-white px-5 text-sm text-black outline-none transition-all duration-300 placeholder:text-black/35 focus:border-black focus:ring-4 focus:ring-black/[0.05]"
                                         />
                                     </div>
 
                                     {/* CV */}
-
                                     <div>
                                         <label
                                             htmlFor="cv"
-                                            className="
-                                                mb-2
-                                                block
-                                                text-sm
-                                                font-semibold
-                                                text-black
-                                            "
+                                            className="mb-2 block text-sm font-semibold text-black"
                                         >
                                             Upload CV
                                             <span className="ml-1 text-red-500">
@@ -1145,29 +908,10 @@ export default function CareerApplicationSection() {
 
                                         <label
                                             htmlFor="cv"
-                                            className="
-                                                flex
-                                                min-h-[48px]
-                                                cursor-pointer
-                                                items-center
-                                                justify-between
-                                                gap-3
-                                                rounded-full
-                                                border
-                                                border-black/15
-                                                px-4
-                                                transition-all
-                                                duration-300
-                                                hover:border-black/45
-                                            "
+                                            className="flex min-h-[48px] cursor-pointer items-center justify-between gap-3 rounded-full border border-black/15 px-4 transition-all duration-300 hover:border-black/45"
                                         >
                                             <span
-                                                className="
-                                                    min-w-0
-                                                    truncate
-                                                    text-sm
-                                                    text-black/50
-                                                "
+                                                className="min-w-0 truncate text-sm text-black/50"
                                             >
                                                 {formData.cv
                                                     ? formData.cv.name
@@ -1175,19 +919,7 @@ export default function CareerApplicationSection() {
                                             </span>
 
                                             <span
-                                                className="
-                                                    shrink-0
-                                                    rounded-full
-                                                    bg-black
-                                                    px-4
-                                                    py-2
-                                                    text-xs
-                                                    font-semibold
-                                                    text-white
-                                                    transition-transform
-                                                    duration-300
-                                                    hover:scale-105
-                                                "
+                                                className="shrink-0 rounded-full bg-black px-4 py-2 text-xs font-semibold text-white transition-transform duration-300 hover:scale-105"
                                             >
                                                 Browse
                                             </span>
@@ -1205,6 +937,81 @@ export default function CareerApplicationSection() {
                                 </div>
 
                                 {/* =================================================
+                                    ROW 5: COUNTRY, STATE & CITY
+                                ================================================== */}
+
+                                <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-3">
+                                    {/* Country */}
+                                    <div>
+                                        <label
+                                            htmlFor="country"
+                                            className="mb-2 block text-sm font-semibold text-black"
+                                        >
+                                            Country
+                                            <span className="ml-1 text-red-500">
+                                                *
+                                            </span>
+                                        </label>
+
+                                        <input
+                                            id="country"
+                                            name="country"
+                                            type="text"
+                                            value={formData.country}
+                                            onChange={handleChange}
+                                            placeholder="Enter your country"
+                                            className="h-12 w-full rounded-full border border-black/15 bg-white px-5 text-sm text-black outline-none transition-all duration-300 placeholder:text-black/35 focus:border-black focus:ring-4 focus:ring-black/[0.05]"
+                                        />
+                                    </div>
+
+                                    {/* State */}
+                                    <div>
+                                        <label
+                                            htmlFor="state"
+                                            className="mb-2 block text-sm font-semibold text-black"
+                                        >
+                                            State
+                                            <span className="ml-1 text-red-500">
+                                                *
+                                            </span>
+                                        </label>
+
+                                        <input
+                                            id="state"
+                                            name="state"
+                                            type="text"
+                                            value={formData.state}
+                                            onChange={handleChange}
+                                            placeholder="Enter your state"
+                                            className="h-12 w-full rounded-full border border-black/15 bg-white px-5 text-sm text-black outline-none transition-all duration-300 placeholder:text-black/35 focus:border-black focus:ring-4 focus:ring-black/[0.05]"
+                                        />
+                                    </div>
+
+                                    {/* City */}
+                                    <div>
+                                        <label
+                                            htmlFor="city"
+                                            className="mb-2 block text-sm font-semibold text-black"
+                                        >
+                                            City
+                                            <span className="ml-1 text-red-500">
+                                                *
+                                            </span>
+                                        </label>
+
+                                        <input
+                                            id="city"
+                                            name="city"
+                                            type="text"
+                                            value={formData.city}
+                                            onChange={handleChange}
+                                            placeholder="Enter your city"
+                                            className="h-12 w-full rounded-full border border-black/15 bg-white px-5 text-sm text-black outline-none transition-all duration-300 placeholder:text-black/35 focus:border-black focus:ring-4 focus:ring-black/[0.05]"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* =================================================
                                     SUBMIT
                                 ================================================== */}
 
@@ -1215,14 +1022,7 @@ export default function CareerApplicationSection() {
                                         size="md"
                                         arrow
                                         disabled={isSubmitting}
-                                        className="
-                                            rounded-full
-                                            !bg-black
-                                            !px-7
-                                            !py-3.5
-                                            !text-white
-                                            hover:!bg-[#171717]
-                                        "
+                                        className="rounded-full !bg-black !px-7 !py-3.5 !text-white hover:!bg-[#171717]"
                                     >
                                         {isSubmitting
                                             ? "Submitting..."
@@ -1237,44 +1037,19 @@ export default function CareerApplicationSection() {
                         ================================================== */}
 
                         <aside
-                            className="
-                                border-t
-                                border-black/10
-                                bg-[#f5f5f5]
-                                p-6
-                                sm:p-8
-                                lg:border-l
-                                lg:border-t-0
-                                lg:p-10
-                                xl:p-12
-                            "
+                            className="border-t border-black/10 bg-[#f5f5f5] p-6 sm:p-8 lg:border-l lg:border-t-0 lg:p-10 xl:p-12"
                         >
                             {/* Label */}
 
                             <div
-                                className="
-                                    flex
-                                    items-center
-                                    gap-3
-                                "
+                                className="flex items-center gap-3"
                             >
                                 <span
-                                    className="
-                                        h-2
-                                        w-2
-                                        rounded-full
-                                        bg-black
-                                    "
+                                    className="h-2 w-2 rounded-full bg-black"
                                 />
 
                                 <span
-                                    className="
-                                        text-xs
-                                        font-semibold
-                                        uppercase
-                                        tracking-[0.12em]
-                                        text-black/50
-                                    "
+                                    className="text-xs font-semibold uppercase tracking-[0.12em] text-black/50"
                                 >
                                     Why NetSquare
                                 </span>
@@ -1283,15 +1058,7 @@ export default function CareerApplicationSection() {
                             {/* Heading */}
 
                             <h3
-                                className="
-                                    mt-4
-                                    text-2xl
-                                    font-semibold
-                                    leading-tight
-                                    tracking-[-0.035em]
-                                    text-black
-                                    sm:text-3xl
-                                "
+                                className="mt-4 text-2xl font-semibold leading-tight tracking-[-0.035em] text-black sm:text-3xl"
                             >
                                 Build something
                                 <br className="hidden sm:block" />
@@ -1334,30 +1101,12 @@ export default function CareerApplicationSection() {
                                                 1,
                                             ],
                                         }}
-                                        className="
-                                            group
-                                            flex
-                                            gap-4
-                                        "
+                                        className="group flex gap-4"
                                     >
                                         {/* Icon */}
 
                                         <div
-                                            className="
-                                                flex
-                                                h-12
-                                                w-12
-                                                shrink-0
-                                                items-center
-                                                justify-center
-                                                rounded-2xl
-                                                bg-black
-                                                text-white
-                                                transition-all
-                                                duration-300
-                                                group-hover:-translate-y-1
-                                                group-hover:shadow-[0_10px_25px_rgba(0,0,0,0.15)]
-                                            "
+                                            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-black text-white transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_10px_25px_rgba(0,0,0,0.15)]"
                                         >
                                             {benefit.icon}
                                         </div>
@@ -1366,24 +1115,13 @@ export default function CareerApplicationSection() {
 
                                         <div className="min-w-0">
                                             <h4
-                                                className="
-                                                    text-base
-                                                    font-semibold
-                                                    tracking-[-0.02em]
-                                                    text-black
-                                                    sm:text-lg
-                                                "
+                                                className="text-base font-semibold tracking-[-0.02em] text-black sm:text-lg"
                                             >
                                                 {benefit.title}
                                             </h4>
 
                                             <p
-                                                className="
-                                                    mt-1.5
-                                                    text-sm
-                                                    leading-6
-                                                    text-black/55
-                                                "
+                                                className="mt-1.5 text-sm leading-6 text-black/55"
                                             >
                                                 {benefit.description}
                                             </p>
@@ -1395,20 +1133,10 @@ export default function CareerApplicationSection() {
                             {/* Bottom Quote */}
 
                             <div
-                                className="
-                                    mt-10
-                                    border-t
-                                    border-black/10
-                                    pt-6
-                                "
+                                className="mt-10 border-t border-black/10 pt-6"
                             >
                                 <p
-                                    className="
-                                        text-sm
-                                        font-medium
-                                        leading-6
-                                        text-black/55
-                                    "
+                                    className="text-sm font-medium leading-6 text-black/55"
                                 >
                                     Great work starts with great people,
                                     curious minds, and the willingness

@@ -59,7 +59,7 @@ export const servicesData = [
       "Conversational AI & smart chatbots",
     ],
     duration: "4 - 8 weeks",
-    image: "/images/services/ai-development.webp",
+    image: "/images/services/ai.png",
     imageAlt:
       "Modern artificial intelligence and machine learning solution showcase",
     icon: Bot,
@@ -78,7 +78,7 @@ export const servicesData = [
       "Campaign management",
     ],
     duration: "4 - 12 weeks",
-    image: "/images/services/digital-marketing.webp",
+    image: "/images/services/Digital-marketing.png",
     imageAlt:
       "Digital marketing strategy and growth campaign visual",
     icon: Megaphone,
@@ -97,7 +97,7 @@ export const servicesData = [
       "Design systems",
     ],
     duration: "2 - 4 weeks",
-    image: "/images/services/ui-ux-development.webp",
+    image: "/images/services/uiux.png",
     imageAlt:
       "Modern UI/UX interface design and user experience showcase",
     icon: Lightbulb,
@@ -116,7 +116,7 @@ export const servicesData = [
       "Multi-platform API publishing",
     ],
     duration: "3 - 6 weeks",
-    image: "/images/services/cms-framework.webp",
+    image: "/images/services/CMS.png",
     imageAlt:
       "Modern headless CMS framework and content management dashboard showcase",
     icon: LayoutGrid,

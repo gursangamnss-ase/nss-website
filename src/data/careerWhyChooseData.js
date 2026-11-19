@@ -1,51 +1,78 @@
-const careerWhyChooseData = [
+const careerWhyChooseData = {
+  badge: "Why work with us",
+  headingPrefix: "Building",
+  headingScript: "Careers",
+  headingScriptEnd: "with",
+  headingSuffix: "real-world impact",
+  cultureQuote: {
+    quote:
+      "Great digital products aren't built by individuals. They are crafted by passionate teams who care about every detail.",
+    author: "Netsquare Softwares",
+    role: "People & Culture",
+    image: "/career/career-culture.webp",
+  },
+  culture: {
+    title: "Our culture",
+    lead: "At NetSquare Softwares, we believe the right environment turns curiosity into capability and ideas into impact.",
+    description:
+      "We foster an open studio where developers, designers, and problem solvers take true ownership of challenging products, master modern frameworks, and grow alongside supportive peers.",
+    ctaText: "Explore open roles",
+    ctaLink: "#openings",
+    copyright: "© Netsquare Softwares Pvt Ltd",
+  },
+  offerings: {
+    title: "What you'll experience",
+    items: [
+      "Direct ownership on real-world web, mobile, and AI applications",
+      "Hands-on mentorship from senior engineers and creative directors",
+      "Modern technology stack with AI integrations and dedicated learning time",
+      "Transparent leadership, flat hierarchy, and zero bureaucratic friction",
+      "Sustainable pace with a collaborative 5-day productive rhythm",
+    ],
+  },
+  metrics: [
     {
-        id: "make-an-impact",
-        icon: "/icons/career/why-work-with-us/impact.svg",
-        title: "Make an Impact",
-        description:
-            "Your work matters. Take ownership of real challenges and contribute to projects that create meaningful results.",
+      id: "balance",
+      value: 5,
+      suffix: "Days",
+      isScriptSuffix: false,
+      label: "Work-life balance",
+      description: ["Focused five-day", "work week for", "sustainable craft."],
     },
-
     {
-        id: "keep-evolving",
-        icon: "/icons/career/why-work-with-us/evolving.svg",
-        title: "Keep Evolving",
-        description:
-            "Technology never stands still, and neither should you. Explore new tools, sharpen your skills, and keep discovering what's possible.",
+      id: "retention",
+      value: 96,
+      suffix: "%",
+      isScriptSuffix: true,
+      label: "Team satisfaction",
+      description: ["Team retention", "& career growth", "rate."],
+      isRating: true,
+      clientCount: "30+",
+      rating: "5.0",
+      avatars: [
+        "/images/testimonials/jaspreet-soni.webp",
+        "/images/testimonials/aurevia-events.webp",
+        "/images/testimonials/jagjot-singh.webp",
+        "/images/testimonials/harshdeep-singh.webp",
+      ],
     },
-
     {
-        id: "work-that-challenges-you",
-        icon: "/icons/career/why-work-with-us/challenge.svg",
-        title: "Work That Challenges You",
-        description:
-            "Step beyond routine tasks and solve problems that push your thinking, creativity, and technical abilities.",
+      id: "tech",
+      value: 100,
+      suffix: "%",
+      isScriptSuffix: true,
+      label: "Modern ecosystem",
+      description: ["Modern stack,", "AI workflows &", "clean design."],
     },
-
     {
-        id: "learn-from-people",
-        icon: "/icons/career/why-work-with-us/people.svg",
-        title: "Learn From People",
-        description:
-            "Work alongside experienced professionals, exchange ideas, ask questions, and learn from people who have been there before.",
+      id: "growth",
+      value: 2,
+      suffix: "x/Yr",
+      isScriptSuffix: false,
+      label: "Career progression",
+      description: ["Biannual reviews,", "mentorship &", "rapid growth."],
     },
-
-    {
-        id: "turn-ideas-into-reality",
-        icon: "/icons/career/why-work-with-us/ideas.svg",
-        title: "Turn Ideas Into Reality",
-        description:
-            "Bring your ideas to the table. We value curiosity, creativity, and the willingness to find a better way forward.",
-    },
-
-    {
-        id: "grow-with-the-team",
-        icon: "/icons/career/why-work-with-us/growth.svg",
-        title: "Grow With the Team",
-        description:
-            "Your growth and the team's growth go hand in hand. Build confidence, experience, and expertise while being part of something bigger.",
-    },
-];
+  ],
+};
 
 export default careerWhyChooseData;

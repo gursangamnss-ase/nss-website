@@ -12,12 +12,15 @@ export default function FormField({
   autoComplete,
   error,
   className = "",
+  inputClassName = "",
 }) {
   const inputId = id || name;
   const isTextarea = as === "textarea";
 
+  const defaultRounding = isTextarea ? "rounded-[22px]" : "rounded-full";
+
   const baseInputStyles =
-    "w-full rounded-xl bg-white border border-[var(--color-border-subtle)] px-4 py-3 text-sm text-[var(--color-primary)] placeholder:text-[var(--color-text-secondary)]/60 focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] transition-colors";
+    `w-full ${defaultRounding} bg-white border border-neutral-200/90 px-5 py-3.5 text-sm text-[var(--color-primary)] placeholder:text-neutral-400 focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] transition-all shadow-[0_1px_2px_rgba(0,0,0,0.02)] ${inputClassName}`.trim();
 
   return (
     <div className={`space-y-2 ${className}`}>

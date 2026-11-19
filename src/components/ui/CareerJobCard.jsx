@@ -42,102 +42,37 @@ export default function CareerJobCard({
                         y: -6,
                     }
             }
-            className="
-                group
-                relative
-                flex
-                min-w-0
-                flex-col
-                overflow-hidden
-                rounded-[26px]
-                border
-                border-black/[0.08]
-                bg-white
-                shadow-[0_8px_30px_rgba(0,0,0,0.055)]
-                transition-all
-                duration-500
-                hover:border-black/[0.14]
-                hover:shadow-[0_22px_60px_rgba(0,0,0,0.11)]
-            "
+            className="group relative flex min-w-0 flex-col overflow-hidden rounded-[26px] border border-black/[0.08] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.055)] transition-all duration-500 hover:border-black/[0.14] hover:shadow-[0_22px_60px_rgba(0,0,0,0.11)]"
         >
             {/* =========================================
                 IMAGE
             ========================================== */}
 
             <div
-                className="
-                    relative
-                    aspect-[1.5]
-                    w-full
-                    overflow-hidden
-                    bg-[#f2f2f2]
-                "
+                className="relative aspect-[1.5] w-full overflow-hidden bg-[#f2f2f2]"
             >
                 <Image
                     src={job.image}
                     alt={`${job.title} at NetSquare Softwares`}
                     fill
                     loading="lazy"
-                    sizes="
-                        (max-width: 639px) 88vw,
-                        (max-width: 1023px) 44vw,
-                        25vw
-                    "
-                    className="
-                        object-cover
-                        grayscale-[12%]
-                        transition-transform
-                        duration-700
-                        ease-[cubic-bezier(0.22,1,0.36,1)]
-                        group-hover:scale-[1.06]
-                    "
+                    sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, (max-width: 1279px) 30vw, 24vw"
+                    className="object-cover grayscale-[12%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
                 />
 
                 {/* IMAGE OVERLAY */}
 
                 <div
-                    className="
-                        pointer-events-none
-                        absolute
-                        inset-0
-                        bg-gradient-to-t
-                        from-black/30
-                        via-black/[0.03]
-                        to-transparent
-                        opacity-70
-                        transition-opacity
-                        duration-500
-                        group-hover:opacity-90
-                    "
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-black/[0.03] to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-90"
                 />
 
                 {/* TOP CATEGORY */}
 
                 <div
-                    className="
-                        absolute
-                        left-5
-                        top-5
-                        z-10
-                    "
+                    className="absolute left-5 top-5 z-10"
                 >
                     <span
-                        className="
-                            inline-flex
-                            items-center
-                            rounded-full
-                            border
-                            border-white/25
-                            bg-black/35
-                            px-3
-                            py-1.5
-                            text-[10px]
-                            font-medium
-                            uppercase
-                            tracking-[0.08em]
-                            text-white
-                            backdrop-blur-md
-                        "
+                        className="inline-flex items-center rounded-full border border-white/25 bg-black/35 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.08em] text-white backdrop-blur-md"
                     >
                         {job.category}
                     </span>
@@ -145,66 +80,16 @@ export default function CareerJobCard({
             </div>
 
             {/* =========================================
-                FLOATING ICON
-            ========================================== */}
-
-            <div
-                className="
-                    relative
-                    z-20
-                    -mt-7
-                    ml-6
-                    flex
-                    h-14
-                    w-14
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-[17px]
-                    border
-                    border-black/[0.08]
-                    bg-white
-                    text-black
-                    shadow-[0_12px_30px_rgba(0,0,0,0.12)]
-                    transition-all
-                    duration-500
-                    group-hover:-translate-y-1
-                    group-hover:shadow-[0_16px_35px_rgba(0,0,0,0.15)]
-                "
-            >
-                <CareerJobIcon type={job.icon} />
-            </div>
-
-            {/* =========================================
                 CONTENT
             ========================================== */}
 
             <div
-                className="
-                    flex
-                    flex-1
-                    flex-col
-                    px-6
-                    pb-6
-                    pt-5
-
-                    sm:px-7
-                    sm:pb-7
-                "
+                className="flex flex-1 flex-col px-6 pb-6 pt-6 sm:px-7 sm:pb-7 sm:pt-7"
             >
                 {/* TITLE */}
 
                 <h3
-                    className="
-                        max-w-[95%]
-                        text-[20px]
-                        font-semibold
-                        leading-[1.12]
-                        tracking-[-0.035em]
-                        text-[var(--color-primary)]
-
-                        sm:text-[21px]
-                    "
+                    className="max-w-[95%] text-[20px] font-semibold leading-[1.12] tracking-[-0.035em] text-[var(--color-primary)] sm:text-[21px]"
                 >
                     {job.title}
                 </h3>
@@ -212,26 +97,12 @@ export default function CareerJobCard({
                 {/* META */}
 
                 <div
-                    className="
-                        mt-4
-                        flex
-                        flex-wrap
-                        items-center
-                        gap-x-4
-                        gap-y-2
-                        text-[12px]
-                        font-medium
-                        text-black/55
-                    "
+                    className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[12px] font-medium text-black/55"
                 >
                     {/* LOCATION */}
 
                     <div
-                        className="
-                            flex
-                            items-center
-                            gap-1.5
-                        "
+                        className="flex items-center gap-1.5"
                     >
                         <LocationIcon />
 
@@ -243,25 +114,14 @@ export default function CareerJobCard({
                     {/* DIVIDER */}
 
                     <span
-                        className="
-                            hidden
-                            h-3
-                            w-px
-                            bg-black/15
-
-                            sm:block
-                        "
+                        className="hidden h-3 w-px bg-black/15 sm:block"
                         aria-hidden="true"
                     />
 
                     {/* TYPE */}
 
                     <div
-                        className="
-                            flex
-                            items-center
-                            gap-1.5
-                        "
+                        className="flex items-center gap-1.5"
                     >
                         <BriefcaseIcon />
 
@@ -276,42 +136,20 @@ export default function CareerJobCard({
                 ================================== */}
 
                 <div
-                    className="
-                        mt-6
-                        border-t
-                        border-black/[0.08]
-                        pt-5
-                    "
+                    className="mt-6 border-t border-black/[0.08] pt-5"
                 >
                     <button
                         type="button"
                         onClick={() => onViewDetails(job)}
-                        className="
-                            group/action
-                            flex
-                            w-full
-                            items-center
-                            justify-between
-                            text-left
-                        "
+                        className="group/action flex w-full items-center justify-between text-left"
                     >
                         {/* CTA TEXT */}
 
                         <span
-                            className="
-                                text-[13px]
-                                font-semibold
-                                tracking-[-0.01em]
-                                text-black
-                            "
+                            className="text-[13px] font-semibold tracking-[-0.01em] text-black"
                         >
                             <span
-                                className="
-                                    inline-block
-                                    transition-transform
-                                    duration-300
-                                    group-hover/action:translate-x-1
-                                "
+                                className="inline-block transition-transform duration-300 group-hover/action:translate-x-1"
                             >
                                 View Details
                             </span>
@@ -320,25 +158,7 @@ export default function CareerJobCard({
                         {/* ARROW */}
 
                         <span
-                            className="
-                                flex
-                                h-9
-                                w-9
-                                items-center
-                                justify-center
-                                rounded-full
-                                border
-                                border-black/10
-                                bg-[#f5f5f5]
-                                text-black
-                                transition-all
-                                duration-300
-
-                                group-hover/action:border-black
-                                group-hover/action:bg-black
-                                group-hover/action:text-white
-                                group-hover/action:translate-x-1
-                            "
+                            className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-[#f5f5f5] text-black transition-all duration-300 group-hover/action:border-black group-hover/action:bg-black group-hover/action:text-white group-hover/action:translate-x-1"
                         >
                             <ArrowIcon />
                         </span>
@@ -495,6 +315,62 @@ function CareerJobIcon({ type }) {
                     stroke="currentColor"
                     strokeWidth="1.6"
                     strokeLinecap="round"
+                />
+            </svg>
+        );
+    }
+
+    if (type === "mobile") {
+        return (
+            <svg {...common}>
+                <rect
+                    x="6"
+                    y="2"
+                    width="12"
+                    height="20"
+                    rx="2.5"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                />
+                <circle cx="12" cy="18" r="0.9" fill="currentColor" />
+                <path
+                    d="M10 5H14"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                />
+            </svg>
+        );
+    }
+
+    if (type === "cloud") {
+        return (
+            <svg {...common}>
+                <path
+                    d="M6.5 19H18C20.2 19 22 17.2 22 15C22 12.9 20.4 11.2 18.3 11C17.8 7.6 14.9 5 11.5 5C8.6 5 6.1 6.8 5.2 9.5C3.4 10 2 11.6 2 13.5C2 15.7 3.8 17.5 6 17.5"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+            </svg>
+        );
+    }
+
+    if (type === "check") {
+        return (
+            <svg {...common}>
+                <path
+                    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                />
+                <path
+                    d="M8 12L11 15L16 9"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
             </svg>
         );

@@ -18,14 +18,36 @@ export const contactData = {
     branchOfficeTitle: "Branch Office",
     canadaAgency: "Branch Office",
     canadaAddress: "190 Corner Springs Landing Northeast Calgary, AB T3N 2Y1",
-    founderQuote:
-      "Every great project begins with a simple conversation let’s start yours.",
-    founder: {
-      name: "Amanda",
-      role: "Founder & CEO",
-      avatar: "/images/team/amanda-reeds.webp",
-    },
   },
+  offices: [
+    {
+      id: "mohali",
+      name: "Mohali HQ",
+      tag: "Registered Office",
+      company: "NetSquare Software Pvt Ltd",
+      address:
+        "D-234, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar (Mohali), Punjab 140307",
+      phone: "+ 91 82830 30094",
+      email: "admin@netsquaresoftwares.com",
+      mapEmbedUrl:
+        "https://maps.google.com/maps?q=30.71333,76.69558&hl=en&z=15&output=embed&iwloc=near",
+      directionsUrl:
+        "https://www.google.com/maps/dir/?api=1&destination=30.71333,76.69558",
+    },
+    {
+      id: "calgary",
+      name: "Calgary Branch",
+      tag: "Branch Office",
+      company: "NetSquare Softwares Canada",
+      address: "190 Corner Springs Landing Northeast Calgary, AB T3N 2Y1",
+      phone: "+ 91 82830 30094",
+      email: "admin@netsquaresoftwares.com",
+      mapEmbedUrl:
+        "https://maps.google.com/maps?q=51.1634,-113.9231&hl=en&z=15&output=embed&iwloc=near",
+      directionsUrl:
+        "https://www.google.com/maps/dir/?api=1&destination=51.1634,-113.9231",
+    },
+  ],
   form: {
     heading: "Let’s work together",
     fields: {

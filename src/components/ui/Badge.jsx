@@ -26,9 +26,11 @@ export default function Badge({
 
   const renderedIcon = icon !== undefined ? icon : defaultIcon;
 
+  const combinedClassName = `inline-flex items-center gap-2 ${className}`.replace(/\s+/g, " ").trim();
+
   return (
     <span
-      className={`inline-flex items-center gap-2 ${className}`}
+      className={combinedClassName}
       style={color ? { color } : undefined}
       {...props}
     >

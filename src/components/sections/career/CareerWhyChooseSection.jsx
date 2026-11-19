@@ -1,179 +1,261 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
-
+import Image from "next/image";
+import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
-import Section from "@/components/layout/Section";
-import CareerBenefitCard from "@/components/ui/CareerBenefitCard";
-
-import careerWhyChooseData from "@/data/careerWhyChooseData";
 import Badge from "@/components/ui/Badge";
+import RatingStars from "@/components/ui/RatingStars";
+import CountUp from "@/components/ui/CounterUp";
+import careerWhyChooseData from "@/data/careerWhyChooseData";
 
 export default function CareerWhyChooseSection() {
-    const shouldReduceMotion = useReducedMotion();
+  const data = careerWhyChooseData;
 
-    return (
-        <Section
-            spacing="xl"
-            background="white"
-            className="overflow-hidden"
-        >
-            <Container size="2xl">
-                <div
-                    className="
-                        grid
-                        grid-cols-1
-                        gap-12
+  return (
+    <section className="relative bg-[var(--color-surface)] py-20 sm:py-28 lg:py-36 text-[var(--color-primary)] overflow-hidden">
+      <Container size="2xl">
+        {/* Upper Row:
+            Left Column (4 cols): Badge at top
+            Right Column (8 cols): Display Heading */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-start mb-8 sm:mb-8 lg:mb-8">
+          {/* Left Column: Badge */}
+          <div className="lg:col-span-4 pt-2">
+            <Badge
+              text={data.badge}
+              disabled
+              color="var(--color-primary)"
+              className="font-medium text-xs sm:text-sm tracking-wide"
+            />
+          </div>
 
-                        lg:grid-cols-[0.78fr_1.22fr]
-                        lg:gap-16
+          {/* Right Column: Display Heading matching exact layout of AboutVisionSection */}
+          <div className="lg:col-span-8">
+            <h2 className="text-[clamp(2.75rem,6.8vw,5.5rem)] font-medium leading-[1.05] tracking-[-0.04em] text-[var(--color-primary)]">
+              {data.headingPrefix}{" "}
+              <span className="font-script text-[1.28em] font-normal leading-none inline-block align-baseline -rotate-2 mx-1">
+                {data.headingScript}
+              </span>{" "}
+              {data.headingScriptEnd}
+              <br />
+              {data.headingSuffix}
+            </h2>
+          </div>
+        </div>
 
-                        xl:gap-20
-                    "
-                >
-                    {/* =========================================
-                        LEFT CONTENT
-                    ========================================== */}
-                    <motion.div
-                        initial={
-                            shouldReduceMotion
-                                ? false
-                                : {
-                                    opacity: 0,
-                                    x: -30,
-                                }
-                        }
-                        whileInView={
-                            shouldReduceMotion
-                                ? {}
-                                : {
-                                    opacity: 1,
-                                    x: 0,
-                                }
-                        }
-                        viewport={{
-                            once: true,
-                            amount: 0.25,
-                        }}
-                        transition={{
-                            duration: 0.7,
-                            ease: [0.22, 1, 0.36, 1],
-                        }}
-                        className="
-                            max-w-[520px]
-                            lg:sticky
-                            lg:top-24
-                            lg:self-start
-                        "
+        {/* Lower Row:
+            Left Column (4 cols): Culture Photo Card (aligned horizontally with Our culture/What we offer)
+            Right Column (8 cols): 2-Column Culture & Offerings */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-stretch">
+          {/* Left Column: Culture Photo Card */}
+          <div className="lg:col-span-4 flex flex-col">
+            <div className="relative rounded-[20px] sm:rounded-[24px] overflow-hidden flex-1 min-h-[380px] sm:min-h-[400px] lg:min-h-[430px] p-7 sm:p-9 flex flex-col justify-end text-white shadow-sm group">
+              <Image
+                src={data.cultureQuote.image}
+                alt="Life and collaboration at NetSquare Softwares"
+                aria-hidden="true"
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              {/* Gradient Overlay for Text Contrast */}
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"
+                aria-hidden="true"
+              />
+
+              <div className="relative z-10">
+                <p className="text-lg sm:text-[19px] font-medium leading-snug tracking-tight mb-4 text-white">
+                  {data.cultureQuote.quote}
+                </p>
+                <p className="text-xs sm:text-sm text-neutral-300 font-normal">
+                  <span className="font-semibold text-white">
+                    {data.cultureQuote.author}
+                  </span>
+                  {data.cultureQuote.role && ` · ${data.cultureQuote.role}`}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: 2-Column Culture & Offerings */}
+          <div className="lg:col-span-8 flex flex-col justify-between">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 h-full">
+              {/* Culture Subcolumn */}
+              <div className="flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-[var(--color-primary)] mb-3">
+                    {data.culture.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-[var(--color-text-secondary)] font-medium leading-relaxed">
+                    At NetSquare Softwares, we believe the right environment turns{" "}
+                    <strong className="font-semibold text-[var(--color-primary)]">
+                      curiosity into capability
+                    </strong>{" "}
+                    and ideas into impact. We foster an open studio where talented
+                    developers, designers, and problem solvers take true ownership of{" "}
+                    <strong className="font-semibold text-[var(--color-primary)]">
+                      challenging products
+                    </strong>
+                    , master modern frameworks, and grow alongside{" "}
+                    <strong className="font-semibold text-[var(--color-primary)]">
+                      supportive peers
+                    </strong>
+                    .
+                  </p>
+
+                  <div className="mt-7 sm:mt-8">
+                    <Button
+                      href={data.culture.ctaLink}
+                      variant="dark"
+                      size="md"
                     >
-                        {/* LABEL */}
-                        <Badge
-                            text="Why work with us"
-                            color="var(--color-primary)"
-                            className="
-                                mb-5
-                                text-sm
-                                font-medium
-                                tracking-[-0.01em]
-                            "
-                        />
-
-                        {/* HEADING */}
-                        <h2
-                            className="
-                                text-[clamp(3.5rem,6vw,6rem)]
-                                font-semibold
-                                leading-[0.82]
-                                tracking-[-0.055em]
-                                text-[var(--color-primary)]
-                            "
-                        >
-                            Work With
-
-                            <span
-                                className="
-                                    block
-                                    mt-8
-                                    font-script
-                                    text-[clamp(4.5rem,7vw,7rem)]
-                                    font-normal
-                                    leading-[0.75]
-                                    tracking-[-0.02em]
-                                "
-                            >
-                                Purpose
-                            </span>
-                        </h2>
-
-                        {/* DESCRIPTION */}
-                        <div className="mt-12">
-                            <h3
-                                className="
-                                    max-w-[470px]
-                                    text-xl
-                                    font-semibold
-                                    leading-[1.35]
-                                    tracking-[-0.02em]
-                                    text-[var(--color-primary)]
-
-                                    sm:text-2xl
-                                "
-                            >
-                                Build more than a career. Build your potential.
-                            </h3>
-
-                            <p
-                                className="
-                                    mt-5
-                                    max-w-[500px]
-                                    text-base
-                                    leading-7
-                                    text-[var(--color-text-secondary)]
-
-                                    sm:text-lg
-                                    sm:leading-8
-                                "
-                            >
-                                At NetSquare Softwares, we believe the right
-                                environment can turn curiosity into capability
-                                and ideas into impact. Join us to learn by doing,
-                                take on meaningful challenges, and grow with
-                                people who believe in what they create.
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    {/* =========================================
-                    RIGHT CARDS
-                    ========================================== */}
-                    <div
-                        className="
-                        grid
-                        grid-cols-1
-                        gap-5
-                        md:grid-cols-2
-                        md:gap-5
-                        lg:gap-6"
-                    >
-                        {careerWhyChooseData.map((item) => (
-                            <CareerBenefitCard
-                                key={item.id}
-                                icon={item.icon}
-                                title={item.title}
-                                description={item.description}
-                                className="
-                                min-h-[250px]
-                                px-7
-                                py-7
-                                sm:px-8
-                                sm:py-8
-                                lg:px-9
-                                lg:py-9"
-                            />
-                        ))}
-                    </div>
+                      {data.culture.ctaText}
+                    </Button>
+                  </div>
                 </div>
-            </Container>
-        </Section>
-    );
+
+                {/* Copyright Line */}
+                <div className="mt-10 sm:mt-14">
+                  <p className="text-xs text-[var(--color-text-secondary)] font-normal tracking-wide">
+                    {data.culture.copyright}
+                  </p>
+                </div>
+              </div>
+
+              {/* Offerings Subcolumn with clean dot bullets */}
+              <div>
+                <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-[var(--color-primary)] mb-3">
+                  {data.offerings.title}
+                </h3>
+                <ul className="space-y-2">
+                  {data.offerings.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm sm:text-base font-medium text-[var(--color-text-secondary)] leading-relaxed"
+                    >
+                      <span
+                        className="w-1.5 h-1.5 rounded-full bg-[var(--color-text-secondary)] shrink-0 mt-2"
+                        aria-hidden="true"
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bento Row: 4 Metric Counter Cards matching Image 3 / AboutVisionSection */}
+        <div className="mt-16 sm:mt-24 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 sm:gap-3 lg:gap-[10px]">
+          {data.metrics.map((metric, idx) => {
+            const isDark = metric.isRating;
+
+            return (
+              <div
+                key={metric.id}
+                className={`rounded-[24px] sm:rounded-[28px] p-7 sm:p-8 flex flex-col justify-between min-h-[310px] sm:min-h-[330px] transition-all duration-300 hover:shadow-lg ${
+                  isDark
+                    ? "bg-[var(--color-surface-card)] text-white"
+                    : "bg-white text-[var(--color-primary)] border border-neutral-100/90 shadow-sm"
+                }`}
+              >
+                {/* Top header of metric card */}
+                {isDark ? (
+                  <div>
+                    {/* Avatars Stack + Pill Badge */}
+                    <div className="flex items-center">
+                      <div className="flex items-center -space-x-2">
+                        {metric.avatars.map((av, avIdx) => (
+                          <div
+                            key={avIdx}
+                            className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-[10px] border-2 border-[var(--color-surface-card)] overflow-hidden shrink-0 shadow-sm"
+                          >
+                            <Image
+                              src={av}
+                              alt={`Team member avatar ${avIdx + 1}`}
+                              fill
+                              sizes="40px"
+                              className="object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                      <div className="ml-2.5 px-3 py-1 rounded-full bg-white text-black text-xs sm:text-[13px] font-bold flex items-center justify-center shrink-0 shadow-sm leading-none">
+                        {metric.clientCount || "30+"}
+                      </div>
+                    </div>
+
+                    {/* Rating Stars & Label */}
+                    <div className="mt-5">
+                      <div className="flex items-center gap-2">
+                        <RatingStars
+                          rating={Number(metric.rating) || 5}
+                          size={13}
+                          variant="light"
+                        />
+                        {metric.rating && (
+                          <span className="text-xs sm:text-sm font-semibold text-white tracking-tight">
+                            {metric.rating}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs sm:text-sm text-[var(--color-text-muted)] font-normal mt-2.5 tracking-tight">
+                        {metric.label}
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <p className="text-sm sm:text-base font-medium text-[var(--color-primary)] tracking-tight">
+                    {metric.label}
+                  </p>
+                )}
+
+                {/* Bottom Row: Counter Number (Left) + Description (Right) */}
+                <div className="flex items-end justify-between gap-3 pt-6">
+                  <div className="flex items-baseline shrink-0">
+                    <span className="text-[52px] sm:text-[60px] lg:text-[66px] font-semibold tracking-tight leading-none text-current">
+                      <CountUp
+                        to={metric.value}
+                        from={0}
+                        duration={1.8}
+                        delay={idx * 0.1}
+                      />
+                    </span>
+                    {metric.isScriptSuffix ? (
+                      <span className="font-script text-[50px] sm:text-[58px] lg:text-[62px] font-normal leading-none ml-1 text-current">
+                        {metric.suffix}
+                      </span>
+                    ) : (
+                      <span className="text-[17px] sm:text-[19px] lg:text-[21px] font-medium tracking-tight text-[var(--color-text-secondary)] ml-1.5 leading-none">
+                        {metric.suffix}
+                      </span>
+                    )}
+                  </div>
+
+                  <p
+                    className={`text-right text-[13.5px] sm:text-[14.5px] lg:text-[15.5px] font-normal leading-[1.3] shrink-0 ${
+                      isDark
+                        ? "text-[var(--color-text-muted)]"
+                        : "text-[var(--color-text-secondary)]"
+                    }`}
+                  >
+                    {Array.isArray(metric.description) ? (
+                      metric.description.map((line, lIdx) => (
+                        <span key={lIdx} className="block">
+                          {line}
+                        </span>
+                      ))
+                    ) : (
+                      metric.description
+                    )}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </Container>
+    </section>
+  );
 }

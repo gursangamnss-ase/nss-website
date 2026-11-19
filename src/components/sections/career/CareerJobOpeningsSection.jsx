@@ -1,555 +1,161 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
-
+import { useState } from "react";
+import Image from "next/image";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 import CareerJobCard from "@/components/ui/CareerJobCard";
 import CareerJobDetailsModal from "@/components/ui/CareerJobDetailsModal";
-import Badge from "@/components/ui/Badge";
+import careerJobsData, { careerJobsHeader } from "@/data/careerJobsData";
 
-import careerJobsData from "@/data/careerJobsData";
+const INITIAL_COUNT = 4;
 
 export default function CareerJobOpeningsSection() {
-    const shouldReduceMotion = useReducedMotion();
+    const header = careerJobsHeader || {
+        badge: "Job Openings",
+        titleLine1: "Current",
+        ampersand: "/images/letterImage.svg",
+        titleLine2: "Opportunities",
+        yearTag: "Open Positions 2026",
+        description:
+            "Join our multidisciplinary team of engineers, designers, and innovators building next-generation digital products. We offer high-ownership projects, modern toolchains, and accelerated career progression.",
+    };
 
-    const carouselRef = useRef(null);
-    const autoPlayRef = useRef(null);
-
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
     const [selectedJob, setSelectedJob] = useState(null);
 
-    /* =========================================
-       SCROLL CAROUSEL
-    ========================================== */
+    const visibleJobs = careerJobsData.slice(0, visibleCount);
+    const hasMore = visibleCount < careerJobsData.length;
 
-    const scrollCarousel = useCallback((direction) => {
-        const container = carouselRef.current;
-
-        if (!container) return;
-
-        const card = container.querySelector("[data-job-card]");
-
-        if (!card) return;
-
-        const cardWidth = card.getBoundingClientRect().width;
-        const gap = 20;
-
-        const amount = cardWidth + gap;
-
-        if (direction === "next") {
-            const maxScroll =
-                container.scrollWidth - container.clientWidth;
-
-            if (container.scrollLeft >= maxScroll - 10) {
-                container.scrollTo({
-                    left: 0,
-                    behavior: "smooth",
-                });
-
-                return;
-            }
-
-            container.scrollBy({
-                left: amount,
-                behavior: "smooth",
-            });
-        } else {
-            if (container.scrollLeft <= 10) {
-                container.scrollTo({
-                    left:
-                        container.scrollWidth -
-                        container.clientWidth,
-                    behavior: "smooth",
-                });
-
-                return;
-            }
-
-            container.scrollBy({
-                left: -amount,
-                behavior: "smooth",
-            });
-        }
-    }, []);
-
-    /* =========================================
-       UPDATE ACTIVE DOT
-    ========================================== */
-
-    const handleScroll = useCallback(() => {
-        const container = carouselRef.current;
-
-        if (!container) return;
-
-        const card = container.querySelector("[data-job-card]");
-
-        if (!card) return;
-
-        const cardWidth = card.getBoundingClientRect().width;
-        const gap = 20;
-
-        const index = Math.round(
-            container.scrollLeft / (cardWidth + gap)
-        );
-
-        setActiveIndex(
-            Math.min(
-                Math.max(index, 0),
-                careerJobsData.length - 1
-            )
-        );
-    }, []);
-
-    /* =========================================
-       AUTO PLAY
-    ========================================== */
-
-    const startAutoPlay = useCallback(() => {
-        if (shouldReduceMotion) return;
-
-        if (autoPlayRef.current) {
-            clearInterval(autoPlayRef.current);
-        }
-
-        autoPlayRef.current = setInterval(() => {
-            scrollCarousel("next");
-        }, 4000);
-    }, [scrollCarousel, shouldReduceMotion]);
-
-    /* =========================================
-       INITIAL AUTO PLAY
-    ========================================== */
-
-    useEffect(() => {
-        startAutoPlay();
-
-        return () => {
-            if (autoPlayRef.current) {
-                clearInterval(autoPlayRef.current);
-            }
-        };
-    }, [startAutoPlay]);
-
-    /* =========================================
-       PAUSE / RESUME AUTO PLAY
-    ========================================== */
-
-    const pauseAutoPlay = () => {
-        if (autoPlayRef.current) {
-            clearInterval(autoPlayRef.current);
-        }
-    };
-
-    const resumeAutoPlay = () => {
-        startAutoPlay();
-    };
-
-    /* =========================================
-       GO TO SPECIFIC SLIDE
-    ========================================== */
-
-    const goToSlide = (index) => {
-        const container = carouselRef.current;
-
-        if (!container) return;
-
-        const card = container.querySelector("[data-job-card]");
-
-        if (!card) return;
-
-        const cardWidth = card.getBoundingClientRect().width;
-        const gap = 20;
-
-        container.scrollTo({
-            left: index * (cardWidth + gap),
-            behavior: "smooth",
-        });
+    const handleLoadMore = () => {
+        setVisibleCount((prev) => Math.min(prev + 4, careerJobsData.length));
     };
 
     return (
         <>
             <Section
                 id="openings"
-                spacing="xl"
+                spacing="none"
                 background="white"
-                className="
-                    relative
-                    overflow-hidden
-                "
+                className="bg-white text-[var(--color-primary)] py-20 sm:py-28 lg:pt-36 lg:pb-28 overflow-hidden"
             >
-                {/* =========================================
-                    BACKGROUND DECORATION
-                ========================================== */}
+                <Container size="2xl" className="px-5 sm:px-8 lg:px-12 relative z-10">
+                    {/* Pre-title Badge: Left on mobile/tablet (<lg), Right on desktop (>=lg) matching CreativeCollabsSection */}
+                    <div className="flex justify-start lg:justify-end pb-4 sm:pb-6 md:pb-8">
+                        <Badge
+                            text={header.badge}
+                            disabled
+                            color="var(--color-primary)"
+                            className="text-xs font-medium tracking-wide sm:text-sm text-[var(--color-primary)]"
+                        />
+                    </div>
 
-                <div
-                    className="
-                        pointer-events-none
-                        absolute
-                        inset-0
-                    "
-                    aria-hidden="true"
-                >
-                    {/* Top-right rings */}
-                    <div
-                        className="
-                            absolute
-                            right-[-160px]
-                            top-[-180px]
-                            h-[420px]
-                            w-[420px]
-                            rounded-full
-                            border
-                            border-black/[0.06]
-                        "
-                    />
-
-                    <div
-                        className="
-                            absolute
-                            right-[-100px]
-                            top-[-120px]
-                            h-[340px]
-                            w-[340px]
-                            rounded-full
-                            border
-                            border-black/[0.05]
-                        "
-                    />
-
-                    {/* Bottom-left soft glow */}
-                    <div
-                        className="
-                            absolute
-                            bottom-[-220px]
-                            left-[-120px]
-                            h-[400px]
-                            w-[400px]
-                            rounded-full
-                            bg-black/[0.025]
-                            blur-3xl
-                        "
-                    />
-                </div>
-
-                <Container
-                    size="2xl"
-                    className="relative z-10"
-                >
-                    {/* =========================================
-                        HEADER
-                    ========================================== */}
-
-                    <div className="flex justify-center text-center">
-                        <motion.div
-                            initial={
-                                shouldReduceMotion
-                                    ? false
-                                    : {
-                                        opacity: 0,
-                                        y: 30,
-                                    }
-                            }
-                            whileInView={
-                                shouldReduceMotion
-                                    ? {}
-                                    : {
-                                        opacity: 1,
-                                        y: 0,
-                                    }
-                            }
-                            viewport={{
-                                once: true,
-                                amount: 0.25,
-                            }}
-                            transition={{
-                                duration: 0.7,
-                                ease: [0.22, 1, 0.36, 1],
-                            }}
-                            className="
-                                w-full
-                                max-w-[1200px]
-                            "
-                        >
-                            {/* =================================
-                                BADGE
-                            ================================== */}
-
-                            <div className="flex justify-center">
-                                <Badge
-                                    text="Job Openings"
-                                    color="#05080c"
-                                    className="
-                                        text-sm
-                                        font-medium
-                                        tracking-[-0.01em]
-                                    "
+                    {/* Mobile & Tablet Heading (< lg: 0 - 1023px) - Stacked with inline Ampersand */}
+                    <div className="flex lg:hidden flex-col items-start gap-1 sm:gap-2">
+                        {/* Line 1: Current & */}
+                        <div className="inline-flex items-center gap-2 sm:gap-3">
+                            <h2 className="text-[48px] sm:text-[58px] md:text-[68px] font-semibold leading-[0.85] tracking-[-0.04em] text-[var(--color-primary)] select-none">
+                                {header.titleLine1}
+                            </h2>
+                            <div className="w-[38px] sm:w-[50px] md:w-[60px] aspect-[1.1] select-none shrink-0">
+                                <Image
+                                    src={header.ampersand}
+                                    alt=""
+                                    aria-hidden="true"
+                                    width={64}
+                                    height={70}
+                                    className="w-full h-full object-contain"
                                 />
                             </div>
+                        </div>
 
-                            {/* =================================
-                                MAIN TITLE
-                            ================================== */}
-
-                            <h2 className="text-[clamp(2.5rem,6.5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.04em] text-[var(--color-primary)]">
-                                Current
-
-                                <span
-                                    className="
-                                        ml-2
-                                        inline-block
-                                        font-script
-                                        text-[clamp(2.5rem,6.5vw,4.5rem)]
-                                        font-normal
-                                        leading-[0.75]
-                                        tracking-[-0.02em]
-                                        text-black
-                                    "
-                                >
-                                    Opportunities
-                                </span>
+                        {/* Line 2: Opportunities */}
+                        <div className="w-full">
+                            <h2 className="text-[40px] sm:text-[52px] md:text-[64px] font-semibold leading-[0.85] tracking-[-0.04em] text-[var(--color-primary)] select-none">
+                                {header.titleLine2}
                             </h2>
-                        </motion.div>
+                        </div>
                     </div>
 
-                    {/* =========================================
-                        CAROUSEL
-                    ========================================== */}
+                    {/* Desktop & Laptop Heading (>= lg: 1024px+) - Staggered layout matching CreativeCollabsSection exactly */}
+                    <div className="hidden lg:flex flex-row items-start lg:gap-20 xl:gap-28 relative">
+                        {/* Left: Current + Script Ampersand overlapping */}
+                        <div className="relative inline-flex items-center shrink-0">
+                            <h2 className="text-[clamp(5.3rem,8.33vw,7.5rem)] font-semibold leading-[0.8] tracking-[-0.04em] text-[var(--color-primary)] select-none">
+                                {header.titleLine1}
+                            </h2>
 
-                    <div
-                        className="
-                            relative
-                            mt-14
-
-                            sm:mt-16
-
-                            lg:mt-20
-                        "
-                    >
-                        {/* =================================
-                            PREVIOUS BUTTON
-                        ================================== */}
-
-                        <CarouselArrow
-                            direction="left"
-                            onClick={() => {
-                                pauseAutoPlay();
-                                scrollCarousel("prev");
-                                resumeAutoPlay();
-                            }}
-                            className="
-                                left-[-22px]
-
-                                xl:left-[-58px]
-                            "
-                        />
-
-                        {/* =================================
-                            NEXT BUTTON
-                        ================================== */}
-
-                        <CarouselArrow
-                            direction="right"
-                            onClick={() => {
-                                pauseAutoPlay();
-                                scrollCarousel("next");
-                                resumeAutoPlay();
-                            }}
-                            className="
-                                right-[-22px]
-
-                                xl:right-[-58px]
-                            "
-                        />
-
-                        {/* =================================
-                            CAROUSEL TRACK
-                        ================================== */}
-
-                        <div
-                            ref={carouselRef}
-                            onScroll={handleScroll}
-                            onMouseEnter={pauseAutoPlay}
-                            onMouseLeave={resumeAutoPlay}
-                            className="
-                                flex
-                                gap-5
-                                overflow-x-auto
-                                scroll-smooth
-                                snap-x
-                                snap-mandatory
-                                pb-8
-
-                                [scrollbar-width:none]
-                                [&::-webkit-scrollbar]:hidden
-                            "
-                        >
-                            {careerJobsData.map((job) => (
-                                <div
-                                    key={job.id}
-                                    data-job-card
-                                    className="
-                                        w-[88vw]
-                                        shrink-0
-                                        snap-start
-
-                                        sm:w-[calc(50%-10px)]
-
-                                        lg:w-[calc(25%-15px)]
-                                    "
-                                >
-                                    <CareerJobCard
-                                        job={job}
-                                        onViewDetails={setSelectedJob}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* =================================
-                            CAROUSEL DOTS
-                        ================================== */}
-
-                        <div
-                            className="
-                                mt-5
-                                flex
-                                items-center
-                                justify-center
-                                gap-2
-                            "
-                        >
-                            {careerJobsData.map((job, index) => (
-                                <button
-                                    key={job.id}
-                                    type="button"
-                                    aria-label={`Go to ${job.title}`}
-                                    onClick={() => {
-                                        pauseAutoPlay();
-                                        goToSlide(index);
-                                        resumeAutoPlay();
-                                    }}
-                                    className={`
-                                        h-2.5
-                                        rounded-full
-                                        transition-all
-                                        duration-300
-
-                                        ${activeIndex === index
-                                            ? "w-5 bg-black"
-                                            : "w-2.5 bg-black/15 hover:bg-black/30"
-                                        }
-                                    `}
+                            {/* Script Ampersand SVG overlapping between Current and Opportunities */}
+                            <div className="absolute left-[88%] -top-2 lg:-top-4 w-[150px] lg:w-[190px] xl:w-[260px] 2xl:w-[310px] aspect-[1.1] pointer-events-none select-none z-10">
+                                <Image
+                                    src={header.ampersand}
+                                    alt=""
+                                    aria-hidden="true"
+                                    width={342}
+                                    height={348}
+                                    className="w-full h-full object-contain"
                                 />
-                            ))}
+                            </div>
+                        </div>
+
+                        {/* Right: Opportunities pushed down to align on line 2 under the ampersand */}
+                        <div className="pt-20 lg:pt-28 xl:pt-36 2xl:pt-44 w-full">
+                            <h2 className="text-[clamp(5.3rem,8.33vw,7.5rem)] font-semibold leading-[0.8] tracking-[-0.04em] text-[var(--color-primary)] select-none whitespace-nowrap ml-7 xl:ml-20">
+                                {header.titleLine2}
+                            </h2>
                         </div>
                     </div>
+
+                    {/* Lower Narrative & Year Tag - Responsive layout eliminating text collisions at 1024px */}
+                    <div className="mt-10 sm:mt-14 lg:mt-20 flex flex-col lg:flex-row items-start gap-4 sm:gap-6 lg:gap-10 xl:gap-24 2xl:gap-36">
+                        <div className="shrink-0 lg:w-auto lg:min-w-[240px] xl:min-w-[270px]">
+                            <h3 className="text-xl sm:text-2xl lg:text-[24px] xl:text-[28px] font-medium tracking-[-0.03em] text-[var(--color-primary)] whitespace-nowrap">
+                                {header.yearTag}
+                            </h3>
+                        </div>
+
+                        <div className="flex-1 max-w-[820px]">
+                            <p className="text-base sm:text-lg lg:text-[17px] xl:text-lg font-normal leading-[1.45] tracking-[-0.015em] text-[var(--color-text-secondary)]">
+                                {header.description}
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Responsive Grid: 1 col on mobile, 2 cols on tablet, 3 cols at 1024px, 4 cols on desktop */}
+                    <div className="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6 lg:gap-6 xl:gap-7">
+                        {visibleJobs.map((job) => (
+                            <CareerJobCard
+                                key={job.id}
+                                job={job}
+                                onViewDetails={setSelectedJob}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Load More Button (matching ProjectsGrid) */}
+                    {hasMore && (
+                        <div className="flex justify-center pt-12 sm:pt-16">
+                            <Button
+                                type="button"
+                                variant="dark"
+                                size="md"
+                                onClick={handleLoadMore}
+                                aria-label="Load more positions"
+                            >
+                                Load More Positions
+                            </Button>
+                        </div>
+                    )}
                 </Container>
             </Section>
 
-            {/* =========================================
-                JOB DETAILS MODAL
-            ========================================== */}
-
+            {/* Job Details Modal */}
             <CareerJobDetailsModal
                 job={selectedJob}
                 onClose={() => setSelectedJob(null)}
             />
         </>
-    );
-}
-
-
-/* =========================================
-   CAROUSEL ARROW
-========================================= */
-
-function CarouselArrow({
-    direction,
-    onClick,
-    className = "",
-}) {
-    return (
-        <button
-            type="button"
-            onClick={onClick}
-            aria-label={
-                direction === "left"
-                    ? "Previous jobs"
-                    : "Next jobs"
-            }
-            className={`
-                absolute
-                top-1/2
-                z-20
-                hidden
-                h-12
-                w-12
-                -translate-y-1/2
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-black/10
-                bg-white
-                text-black
-                shadow-[0_8px_25px_rgba(0,0,0,0.08)]
-                transition-all
-                duration-300
-
-                hover:bg-black
-                hover:text-white
-
-                lg:flex
-
-                ${className}
-            `}
-        >
-            <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-            >
-                {direction === "left" ? (
-                    <>
-                        <path
-                            d="M19 12H5"
-                            stroke="currentColor"
-                            strokeWidth="1.8"
-                            strokeLinecap="round"
-                        />
-
-                        <path
-                            d="M11 6L5 12L11 18"
-                            stroke="currentColor"
-                            strokeWidth="1.8"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                    </>
-                ) : (
-                    <>
-                        <path
-                            d="M5 12H19"
-                            stroke="currentColor"
-                            strokeWidth="1.8"
-                            strokeLinecap="round"
-                        />
-
-                        <path
-                            d="M13 6L19 12L13 18"
-                            stroke="currentColor"
-                            strokeWidth="1.8"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                    </>
-                )}
-            </svg>
-        </button>
     );
 }
