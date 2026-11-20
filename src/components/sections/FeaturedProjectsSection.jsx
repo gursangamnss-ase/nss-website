@@ -75,7 +75,7 @@ export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
       onTouchEnd={handleTouchEnd}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="relative w-full h-[100vh] sm:h-[100vh] lg:h-[100vh] overflow-hidden bg-[var(--color-primary)] select-none"
+      className="relative w-full h-[100vh] sm:h-[100vh] lg:h-[120vh] overflow-hidden bg-[var(--color-primary)] select-none"
     >
       {/* Background Images with cross-fade */}
       {featuredProjectsData.map((project, idx) => {
@@ -94,7 +94,7 @@ export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
               alt={project.alt}
               fill
               sizes="100vw"
-              className="object-cover object-center"
+              className="object-cover lg:object-fill object-center"
             />
             {/* Dark tint overlay for text contrast */}
             <div className="absolute inset-0 bg-black/40" />
