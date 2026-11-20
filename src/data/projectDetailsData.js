@@ -125,7 +125,7 @@ export const projectDetailsData = {
     slug: "iris",
     title: "IRIS",
     scriptTitle: "USA",
-    heroImage: "/projects/iris/hero.webp",
+    heroImage: "/projects/iris/IRIS_AI_Workspace.png",
     overview: {
       badge: "Overview",
       description:
