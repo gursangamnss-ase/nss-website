@@ -66,7 +66,7 @@ export default function ServiceDetailCard({ service, className = "" }) {
           </div>
 
           {/* Image */}
-          <div className="relative aspect-square w-full shrink-0 overflow-hidden rounded-xl border border-white/10 sm:h-[360px] sm:aspect-auto md:h-[330px] md:w-[360px] lg:h-[340px] lg:w-[420px] min-[1200px]:h-[420px] min-[1200px]:w-[360px] lg:rounded-2xl">
+          <div className="relative aspect-16/11 w-full shrink-0 overflow-hidden rounded-xl border border-white/10 sm:h-[360px] sm:aspect-auto md:h-[330px] md:w-[360px] lg:h-[340px] lg:w-[420px] min-[1200px]:h-[420px] min-[1200px]:w-[360px] lg:rounded-2xl">
             <Image
               src={image}
               alt={imageAlt || title}

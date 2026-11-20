@@ -78,7 +78,7 @@ export const servicesData = [
       "Campaign management",
     ],
     duration: "4 - 12 weeks",
-    image: "/images/services/Digital-marketing.png",
+    image: "/images/services/digital_marketing_office.png",
     imageAlt:
       "Digital marketing strategy and growth campaign visual",
     icon: Megaphone,
