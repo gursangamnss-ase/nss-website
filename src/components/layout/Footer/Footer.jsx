@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { footerData } from "@/data/footerData";
 
 /* Social Icon SVG components */
@@ -54,7 +57,15 @@ function SocialIcon({ type }) {
 }
 
 export default function Footer() {
+  const pathname = usePathname();
   const { brand, mainLinks, contact, socials, copyright, privacyHref } = footerData;
+
+  const isLinkActive = (href) => {
+    if (!pathname) return false;
+    if (href === "/") return pathname === "/";
+    if (href.startsWith("/#")) return false;
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   const leftSocials = socials.slice(0, 2);
   const rightSocials = socials.slice(2, 4);
@@ -100,19 +111,22 @@ export default function Footer() {
               Main links
             </p>
             <div className="grid grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
-              {mainLinks.map((link, idx) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className={`text-base sm:text-[17px] font-medium transition-colors duration-200 ${
-                    idx === 0
-                      ? "text-white hover:text-white/80"
-                      : "text-[var(--color-text-muted)] hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {mainLinks.map((link) => {
+                const isActive = isLinkActive(link.href);
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className={`text-base sm:text-[17px] font-medium transition-colors duration-200 ${
+                      isActive
+                        ? "text-white font-semibold"
+                        : "text-[var(--color-text-muted)] hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
