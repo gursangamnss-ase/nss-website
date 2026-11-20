@@ -95,7 +95,7 @@ export function ProjectShowcaseBanner({ image, alt = "Project showcase" }) {
               alt={alt}
               fill
               sizes="100vw"
-              className="object-contain object-center"
+              className="object-cover object-center"
               priority
             />
           </div>
@@ -174,7 +174,7 @@ export function ProjectGalleryGrid({ images = [] }) {
                   alt="Project gallery showcase"
                   fill
                   sizes="100vw"
-                  className="object-contain object-center"
+                  className="object-cover object-center"
                 />
               </div>
               <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/15 pointer-events-none" />
