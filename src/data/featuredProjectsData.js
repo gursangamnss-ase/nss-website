@@ -6,7 +6,7 @@ export const featuredProjectsData = [
     titleLine2: "USA",
     tags: ["Retail POS", "Liquor Store System"],
     href: "/project/bottlepos",
-    image: "/projects/cover-image/BottlePOS Devices in a Warm Studio.webp",
+    image: "/projects/cover-image/BottlePOS.png",
     alt: "Bottle POS USA Point of Sale and Liquor Store Management SaaS Platform",
   },
   {
@@ -16,7 +16,7 @@ export const featuredProjectsData = [
     titleLine2: "USA",
     tags: ["Social Networking", "Mobile Application"],
     href: "/project/fingerprint",
-    image: "/projects/cover-image/fingerprint.webp",
+    image: "/projects/cover-image/FingerPrintMobile.png",
     alt: "Fingerprint USA Social Video Recording and Sharing Mobile Application",
   },
   {
@@ -26,7 +26,7 @@ export const featuredProjectsData = [
     titleLine2: "USA",
     tags: ["Artificial Intelligence", "AI Agents & Automation"],
     href: "/project/iris",
-    image: "/projects/cover-image/iris.webp",
+    image: "/projects/cover-image/IRIS_AI_Workspace.png",
     alt: "IRIS USA AI-Powered Personal Assistant and Business Automation Platform",
   },
   {
@@ -36,7 +36,7 @@ export const featuredProjectsData = [
     titleLine2: "USA",
     tags: ["Fleet Management", "Admin System"],
     href: "/project/mannbros",
-    image: "/projects/cover-image/Modern Trailer Leasing Office Dashboard.webp",
+    image: "/projects/cover-image/Modern.png",
     alt: "Mann Bros USA Leasing trailer and fleet management platform",
   },
   {
@@ -56,7 +56,7 @@ export const featuredProjectsData = [
     titleLine2: "NZ",
     tags: ["Logistics & Freight", "Transportation Services"],
     href: "/project/dav",
-    image: "/projects/cover-image/dav.webp",
+    image: "/projects/cover-image/DAVTransport.png",
     alt: "DAV NZ Safe and Secure Freight and Moving Services New Zealand",
   },
   {
@@ -66,7 +66,7 @@ export const featuredProjectsData = [
     titleLine2: "Australia",
     tags: ["Fashion & Apparel", "Punjabi Streetwear"],
     href: "/project/shopraftaar",
-    image: "/projects/cover-image/RAFTAAR Website Mockup with Tote Bag.webp",
+    image: "/projects/cover-image/RAFTAAR.png",
     alt: "Raftaar Australia Punjabi Streetwear E-Commerce digital storefront",
   },
 ];

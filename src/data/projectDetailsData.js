@@ -125,7 +125,7 @@ export const projectDetailsData = {
     slug: "iris",
     title: "IRIS",
     scriptTitle: "USA",
-    heroImage: "/projects/iris/hero.webp",
+    heroImage: "/projects/iris/IRIS_AI_Workspace.png",
     overview: {
       badge: "Overview",
       description:
@@ -194,7 +194,7 @@ export const projectDetailsData = {
         "Fingerprint is a social video-sharing mobile application designed to connect friends through personalized video experiences. The application allows users to record videos directly from their smartphones, share memorable moments with friends, and watch videos shared by people in their social network. Combining in-app video recording, social sharing, and content discovery, Fingerprint provides an interactive platform for communicating and connecting through video.",
       meta: [
         { label: "Client:", value: "Fingerprint" },
-        { label: "Year:", value: "2026" },
+        { label: "Year:", value: "2025" },
         { label: "Category:", value: "Social Networking & Entertainment / Mobile App" },
         { label: "Tech Stack:", value: "React Native, JavaScript, REST APIs, Deep Linking" },
       ],
@@ -494,7 +494,7 @@ export const projectDetailsData = {
         "Punjabi Heritage and Folk (PHF) is a Canadian cultural organization dedicated to preserving and promoting Punjabi heritage, traditions, folk arts, and cultural practices among youth. Since 2009, PHF has been educating young people about Punjabi virsa while providing training in traditional Punjabi folk dances and musical instruments. Netsquare Softwares developed a responsive and culturally focused website with centralized registration, event showcase, and program administration.",
       meta: [
         { label: "Client:", value: "Punjabi Heritage and Folk (PHF)" },
-        { label: "Year:", value: "2026" },
+        { label: "Year:", value: "2022" },
         { label: "Category:", value: "Cultural Organization / Punjabi Heritage & Performing Arts" },
         { label: "Location:", value: "Edmonton, Alberta, Canada" },
       ],
@@ -554,7 +554,7 @@ export const projectDetailsData = {
         "My Keys Driving School is a professional driver-training provider based in Edmonton, Alberta, offering structured driving lessons designed to help learners become confident, safe, and responsible drivers. The school provides a range of training programs, including Class 5 Basic and Advanced courses, winter driving, defensive driving, driving evaluation, and demerit reduction programs. The website was developed to provide students with a convenient digital platform where they can explore available courses, review program pricing, and connect for lessons and bookings.",
       meta: [
         { label: "Client:", value: "My Keys Driving School" },
-        { label: "Year:", value: "2026" },
+        { label: "Year:", value: "2021" },
         { label: "Category:", value: "Education / Driving Training & Road Safety" },
         { label: "Location:", value: "Edmonton, Alberta, Canada" },
       ],
@@ -614,7 +614,7 @@ export const projectDetailsData = {
         "All Sydney Tow Truck is a professional towing and roadside assistance provider serving customers across Sydney and surrounding areas. The company provides a wide range of services, including car towing, emergency towing, vehicle recovery, long-distance towing, motorcycle towing, heavy equipment transport, and roadside assistance. The website was developed to provide customers with a convenient digital platform where they can quickly explore services, request a quote, and connect with the towing dispatch team.",
       meta: [
         { label: "Client:", value: "All Sydney Tow Truck" },
-        { label: "Year:", value: "2026" },
+        { label: "Year:", value: "2019" },
         { label: "Category:", value: "Transportation / Towing Services" },
         { label: "Location:", value: "Sydney, New South Wales, Australia" },
       ],
@@ -734,7 +734,7 @@ export const projectDetailsData = {
         "Amina Bazaar is an online marketplace specializing in VIP and fancy mobile numbers in India, offering customers a curated collection of unique numbers across different patterns, categories, and price ranges. The platform enables users to search and explore numbers based on specific digit combinations, including mirror numbers, special digits, doubling numbers, zero-pattern numbers, business numbers, and Super VIP numbers.",
       meta: [
         { label: "Client:", value: "Amina Bazaar" },
-        { label: "Year:", value: "2026" },
+        { label: "Year:", value: "2021" },
         { label: "Category:", value: "E-commerce / Telecommunications" },
         { label: "Location:", value: "India" },
       ],
@@ -854,7 +854,7 @@ export const projectDetailsData = {
         "Rentex Car Rental is a Canadian car rental company serving customers across the Greater Toronto Area with affordable and convenient vehicle rental solutions. The company provides a diverse range of rental options for personal, business, insurance replacement, body-shop, and travel-related needs. The website was developed to provide customers with a convenient digital platform where they can explore available vehicles, understand rental services, check pickup and drop-off options, and make reservations online.",
       meta: [
         { label: "Client:", value: "Rentex Car Rental" },
-        { label: "Year:", value: "2026" },
+        { label: "Year:", value: "2019" },
         { label: "Category:", value: "Travel & Transportation / Car Rental" },
         { label: "Location:", value: "Mississauga, Ontario, Canada" },
       ],
@@ -914,7 +914,7 @@ export const projectDetailsData = {
         "Bottle POS is a cloud-based point-of-sale and inventory management software platform custom-built specifically for liquor, wine, and beer retailers. Developed by retail veterans, the system streamlines complex beverage-retail operations with automated invoice scanning, AI-powered sales ranking, age verification compliance, and multi-store inventory synchronization. Netsquare Softwares designed and engineered a high-converting digital platform to showcase its software capabilities, drive product demos, and convert independent store owners.",
       meta: [
         { label: "Client:", value: "Bottle POS" },
-        { label: "Year:", value: "2026" },
+        { label: "Year:", value: "2024" },
         { label: "Category:", value: "SaaS / Point of Sale & Retail Technology" },
         { label: "Location:", value: "Peachtree Corners, Georgia, United States" },
       ],

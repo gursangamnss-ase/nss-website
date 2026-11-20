@@ -12,7 +12,7 @@ export const footerData = {
     { label: "Projects", href: "/project" },
     { label: "Blog", href: "/blog" },
     { label: "Contact us", href: "/contact" },
-    { label: "Services", href: "/#services" },
+    { label: "Career", href: "/career" },
   ],
   contact: {
     phoneLabel: "082830 30094",
