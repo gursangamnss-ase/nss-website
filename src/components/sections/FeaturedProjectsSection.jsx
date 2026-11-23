@@ -95,7 +95,7 @@ export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
                 src={project.mobileImage || project.image}
                 alt={project.alt}
                 fill
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, 0px"
                 className="object-cover object-center"
                 priority={idx === 0}
               />
@@ -107,7 +107,7 @@ export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
                 src={project.image}
                 alt={project.alt}
                 fill
-                sizes="100vw"
+                sizes="(max-width: 768px) 0px, 100vw"
                 className="object-cover lg:object-fill object-center"
                 priority={idx === 0}
               />
