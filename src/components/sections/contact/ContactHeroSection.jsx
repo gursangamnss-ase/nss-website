@@ -4,7 +4,7 @@ import ContactForm from "@/components/forms/ContactForm";
 import ContactMapSection from "@/components/sections/contact/ContactMapSection";
 import Container from "@/components/layout/Container";
 import { contactData } from "@/data/contactData";
-import { IndiaFlag, CanadaFlag } from "@/components/ui/FlagIcons";
+import { IndiaFlag, CanadaFlag, AustraliaFlag } from "@/components/ui/FlagIcons";
 
 export default function ContactHeroSection() {
   const { hero } = contactData;
@@ -102,7 +102,7 @@ export default function ContactHeroSection() {
                   </p>
                 </div>
 
-                {/* Branch Office */}
+                {/* Canada Branch Office */}
                 {hero.canadaAddress && (
                   <div>
                     <div className="flex items-center gap-2">
@@ -113,6 +113,21 @@ export default function ContactHeroSection() {
                     </div>
                     <p className="text-sm sm:text-base text-neutral-600 max-w-sm mt-1 leading-relaxed">
                       {hero.canadaAddress}
+                    </p>
+                  </div>
+                )}
+
+                {/* Australia Branch Office */}
+                {hero.australiaAddress && (
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <p className="text-base sm:text-lg font-bold text-[var(--color-primary)]">
+                        {hero.australiaAgency || "Branch Office"}
+                      </p>
+                      <AustraliaFlag className="h-4 w-[23px] rounded-[2px] shadow-sm inline-block shrink-0" />
+                    </div>
+                    <p className="text-sm sm:text-base text-neutral-600 max-w-sm mt-1 leading-relaxed">
+                      {hero.australiaAddress}
                     </p>
                   </div>
                 )}

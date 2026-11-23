@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { footerData } from "@/data/footerData";
-import { IndiaFlag, CanadaFlag } from "@/components/ui/FlagIcons";
+import { IndiaFlag, CanadaFlag, AustraliaFlag } from "@/components/ui/FlagIcons";
 
 /* Social Icon SVG components */
 function SocialIcon({ type }) {
@@ -192,6 +192,20 @@ export default function Footer() {
                   </div>
                   <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs sm:max-w-sm">
                     {contact.canadaAddress}
+                  </p>
+                </div>
+              )}
+
+              {contact.australiaAddress && (
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex items-center gap-2">
+                    <p className="text-base font-medium text-white">
+                      {contact.australiaTitle || "Branch Office"}
+                    </p>
+                    <AustraliaFlag className="h-4 w-[23px] rounded-[2px] shadow-sm inline-block shrink-0" />
+                  </div>
+                  <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs sm:max-w-sm">
+                    {contact.australiaAddress}
                   </p>
                 </div>
               )}

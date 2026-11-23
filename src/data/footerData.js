@@ -23,6 +23,8 @@ export const footerData = {
     address: "D-234, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 140307",
     canadaTitle: "Branch Office",
     canadaAddress: "190 Corner Springs Landing Northeast Calgary, AB T3N 2Y1",
+    australiaTitle: "Branch Office",
+    australiaAddress: "1098 North East Road, Modbury SA 5092, Australia",
   },
   socials: [
     {

@@ -32,3 +32,19 @@ export function CanadaFlag({
     />
   );
 }
+
+export function AustraliaFlag({
+  className = "h-4 w-[23px] rounded-[2px] shadow-sm inline-block shrink-0 object-cover",
+  alt = "Australia Flag",
+}) {
+  return (
+    <Image
+      src="/images/flags/australia.png"
+      alt={alt}
+      width={23}
+      height={16}
+      className={className}
+      unoptimized
+    />
+  );
+}
