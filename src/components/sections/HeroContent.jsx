@@ -83,7 +83,7 @@ export default function HeroContent() {
           {/* Desktop-only CTA Button (lg+: 1024px and up): Positioned between text and copyright */}
           <div className="hidden lg:block pt-0.5">
             <Button
-              href="#contact"
+              href="/contact"
               variant="light"
               size="md"
             >

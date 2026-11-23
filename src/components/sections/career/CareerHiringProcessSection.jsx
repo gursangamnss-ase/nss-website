@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 
@@ -15,10 +15,27 @@ import { careerHiringProcessData } from "@/data/careerHiringProcessData";
 
 export default function CareerHiringProcessSection() {
     const [activeStepIndex, setActiveStepIndex] = useState(0);
+    const detailCardRef = useRef(null);
 
     const shouldReduceMotion = useReducedMotion();
 
     const activeStep = careerHiringProcessData[activeStepIndex];
+
+    const handleStepClick = (index) => {
+        setActiveStepIndex(index);
+        if (typeof window !== "undefined" && window.innerWidth <= 1024) {
+            setTimeout(() => {
+                if (detailCardRef.current) {
+                    const yOffset = -24;
+                    const y =
+                        detailCardRef.current.getBoundingClientRect().top +
+                        (window.scrollY || window.pageYOffset || 0) +
+                        yOffset;
+                    window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+                }
+            }, 50);
+        }
+    };
 
     return (
         <Section
@@ -200,7 +217,7 @@ export default function CareerHiringProcessSection() {
                                             activeStepIndex === index
                                         }
                                         onClick={() =>
-                                            setActiveStepIndex(index)
+                                            handleStepClick(index)
                                         }
                                         className="h-full"
                                     />
@@ -212,7 +229,7 @@ export default function CareerHiringProcessSection() {
                     {/* =========================================
                         DETAIL (min-[1200px]:col-span-8 aligned with heading)
                     ========================================== */}
-                    <div className="min-[1200px]:col-span-8 w-full min-w-0">
+                    <div ref={detailCardRef} className="min-[1200px]:col-span-8 w-full min-w-0 scroll-mt-6">
                         <AnimatePresence mode="wait">
                             <CareerHiringProcessDetailCard
                                 key={activeStep.id}

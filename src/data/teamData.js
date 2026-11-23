@@ -6,7 +6,7 @@ export const teamData = {
   statement:
     "We're a passionate team of creative thinkers, designers and technology professionals who believe in turning ideas into meaningful digital experiences. Through collaboration, innovation and techinal expertise, we build solutions that help businesses grow and make a lasting impact.",
   ctaText: "Know more about us",
-  ctaLink: "#contact",
+  ctaLink: "/contact",
   copyright: "© Netsquare Softwares Pvt Itd",
   members: [
     {

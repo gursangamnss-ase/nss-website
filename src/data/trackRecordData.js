@@ -7,7 +7,7 @@ export const trackRecordData = {
   },
   cta: {
     label: "Know more about us",
-    href: "/about",
+    href: "/about-us",
   },
   stats: [
     {

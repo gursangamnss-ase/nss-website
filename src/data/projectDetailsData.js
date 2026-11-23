@@ -12,7 +12,7 @@ export const projectDetailsData = {
         "Aeko is an Australian luxury architectural brand specializing in bespoke wrought iron doors, high-strength steel doors, pivot systems, and architectural living solutions. The company combines timeless hand-crafted metallurgy with contemporary minimalist design, delivering premium residential and commercial entrance solutions across Australia. The platform was developed to provide architects, builders, and homeowners with an inspiring digital catalogue, interactive product exploration, and a seamless quote-request workflow.",
       meta: [
         { label: "Client:", value: "Aeko Australia" },
-        { label: "Year:", value: "2026" },
+        { label: "Year:", value: "2025" },
         { label: "Category:", value: "Architectural Doors & Luxury Interiors / E-Commerce" },
         { label: "Location:", value: "Australia" },
       ],

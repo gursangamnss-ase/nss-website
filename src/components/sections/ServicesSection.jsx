@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "motion/react";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
@@ -12,6 +12,23 @@ import { servicesData } from "@/data/servicesData";
 
 export default function ServicesSection() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const detailCardRef = useRef(null);
+
+  const handleTabClick = (index) => {
+    setActiveTabIndex(index);
+    if (typeof window !== "undefined" && window.innerWidth <= 1024) {
+      setTimeout(() => {
+        if (detailCardRef.current) {
+          const yOffset = -24;
+          const y =
+            detailCardRef.current.getBoundingClientRect().top +
+            (window.scrollY || window.pageYOffset || 0) +
+            yOffset;
+          window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+        }
+      }, 50);
+    }
+  };
 
   return (
     <Section
@@ -68,7 +85,7 @@ export default function ServicesSection() {
                     number={service.number}
                     title={service.title}
                     isActive={activeTabIndex === index}
-                    onClick={() => setActiveTabIndex(index)}
+                    onClick={() => handleTabClick(index)}
                     className="h-full"
                   />
                 </motion.div>
@@ -88,17 +105,17 @@ export default function ServicesSection() {
               className="mt-6 sm:mt-8 min-[1200px]:mt-10"
             >
               <Button
-                href="#contact"
+                href="/contact"
                 variant="light"
                 className="w-auto px-6 py-1"
               >
-                See pricing
+                Let's Connect
               </Button>
             </motion.div>
           </div>
 
           {/* Service card */}
-          <div className="min-[1200px]:col-span-8 w-full">
+          <div ref={detailCardRef} className="min-[1200px]:col-span-8 w-full scroll-mt-6">
             <ServiceDetailCard service={servicesData[activeTabIndex]} />
           </div>
         </div>
