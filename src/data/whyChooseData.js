@@ -37,7 +37,7 @@ export const whyChooseData = {
       "Continuous Innovation",
     ],
     ctaText: "Get started",
-    ctaLink: "#contact",
+    ctaLink: "/contact",
     chainImage: "/brand/ZywE1VmIeWyUjcGlRI6E373zLc.avif",
     copyright: "© 2026 Netsquare Softwares Pvt. Ltd.",
   },

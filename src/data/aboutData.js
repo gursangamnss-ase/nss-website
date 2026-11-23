@@ -85,8 +85,8 @@ export const aboutData = {
       title: "Our mission",
       description:
         "Our mission to empower businesses through innovative technology, creative-thinking and reliable digital solutions. We strive to transform ideas into meaningful digital experiences that simplify processes, strengthen online presence and create lasting value for our clients",
-      ctaText: "Meet our team",
-      ctaLink: "/contact",
+      ctaText: "Explore our work",
+      ctaLink: "/project",
     },
     goals: {
       title: "Our goal",

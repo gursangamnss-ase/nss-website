@@ -18,6 +18,8 @@ export const contactData = {
     branchOfficeTitle: "Branch Office",
     canadaAgency: "Branch Office",
     canadaAddress: "190 Corner Springs Landing Northeast Calgary, AB T3N 2Y1",
+    australiaAgency: "Branch Office",
+    australiaAddress: "1098 North East Road, Modbury SA 5092, Australia",
   },
   offices: [
     {
@@ -46,6 +48,19 @@ export const contactData = {
         "https://maps.google.com/maps?q=51.1634,-113.9231&hl=en&z=15&output=embed&iwloc=near",
       directionsUrl:
         "https://www.google.com/maps/dir/?api=1&destination=51.1634,-113.9231",
+    },
+    {
+      id: "modbury",
+      name: "Australia Branch",
+      tag: "Branch Office",
+      company: "NetSquare Softwares Australia",
+      address: "1098 North East Road, Modbury SA 5092, Australia",
+      phone: "+ 91 82830 30094",
+      email: "admin@netsquaresoftwares.com",
+      mapEmbedUrl:
+        "https://maps.google.com/maps?q=-34.8437,138.6853&hl=en&z=15&output=embed&iwloc=near",
+      directionsUrl:
+        "https://www.google.com/maps/dir/?api=1&destination=-34.8437,138.6853",
     },
   ],
   form: {

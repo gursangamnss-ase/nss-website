@@ -23,27 +23,24 @@ export const footerData = {
     address: "D-234, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 140307",
     canadaTitle: "Branch Office",
     canadaAddress: "190 Corner Springs Landing Northeast Calgary, AB T3N 2Y1",
+    australiaTitle: "Branch Office",
+    australiaAddress: "1098 North East Road, Modbury SA 5092, Australia",
   },
   socials: [
     {
-      name: "Facebook",
-      href: "https://www.facebook.com/",
-      type: "facebook",
-    },
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/",
-      type: "instagram",
-    },
-    {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/",
+      href: "https://www.linkedin.com/company/netsquaresoftwarespvtltd",
       type: "linkedin",
     },
     {
-      name: "Twitter/X",
-      href: "https://x.com/",
-      type: "twitter",
+      name: "YouTube",
+      href: "https://youtube.com/@netsquaresoftwares",
+      type: "youtube",
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/netsquaresoftwares",
+      type: "instagram",
     },
   ],
   copyright: `© ${new Date().getFullYear()} NetSquare Softwares. All rights reserved`,

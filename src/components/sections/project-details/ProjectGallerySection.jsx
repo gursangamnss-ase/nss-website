@@ -75,7 +75,11 @@ function ImageLightboxModal({ image, onClose }) {
   );
 }
 
-export function ProjectShowcaseBanner({ image, alt = "Project showcase" }) {
+export function ProjectShowcaseBanner({
+  image,
+  alt = "Project showcase",
+  showcaseAspectRatio = "2.167 / 1",
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   if (!image) return null;
@@ -87,7 +91,8 @@ export function ProjectShowcaseBanner({ image, alt = "Project showcase" }) {
           type="button"
           onClick={() => setIsOpen(true)}
           aria-label={`View enlarged ${alt}`}
-          className="group relative w-full aspect-[2.167/1] overflow-hidden bg-neutral-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] cursor-zoom-in block text-left"
+          className="group relative w-full overflow-hidden bg-neutral-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] cursor-zoom-in block text-left"
+          style={{ aspectRatio: showcaseAspectRatio }}
         >
           <div className="relative h-full w-full origin-center transition-transform duration-500 ease-out group-hover:scale-[1.03]">
             <Image
@@ -116,7 +121,11 @@ export function ProjectShowcaseBanner({ image, alt = "Project showcase" }) {
   );
 }
 
-export function ProjectGalleryGrid({ images = [] }) {
+export function ProjectGalleryGrid({
+  images = [],
+  galleryAspectRatio = "2.18 / 1",
+  bottomAspectRatio = galleryAspectRatio,
+}) {
   const [selectedImage, setSelectedImage] = useState(null);
 
   if (!images || images.length === 0) return null;
@@ -141,7 +150,8 @@ export function ProjectGalleryGrid({ images = [] }) {
                   })
                 }
                 aria-label={`View enlarged project gallery image ${idx + 1}`}
-                className="group relative aspect-[4/3] w-full overflow-hidden rounded-[24px] sm:rounded-3xl bg-neutral-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] cursor-zoom-in text-left block"
+                className="group relative w-full overflow-hidden rounded-[20px] sm:rounded-3xl bg-neutral-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] cursor-zoom-in text-left block"
+                style={{ aspectRatio: galleryAspectRatio }}
               >
                 <Image
                   src={img}
@@ -166,7 +176,8 @@ export function ProjectGalleryGrid({ images = [] }) {
                 })
               }
               aria-label="View enlarged project gallery showcase image"
-              className="group relative aspect-[16/9] md:aspect-[2.167/1] w-full overflow-hidden rounded-[24px] sm:rounded-3xl bg-neutral-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] cursor-zoom-in text-left block"
+              className="group relative w-full overflow-hidden rounded-[20px] sm:rounded-3xl bg-neutral-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] cursor-zoom-in text-left block"
+              style={{ aspectRatio: bottomAspectRatio }}
             >
               <div className="relative h-full w-full origin-center transition-transform duration-500 ease-out group-hover:scale-[1.03]">
                 <Image

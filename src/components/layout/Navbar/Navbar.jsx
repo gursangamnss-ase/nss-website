@@ -14,10 +14,9 @@ const menuItems = [
 ];
 
 const socialItems = [
-  { label: "Facebook", link: "https://www.facebook.com/" },
-  { label: "Instagram", link: "https://www.instagram.com/" },
-  { label: "LinkedIn", link: "https://www.linkedin.com/" },
-  { label: "Twitter", link: "https://x.com/" },
+  { label: "LinkedIn", link: "https://www.linkedin.com/company/netsquaresoftwarespvtltd" },
+  { label: "YouTube", link: "https://youtube.com/@netsquaresoftwares" },
+  { label: "Instagram", link: "https://www.instagram.com/netsquaresoftwares" },
 ];
 
 const projectCountBadge = `(${String(projectData.projects.length).padStart(2, "0")})`;

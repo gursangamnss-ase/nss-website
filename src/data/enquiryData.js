@@ -51,7 +51,7 @@ export const enquiryData = {
     },
     cta: {
       text: "Book a discovery call",
-      link: "#contact",
+      link: "/contact",
     },
   },
 };
