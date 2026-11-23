@@ -89,13 +89,30 @@ export default function FeaturedProjectsSection({ autoPlayInterval = 4000 }) {
               }`}
             aria-hidden={!isActive}
           >
-            <Image
-              src={project.image}
-              alt={project.alt}
-              fill
-              sizes="100vw"
-              className="object-cover lg:object-fill object-center"
-            />
+            {/* Mobile Image (<= 768px: complete uncropped mobile variant) */}
+            <div className="absolute inset-0 block min-[769px]:hidden">
+              <Image
+                src={project.mobileImage || project.image}
+                alt={project.alt}
+                fill
+                sizes="100vw"
+                className="object-cover object-center"
+                priority={idx === 0}
+              />
+            </div>
+
+            {/* Desktop / Large Screen Image (> 768px) */}
+            <div className="absolute inset-0 hidden min-[769px]:block">
+              <Image
+                src={project.image}
+                alt={project.alt}
+                fill
+                sizes="100vw"
+                className="object-cover lg:object-fill object-center"
+                priority={idx === 0}
+              />
+            </div>
+
             {/* Dark tint overlay for text contrast */}
             <div className="absolute inset-0 bg-black/40" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/45" />

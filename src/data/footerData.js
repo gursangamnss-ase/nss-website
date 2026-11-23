@@ -26,24 +26,19 @@ export const footerData = {
   },
   socials: [
     {
-      name: "Facebook",
-      href: "https://www.facebook.com/",
-      type: "facebook",
-    },
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/",
-      type: "instagram",
-    },
-    {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/",
+      href: "https://www.linkedin.com/company/netsquaresoftwarespvtltd",
       type: "linkedin",
     },
     {
-      name: "Twitter/X",
-      href: "https://x.com/",
-      type: "twitter",
+      name: "YouTube",
+      href: "https://youtube.com/@netsquaresoftwares",
+      type: "youtube",
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/netsquaresoftwares",
+      type: "instagram",
     },
   ],
   copyright: `© ${new Date().getFullYear()} NetSquare Softwares. All rights reserved`,

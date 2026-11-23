@@ -88,7 +88,7 @@ export default function InsideStudioSection() {
         </div>
 
         <StudioImageCard
-          image="/images/studio-team.avif"
+          image="/images/company-team-studio.png"
           imageAlt="Studio team gathered in sunlight"
           avatar="/brand/avatar-6.webp"
           title="Discuss your projects"

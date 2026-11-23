@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import Button from "@/components/ui/Button";
 import { contactData } from "@/data/contactData";
+import { IndiaFlag, CanadaFlag } from "@/components/ui/FlagIcons";
 
 export default function ContactMapSection({ className = "" }) {
   const offices = contactData.offices || [
@@ -76,15 +77,22 @@ export default function ContactMapSection({ className = "" }) {
                 </span>
 
                 {/* NSS Signature Dual-Layer Vertical Text Roll Animation */}
-                <span className="relative z-10 flex items-center leading-tight font-medium overflow-hidden">
-                  <span className="inline-block transition-all duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] origin-center translate-y-0 scale-100 opacity-100 group-hover:-translate-y-[160%] group-hover:scale-[0.8] group-hover:opacity-0 whitespace-nowrap">
-                    {office.name}
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="absolute inset-0 flex items-center justify-center transition-all duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] origin-center translate-y-[160%] scale-[1.2] opacity-0 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 pointer-events-none whitespace-nowrap"
-                  >
-                    {office.name}
+                <span className="relative z-10 flex items-center gap-1.5 leading-tight font-medium overflow-hidden">
+                  {office.id === "mohali" ? (
+                    <IndiaFlag className="h-3 w-4.5 rounded-[1px] shrink-0" />
+                  ) : (
+                    <CanadaFlag className="h-3 w-4.5 rounded-[1px] shrink-0" />
+                  )}
+                  <span className="relative flex items-center overflow-hidden">
+                    <span className="inline-block transition-all duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] origin-center translate-y-0 scale-100 opacity-100 group-hover:-translate-y-[160%] group-hover:scale-[0.8] group-hover:opacity-0 whitespace-nowrap">
+                      {office.name}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-0 flex items-center justify-center transition-all duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] origin-center translate-y-[160%] scale-[1.2] opacity-0 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 pointer-events-none whitespace-nowrap"
+                    >
+                      {office.name}
+                    </span>
                   </span>
                 </span>
               </button>
@@ -115,7 +123,12 @@ export default function ContactMapSection({ className = "" }) {
         {/* Floating Address & Directions Overlay Card */}
         <div className="absolute left-4 bottom-4 sm:left-6 sm:bottom-6 max-w-[calc(100%-2rem)] sm:max-w-sm rounded-[20px] bg-white/95 backdrop-blur-md p-4 sm:p-5 border border-white/60 shadow-lg text-[var(--color-primary)] z-10">
           <div className="flex items-center gap-2 mb-1.5">
-            <span className="px-2.5 py-0.5 rounded-full bg-neutral-100 text-[11px] font-semibold text-neutral-700 uppercase tracking-wider">
+            <span className="px-2.5 py-0.5 rounded-full bg-neutral-100 text-[11px] font-semibold text-neutral-700 uppercase tracking-wider flex items-center gap-1.5">
+              {activeOffice.id === "mohali" ? (
+                <IndiaFlag className="h-2.5 w-3.5 rounded-[1px] shrink-0" />
+              ) : (
+                <CanadaFlag className="h-2.5 w-3.5 rounded-[1px] shrink-0" />
+              )}
               {activeOffice.tag}
             </span>
             <span className="text-xs text-neutral-500">

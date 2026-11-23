@@ -4,21 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { footerData } from "@/data/footerData";
+import { IndiaFlag, CanadaFlag } from "@/components/ui/FlagIcons";
 
 /* Social Icon SVG components */
 function SocialIcon({ type }) {
-  if (type === "facebook") {
-    return (
-      <svg
-        viewBox="0 0 50 50"
-        className="w-5 h-5 fill-current"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path d="M24.583 45.313h.834c1.562 0 2.343 0 2.891-.398q.267-.194.46-.461c.399-.548.399-1.33.399-2.892V28.386h2.5c1.562 0 2.343 0 2.891-.398a2 2 0 0 0 .46-.46c.399-.548.399-1.33.399-2.892v-.399c0-1.562 0-2.344-.398-2.891a2.1 2.1 0 0 0-.461-.461c-.548-.398-1.329-.398-2.891-.398h-2.5v-4.774c0-.97 0-1.456.158-1.84.212-.51.617-.915 1.128-1.127.383-.158.868-.158 1.839-.158.97 0 1.456 0 1.839-.159.51-.211.916-.617 1.127-1.127.159-.383.159-.869.159-1.84V7.929c0-1.08 0-1.619-.196-2.038a2.08 2.08 0 0 0-1.007-1.007c-.419-.196-.959-.196-2.038-.196-3.778 0-5.667 0-7.133.684a7.3 7.3 0 0 0-3.526 3.527c-.684 1.465-.684 3.354-.684 7.132v4.456h-2.5c-1.562 0-2.343 0-2.89.398a2.1 2.1 0 0 0-.462.46c-.398.548-.398 1.33-.398 2.892v.4c0 1.562 0 2.343.398 2.89q.195.267.461.462c.548.397 1.329.397 2.891.397h2.5v13.177c0 1.563 0 2.344.398 2.892q.194.267.461.46c.548.398 1.33.398 2.891.398" />
-      </svg>
-    );
-  }
   if (type === "linkedin") {
     return (
       <svg
@@ -28,6 +17,30 @@ function SocialIcon({ type }) {
         aria-hidden="true"
       >
         <path fillRule="evenodd" clipRule="evenodd" d="M4.688 22.5c0-7.421 0-11.132 1.89-13.733a9.9 9.9 0 0 1 2.189-2.19c2.601-1.89 6.312-1.89 13.733-1.89h5c7.421 0 11.132 0 13.733 1.89.84.61 1.58 1.35 2.19 2.19 1.89 2.601 1.89 6.312 1.89 13.733v5c0 7.421 0 11.132-1.89 13.733a9.9 9.9 0 0 1-2.19 2.19c-2.6 1.89-6.312 1.89-13.733 1.89h-5c-7.421 0-11.132 0-13.733-1.89a9.9 9.9 0 0 1-2.19-2.19c-1.89-2.6-1.89-6.312-1.89-13.733zm10.937-2.188c.863 0 1.563.7 1.563 1.563v12.5a1.563 1.563 0 0 1-3.125 0v-12.5c0-.863.7-1.563 1.562-1.563m7.292 0c.863 0 1.562.7 1.562 1.563v.471a8.7 8.7 0 0 1 5.6-2.034 5.86 5.86 0 0 1 5.858 5.86v8.203a1.563 1.563 0 0 1-3.124 0v-8.203a2.734 2.734 0 0 0-2.735-2.735 5.6 5.6 0 0 0-5.599 5.6v5.338a1.563 1.563 0 0 1-3.125 0v-12.5c0-.863.7-1.563 1.563-1.563m-7.292-2.604a2.083 2.083 0 1 0 0-4.166 2.083 2.083 0 0 0 0 4.166" />
+      </svg>
+    );
+  }
+  if (type === "youtube") {
+    return (
+      <svg
+        viewBox="0 0 50 50"
+        className="w-5 h-5 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M44.42 13.91a5.63 5.63 0 0 0-3.96-3.98C36.96 9 25 9 25 9s-11.96 0-15.46.93a5.63 5.63 0 0 0-3.96 3.98C4.65 17.43 4.65 25 4.65 25s0 7.57.93 11.09a5.63 5.63 0 0 0 3.96 3.98C13.04 41 25 41 25 41s11.96 0 15.46-.93a5.63 5.63 0 0 0 3.96-3.98c.93-3.52.93-11.09.93-11.09s0-7.57-.93-11.09zM20.9 31.82V18.18L32.8 25l-11.9 6.82z" />
+      </svg>
+    );
+  }
+  if (type === "facebook") {
+    return (
+      <svg
+        viewBox="0 0 50 50"
+        className="w-5 h-5 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M24.583 45.313h.834c1.562 0 2.343 0 2.891-.398q.267-.194.46-.461c.399-.548.399-1.33.399-2.892V28.386h2.5c1.562 0 2.343 0 2.891-.398a2 2 0 0 0 .46-.46c.399-.548.399-1.33.399-2.892v-.399c0-1.562 0-2.344-.398-2.891a2.1 2.1 0 0 0-.461-.461c-.548-.398-1.329-.398-2.891-.398h-2.5v-4.774c0-.97 0-1.456.158-1.84.212-.51.617-.915 1.128-1.127.383-.158.868-.158 1.839-.158.97 0 1.456 0 1.839-.159.51-.211.916-.617 1.127-1.127.159-.383.159-.869.159-1.84V7.929c0-1.08 0-1.619-.196-2.038a2.08 2.08 0 0 0-1.007-1.007c-.419-.196-.959-.196-2.038-.196-3.778 0-5.667 0-7.133.684a7.3 7.3 0 0 0-3.526 3.527c-.684 1.465-.684 3.354-.684 7.132v4.456h-2.5c-1.562 0-2.343 0-2.89.398a2.1 2.1 0 0 0-.462.46c-.398.548-.398 1.33-.398 2.892v.4c0 1.562 0 2.343.398 2.89q.195.267.461.462c.548.397 1.329.397 2.891.397h2.5v13.177c0 1.563 0 2.344.398 2.892q.194.267.461.46c.548.398 1.33.398 2.891.398" />
       </svg>
     );
   }
@@ -67,8 +80,9 @@ export default function Footer() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
-  const leftSocials = socials.slice(0, 2);
-  const rightSocials = socials.slice(2, 4);
+  const midPoint = Math.ceil(socials.length / 2);
+  const leftSocials = socials.slice(0, midPoint);
+  const rightSocials = socials.slice(midPoint);
 
   return (
     <footer className="relative overflow-hidden bg-[var(--color-primary)] text-white pt-24 sm:pt-32 pb-12">
@@ -154,9 +168,12 @@ export default function Footer() {
             {/* Registered & Branch Office studio address */}
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-1.5">
-                <p className="text-lg font-medium text-[var(--color-text-muted)] tracking-wide">
-                  {contact.offlineTitle || "Registered Office"}
-                </p>
+                <div className="flex items-center gap-2">
+                  <p className="text-lg font-medium text-[var(--color-text-muted)] tracking-wide">
+                    {contact.offlineTitle || "Registered Office"}
+                  </p>
+                  <IndiaFlag className="h-4 w-[23px] rounded-[2px] shadow-sm inline-block shrink-0" />
+                </div>
                 <p className="text-base font-medium text-white">
                   {contact.companyTitle}
                 </p>
@@ -167,9 +184,12 @@ export default function Footer() {
 
               {contact.canadaAddress && (
                 <div className="flex flex-col gap-1.5">
-                  <p className="text-base font-medium text-white">
-                    {contact.canadaTitle || "Branch Office"}
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <p className="text-base font-medium text-white">
+                      {contact.canadaTitle || "Branch Office"}
+                    </p>
+                    <CanadaFlag className="h-4 w-[23px] rounded-[2px] shadow-sm inline-block shrink-0" />
+                  </div>
                   <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs sm:max-w-sm">
                     {contact.canadaAddress}
                   </p>

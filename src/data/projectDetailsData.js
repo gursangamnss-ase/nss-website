@@ -6,6 +6,7 @@ export const projectDetailsData = {
     title: "Aeko",
     scriptTitle: "Australia",
     heroImage: "/projects/aeko/hero.webp",
+    heroAspectRatio: "1672 / 941",
     overview: {
       badge: "Overview",
       description:
@@ -66,6 +67,7 @@ export const projectDetailsData = {
     title: "DAV",
     scriptTitle: "NZ",
     heroImage: "/projects/dav/hero.webp",
+    heroAspectRatio: "1568 / 1003",
     overview: {
       badge: "Overview",
       description:
@@ -80,6 +82,7 @@ export const projectDetailsData = {
       liveSiteLabel: "View live site",
     },
     showcaseImage: "/projects/dav/showcase.webp",
+    showcaseAspectRatio: "1568 / 1003",
     challenge: {
       badge: "The Challenge",
       description:
@@ -126,6 +129,7 @@ export const projectDetailsData = {
     title: "IRIS",
     scriptTitle: "USA",
     heroImage: "/projects/iris/IRIS_AI_Workspace.png",
+    heroAspectRatio: "1568 / 1003",
     overview: {
       badge: "Overview",
       description:
@@ -140,6 +144,7 @@ export const projectDetailsData = {
       liveSiteLabel: "",
     },
     showcaseImage: "/projects/iris/showcase.webp",
+    showcaseAspectRatio: "1568 / 1003",
     challenge: {
       badge: "The Challenge",
       description:
@@ -188,6 +193,7 @@ export const projectDetailsData = {
     title: "Fingerprint",
     scriptTitle: "USA",
     heroImage: "/projects/fingerprint/hero.webp",
+    heroAspectRatio: "1568 / 1003",
     overview: {
       badge: "Overview",
       description:
@@ -202,6 +208,9 @@ export const projectDetailsData = {
       liveSiteLabel: "",
     },
     showcaseImage: "/projects/fingerprint/showcase.webp",
+    showcaseAspectRatio: "1568 / 1003",
+    galleryAspectRatio: "4 / 3",
+    bottomGalleryAspectRatio: "2 / 1",
     challenge: {
       badge: "The Challenge",
       description:
@@ -248,6 +257,7 @@ export const projectDetailsData = {
     title: "Raftaar",
     scriptTitle: "Australia",
     heroImage: "/projects/shopraftaar/hero.webp",
+    heroAspectRatio: "1912 / 867",
     overview: {
       badge: "Overview",
       description:
@@ -308,6 +318,7 @@ export const projectDetailsData = {
     title: "Mann Bros",
     scriptTitle: "USA",
     heroImage: "/projects/mannbros/hero.webp",
+    heroAspectRatio: "1844 / 853",
     overview: {
       badge: "Overview",
       description:
@@ -368,6 +379,7 @@ export const projectDetailsData = {
     title: "Shahi Khuraak",
     scriptTitle: "NZ",
     heroImage: "/projects/shahikhuraak/hero.webp",
+    heroAspectRatio: "1892 / 867",
     overview: {
       badge: "Overview",
       description:
@@ -428,6 +440,7 @@ export const projectDetailsData = {
     title: "Next Wave",
     scriptTitle: "Mechanical",
     heroImage: "/projects/nextwave/hero.webp",
+    heroAspectRatio: "1902 / 861",
     overview: {
       badge: "Overview",
       description:
@@ -488,6 +501,7 @@ export const projectDetailsData = {
     title: "Punjabi Heritage",
     scriptTitle: "& Folk",
     heroImage: "/projects/phf/hero.webp",
+    heroAspectRatio: "1901 / 866",
     overview: {
       badge: "Overview",
       description:
@@ -548,6 +562,7 @@ export const projectDetailsData = {
     title: "My Keys",
     scriptTitle: "Driving School",
     heroImage: "/projects/mykeys/hero.webp",
+    heroAspectRatio: "1925 / 915",
     overview: {
       badge: "Overview",
       description:
@@ -608,6 +623,7 @@ export const projectDetailsData = {
     title: "All Sydney",
     scriptTitle: "Tow Truck",
     heroImage: "/projects/allsydneytowtruck/hero.webp",
+    heroAspectRatio: "1892 / 865",
     overview: {
       badge: "Overview",
       description:
@@ -668,6 +684,7 @@ export const projectDetailsData = {
     title: "Lynix",
     scriptTitle: "World",
     heroImage: "/projects/lynixworld/hero.webp",
+    heroAspectRatio: "1836 / 862",
     overview: {
       badge: "Overview",
       description:
@@ -728,6 +745,7 @@ export const projectDetailsData = {
     title: "Amina",
     scriptTitle: "Bazaar",
     heroImage: "/projects/aminabazaar/hero.webp",
+    heroAspectRatio: "1887 / 852",
     overview: {
       badge: "Overview",
       description:
@@ -788,6 +806,7 @@ export const projectDetailsData = {
     title: "IBSP",
     scriptTitle: "Chris21 HR",
     heroImage: "/projects/ibsp/hero.webp",
+    heroAspectRatio: "1897 / 896",
     overview: {
       badge: "Overview",
       description:
@@ -848,6 +867,7 @@ export const projectDetailsData = {
     title: "Rentex",
     scriptTitle: "Car Rental",
     heroImage: "/projects/rentexcar/hero.webp",
+    heroAspectRatio: "1887 / 902",
     overview: {
       badge: "Overview",
       description:
@@ -908,6 +928,7 @@ export const projectDetailsData = {
     title: "Bottle POS",
     scriptTitle: "USA",
     heroImage: "/projects/bottlepos/hero.webp",
+    heroAspectRatio: "1887 / 902",
     overview: {
       badge: "Overview",
       description:
@@ -982,6 +1003,7 @@ export function getProjectBySlug(slug) {
     title: base.title,
     scriptTitle: base.scriptTitle,
     heroImage: base.image,
+    heroAspectRatio: "1844 / 853",
     overview: {
       badge: "Overview",
       description: `${base.title} ${base.scriptTitle} was designed to deliver standout storytelling, modern responsive layouts, and seamless digital interaction.`,

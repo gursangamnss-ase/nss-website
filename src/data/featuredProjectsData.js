@@ -7,6 +7,7 @@ export const featuredProjectsData = [
     tags: ["Retail POS", "Liquor Store System"],
     href: "/project/bottlepos",
     image: "/projects/cover-image/BottlePOS.png",
+    mobileImage: "/projects/cover-image/mobile/BottlePOS.png",
     alt: "Bottle POS USA Point of Sale and Liquor Store Management SaaS Platform",
   },
   {
@@ -17,6 +18,7 @@ export const featuredProjectsData = [
     tags: ["Social Networking", "Mobile Application"],
     href: "/project/fingerprint",
     image: "/projects/cover-image/FingerPrintMobile.png",
+    mobileImage: "/projects/cover-image/mobile/FingerPrintMobile.png",
     alt: "Fingerprint USA Social Video Recording and Sharing Mobile Application",
   },
   {
@@ -27,6 +29,7 @@ export const featuredProjectsData = [
     tags: ["Artificial Intelligence", "AI Agents & Automation"],
     href: "/project/iris",
     image: "/projects/cover-image/IRIS_AI_Workspace.png",
+    mobileImage: "/projects/cover-image/mobile/IRIS_AI_Workspace.png",
     alt: "IRIS USA AI-Powered Personal Assistant and Business Automation Platform",
   },
   {
@@ -37,6 +40,7 @@ export const featuredProjectsData = [
     tags: ["Fleet Management", "Admin System"],
     href: "/project/mannbros",
     image: "/projects/cover-image/Modern.png",
+    mobileImage: "/projects/cover-image/mobile/Modern.png",
     alt: "Mann Bros USA Leasing trailer and fleet management platform",
   },
   {
@@ -47,6 +51,7 @@ export const featuredProjectsData = [
     tags: ["Architectural Doors", "Custom Living"],
     href: "/project/aeko",
     image: "/projects/cover-image/aeko.webp",
+    mobileImage: "/projects/cover-image/mobile/aeko.webp",
     alt: "Aeko Australia Architectural Doors and Bespoke Living Spaces",
   },
   {
@@ -57,6 +62,7 @@ export const featuredProjectsData = [
     tags: ["Logistics & Freight", "Transportation Services"],
     href: "/project/dav",
     image: "/projects/cover-image/DAVTransport.png",
+    mobileImage: "/projects/cover-image/mobile/DAVTransport.png",
     alt: "DAV NZ Safe and Secure Freight and Moving Services New Zealand",
   },
   {
@@ -67,6 +73,7 @@ export const featuredProjectsData = [
     tags: ["Fashion & Apparel", "Punjabi Streetwear"],
     href: "/project/shopraftaar",
     image: "/projects/cover-image/RAFTAAR.png",
+    mobileImage: "/projects/cover-image/mobile/RAFTAAR.png",
     alt: "Raftaar Australia Punjabi Streetwear E-Commerce digital storefront",
   },
 ];

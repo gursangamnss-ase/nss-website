@@ -60,6 +60,7 @@ export default async function ProjectDetailPage({ params }) {
           title={project.title}
           scriptTitle={project.scriptTitle}
           heroImage={project.heroImage}
+          heroAspectRatio={project.heroAspectRatio}
         />
 
         {/* Overview & Metadata Section */}
@@ -69,6 +70,7 @@ export default async function ProjectDetailPage({ params }) {
         <ProjectShowcaseBanner
           image={project.showcaseImage}
           alt={`${project.title} showcase visual`}
+          showcaseAspectRatio={project.showcaseAspectRatio}
         />
 
         {/* The Challenge & The Solution Section */}
@@ -78,7 +80,11 @@ export default async function ProjectDetailPage({ params }) {
         />
 
         {/* Visual Gallery Grid */}
-        <ProjectGalleryGrid images={project.gallery} />
+        <ProjectGalleryGrid
+          images={project.gallery}
+          galleryAspectRatio={project.galleryAspectRatio}
+          bottomAspectRatio={project.bottomGalleryAspectRatio}
+        />
 
         {/* Impact Results & Metrics */}
         <ProjectResultsSection results={project.results} />

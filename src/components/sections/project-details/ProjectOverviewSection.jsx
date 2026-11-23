@@ -1,9 +1,8 @@
 import Badge from "@/components/ui/Badge";
-import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 
 export default function ProjectOverviewSection({ overview }) {
-  const { badge, description, meta, liveSiteUrl, liveSiteLabel } = overview;
+  const { badge, description, meta } = overview;
 
   return (
     <section className="bg-white py-12 sm:py-16">
@@ -14,7 +13,7 @@ export default function ProjectOverviewSection({ overview }) {
             <Badge text={badge} className="text-sm font-medium text-neutral-800" />
           </div>
 
-          {/* Right Column: Narrative, Metadata & CTA pushed to the right */}
+          {/* Right Column: Narrative, Metadata */}
           <div className="w-full lg:w-[62%] xl:w-[65%] space-y-10">
             {/* Overview Narrative */}
             <p className="text-lg sm:text-xl font-medium text-neutral-700 leading-relaxed">
@@ -37,21 +36,6 @@ export default function ProjectOverviewSection({ overview }) {
                 </div>
               ))}
             </div>
-
-            {/* Live Site Pill Button */}
-            {liveSiteUrl && (
-              <div className="pt-2">
-                <Button
-                  href={liveSiteUrl}
-                  variant="dark"
-                  size="md"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {liveSiteLabel || "View live site"}
-                </Button>
-              </div>
-            )}
           </div>
         </div>
       </Container>
